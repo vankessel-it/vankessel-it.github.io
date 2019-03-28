@@ -1,0 +1,33 @@
+
+    
+    <a href="https://community.algolia.com/instantsearch.js/" class="is-logo"><img src="logo-is.png" width="40"></a>
+    <a href="./" class="logo">amazing</a>
+    
+var hitTemplateOld =
+'
+      <div class="card" style="width: 215px; height: 280px" title = "{{code}}">
+        <img class="card-img-left" src="{{primaryImageUrl}}" alt="{{code}}" />
+        <div class="card-body">
+          <small class="text-muted">
+            {{#helpers.highlight}}{ "attribute": "code" }{{/helpers.highlight}}
+          </small><br>
+          {{brand}}<br>
+          {{model}}<br>
+          {{price}}<br>
+        </div>
+      </div>
+      ';
+search.addWidget(
+    instantsearch.widgets.priceRanges({
+      container: '#price-list',
+      attributeName: 'price',
+      cssClasses: {
+        list: 'nav nav-list',
+        count: 'badge pull-right',
+        active: 'active'
+      },
+      templates: {
+        header: '<div class="facet-title">Prices</div class="facet-title">'
+      }
+    })
+  );
