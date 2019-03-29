@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Universal</title>
-    <link>https://vankessel-it.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Universal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://vankessel-it.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Agricultural</title>
-      <link>https://vankessel-it.github.io/categories/agricultural/</link>
+      <link>/categories/agricultural/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/agricultural/</guid>
+      <guid>/categories/agricultural/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cranes Handling / Lifting</title>
-      <link>https://vankessel-it.github.io/categories/cranes-handling-lifting/</link>
+      <link>/categories/cranes-handling-lifting/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/cranes-handling-lifting/</guid>
+      <guid>/categories/cranes-handling-lifting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Earthmoving Equipment</title>
-      <link>https://vankessel-it.github.io/categories/earthmoving-equipment/</link>
+      <link>/categories/earthmoving-equipment/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/earthmoving-equipment/</guid>
+      <guid>/categories/earthmoving-equipment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Generator Compressor</title>
-      <link>https://vankessel-it.github.io/categories/generator-compressor/</link>
+      <link>/categories/generator-compressor/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/generator-compressor/</guid>
+      <guid>/categories/generator-compressor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Generators Compressors</title>
-      <link>https://vankessel-it.github.io/categories/generators-compressors/</link>
+      <link>/categories/generators-compressors/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/generators-compressors/</guid>
+      <guid>/categories/generators-compressors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Handling Lifting</title>
-      <link>https://vankessel-it.github.io/categories/handling-lifting/</link>
+      <link>/categories/handling-lifting/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/handling-lifting/</guid>
+      <guid>/categories/handling-lifting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Parts Attachments</title>
-      <link>https://vankessel-it.github.io/categories/parts-attachments/</link>
+      <link>/categories/parts-attachments/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/parts-attachments/</guid>
+      <guid>/categories/parts-attachments/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pipelayer/Welding</title>
-      <link>https://vankessel-it.github.io/categories/pipelayer-welding/</link>
+      <link>/categories/pipelayer-welding/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/pipelayer-welding/</guid>
+      <guid>/categories/pipelayer-welding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quarry Mining</title>
-      <link>https://vankessel-it.github.io/categories/quarry-mining/</link>
+      <link>/categories/quarry-mining/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/quarry-mining/</guid>
+      <guid>/categories/quarry-mining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Road Equipment</title>
-      <link>https://vankessel-it.github.io/categories/road-equipment/</link>
+      <link>/categories/road-equipment/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/road-equipment/</guid>
+      <guid>/categories/road-equipment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trucks Trailers</title>
-      <link>https://vankessel-it.github.io/categories/trucks-trailers/</link>
+      <link>/categories/trucks-trailers/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://vankessel-it.github.io/categories/trucks-trailers/</guid>
+      <guid>/categories/trucks-trailers/</guid>
       <description></description>
     </item>
     

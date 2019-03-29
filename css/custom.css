@@ -1,1 +1,5 @@
-/* your styles go here */
+.product {
+    text-align: right;
+    position: relative;
+    margin-bottom: 40px;
+  }
