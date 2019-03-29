@@ -3,152 +3,152 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/fr/brands/</loc>
+    <loc>https://vankessel-it.github.io/fr/brands/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/brands/"
+                href="https://vankessel-it.github.io/brands/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/brands/"
+                href="https://vankessel-it.github.io/es/brands/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/brands/"
+                href="https://vankessel-it.github.io/de/brands/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/brands/"
+                href="https://vankessel-it.github.io/fr/brands/"
                 />
   </url>
   
   <url>
-    <loc>/fr/categories/</loc>
+    <loc>https://vankessel-it.github.io/fr/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://vankessel-it.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/categories/"
+                href="https://vankessel-it.github.io/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/categories/"
+                href="https://vankessel-it.github.io/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/categories/"
+                href="https://vankessel-it.github.io/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>/fr/categorylinks/</loc>
+    <loc>https://vankessel-it.github.io/fr/categorylinks/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categorylinks/"
+                href="https://vankessel-it.github.io/categorylinks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/categorylinks/"
+                href="https://vankessel-it.github.io/es/categorylinks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/categorylinks/"
+                href="https://vankessel-it.github.io/de/categorylinks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/categorylinks/"
+                href="https://vankessel-it.github.io/fr/categorylinks/"
                 />
   </url>
   
   <url>
-    <loc>/fr/subcategories/</loc>
+    <loc>https://vankessel-it.github.io/fr/subcategories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/subcategories/"
+                href="https://vankessel-it.github.io/subcategories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/subcategories/"
+                href="https://vankessel-it.github.io/es/subcategories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/subcategories/"
+                href="https://vankessel-it.github.io/de/subcategories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/subcategories/"
+                href="https://vankessel-it.github.io/fr/subcategories/"
                 />
   </url>
   
   <url>
-    <loc>/fr/tags/</loc>
+    <loc>https://vankessel-it.github.io/fr/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://vankessel-it.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/tags/"
+                href="https://vankessel-it.github.io/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/tags/"
+                href="https://vankessel-it.github.io/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/tags/"
+                href="https://vankessel-it.github.io/fr/tags/"
                 />
   </url>
   
   <url>
-    <loc>/fr/</loc>
+    <loc>https://vankessel-it.github.io/fr/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://vankessel-it.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/"
+                href="https://vankessel-it.github.io/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/de/"
+                href="https://vankessel-it.github.io/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/"
+                href="https://vankessel-it.github.io/fr/"
                 />
   </url>
   

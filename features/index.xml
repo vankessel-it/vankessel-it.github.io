@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Features on Universal</title>
-    <link>/features/</link>
+    <link>https://vankessel-it.github.io/features/</link>
     <description>Recent content in Features on Universal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/features/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vankessel-it.github.io/features/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Delta Parts</title>
-      <link>/features/delta-parts/</link>
+      <link>https://vankessel-it.github.io/features/delta-parts/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/features/delta-parts/</guid>
+      <guid>https://vankessel-it.github.io/features/delta-parts/</guid>
       <description>Workshop in the Netherlands Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines. A stock of parts is held locally.
 
 Independent machinery inspections We carry out internal inspections to our own very high standards as well as work with independent inspection organisations such as TÜV, Veritas and SGS.</description>
@@ -24,10 +24,10 @@ Independent machinery inspections We carry out internal inspections to our own v
     
     <item>
       <title>Delta Parts</title>
-      <link>/features/delta-rental/</link>
+      <link>https://vankessel-it.github.io/features/delta-rental/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/features/delta-rental/</guid>
+      <guid>https://vankessel-it.github.io/features/delta-rental/</guid>
       <description>Workshop in Netherlands Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines. A stock of parts is held locally.
 
 Independent machinery inspections We carry out internal inspections to our own very high standards as well as work with independent inspection organisations such as TÜV, Veritas and SGS.</description>
