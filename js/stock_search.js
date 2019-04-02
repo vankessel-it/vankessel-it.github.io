@@ -9,7 +9,7 @@ const searchClient = algoliasearch(
     indexName: 'DL_index_main',
     searchClient,
   });
-  
+
 var hitTemplate = 
 '<article class="hit">' +
     '<a href="/stock/{{code}}/"> '+
@@ -27,6 +27,16 @@ var hitTemplate =
 
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
+
+var shortcutIconTemplate = 
+`
+<a class="{{cssClasses.link}}" href="{{url}}">
+<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}"  width="50"/> </span>
+<span class="{{cssClasses.count}}">
+  {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
+</span>
+</a>
+`;
 
 search.addWidget(
   instantsearch.widgets.searchBox({
@@ -46,6 +56,18 @@ search.addWidget(
     ],
   })
 );
+
+search.addWidget(
+  instantsearch.widgets.hitsPerPage({
+    container: '#hits-per-page',
+    items: [
+      { label: '20 hits per page', value: 20, default: true },
+      { label: '50 hits per page', value: 50 },
+      { label: '100 hits per page', value: 100 },
+    ],
+  })
+);
+
 
 search.addWidget(
   instantsearch.widgets.clearRefinements({
@@ -73,6 +95,25 @@ search.addWidget(
   //     attribute: 'buildYear',
   //   })
   // );
+
+  search.addWidget(
+    instantsearch.widgets.menu({
+      container: '#shortcut-list',
+      attribute: 'shortcutIcon',
+      sortBy: ['name:asc'],
+      templates: {
+        item: shortcutIconTemplate,
+      },
+      // cssClasses: {
+      //   item: 'MyCustomMenuListItem',
+        // root: 'MyCustomMenu',
+        // list: [
+        //   'MyCustomMenuList',
+        //   'MyCustomMenuList--sub-class',
+        // ],
+      // },      
+    })
+  );
 
   search.addWidget(
     instantsearch.widgets.refinementList({
