@@ -1,7 +1,7 @@
 /* global algoliasearch instantsearch */
 
 const searchClient = algoliasearch(
-    'WZKUT69QG8T',
+    'ZKUT69QG8T',
     'a577b196fd8351e64f8329c6800bfadd'
   );
   
