@@ -27,9 +27,9 @@ var hitTemplate_algolia =
 '</article>';
 
 var hitTemplate = 
-'<div class="vd_item">' +
+'<div>' +
     '<a href="/stock/{{code}}/"> '+
-    '<div><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
+    '<div class="delta-ImageWrapper"><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
     '<div class="delta-Item">' +
       '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
       '<div>{{{_highlightResult.brand.value}}}</div>' +
