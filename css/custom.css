@@ -1,12 +1,36 @@
 
-  /* .MyCustomMenuList{
-    list-style-type: upper-roman;
-  } */
+  /* CSS Algolia
+  https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+  */
 
-  /* .MyCustomMenuListItem{
-    display: inline;
-  } */
+  .delta-Item{
+    margin-left: 1rem;
+  }
 
+  .ais-Hits  {
+    color: #3a4570;
+  }
+
+  .ais-InfiniteHits-list,
+  .ais-InfiniteResults-list,
+  .ais-Hits-list,
+  .ais-Results-list  {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap; 
+  }
+
+  .ais-InfiniteHits-item,
+  .ais-InfiniteResults-item,
+  .ais-Hits-item,
+  .ais-Results-item {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0rem;
+    width: auto;
+    box-shadow: none; 
+  }
 
   .ais-Menu-list  {
     list-style-type: none;
@@ -35,11 +59,8 @@
   }
 
   .ais-Menu-count{
-    padding: 0.1rem 0.4rem;
-    font-size: 0.8rem;
     color: #3a4570;
     background-color: #dfe2ee;
-    border-radius: 8px;
   }  
 
   .ais-Menu-item--selected .ais-Menu-count {
