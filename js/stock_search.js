@@ -8,6 +8,7 @@ const searchClient = algoliasearch(
   const search = instantsearch({
     indexName: 'DL_index_main',
     searchClient,
+    routing: true,
   });
 
 var hitTemplate_algolia = 
@@ -151,6 +152,8 @@ search.addWidget(
 );
 
 
+search.start();
+
   // search.addWidget(
   //   instantsearch.widgets.toggleRefinement({
   //     container: '#toggle-new',
@@ -169,4 +172,3 @@ search.addWidget(
   //   })
   // );
 
-search.start();
