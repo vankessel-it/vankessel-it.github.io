@@ -10,7 +10,7 @@ const searchClient = algoliasearch(
     searchClient,
   });
 
-var hitTemplate = 
+var hitTemplate_algolia = 
 '<article class="hit">' +
     '<a href="/stock/{{code}}/"> '+
     '<div class="product-picture-wrapper">' +
@@ -25,13 +25,26 @@ var hitTemplate =
     '</a>'+
 '</article>';
 
+var hitTemplate = 
+'<div class="vd_item">' +
+    '<a href="/stock/{{code}}/"> '+
+    '<div><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
+    '<div class="delta-Item">' +
+      '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
+      '<div>{{{_highlightResult.brand.value}}}</div>' +
+      '<div>{{{_highlightResult.model.value}}}</div>' +
+      '<div><small class="text-muted">Sold new</small> {{{buildYear}}}</div>' +
+    '</div>' +
+    '</a>'+
+'</div>';
+
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
 
-var shortcutIconTemplate = 
+var iconFilterTemplate = 
 `
 <a class="{{cssClasses.link}}" href="{{url}}">
-<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}"  width="50"/> </span>
+<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"  width="50"/> </span>
 <span class="{{cssClasses.count}}">
   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
 </span>
@@ -76,51 +89,67 @@ search.addWidget(
   })
 );
 
-  search.addWidget(
-    instantsearch.widgets.currentRefinements({
-      container: '#current-refinements',
-    })
-  );
+search.addWidget(
+  instantsearch.widgets.currentRefinements({
+    container: '#current-refinements',
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.menu({
+    container: '#iconFilter-list',
+    attribute: 'filter',
+    sortBy: ['name:desc'],
+    templates: {
+      item: iconFilterTemplate,
+    },
+
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+    container: '#location-list',
+    attribute: 'location',
+  })
+);
   
-  // search.addWidget(
-  //   instantsearch.widgets.refinementList({
-  //     container: '#brand-list',
-  //     attribute: 'brand',
-  //   })
-  // );
- 
-  // search.addWidget(
-  //   instantsearch.widgets.rangeSlider({
-  //     container: '#buildYear-list',
-  //     attribute: 'buildYear',
-  //   })
-  // );
+search.addWidget(
+  instantsearch.widgets.hierarchicalMenu({
+    container: '#brand-list',
+    attributes: [
+      'brand',
+      'brand_lvl2',
+    ],
+  })
+);
 
-  search.addWidget(
-    instantsearch.widgets.menu({
-      container: '#shortcut-list',
-      attribute: 'shortcutIcon',
-      sortBy: ['name:asc'],
-      templates: {
-        item: shortcutIconTemplate,
-      },
-      // cssClasses: {
-      //   item: 'MyCustomMenuListItem',
-        // root: 'MyCustomMenu',
-        // list: [
-        //   'MyCustomMenuList',
-        //   'MyCustomMenuList--sub-class',
-        // ],
-      // },      
-    })
-  );
+search.addWidget(
+  instantsearch.widgets.hierarchicalMenu({
+    container: '#category-list',
+    attributes: [
+      'category',
+      'category_lvl2',
+    ],
+  })
+);
 
-  search.addWidget(
-    instantsearch.widgets.refinementList({
-      container: '#location-list',
-      attribute: 'location',
-    })
-  );
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: hitTemplate,
+      empty: noResultsTemplate,
+    },
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+  })
+);
+
 
   // search.addWidget(
   //   instantsearch.widgets.toggleRefinement({
@@ -132,41 +161,12 @@ search.addWidget(
   //     on: false,
   //   })
   // );
-  
-  search.addWidget(
-    instantsearch.widgets.hierarchicalMenu({
-      container: '#brand-list',
-      attributes: [
-        'brandmodel_lvl1',
-        'brandmodel_lvl2',
-      ],
-    })
-  );
 
-  search.addWidget(
-    instantsearch.widgets.hierarchicalMenu({
-      container: '#classification-list',
-      attributes: [
-        'classifications_lvl1',
-        'classifications_lvl2',
-      ],
-    })
-  );
-
-  search.addWidget(
-    instantsearch.widgets.hits({
-      container: '#hits',
-      templates: {
-        item: hitTemplate,
-        empty: noResultsTemplate,
-      },
-    })
-  );
-  
-  search.addWidget(
-    instantsearch.widgets.pagination({
-      container: '#pagination',
-    })
-  );
+  // search.addWidget(
+  //   instantsearch.widgets.rangeSlider({
+  //     container: '#buildYear-list',
+  //     attribute: 'buildYear',
+  //   })
+  // );
 
 search.start();

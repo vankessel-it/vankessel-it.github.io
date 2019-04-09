@@ -210,65 +210,71 @@
 
     <div class="row">
       
-      <div class="col-md-9" style="min-height:50px;">
-        <div id="shortcut-list" ></div>
+      <div class=" col" style="min-height:50px;">
+        <div id="iconFilter-list" ></div>
       </div>
     </div>
 
     <div class="row">
 
+      
       <div class="col-md-3">
               
-      <div id="searchbox"></div>
+        <div id="searchbox"></div>
 
-      <div id="clear-refinements"></div>
+        <div id="clear-refinements"></div>
 
-      <div class="panel panel-default sidebar-menu">
-        <div class="panel-heading">
-          <h3 class="h4 panel-title">Category</h3>
+        <div class="panel panel-default sidebar-menu">
+          <div class="panel-heading">
+            <h3 class="h4 panel-title">Category</h3>
+          </div>
+          <div id="category-list" class="panel-body"></div>
         </div>
-        <div id="classification-list" class="panel-body"></div>
-      </div>
 
-      <div class="panel panel-default sidebar-menu">
-        <div class="panel-heading">
-          <h3 class="h4 panel-title">Brand</h3>
+        <div class="panel panel-default sidebar-menu">
+          <div class="panel-heading">
+            <h3 class="h4 panel-title">Brand</h3>
+          </div>
+          <div id="brand-list" class="panel-body"></div>
         </div>
-        <div id="brand-list" class="panel-body"></div>
-      </div>
 
-      <div class="panel panel-default sidebar-menu">
-        
-        <div class="panel-heading">
-          <h3 class="h4 panel-title">Location</h3>
-        </div>
-        
-        <div id="location-list" class="panel-body"></div>
-      </div>
-      
-    </div>
-
-    <div class="col-md-9">
-
-      <div class="row">
-        <div id="sort-by-selector" class="col-md-4"></div>
-        <div id="hits-per-page" class="col-md-3"></div>        
-        <div id="current-refinements" class="col-md-2"></div>
-      </div>
-      
-      <div id="hits"></div>
+        <div class="panel panel-default sidebar-menu">
           
-      <div id="pagination" class="pages"></div>
+          <div class="panel-heading">
+            <h3 class="h4 panel-title">Location</h3>
+          </div>
+          
+          <div id="location-list" class="panel-body"></div>
+        </div>
+      
+      </div>
+
+      
+      <div class="col-md-9">
+
+        <div class="row">
+          <div id="sort-by-selector" class="col-md-4"></div>
+          <div id="hits-per-page" class="col-md-3"></div>        
+          <div id="current-refinements" class="col-md-2"></div>
+        </div>
+        
+        <div class="row">
+          
+          <div id="hits"></div>
+          
+        </div>
+
+        <div id="pagination" class="row pages"></div>
+      
+      </div>
+      
     </div>
-
   </div>
-
 </div>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.2.1"></script>
   
-<script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.2.1"></script>
-  
-<script src="/js/stock_search.js"></script> 
+  <script src="/js/stock_search.js"></script> 
     
 
       <footer id="footer">
