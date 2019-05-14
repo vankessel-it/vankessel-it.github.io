@@ -3,6 +3,275 @@
   https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   */
 
+  @keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+     }
+}
+
+.delta-search img{
+  height: 40px;
+}
+
+.delta-quick-search img{
+  height: 40px;
+}
+
+
+.delta-quick-search-button{
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  animation: shadow-pulse 2s infinite;
+  margin-top: 10px;
+}
+
+.delta-quick-search img{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.delta-carousel-button{
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  animation: shadow-pulse 2s infinite;
+}
+
+.delta-homepage-bar{
+  background-color: #FAB428;
+  height:15px;
+}
+
+.delta-feature{
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+.delta-feature-card{
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.delta-feature-card img{
+  height:227px;
+  width:250px;
+  /* height:455px;
+  width:500px; */
+}
+
+.delta-feature-card-border{
+  /* background-color: #EDEDED; */
+ 
+  /* height: 40px; */
+}
+
+
+.delta-feature-header{
+  color: #FFFFFF;
+  background-color: #1D1D1B;
+  align-content: center;
+  padding: 5px;
+  height: 40px;
+  width:250px;
+}
+
+.delta-band-mail{
+  background-color: white;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+}
+
+#mc_embed_signup{
+  background:#FAB428;
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width:100%;
+}
+
+.delta-band-mail-title{
+  color: #FFFFFF;
+}
+
+.delta-band-mail-body{
+  background-color: #FAB428;
+  color: black;
+}
+
+.delta-band-xrok{
+  background-color: black;
+  /* margin-top: 40px; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.delta-band-xrok-title{
+  background-color: black;
+  color: red;
+}
+
+.delta-band-xrok-body{
+  color: white;
+  background-color: black;
+}
+
+.delta-band-3{
+  background-color: #FAB428;
+  /* margin-top: 40px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-3-title{
+  color: #FFFFFF;
+}
+
+.delta-band-3-body{
+  color: black;
+}
+
+.delta-band-1{
+  background-color: #1D1D1B;
+  /* margin-top: 40px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-1-title{
+  color: #FFFFFF;
+}
+
+.delta-band-1-body{
+  color: #FAB428;
+}
+
+.delta-band-2{
+  background-color: #D0D0D0;
+  /* margin-top: 40px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-2-title{
+  color: #FFFFFF;
+}
+
+.delta-band-2-body{
+  color: black;
+}
+
+.delta-band-button{
+  color: #FFFFFF;
+}
+
+.delta-band-button span{
+  color: #FAB428;
+  vertical-align: middle;
+}
+
+.delta-footer-header{
+  padding-top: 10px;
+  color: #FAB428;
+  background-color: #EDEDED;
+}
+
+.delta-footer-items{
+  color: black;
+  background-color: #EDEDED;
+}
+
+.delta-footer-items ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.delta-footer-social ul{
+  padding-left: 0;
+  list-style: none;
+}
+
+.delta-footer-social li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+.delta-footer-bar{
+  color: white;
+  background-color: #1D1D1B;
+}
+
+.delta-footer-bar span{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.delta-link a:link{
+  color: white;
+}
+  
+.delta-link a:visited{
+  color: white;
+}
+
+.delta-link a:hover{
+  color: #FAB428;
+}  
+
+.delta-zoom-image{
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.delta-zoom-image img{
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  
+  vertical-align: middle;
+}
+
+.delta-zoom-image img:hover{
+  transform:scale(1.2);
+  -ms-transform:scale(1.2); /* IE 9 */
+  -moz-transform:scale(1.2); /* Firefox */
+  -webkit-transform:scale(1.2); /* Safari and Chrome */
+  -o-transform:scale(1.2); /* Opera */ 
+}
+
+/* .delta-nav-bg{
+  background-color: #1D1D1B;
+} */
+
+/* .delta-homepage-search{
+  background-color: #FFFFFF;
+  color: #FAB428;
+} */
+
+.delta-homepage-search img{
+  background-color: #FFFFFF;
+}
+
+.delta-homepage-search button{
+  animation: radial-pulse 1s infinite;
+}
+
+.delta-homepage-search-count{
+  background-color: #9D9D9C;
+}
+
+
 .delta-Item{
   margin-left: 1rem;
 }
@@ -70,6 +339,10 @@
 /* .ais-Menu-item--selected {
   
 }  */
+
+.ais-Menu-item{
+  background-color: #FFFFFF;
+}
 
 .ais-Menu-item img {
   filter: grayscale(1);

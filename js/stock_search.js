@@ -44,8 +44,8 @@ var noResultsTemplate =
 
 var iconFilterTemplate = 
 `
-<a class="{{cssClasses.link}}" href="{{url}}">
-<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"  width="50"/> </span>
+<a class="{{cssClasses.link}} delta-search" href="{{url}}">
+<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"/> </span>
 <span class="{{cssClasses.count}}">
   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
 </span>
