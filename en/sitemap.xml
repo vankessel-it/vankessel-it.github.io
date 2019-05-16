@@ -2368,16 +2368,6 @@
   </url>
   
   <url>
-    <loc>/features/delta-parts/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/features/delta-rental/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
     <lastmod>2019-03-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -2401,6 +2391,10 @@
                 hreflang="en"
                 href="/"
                 />
+  </url>
+  
+  <url>
+    <loc>/machinery/</loc>
   </url>
   
   <url>
@@ -2442,22 +2436,8 @@
   </url>
   
   <url>
-    <loc>/contact/</loc>
-  </url>
-  
-  <url>
     <loc>/category/crushers/</loc>
     <lastmod>2019-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/faq/</loc>
-  </url>
-  
-  <url>
-    <loc>/features/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

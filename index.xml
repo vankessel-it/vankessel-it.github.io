@@ -4271,45 +4271,12 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
     </item>
     
     <item>
-      <title>Delta Parts</title>
-      <link>/features/delta-parts/</link>
-      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/features/delta-parts/</guid>
-      <description>Workshop in the Netherlands Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines. A stock of parts is held locally.
-
-Independent machinery inspections We carry out internal inspections to our own very high standards as well as work with independent inspection organisations such as TÜV, Veritas and SGS.</description>
-    </item>
-    
-    <item>
-      <title>Delta Parts</title>
-      <link>/features/delta-rental/</link>
-      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/features/delta-rental/</guid>
-      <description>Workshop in Netherlands Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines. A stock of parts is held locally.
-
-Independent machinery inspections We carry out internal inspections to our own very high standards as well as work with independent inspection organisations such as TÜV, Veritas and SGS.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/contact/</link>
+      <title></title>
+      <link>/machinery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/contact/</guid>
-      <description>We are here to help you Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.
-Please feel free to contact us, our customer service center is working for you 24&amp;frasl;7.</description>
-    </item>
-    
-    <item>
-      <title>FAQ</title>
-      <link>/faq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/faq/</guid>
-      <description>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-1. WHAT TO DO IF I HAVE STILL NOT RECEIVED THE ORDER? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</description>
+      <guid>/machinery/</guid>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}    Delta Machinery   With a fresh stock of over 300 units sourced from our worldwide network and our own fully equipped workshop with skilled personnel to carry out anything from full refurbishments to single repairs, Delta Machinery is here to assist you with all your heavy equipment needs.  In case the machinery you need is not in stock, we can source, service, inspect and test the equipment.</description>
     </item>
     
   </channel>
