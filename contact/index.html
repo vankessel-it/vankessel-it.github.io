@@ -7,7 +7,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -55,13 +55,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia-min.css" integrity="sha256-nkldBwBn2NQqRL1mod7BqHsJ6cEOn6u/ln6F/lI4CFo=" crossorigin="anonymous">
     
     
+
+    
+    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    
+
     
 
     
    
      
     
-         
     <link rel="stylesheet" href="/css/custom.css">
     
 
@@ -70,7 +74,7 @@
     
 
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-  <meta property="og:title" content="Contact" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/contact//" />
   <meta property="og:image" content="img/delta_logo_large.png" />
@@ -80,11 +84,8 @@
 
   <body>
 
-    <div id="all">
-
-        <header>
-
-          
+    <header>
+        
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
 
   <div class="container">
@@ -104,28 +105,40 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/contact">Contact</a>
+              <a class="dropdown-item" href="/history">History</a>
+              <a class="dropdown-item" href="/gallery">Gallery</a>
+
+              <a class="dropdown-item" href="/rental">Rental</a>
+              <a class="dropdown-item" href="/workshop">Workshop</a>
+              <a class="dropdown-item" href="/logistics">Logistics</a>
+              <a class="dropdown-item" href="/services">Services</a>
+            </div>
+          </li>   
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Delta Group
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Delta Machinery</a>
-            <a class="dropdown-item" href="#">Delta Pipeline</a>
-            <a class="dropdown-item" href="#">Delta Parts</a>
-            <a class="dropdown-item" href="#">XROCK</a>
+            <a class="dropdown-item" href="/machinery">Delta Machinery</a>
+            <a class="dropdown-item" href="/pipeline">Delta Pipeline Machinery</a>
+            <a class="dropdown-item" href="/parts">Delta Parts</a>
+            <a class="dropdown-item" href="https://www.xrok.com/">XROK</a>
           </div>
         </li>         
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Gallery</a>
+          <a class="nav-link" href="/stock">Stock</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -143,17 +156,121 @@
       </ul>
 
       <span class="navbar-text text-light right-side d-flex">
-          <i class="fa fa-phone"></i> +31 888 966 966
+          <a href="tel:+31 888 966 966"><i class="fa fa-phone"></i> +31 888 966 966</a>
       </span>
 
     </div>
 
   </div>
 </nav>
+        <small>
+<ul class="nav justify-content-center delta-quick-search">
 
-        </header>
+    <li class="nav-item">
+        <a href="/stock/?menu%5Bfilter%5D=dozer">
+            <img src="/img/categories/dozer.png"/><BR>
+            <div class="text-secondary text-center">Dozers</div>
+        </a>
+    </li>
 
-        <section class="container-fluid delta-footer-header" >
+    <li class="nav-item">
+        <a href="/stock/?menu%5Bfilter%5D=pipelayer">
+            <img src="/img/categories/pipelayer.png"/><BR>
+            <div class="text-secondary text-center">Pipelayers</div>
+        </a>
+    </li>   
+
+    <li class="nav-item">
+        <a href="/stock/?menu%5Bfilter%5D=excavator_tracks">
+            <img src="/img/categories/excavator_tracks.png"/><BR>
+            <div class="text-secondary text-center">Excavators</div>
+        </a>
+    </li> 
+
+    <li class="nav-item">
+        <a href="/stock/?menu%5Bfilter%5D=loader">
+            <img src="/img/categories/loader.png"/><BR>
+            <div class="text-secondary text-center">Loaders</div>
+        </a>
+    </li>      
+
+    <li class="nav-item">
+        <a href="/stock/?menu%5Bfilter%5D=_other">
+            <img src="/img/categories/_other.png"/><BR>
+            <div class="text-secondary text-center">Other</div>
+        </a>
+    </li> 
+
+
+    
+</ul>
+</small>
+<div class="delta-homepage-bar w-100"></div>
+    </header>
+
+    <section class="container-fluid" >
+
+        <div class="row delta-band-2">
+            
+            <div class="col-2"></div>                       
+            
+            <div class="col-md-auto">
+                <div class="delta-band-2-title">
+                    <h1>Delta Machinery</h1>
+                </div>
+                <div class="delta-band-2-body">
+                    <p>
+                        Telephone:	<a href="tel:+31 888 966 966">+31 (0) 888 966 966</a><br>
+                        Fax: +31 (0) 888 966 950<br>
+                        Chambre of commerce number:	17078066<br>
+                        Email: <a href="mailto:sales@deltamachinery.nl">sales@deltamachinery.nl</a><BR>
+                    </p> 
+                        
+                </div>
+            </div> 
+    
+            <div class="col-2"></div>
+                
+        </div>
+        
+        <div class="row delta-info-1-body">
+            
+            <div class="col-2"></div>
+            <div class="col-4">
+                <p>	
+                    <b>Delta Machinery</b><br>
+                    Mark S. Clarkelaan 6<br>
+                    4761 RK  Zevenbergen<br>
+                    The Netherlands<br>
+                </p>
+            </div>
+            <div class="col-md-auto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d632385.7630590899!2d4.684671!3d51.746626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4236cc488a661%3A0xa26d9eaaacc97f0!2sMark+S.+Clarkelaan+6%2C+4761+RK+Zevenbergen%2C+Netherlands!5e0!3m2!1sen!2sus!4v1558075794681!5m2!1sen!2sus" 
+                width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+        </div>            
+
+        <div class="row delta-info-1-body">
+            
+            <div class="col-2"></div>
+            <div class="col-4">
+                <p>	
+                    <b>Delta Machinery Workshop</b><br>
+                    Voltstraat 19<br>
+                    5753 RL Deurne<br>
+                    The Netherlands<br>
+                </p>
+            </div>
+            <div class="col-md-auto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d893977.341629758!2d4.321574260849776!3d51.76436250096963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c73b8407e3b57f%3A0x24a57150e6679304!2sVoltstraat+19%2C+5753+RL+Deurne!5e0!3m2!1sen!2snl!4v1558076296832!5m2!1sen!2snl" 
+                width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+         </div>             
+
+    </section>
+
+    <section class="container-fluid delta-footer-header" >
 
     <div class="row">
         
@@ -164,11 +281,11 @@
                 Delta Machinery
             </div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">Delta Group</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/gallery">Gallery</a></li>
             </ul>
         </div>
         
@@ -177,13 +294,16 @@
                 Delta Services
             </div>
             <ul>
-                <li><a href="">Rental fleet</a></li>
-                <li><a href="">Pipeline Machinery</a></li>
-                <li><a href="">Workshop</a></li>
-                <li><a href="">Logistics</a></li>
-                <li><a href="">Shipping</a></li>
-                <li><a href="">Documents</a></li>
-                <li><a href="">History</a></li>
+                <li><a href="/machinery">Manchinery</a></li>
+                <li><a href="/pipeline">Pipeline Manchinery</a></li>
+                <li><a href="/Parts">Parts</a></li>
+                <li><a href="https://www.xrok.com/">XROK</a></li>
+
+                <li><a href="/rental">Rental</a></li>
+                <li><a href="/workshop">Workshop</a></li>
+                <li><a href="/logistics">Logistics</a></li>
+                <li><a href="/services">Services</a></li>
+
             </ul>
         </div>
             
@@ -192,11 +312,12 @@
                 Machine Types
             </div>
             <ul>
-                <li><a href="">Tracked excavator</a></li>
-                <li><a href="">Dozer</a></li>
+                <li><a href="/stock/?menu%5Bfilter%5D=dozer">Dozer</a></li>
+                <li><a href="/stock/?menu%5Bfilter%5D=excavator_tracks">Tracked excavator</a></li>
+                
                 <li><a href="">Motor grader</a></li>
-                <li><a href="">Wheel loader</a></li>
-                <li><a href="">Pipeline equipment</a></li>
+                <li><a href="/stock/?menu%5Bfilter%5D=loader">Wheel loader</a></li>
+                <li><a href="/stock/?menu%5Bfilter%5D=pipelayer">Pipeline equipment</a></li>
                 <li><a href="">Quary & Mining</a></li>
                 <li><a href="">Parts</a></li>
             </ul>
@@ -207,13 +328,13 @@
                 Machine Brands
             </div>
             <ul>
-                <li><a href="">Caterpillar</a></li>
-                <li><a href="">Komatsu</a></li>
-                <li><a href="">Doosan</a></li>
-                <li><a href="">XROK</a></li>
-                <li><a href="">Phoenix</a></li>
-                <li><a href="">Terex</a></li>
-                <li><a href="">Metso</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Komatsu">Komatsu</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=XROK">XROK</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Phoenix">Phoenix</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Terex">Terex</a></li>
+                <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Metso">Metso</a></li>
             </ul>
         </div>
 
@@ -226,8 +347,8 @@
             4761 RK Zevenbergen<BR>
             The Netherlands<BR>
             <HR>
-            <B>T</B>: +31 (0) 888 966 966<BR>
-            <B>F</B>: +31 (0) 888 966 950<BR>
+            <B>T</B>: <a href="tel:+31 888 966 966">+31 (0) 888 966 966</a><BR>
+            <B>F</B>: <a href="tel:+31 888 966 950">+31 (0) 888 966 950</a><BR>
             <B>E</B>: <a href="mailto:sales@deltamachinery.nl">info@deltamachinery</a><BR>
         </div>
 
@@ -267,18 +388,20 @@
     <div class="row justify-content-md-center delta-footer-bar">
         <small>
         <div class="col-md-auto delta-link">
-            <a href="">General terms and conditions</a>
+            <a href="/disclaimer">Disclaimer</a>
             <span>|</span>
-            <a href="">Privacy</a>
+            <a href="/general-terms-and-conditions">General terms and conditions</a>
             <span>|</span>
-            <a href="">Cookies</a>
+            <a href="/privacy">Privacy</a>
+            <span>|</span>
+            <a href="/contact">&copy; 2019 Delta Group</a>
+            
+            
         </div>
         </small>
     </div>
 
 </section>
-
-    </div>
 
     
 
@@ -291,10 +414,16 @@
 
 
 
+<script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
+
+
+
+
 
 
 
 
 
   </body>
+
 </html>

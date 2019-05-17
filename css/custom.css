@@ -1,16 +1,19 @@
 
-  /* CSS Algolia
-  https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
-  */
+/* CSS Algolia
+https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+*/
 
-  @keyframes shadow-pulse
+/***********************************
+* Quick Search
+************************************/
+@keyframes shadow-pulse
 {
-     0% {
-          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-     }
-     100% {
-          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-     }
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
 }
 
 .delta-search img{
@@ -35,6 +38,9 @@
   margin-right:10px;
 }
 
+/***********************************
+* Carousel
+************************************/
 .delta-carousel-button{
   font-weight: bold;
   text-align: center;
@@ -47,6 +53,9 @@
   height:15px;
 }
 
+/***********************************
+* Feature
+************************************/
 .delta-feature{
   background-color: #FFFFFF;
   padding-top: 30px;
@@ -83,30 +92,58 @@
   width:250px;
 }
 
+/***********************************
+* Info
+************************************/
 .delta-info-banner img{
   padding-bottom: 0px;
   width:100%;
   height: 300px;
 }
 
-.delta-info-1{
+/* .delta-info-1{
   background-color: #1D1D1B;
   padding-top: 20px;
   padding-bottom: 20px;
-}
+} */
 
 .delta-info-1-body{
   background-color: white;
   color: black;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .delta-info-1-body img{
   width:250px;
-  padding: 10px;
+  padding-left: 0px;
+  padding-right: 30px;
 }
 
 
+
+/* .delta-info-2{
+  background-color: #1D1D1B;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.delta-info-2-body{
+  background-color: white;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-info-2-body img{
+  width:250px;
+  padding-left: 0px;
+  padding-right: 30px;
+} */
+
+/***********************************
+* Band
+************************************/
 .delta-band-mail{
   background-color: white;
   /* padding-top: 30px;
@@ -200,6 +237,9 @@
   vertical-align: middle;
 }
 
+/***********************************
+* Footer
+************************************/
 .delta-footer-header{
   padding-top: 10px;
   color: #FAB428;
@@ -239,6 +279,9 @@
   padding-right:10px;
 }
 
+/***********************************
+* General
+************************************/
 .delta-link a:link{
   color: white;
 }

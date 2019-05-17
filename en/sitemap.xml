@@ -2394,7 +2394,51 @@
   </url>
   
   <url>
+    <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/disclaimer/</loc>
+  </url>
+  
+  <url>
+    <loc>/general-terms-and-conditions/</loc>
+  </url>
+  
+  <url>
+    <loc>/history/</loc>
+  </url>
+  
+  <url>
+    <loc>/logistics/</loc>
+  </url>
+  
+  <url>
     <loc>/machinery/</loc>
+  </url>
+  
+  <url>
+    <loc>/parts/</loc>
+  </url>
+  
+  <url>
+    <loc>/pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>/privacy/</loc>
+  </url>
+  
+  <url>
+    <loc>/rental/</loc>
+  </url>
+  
+  <url>
+    <loc>/services/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshop/</loc>
   </url>
   
   <url>
