@@ -4329,7 +4329,7 @@ Voltstraat 19</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/logistics/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}    Logistics   .............  ............       ........      ........     {{ partial &#34;footer.html&#34; . }} {{ partial &#34;scripts.html&#34; . }}   </description>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}    Logistics   .............  ............      {{ with .Resources.GetMatch &#34;img/logistics_2.jpg&#34;}} {{ $image_tn := .Resize &#34;300x&#34; }} {{end}}  ........     {{ with .Resources.GetMatch &#34;img/logistics_3.jpg&#34;}} {{ $image_tn := .Resize &#34;300x&#34; }} {{end}}  ........     {{ partial &#34;footer.html&#34; . }} {{ partial &#34;</description>
     </item>
     
     <item>
@@ -4384,7 +4384,7 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/services/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}    Delta Services   We oversee the logistics from the headquarters in Deurne in the Netherlands, which is conveniently located for international shipping. These services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.       If RORO loading is not possible for certain destinations, we are able to dismantle machines for shipping in containers or on a flat rack.</description>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}    Delta Services   We oversee the logistics from the headquarters in Deurne in the Netherlands, which is conveniently located for international shipping.      {{ with .Resources.GetMatch &#34;img/services_2.jpg&#34;}} {{ $image_tn := .Resize &#34;300x&#34; }} {{end}}  Services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.</description>
     </item>
     
     <item>

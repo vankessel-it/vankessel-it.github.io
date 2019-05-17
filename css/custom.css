@@ -115,7 +115,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 }
 
 .delta-info-1-body img{
-  width:250px;
+  /* width:250px; */
   padding-left: 0px;
   padding-right: 30px;
 }
