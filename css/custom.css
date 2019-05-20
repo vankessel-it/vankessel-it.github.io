@@ -4,6 +4,23 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 */
 
 /***********************************
+* Homepage Stock Search button
+************************************/
+
+.delta-homepage-search img{
+  background-color: #FFFFFF;
+}
+
+.delta-homepage-search button{
+  animation: radial-pulse 1s infinite;
+}
+
+.delta-homepage-search-count{
+  background-color: #9D9D9C;
+}
+
+
+/***********************************
 * Quick Search
 ************************************/
 @keyframes shadow-pulse
@@ -37,6 +54,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   margin-left:10px;
   margin-right:10px;
 }
+
 
 /***********************************
 * Carousel
@@ -325,19 +343,6 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   background-color: #FFFFFF;
   color: #FAB428;
 } */
-
-.delta-homepage-search img{
-  background-color: #FFFFFF;
-}
-
-.delta-homepage-search button{
-  animation: radial-pulse 1s infinite;
-}
-
-.delta-homepage-search-count{
-  background-color: #9D9D9C;
-}
-
 
 .delta-Item{
   margin-left: 1rem;
