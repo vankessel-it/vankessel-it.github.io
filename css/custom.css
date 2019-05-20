@@ -114,10 +114,12 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 * Info
 ************************************/
 .delta-info-banner img{
-  padding-bottom: 0px;
-  width:100%;
-  height: 300px;
-}
+  /* padding: 0px;
+  margin: 0px;
+  width:100%; */
+  /* width:100%;
+  height: 300px;  */
+} */
 
 /* .delta-info-1{
   background-color: #1D1D1B;
