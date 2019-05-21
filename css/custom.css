@@ -77,7 +77,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 .delta-feature{
   background-color: #FFFFFF;
   padding-top: 30px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
 }
 
 .delta-feature-card{
@@ -133,6 +133,10 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   padding-bottom: 30px;
 }
 
+.delta-info-1-row{
+  padding-top: 10px;
+}
+
 .delta-info-1-body img{
   /* width:250px; */
   padding-left: 0px;
@@ -164,12 +168,13 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 * Band
 ************************************/
 .delta-band-mail{
-  background-color: white;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
+  background:#FAB428;
+  /* margin-top: 30px; */
+  /* padding-bottom: 30px; */
 }
 
 #mc_embed_signup{
+  padding:0px;
   background:#FAB428;
   clear:left; 
   font:14px Helvetica,Arial,sans-serif; 
