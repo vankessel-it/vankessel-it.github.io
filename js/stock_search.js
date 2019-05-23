@@ -25,12 +25,86 @@ var hitTemplate_algolia =
     '</div>' +
     '</a>'+
 '</article>';
+//<i class="fa fa-phone"></i>
+// https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+// Auto-applied classes by Angolia: ais-Hits, ais-Hits-list, ais-Hits-item
+// .ais-Hits-item,
+// .ais-Results-item {
+//   margin-top: 1rem;
+//   margin-left: 1rem;
+//   padding: 1rem;
+//   width: calc(25% - 1rem);
+//   border: 1px solid #c4c8d8;
+//   -webkit-box-shadow: 0 2px 5px 0px #e3e5ec;
+//   box-shadow: 0 2px 5px 0px #e3e5ec; }
+//   .ais-Panel-body .ais-InfiniteHits-item, .ais-Panel-body
+//   .ais-InfiniteResults-item, .ais-Panel-body
+//   .ais-Hits-item, .ais-Panel-body
+//   .ais-Results-item {
+//     margin: 0.5rem 0 0.5rem 1rem; }
 
+//delta-zoom-image
 var hitTemplate = 
+'<a href="/stock/{{code}}/"> '+
+
+  '<div class="container delta-hit">'+
+    
+    '<div class="row ">'+
+      '<div class="col delta-zoom-image">'+
+        '<img src="{{primaryImageUrl}}" alt="{{code}}"></img> '+
+      '</div>'+
+    '</div>'+
+
+    '<div class="row delta-hit-title delta-nopadding">'+
+      '<div class="col">{{_highlightResult.brand.value}} {{_highlightResult.model.value}}</div> '+
+    '</div>'+
+
+    '<div class="row delta-hit-subtitle delta-nopadding">'+
+      '<div class="col ">New cutting edge</div> '+
+    '</div>'+
+
+    '<div class="row delta-hit-reference delta-nopadding">'+
+      '<div class="col">Reference: {{_highlightResult.code.value}} <span class="badge badge-success">EPA</span><span class="badge badge-warning">CE</span></div> '+
+    '</div>'+    
+  
+    '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="col">' +
+        '<i class="fa fa-map-marker delta-hit-icon"></i> {{{location}}}' +
+      '</div>' +
+    '</div>'+
+
+    '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="col">' +
+        '<i class="fa fa-calendar delta-hit-icon"></i> {{{buildYear}}}' +
+      '</div>' +
+      '<div class="col">' +
+        '<i class="fa fa-clock delta-hit-icon"></i> {{{hours}}}' +
+      '</div>' +
+    '</div>'+
+
+  '</div>'+
+'</a>';
+
+var hitTemplate21052019_card = 
+'<div class="card">' +
+    '<img class="card-img-top" src="{{primaryImageUrl}}" alt="{{code}}"></img> '+
+    '<a href="/stock/{{code}}/"> '+
+    '<div class="card-header">{{code}}</BR><small>New cutting edge</small></div> '+
+    '<div class="delta-hit-item">' +
+      '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
+      '<div>{{{_highlightResult.brand.value}}}</div>' +
+      '<div>{{{_highlightResult.model.value}}}</div>' +
+      '<div><small class="text-muted">Sold new</small> {{{buildYear}}}</div>' +
+    '</div>' +
+    '</a>'+
+'</div>';
+
+
+var hitTemplate21052019 = 
 '<div>' +
     '<a href="/stock/{{code}}/"> '+
-    '<div class="delta-ImageWrapper"><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
-    '<div class="delta-Item">' +
+    '<div class="delta-imageWrapper"><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
+    '<div class="delta-hit-item">' +
       '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
       '<div>{{{_highlightResult.brand.value}}}</div>' +
       '<div>{{{_highlightResult.model.value}}}</div>' +

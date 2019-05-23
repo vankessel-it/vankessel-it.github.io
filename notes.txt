@@ -1,13 +1,44 @@
+Besprekeing Mark/Rick  21/5/2019
+
+Homepage
+-          Mark laat 5 slideshow header foto’s bewerken door Marcel. Formaat 1920x500
+-          ‘Subscribe to our stocklist’. Rick aanpassen in Mailchimp en doorgeven aan Marc
+-          In totaal 8 pictogrammen voor machine categorieën toevoegen (Excavators – Dozers – Motor graders – Wheel loaders – Pipelayers – Crushers – Parts – Other). Rick past de categorieën aan in Real.
+-          ‘Search’ balk toevoegen onder 8 pictogrammen machine categorieën
+-          Tekst en links onderaan homepage aanpassen (link naar About us / Gallery / Contact ??). Rick maakt voorstel.
+-          Footer blauwe tekst aanpassen naar zwart
+-          Knop ‘View complete stock’ aanpassen op mobiele site, valt nu volledig over de afbeelding
+
+ 
+
+About us
+1.       History à Tekst reeds aanwezig, Mark levert foto’s aan
+2.       Machinery à Link naar Delta Machinery pagina. Knop ‘View complete stock’ toevoegen
+3.       Rental à Link naar Delta Rental pagina
+4.       Parts à Link naar Delta Parts pagina. Contactformulier toevoegen en knop ‘View complete stock’ *K-nummers*
+5.       Services à Tekst + foto’s aanpassen, levert Mark aan
+6.       Workshop à Tekst + foto’s reeds aanwezig
+7.       Logistics à Mark levert tekst + foto’s aan
+8.       XROK à Mark levert tekst + foto’s aan. Link naar www.xrok.com toevoegen
+9.       Contact à Link naar contact pagina
+
+
+Contact
+-          Contactgegevens uitbreiden. Rick maakt voorstel
+
+Stock
+-          Filters toevoegen
+-          Layout stock overview aanpassen (Stocknr – Year – Hours – Price)
+-          Functionaliteit toevoegen in Real voor USP (New cutting edge / Engine overhauled / New tyres / etc)
+-          Label EPA / CE toevoegen (CE toevoegen als specificatie in Real, zelfde als EPA)
+
+
+************************************************************************
 Ter info: 
 
-onderstaand de status / open-punten zoals ik deze zie, mocht het niet kloppen of onvolledig zijn dan hoor ik dat graag. 
-
-
 Rick/Mark: 
-- restructure REAL category / subcategory
 - specifiy Icon filter groups
 - provide multi-language content for all menu-options in the mock-ups
-- specify Machine / Parts, Delta / Van Dijk website setup / crosslinks.
 - specify what kind of watermark is required for images
 
 Rick/Marc: 
@@ -15,7 +46,6 @@ Rick/Marc:
 
 Marcel: 
 - provide icons
-- provide CSS / HTML design
 - provide images for carousel, etc.
 
 Marc: 
@@ -37,8 +67,6 @@ Decided/Implemented:
 - aspect ratio images 1:1.5
 - use of standard REAL category / brand for filtering
 - brands / category descriptions must be lowercase
-- main menu: about us, delta group (with dropdown), faq, contact, language selection
-- Fixed: currently the stock selection is removed when going to a machine and back (BAS keeps selection).
 
 
 With regards to mock-ups:
@@ -65,12 +93,3 @@ With regards to mock-ups:
   * three information groups: general, technical and descriptions
   Note: I would not make three tabs.... just scrolling down is easier for user.
 
-- "special items"
-  * which machines must be shown here?
-
-- mailing list subscription
-  * this functionality is provided by mail-chimp and can be integrated
-
-- footer 
-  * would it be an option to add a 'Now in Stock' button to the footer in stead of all the brands / categories
-  (loads quicker, shorter pages, easier to implement)

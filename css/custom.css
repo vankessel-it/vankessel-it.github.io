@@ -4,6 +4,44 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 */
 
 /***********************************
+* About-us page
+************************************/
+
+.delta-cards{
+
+}
+
+.delta-card-contact{
+  color:  #FAB428;
+  background-color: white;
+  
+}
+
+.delta-card-history img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.delta-card{
+  margin:30px;
+  background-color: white;
+}
+
+.delta-card-body-1{
+  color: black;
+  
+}
+
+.delta-card-body-2{
+  color:  #FAB428;
+  background-color: #1D1D1B;
+}
+
+.delta-card-body-3{
+  color: black;
+  background-color: #D0D0D0;
+}
+/***********************************
 * Homepage Stock Search button
 ************************************/
 
@@ -164,6 +202,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   padding-right: 30px;
 } */
 
+
 /***********************************
 * Band
 ************************************/
@@ -261,6 +300,12 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   vertical-align: middle;
 }
 
+.delta-band-2-small{
+  background-color: #D0D0D0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /***********************************
 * Footer
 ************************************/
@@ -281,6 +326,10 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   padding: 0px;
 }
 
+.delta-footer-items a {
+  color: black;
+}
+
 .delta-footer-social ul{
   padding-left: 0;
   list-style: none;
@@ -290,7 +339,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 	display: inline-block;
 	padding-right: 5px;
 	padding-left: 5px;
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .delta-footer-bar{
@@ -303,6 +352,44 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   padding-right:10px;
 }
 
+/***********************************
+* Search Hits
+************************************/
+.delta-hit{
+  /* padding: 0px; */
+}
+
+.delta-nopadding{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.delta-hit-title{
+  background-color: #1D1D1B;
+  color: #FAB428;
+}
+
+.delta-hit-subtitle{
+  background-color: #1D1D1B;
+  color: white;
+  font-size: small;
+}
+
+.delta-hit-reference{
+  /* background-color: #FAB428;
+  color: black; */
+  font-size: small;
+  background-color: #D0D0D0;
+  color: black;
+}
+
+.delta-hit-body{
+  background-color: #D0D0D0;
+  color: black;
+}
+
+.delta-hit-icon{
+  color: grey;
+}
 /***********************************
 * General
 ************************************/
@@ -350,16 +437,16 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   color: #FAB428;
 } */
 
-.delta-Item{
+/* .delta-hit-item{
   margin-left: 1rem;
-}
+} */
 
-.delta-ImageWrapper{
+/* .delta-imageWrapper{
   display: inline-block;
   overflow: hidden; 
 }
 
-.delta-ImageWrapper img{
+.delta-imageWrapper img{
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -369,14 +456,17 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   vertical-align: middle;
 }
 
-.delta-ImageWrapper img:hover{
+.delta-imageWrapper img:hover{
   transform:scale(1.2);
-  -ms-transform:scale(1.2); /* IE 9 */
-  -moz-transform:scale(1.2); /* Firefox */
-  -webkit-transform:scale(1.2); /* Safari and Chrome */
-  -o-transform:scale(1.2); /* Opera */ 
-}
+  -ms-transform:scale(1.2); 
+  -moz-transform:scale(1.2); 
+  -webkit-transform:scale(1.2);
+  -o-transform:scale(1.2); 
+} */
 
+/***********************************
+* Algolia Hits
+************************************/
 .ais-Hits  {
   color: #3a4570;
 }
