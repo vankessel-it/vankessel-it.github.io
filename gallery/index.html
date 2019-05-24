@@ -90,7 +90,7 @@
 
     <header>
         
-<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+<nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-sm">
 
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -144,49 +144,118 @@
 
   </div>
 </nav>
-        <small>
-<ul class="nav justify-content-center delta-quick-search">
+        <section class="nav justify-content-center delta-quick-search">
 
-    <li class="nav-item">
-        <a href="/stock/?menu%5Bfilter%5D=dozer">
-            <img src="/img/categories/dozer.png"/><BR>
-            <div class="text-secondary text-center">Dozers</div>
-        </a>
-    </li>
+<div class="ais-Menu">
+    <ul class="ais-Menu-list">
 
-    <li class="nav-item">
-        <a href="/stock/?menu%5Bfilter%5D=pipelayer">
-            <img src="/img/categories/pipelayer.png"/><BR>
-            <div class="text-secondary text-center">Pipelayers</div>
-        </a>
-    </li>   
+        <li class = "ais-Menu-item">
 
-    <li class="nav-item">
-        <a href="/stock/?menu%5Bfilter%5D=excavator_tracks">
-            <img src="/img/categories/excavator_tracks.png"/><BR>
-            <div class="text-secondary text-center">Excavators</div>
-        </a>
-    </li> 
+            <div class="input-group input-group-sm delta-homepage-search-field">
 
-    <li class="nav-item">
-        <a href="/stock/?menu%5Bfilter%5D=loader">
-            <img src="/img/categories/loader.png"/><BR>
-            <div class="text-secondary text-center">Loaders</div>
-        </a>
-    </li>      
+                <input class="form-control py-2" type="search" value="" id="searchField" placeholder="Search stock">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="searchButton" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        
+        </li>
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Wheel-loaders">
+                <img src="/img/categories/Wheel-loaders.png"/>
+                <span class="ais-Menu-count">7</span>
+                <small><div class="text-secondary text-center">Wheel-loaders</div></small>
+            </a>
+        </li>
 
-    <li class="nav-item">
-        <a href="/stock/?menu%5Bfilter%5D=_other">
-            <img src="/img/categories/_other.png"/><BR>
-            <div class="text-secondary text-center">Other</div>
-        </a>
-    </li> 
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Pipelayers">
+                <img src="/img/categories/Pipelayers.png"/>
+                <span class="ais-Menu-count">7</span>
+                <small><div class="text-secondary text-center">Pipelayers</div></small>
+            </a>
+        </li>   
+        
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Parts">
+                <img src="/img/categories/Parts.png"/>
+                <span class="ais-Menu-count">91</span>
+                <small><div class="text-secondary text-center">Parts</div></small>
+            </a>
+        </li> 
 
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Motor-graders">
+                <img src="/img/categories/Motor-graders.png"/>
+                <span class="ais-Menu-count">9</span>
+                <small><div class="text-secondary text-center">Motor-graders</div></small>
+            </a>
+        </li> 
 
-    
-</ul>
-</small>
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Excavators">
+                <img src="/img/categories/Excavators.png"/>
+                <span class="ais-Menu-count">39</span>
+                <small><div class="text-secondary text-center">Excavators</div></small>
+            </a>
+        </li> 
+
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Dozers">
+                <img src="/img/categories/Dozers.png"/>
+                <span class="ais-Menu-count">33</span>
+                <small><div class="text-secondary text-center">Dozers</div></small>
+            </a>
+        </li>      
+
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Crushers">
+                <img src="/img/categories/Crushers.png"/>
+                <span class="ais-Menu-count">12</span>
+                <small><div class="text-secondary text-center">Crushers</div></small>
+            </a>
+        </li> 
+
+        <li class="ais-Menu-item">
+            
+            
+            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Other">
+                <img src="/img/categories/Other.png"/>
+                <span class="ais-Menu-count">77</span>
+                <small><div class="text-secondary text-center">Other</div></small>
+            </a>
+        </li> 
+
+        
+    </ul>
+</div>
+</section>
+
 <div class="delta-homepage-bar w-100"></div>
+
+<script>
+document.querySelector("#searchField").addEventListener("keyup", event => {
+    if(event.key !== "Enter") return; 
+    document.querySelector("#searchButton").click(); 
+    event.preventDefault(); 
+});    
+</script>
     </header>
 
     <section class="container-fluid" >
@@ -195,7 +264,9 @@
 
             <div ID="ngy2p" class="col" data-nanogallery2='{
                 "itemsBaseURL": "",
-        
+                "locationHash": false,
+                "touchAnimation": false,
+                
                 "thumbnailWidth": "213",
                 "thumbnailHeight": "142",
                 "thumbnailBorderVertical": 0,

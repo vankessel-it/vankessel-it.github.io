@@ -56,7 +56,7 @@ var hitTemplate =
     '</div>'+
 
     '<div class="row delta-hit-title delta-nopadding">'+
-      '<div class="col">{{_highlightResult.brand.value}} {{_highlightResult.model.value}}</div> '+
+      '<div class="col">{{_highlightResult.description}}</div> '+
     '</div>'+
 
     '<div class="row delta-hit-subtitle delta-nopadding">'+
@@ -119,10 +119,22 @@ var noResultsTemplate =
 var iconFilterTemplate = 
 `
 <a class="{{cssClasses.link}} delta-search" href="{{url}}">
+<img src="/img/categories/{{label}}.png"/>
+<span class="{{cssClasses.count}}">
+  {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
+</span>
+<small><div class="text-secondary text-center">{{label}}</div></small>
+</a>
+`;
+
+var iconFilterTemplate_24052019 = 
+`
+<a class="{{cssClasses.link}} delta-search" href="{{url}}">
 <span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"/> </span>
 <span class="{{cssClasses.count}}">
   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
 </span>
+<small><div class="text-secondary">{{label}}</div></small>
 </a>
 `;
 

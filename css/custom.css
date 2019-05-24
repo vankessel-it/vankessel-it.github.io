@@ -3,6 +3,8 @@
 https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 */
 
+
+body { padding-top: 60px; }
 /***********************************
 * About-us page
 ************************************/
@@ -45,6 +47,10 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 * Homepage Stock Search button
 ************************************/
 
+.delta-homepage-search-field{
+  padding-top: 8px;
+}
+
 .delta-homepage-search img{
   background-color: #FFFFFF;
 }
@@ -73,6 +79,10 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 
 .delta-search img{
   height: 40px;
+
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
 }
 
 .delta-quick-search img{
