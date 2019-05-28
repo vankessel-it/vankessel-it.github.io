@@ -3,7 +3,6 @@ Besprekeing Mark/Rick  21/5/2019
 Homepage
 -          Mark laat 5 slideshow header foto’s bewerken door Marcel. Formaat 1920x500
 -          In totaal 8 pictogrammen voor machine categorieën toevoegen (Excavators – Dozers – Motor graders – Wheel loaders – Pipelayers – Crushers – Parts – Other). Rick past de categorieën aan in Real.
--          Tekst en links onderaan homepage aanpassen (link naar About us / Gallery / Contact ??). Rick maakt voorstel.
 -          Knop ‘View complete stock’ aanpassen op mobiele site, valt nu volledig over de afbeelding
  
 
@@ -24,10 +23,6 @@ Contact
 
 Stock
 -          Filters toevoegen
--          Layout stock overview aanpassen (Stocknr – Year – Hours – Price)
--          Functionaliteit toevoegen in Real voor USP (New cutting edge / Engine overhauled / New tyres / etc)
--          Label EPA / CE toevoegen (CE toevoegen als specificatie in Real, zelfde als EPA)
-
 
 ************************************************************************
 Ter info: 
