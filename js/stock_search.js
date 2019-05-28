@@ -361,7 +361,7 @@ function newFunction() {
         '<div class="col badge-warning">RESERVED</div> '+
       '</div>';
     }
-    if(!data.tags.includes("S")){
+    if(data.tags.includes("S")){
       content+=
       '<div class="row delta-hit-subtitle delta-nopadding">'+
         '<div class="col badge-danger">SOLD</div> '+
