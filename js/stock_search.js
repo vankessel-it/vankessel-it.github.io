@@ -44,6 +44,8 @@ var hitTemplate_algolia =
 //     margin: 0.5rem 0 0.5rem 1rem; }
 
 //delta-zoom-image
+
+
 var hitTemplate = 
 '<a href="/stock/{{code}}/"> '+
 
@@ -54,10 +56,12 @@ var hitTemplate =
         '<img src="{{primaryImageUrl}}" alt="{{code}}"></img> '+
       '</div>'+
     '</div>'+
-
     '<div class="row delta-hit-title delta-nopadding">'+
-      '<div class="col">{{_highlightResult.description}}</div> '+
+      '<div class="col">{{_highlightResult.brand.value}} {{_highlightResult.model.value}}</div> '+
     '</div>'+
+    // '<div class="row delta-hit-title delta-nopadding">'+
+    //   '<div class="col">{{_highlightResult.description.value}}</div> '+
+    // '</div>'+
 
     '<div class="row delta-hit-subtitle delta-nopadding">'+
       '<div class="col ">New cutting edge</div> '+
@@ -225,7 +229,7 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
-      item: hitTemplate,
+      item: newFunction(),
       empty: noResultsTemplate,
     },
   })
@@ -237,8 +241,160 @@ search.addWidget(
   })
 );
 
-
 search.start();
+
+// Default image: 213x142
+function newFunction() {
+  return function hitFunction(data){
+    var content =  
+'<a href="/stock/"'+data.code+'"/"> '+
+
+  '<div class="container delta-hit">'+
+      
+    '<div class="row">'+
+      '<div class="col delta-hit-image">'+
+        
+        '<img src="'+data.primaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+     
+      '</div>'+
+    '</div>'+
+    
+    '<div class="row delta-hit-title delta-nopadding">'+
+      '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
+    '</div>'+
+
+    '<div class="row delta-hit-subtitle delta-nopadding">'+
+      '<div class="col">'+data.advertTitle+'</div> '+
+    '</div>';
+
+    content +=
+    '<div class="row delta-hit-reference delta-nopadding">'+
+
+      '<div class="col-1">' +
+        '<i class="fa fa-key delta-hit-icon"></i>' +
+      '</div>' +
+
+      '<div class="col-5">' + 
+        data._highlightResult.code.value +
+      '</div>';
+
+      '<div class="col">' 
+      // '<div class="col">Reference: '+ data._highlightResult.code.value;
+        if(data.epaCertified){
+          content += '<span class="badge badge-success">EPA</span>'
+        }
+        if(data.ceCertified){
+          content += '<span class="badge badge-warning">CE</span> '
+        }
+        content+=
+      '</div>'+ 
+
+    '</div>';
+
+    if(data.location!=="Other"){
+      content+=
+      '<div class="row delta-hit-body delta-nopadding">'+
+        '<div class="col-1">' +
+          '<i class="fa fa-map-marker delta-hit-icon"></i>'+
+        '</div>' +
+        '<div class="col">' +
+          data.location+'' +
+        '</div>' +
+      '</div>';
+    }
+    
+    if(data.buildYear!==0){
+      content+=
+      '<div class="row delta-hit-body delta-nopadding">'+
+
+        '<div class="col-1">' +
+          '<i class="fa fa-calendar delta-hit-icon"></i>' +
+        '</div>' +
+
+        '<div class="col">' + 
+          data.buildYear +
+        '</div>'+
+
+      '</div>';
+    }
+    
+    if(data.hours!==0){
+      content+=
+      '<div class="row delta-hit-body delta-nopadding">'+
+       '<div class="col-1">' +
+          '<i class="fa fa-clock delta-hit-icon"></i>' +
+        '</div>' +
+        '<div class="col">' + 
+          data.hours +'h'+
+        '</div>'+
+      '</div>';
+    } 
+
+    if(data.mileage!==0){
+      content+=
+      '<div class="row delta-hit-body delta-nopadding">'+
+       '<div class="col-1">' +
+          '<i class="fa fa-clock delta-hit-icon"></i>' +
+        '</div>' +
+        '<div class="col">' + 
+          data.mileage +'km'+
+        '</div>'+
+      '</div>';
+    } 
+
+
+    if(data.price!==0){
+      content+=
+      '<div class="row delta-hit-body delta-nopadding">'+
+       '<div class="col-1">' +
+          '<i class="fa fa-clock delta-hit-icon"></i>' +
+        '</div>' +
+        '<div class="col">' + 
+          data.price +'km'+
+        '</div>'+
+      '</div>';
+    } 
+    
+    if(data.tags.includes("R")){
+      content+=
+      '<div class="row delta-hit-subtitle delta-nopadding">'+
+        '<div class="col badge-warning">RESERVED</div> '+
+      '</div>';
+    }
+    if(!data.tags.includes("S")){
+      content+=
+      '<div class="row delta-hit-subtitle delta-nopadding">'+
+        '<div class="col badge-danger">SOLD</div> '+
+      '</div>';
+    }
+
+    content += '</div>';
+
+content +=    
+  '</div>'+ 
+'</a>';      
+    
+  return content;
+  };
+}
+
+function imgError(image) {
+  image.onerror = "";
+  image.src = "/img/default_image_tn.jpg";
+  return true;
+}
+
+// 
+// '<div class="col">' +
+//   '<i class="fa fa-calendar delta-hit-icon"></i> {{{buildYear}}}' +
+// '</div>' +
+// '<div class="col">' +
+//   '<i class="fa fa-clock delta-hit-icon"></i> {{{hours}}}' +
+// '</div>' +
+
+
+// '</div>'+
+
 
   // search.addWidget(
   //   instantsearch.widgets.toggleRefinement({

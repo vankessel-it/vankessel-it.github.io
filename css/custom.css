@@ -31,7 +31,6 @@ body { padding-top: 60px; }
 
 .delta-card-body-1{
   color: black;
-  
 }
 
 .delta-card-body-2{
@@ -39,7 +38,7 @@ body { padding-top: 60px; }
   background-color: #1D1D1B;
 }
 
-.delta-card-body-3{
+.delta-card-body-1{
   color: black;
   background-color: #D0D0D0;
 }
@@ -365,14 +364,24 @@ body { padding-top: 60px; }
 /***********************************
 * Search Hits
 ************************************/
+
+.ais-Hits-item{
+  background-color: #D0D0D0;
+}
+
 .delta-hit{
-  /* padding: 0px; */
+  padding: 0px;
+  width: 213px;
+}
+
+.delta-hit-image{
 }
 
 .delta-nopadding{
   padding: 0px !important;
   margin: 0px !important;
 }
+
 .delta-hit-title{
   background-color: #1D1D1B;
   color: #FAB428;
@@ -387,7 +396,7 @@ body { padding-top: 60px; }
 .delta-hit-reference{
   /* background-color: #FAB428;
   color: black; */
-  font-size: small;
+  /* font-size: small; */
   background-color: #D0D0D0;
   color: black;
 }
@@ -500,6 +509,7 @@ body { padding-top: 60px; }
   padding: 0rem;
   width: auto;
   box-shadow: none; 
+  
 }
 
 .ais-Menu-list  {
