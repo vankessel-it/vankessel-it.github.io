@@ -247,7 +247,7 @@ search.start();
 function newFunction() {
   return function hitFunction(data){
     var content =  
-'<a href="/stock/"'+data.code+'"/"> '+
+'<a href="/stock/'+data.code+'"> '+
 
   '<div class="container delta-hit">'+
       

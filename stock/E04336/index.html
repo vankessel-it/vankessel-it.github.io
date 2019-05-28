@@ -38,10 +38,6 @@
     
 
     
-    <link rel="stylesheet" href="/css/cookiealert.css">
-    
-
-    
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'b7c7cd20-96bf-4a89-9e76-fc6e24dc19ed', f: true }); done = true; } }; })();</script>
     
 
@@ -142,6 +138,7 @@
     </div>
 
   </div>
+ 
 </nav>
       
       
@@ -349,15 +346,31 @@ Wide range of crusher/screening equipment available from stock!
     </div>
 <section>
 
+<div class="modal fade delta-cookie-consent" id="cookieModal" tabindex="-1" role="dialog">
 
-<div class="alert text-center cookiealert" role="alert">
-    We use cookies to ensure you get the best experience on our website. <a href="/privacy/" target="_blank">Learn more</a>
+    <div class="modal-dialog" role="document">
 
-    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
-        I agree
-    </button>
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Cookie Policy</h5>
+            </div>
+
+            <div class="modal-body">
+
+                <p>We use cookies to ensure you get the best experience on our website.</p>
+                <p>
+                    <a href="/privacy" target="_blank">Click here to view our cookie policy</a>
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button id="cookieModalConsent" type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Accept</button>
+            </div>
+        </div>
+    </div>
 </div>
-    
+     
 
     
 

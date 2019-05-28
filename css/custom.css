@@ -4,7 +4,23 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 */
 
 
+
 body { padding-top: 60px; }
+
+
+.delta-cookie-consent .modal-header{
+  background:  #FAB428;
+  color: white;
+}
+
+.delta-cookie-consent .modal-body{
+  color:  black;
+  background-color: white;
+}
+
+.delta-cookie-consent .modal-footer{
+
+}
 /***********************************
 * About-us page
 ************************************/
