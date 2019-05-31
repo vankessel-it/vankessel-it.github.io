@@ -27,29 +27,4 @@
                 />
   </url>
   
-  <url>
-    <loc>/de/category/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/category/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/category/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/category/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/category/"
-                />
-  </url>
-  
 </urlset>

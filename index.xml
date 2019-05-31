@@ -2506,14 +2506,9 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  Delta Machinery   Telephone:	+31 (0) 888 966 966
 Fax: +31 (0) 888 966 950
 Chambre of commerce number:	17078066
-Email: sales@deltamachinery.nl    	Delta Machinery
-Mark S. Clarkelaan 6
-4761 RK Zevenbergen
-The Netherlands
-    	Delta Machinery Workshop
-Voltstraat 19
-5753 RL Deurne
-The Netherlands</description>
+Email: sales@deltamachinery.nl    -- 	Delta Machinery
+{{ partial &#34;address_moerdijk.html&#34; . }}     	Delta Machinery Workshop
+{{ partial &#34;address_deurne.html&#34; . }}     {{ partial &#34;</description>
     </item>
     
     <item>

@@ -7,6 +7,7 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 
 body { padding-top: 60px; }
 
+
 /***********************************
 * Cookie consent
 ************************************/
@@ -60,6 +61,35 @@ body { padding-top: 60px; }
   color: black;
   background-color: #D0D0D0;
 }
+
+/***********************************
+* Contact
+************************************/
+.delta-contact{
+  margin: 10px;
+}
+
+.delta-required label:after {
+  color: #e32;
+  content: ' *';
+  display:inline;
+}
+
+.delta-contact-col{
+  /* background-color: #D0D0D0; */
+}
+
+.delta-contact-row{
+  background-color: #EDEDED;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* padding-top: 15px;
+  padding-bottom: 5px; */
+}
+
+
 /***********************************
 * Homepage Stock Search button
 ************************************/
