@@ -223,7 +223,7 @@ search.start();
 function newFunction() {
   return function hitFunction(data){
     var content =  
-'<a href="/stock/'+data.code+'"> '+
+'<a href="/stock/'+data.code+'" class="delta-hit-link"> '+
 
   '<div class="container delta-hit">'+
     
@@ -253,11 +253,11 @@ function newFunction() {
         '<i class="fa fa-key delta-hit-icon"></i>' +
       '</div>' +
 
-      '<div class="col-5">' + 
+      '<div class="col">' + 
         data._highlightResult.code.value +
       '</div>' +
-
-      '<div class="col">' 
+      
+      '<div class="col-3">' 
         if(data.epaCertified){
           content += '<span class="badge badge-success">EPA</span>'
         }

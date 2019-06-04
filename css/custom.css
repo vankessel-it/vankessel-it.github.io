@@ -443,14 +443,23 @@ body { padding-top: 60px; }
 ************************************/
 
 .ais-Hits-item{
-  background-color: #F8F8F8;
-  /* background-color: #D0D0D0; */
+  background-color: #F8F8F8; 
+}
+
+.ais-Hits-item:hover {
+  background-color:lightgray !important;
 }
 
 .delta-hit{
   /* padding: 0px; */
   width: 213px;
+  color:black;
 }
+
+.delta-hit-link{
+  text-decoration: none !important;
+}
+
 
 /* .delta-hit .row:nth-of-type(odd) {
   background-color:lightgray;
@@ -492,8 +501,6 @@ body { padding-top: 60px; }
 }
 
 .delta-hit-body{
-  background-color:#F8F8F8;
-  color: black;
 }
 
 .delta-hit-icon{
