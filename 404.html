@@ -17,6 +17,9 @@ permalink: /404.html
 
   
   
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
@@ -31,7 +34,11 @@ permalink: /404.html
     
 
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+    
+
+
+    
+
     
     
     
@@ -102,6 +109,10 @@ permalink: /404.html
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/stock">Stock</a>
+        </li>
         
         <li class="nav-item">
           <a class="nav-link" href="/about-us">About Us</a>
@@ -160,17 +171,17 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Wheel-loaders">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Wheel-loaders">
                 <img src="/img/categories/Wheel-loaders.png"/>
                 <span class="ais-Menu-count">7</span>
-                <small><div class="text-secondary text-center">Wheel-loaders</div></small>
+                <small><div class="text-secondary text-center">Wheel loaders</div></small>
             </a>
         </li>
 
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Pipelayers">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Pipelayers">
                 <img src="/img/categories/Pipelayers.png"/>
                 <span class="ais-Menu-count">7</span>
                 <small><div class="text-secondary text-center">Pipelayers</div></small>
@@ -180,7 +191,7 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Parts">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Parts">
                 <img src="/img/categories/Parts.png"/>
                 <span class="ais-Menu-count">232</span>
                 <small><div class="text-secondary text-center">Parts</div></small>
@@ -190,17 +201,17 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Motor-graders">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Motor-graders">
                 <img src="/img/categories/Motor-graders.png"/>
                 <span class="ais-Menu-count">9</span>
-                <small><div class="text-secondary text-center">Motor-graders</div></small>
+                <small><div class="text-secondary text-center">Motor graders</div></small>
             </a>
         </li> 
 
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Excavators">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Excavators">
                 <img src="/img/categories/Excavators.png"/>
                 <span class="ais-Menu-count">38</span>
                 <small><div class="text-secondary text-center">Excavators</div></small>
@@ -210,7 +221,7 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Dozers">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Dozers">
                 <img src="/img/categories/Dozers.png"/>
                 <span class="ais-Menu-count">34</span>
                 <small><div class="text-secondary text-center">Dozers</div></small>
@@ -220,7 +231,7 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Crushers">
+            <a class="ais-Menu-link delta-searc-icon" href="/stock/?menu%5Bfilter%5D=Crushers">
                 <img src="/img/categories/Crushers.png"/>
                 <span class="ais-Menu-count">24</span>
                 <small><div class="text-secondary text-center">Crushers</div></small>
@@ -230,7 +241,7 @@ permalink: /404.html
         <li class="ais-Menu-item">
             
             
-            <a class="ais-Menu-link delta-search" href="/stock/?menu%5Bfilter%5D=Other">
+            <a class="ais-Menu-link delta-search-icon" href="/stock/?menu%5Bfilter%5D=Other">
                 <img src="/img/categories/Other.png"/>
                 <span class="ais-Menu-count">64</span>
                 <small><div class="text-secondary text-center">Other</div></small>
@@ -342,14 +353,14 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                     Machine Types
                 </div>
                 <ul>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Wheel-loaders">Wheel loaders</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Pipelayers">Pipelayers</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Parts">Parts</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Motor-graders">Motor-graders</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Excavators">Excavators</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Dozers">Dozers</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Crushers">Crushers</a></li>
-                    <li><a href="/stock/?menu%5Bfilter%5D=Other">Other</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Wheel-loaders">Wheel loaders</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Pipelayers">Pipelayers</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Parts">Parts</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Motor-graders">Motor-graders</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Excavators">Excavators</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Dozers">Dozers</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Crushers">Crushers</a></li>
+                    <li><a href="/stock/?menu%5BcategoryFilter%5D=Other">Other</a></li>
                     
                 </ul>
             </div>

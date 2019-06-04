@@ -11,118 +11,12 @@ const searchClient = algoliasearch(
     routing: true,
   });
 
-var hitTemplate_algolia = 
-'<article class="hit">' +
-    '<a href="/stock/{{code}}/"> '+
-    '<div class="product-picture-wrapper">' +
-      '<div class="product-picture"><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +
-    '</div>' +
-    '<div class="product-desc-wrapper">' +
-      '<div class="product-name"><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
-      '<div class="product-type">{{{_highlightResult.brand.value}}}</div>' +
-      '<div class="product-type">{{{_highlightResult.model.value}}}</div>' +
-      '<div class="product-type"><small class="text-muted">Sold new</small> {{{buildYear}}}</div>' +
-    '</div>' +
-    '</a>'+
-'</article>';
-//<i class="fa fa-phone"></i>
-// https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
-// Auto-applied classes by Angolia: ais-Hits, ais-Hits-list, ais-Hits-item
-// .ais-Hits-item,
-// .ais-Results-item {
-//   margin-top: 1rem;
-//   margin-left: 1rem;
-//   padding: 1rem;
-//   width: calc(25% - 1rem);
-//   border: 1px solid #c4c8d8;
-//   -webkit-box-shadow: 0 2px 5px 0px #e3e5ec;
-//   box-shadow: 0 2px 5px 0px #e3e5ec; }
-//   .ais-Panel-body .ais-InfiniteHits-item, .ais-Panel-body
-//   .ais-InfiniteResults-item, .ais-Panel-body
-//   .ais-Hits-item, .ais-Panel-body
-//   .ais-Results-item {
-//     margin: 0.5rem 0 0.5rem 1rem; }
-
-//delta-zoom-image
-
-
-var hitTemplate = 
-'<a href="/stock/{{code}}/"> '+
-
-  '<div class="container delta-hit">'+
-    
-    '<div class="row ">'+
-      '<div class="col delta-zoom-image">'+
-        '<img src="{{primaryImageUrl}}" alt="{{code}}"></img> '+
-      '</div>'+
-    '</div>'+
-    '<div class="row delta-hit-title delta-nopadding">'+
-      '<div class="col">{{_highlightResult.brand.value}} {{_highlightResult.model.value}}</div> '+
-    '</div>'+
-    // '<div class="row delta-hit-title delta-nopadding">'+
-    //   '<div class="col">{{_highlightResult.description.value}}</div> '+
-    // '</div>'+
-
-    '<div class="row delta-hit-subtitle delta-nopadding">'+
-      '<div class="col ">New cutting edge</div> '+
-    '</div>'+
-
-    '<div class="row delta-hit-reference delta-nopadding">'+
-      '<div class="col">Reference: {{_highlightResult.code.value}} <span class="badge badge-success">EPA</span><span class="badge badge-warning">CE</span></div> '+
-    '</div>'+    
-  
-    '<div class="row delta-hit-body delta-nopadding">'+
-      '<div class="col">' +
-        '<i class="fa fa-map-marker delta-hit-icon"></i> {{{location}}}' +
-      '</div>' +
-    '</div>'+
-
-    '<div class="row delta-hit-body delta-nopadding">'+
-      '<div class="col">' +
-        '<i class="fa fa-calendar delta-hit-icon"></i> {{{buildYear}}}' +
-      '</div>' +
-      '<div class="col">' +
-        '<i class="fa fa-clock delta-hit-icon"></i> {{{hours}}}' +
-      '</div>' +
-    '</div>'+
-
-  '</div>'+
-'</a>';
-
-var hitTemplate21052019_card = 
-'<div class="card">' +
-    '<img class="card-img-top" src="{{primaryImageUrl}}" alt="{{code}}"></img> '+
-    '<a href="/stock/{{code}}/"> '+
-    '<div class="card-header">{{code}}</BR><small>New cutting edge</small></div> '+
-    '<div class="delta-hit-item">' +
-      '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
-      '<div>{{{_highlightResult.brand.value}}}</div>' +
-      '<div>{{{_highlightResult.model.value}}}</div>' +
-      '<div><small class="text-muted">Sold new</small> {{{buildYear}}}</div>' +
-    '</div>' +
-    '</a>'+
-'</div>';
-
-
-var hitTemplate21052019 = 
-'<div>' +
-    '<a href="/stock/{{code}}/"> '+
-    '<div class="delta-imageWrapper"><img src="{{primaryImageUrl}}" class="img-fluid" /></div>' +  
-    '<div class="delta-hit-item">' +
-      '<div><small class="text-muted">{{{_highlightResult.code.value}}}</small></div>' +
-      '<div>{{{_highlightResult.brand.value}}}</div>' +
-      '<div>{{{_highlightResult.model.value}}}</div>' +
-      '<div><small class="text-muted">Sold new</small> {{{buildYear}}}</div>' +
-    '</div>' +
-    '</a>'+
-'</div>';
-
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
 
 var iconFilterTemplate = 
 `
-<a class="{{cssClasses.link}} delta-search" href="{{url}}">
+<a class="{{cssClasses.link}} delta-search-icon" href="{{url}}">
 <img src="/img/categories/{{label}}.png"/>
 <span class="{{cssClasses.count}}">
   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
@@ -133,7 +27,7 @@ var iconFilterTemplate =
 
 var iconFilterTemplate_24052019 = 
 `
-<a class="{{cssClasses.link}} delta-search" href="{{url}}">
+<a class="{{cssClasses.link}} delta-search-icon" href="{{url}}">
 <span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"/> </span>
 <span class="{{cssClasses.count}}">
   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
@@ -172,7 +66,6 @@ search.addWidget(
   })
 );
 
-
 search.addWidget(
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
@@ -183,13 +76,19 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.currentRefinements({
     container: '#current-refinements',
+    transformItems(items) {
+      return items.map(item => ({
+        ...item,
+        label: item.label,
+      }));
+    },
   })
 );
 
 search.addWidget(
   instantsearch.widgets.menu({
     container: '#iconFilter-list',
-    attribute: 'filter',
+    attribute: 'categoryFilter',
     sortBy: ['name:desc'],
     templates: {
       item: iconFilterTemplate,
@@ -198,32 +97,109 @@ search.addWidget(
   })
 );
 
+// search.addWidget(
+//   instantsearch.widgets.refinementList({
+//     container: '#location-list',
+//     attribute: 'location',
+//   })
+// );
+
+// Location Panel
+const locationListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Location',
+  },
+})(instantsearch.widgets.refinementList);
+
 search.addWidget(
-  instantsearch.widgets.refinementList({
+  locationListWithPanel({
     container: '#location-list',
     attribute: 'location',
   })
 );
-  
+// Location Panel
+
+// Start Brand Panel
+const brandListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Brand/Model',
+  },
+})(instantsearch.widgets.hierarchicalMenu);
+
 search.addWidget(
-  instantsearch.widgets.hierarchicalMenu({
+  brandListWithPanel({
     container: '#brand-list',
+    showMore: true,
+    limit: 5,
+    // showMoreLimit: 16,
     attributes: [
       'brand',
       'brand_lvl2',
     ],
   })
 );
+// End Brand Panel
+
+// Start Category Panel
+const categoryListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Category',
+  },
+})(instantsearch.widgets.hierarchicalMenu);
 
 search.addWidget(
-  instantsearch.widgets.hierarchicalMenu({
+  categoryListWithPanel({
     container: '#category-list',
+    limit: 5,
+    showMore: true,
+    // showMoreLimit: 6,
     attributes: [
       'category',
       'category_lvl2',
     ],
   })
 );
+// End Category Panel
+
+
+// Start BuildYear Panel
+const buildYearListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Year',
+  },
+})(instantsearch.widgets.rangeSlider);
+
+search.addWidget(
+  buildYearListWithPanel({
+    container: '#buildYear-list',
+    attribute: 'buildYearFilter',
+    precision: 0,
+    step: 1,
+    pips: false,
+  })
+);
+// End BuildYear Panel
+
+
+
+// Start Hours Panel
+const hoursListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Hours',
+  },
+})(instantsearch.widgets.rangeSlider);
+
+search.addWidget(
+  hoursListWithPanel({
+    container: '#hours-list',
+    attribute: 'hours',
+    precision: 0,
+    step: 100,
+    pips: false,
+  })
+);
+// End Hours Panel
+
 
 search.addWidget(
   instantsearch.widgets.hits({
@@ -250,25 +226,28 @@ function newFunction() {
 '<a href="/stock/'+data.code+'"> '+
 
   '<div class="container delta-hit">'+
-      
-    '<div class="row">'+
-      '<div class="col delta-hit-image">'+
-        
-        '<img src="'+data.primaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-     
-      '</div>'+
-    '</div>'+
     
     '<div class="row delta-hit-title delta-nopadding">'+
       '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
     '</div>'+
 
-    '<div class="row delta-hit-subtitle delta-nopadding">'+
-      '<div class="col">'+data.advertTitle+'</div> '+
-    '</div>';
+    '<div class="row">'+
 
+    '<div class="col delta-hit-image delta-nopadding">'+
+      
+      '<img src="'+data.primaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+      '<img src="'+data.secundaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+    '</div>'+
+  '</div>';
+
+    if(data.advertTitle){
+      content+=
+      '<div class="row delta-hit-subtitle delta-nopadding">'+
+        '<div class="col">'+data.advertTitle+'</div> '+
+      '</div>';
+    }
     content +=
-    '<div class="row delta-hit-reference delta-nopadding">'+
+    '<div class="row delta-hit-body delta-nopadding">'+
 
       '<div class="col-1">' +
         '<i class="fa fa-key delta-hit-icon"></i>' +
@@ -276,10 +255,9 @@ function newFunction() {
 
       '<div class="col-5">' + 
         data._highlightResult.code.value +
-      '</div>';
+      '</div>' +
 
       '<div class="col">' 
-      // '<div class="col">Reference: '+ data._highlightResult.code.value;
         if(data.epaCertified){
           content += '<span class="badge badge-success">EPA</span>'
         }
@@ -368,11 +346,11 @@ function newFunction() {
       '</div>';
     }
 
-    content += '</div>';
+    // content += '</div>';
 
 content +=    
-  '</div>'+ 
-'</a>';      
+  '</div>'+ //Container
+'</a>';  //Anchor
     
   return content;
   };
@@ -407,10 +385,5 @@ function imgError(image) {
   //   })
   // );
 
-  // search.addWidget(
-  //   instantsearch.widgets.rangeSlider({
-  //     container: '#buildYear-list',
-  //     attribute: 'buildYear',
-  //   })
-  // );
+
 

@@ -9,10 +9,10 @@ const search = instantsearch({
   routing: true,
 });
 
-{/* <a href="/stock/?menu%5Bfilter%5D=pipelayer">TEST</a> */}
+{/* <a href="/stock/?menu%5BcategoryFilter%5D=pipelayer">TEST</a> */}
 var iconFilterTemplate = 
 `
-<a class="{{cssClasses.link}}" url="/stock/?menu%5Bfilter%5D={{label}}">
+<a class="{{cssClasses.link}}" url="/stock/?menu%categoryFilter%5D={{label}}">
   <span class="{{cssClasses.label}}"><img src="/img/categories/{{label}}.png" height="60"/></span>
   <span class="{{cssClasses.count}}">
     {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
@@ -24,7 +24,7 @@ var iconFilterTemplate =
 search.addWidget(
   instantsearch.widgets.menu({
     container: '#iconFilter-list',
-    attribute: 'filter',
+    attribute: 'categoryFilter',
     limit: 4,
     showMore: true,
     sortBy: ['name:desc'],

@@ -3,11 +3,35 @@
 https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 */
 
-
-
 body { padding-top: 60px; }
 
+/***********************************
+* Search bar
+************************************/
+.delta-search-panel{
+  margin-top:10px;
+  margin-left:10px;
+}
 
+.delta-search-bar{
+  padding:0px;
+  min-width: 150px;
+  background-color: #DADADA;
+}
+
+.delta-search-card{
+  padding-top:20px;
+  padding-left:18px;
+  padding-right:18px;
+  background-color: #DADADA;
+  list-style-type: none;
+  
+}
+
+.delta-search-card-body{
+  /* background-color: red; */
+  padding:0px;
+}
 /***********************************
 * Cookie consent
 ************************************/
@@ -124,7 +148,7 @@ body { padding-top: 60px; }
   }
 }
 
-.delta-search img{
+.delta-search-icon img{
   height: 40px;
 
   margin:0!important;
@@ -409,53 +433,72 @@ body { padding-top: 60px; }
   padding-right:10px;
 }
 
+
+/***********************************
+* Search Stock
+************************************/
+
 /***********************************
 * Search Hits
 ************************************/
 
 .ais-Hits-item{
-  background-color: #D0D0D0;
+  background-color: #F8F8F8;
+  /* background-color: #D0D0D0; */
 }
 
 .delta-hit{
-  padding: 0px;
+  /* padding: 0px; */
   width: 213px;
 }
 
+/* .delta-hit .row:nth-of-type(odd) {
+  background-color:lightgray;
+} */
+
+/* see: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php */
 .delta-hit-image{
+  padding: 0px !important;
+  position: relative;
+  display: inline-block;
+}
+
+.delta-hit-image .img-top{
+  display: none;
+  position: absolute;
+}
+
+.delta-hit-image:hover .img-top {
+  display: inline;
 }
 
 .delta-nopadding{
-  padding: 0px !important;
-  margin: 0px !important;
+  /* padding: 0px !important;
+  margin: 0px !important; */
 }
 
 .delta-hit-title{
   background-color: #1D1D1B;
-  color: #FAB428;
+  color: white;
+
+  /* background-color: #FAB428;
+  color: black;  */
 }
 
 .delta-hit-subtitle{
-  background-color: #1D1D1B;
-  color: white;
+  color: black;
+  background-color: #FFB512;
   font-size: small;
 }
 
-.delta-hit-reference{
-  /* background-color: #FAB428;
-  color: black; */
-  /* font-size: small; */
-  background-color: #D0D0D0;
-  color: black;
-}
-
 .delta-hit-body{
-  background-color: #D0D0D0;
+  background-color:#F8F8F8;
   color: black;
 }
 
 .delta-hit-icon{
   color: grey;
+  /* color:  #FAB428; */
 }
 /***********************************
 * General
