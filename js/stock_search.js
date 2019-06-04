@@ -226,19 +226,19 @@ function newFunction() {
 '<a href="/stock/'+data.code+'" class="delta-hit-link"> '+
 
   '<div class="container delta-hit">'+
-    
-    '<div class="row delta-hit-title delta-nopadding">'+
-      '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
-    '</div>'+
 
     '<div class="row">'+
 
-    '<div class="col delta-hit-image delta-nopadding">'+
+     '<div class="col delta-hit-image delta-nopadding">'+
       
-      '<img src="'+data.primaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-      '<img src="'+data.secundaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-    '</div>'+
-  '</div>';
+        '<img src="'+data.primaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+        '<img src="'+data.secundaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+      '</div>'+
+    '</div>' +
+        
+    '<div class="row delta-hit-title delta-nopadding">'+
+      '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
+    '</div>';
 
     if(data.advertTitle){
       content+=
