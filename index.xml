@@ -3754,7 +3754,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-us/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  -- About us      -- {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;242x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;242x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;242x&#34; }} {{end}}  Rental      {{ with .</description>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  -- About us      -- {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Rental      {{ with .</description>
     </item>
     
     <item>
@@ -3836,15 +3836,6 @@ Email: sales@deltamachinery.nl    -- 	Delta Machinery
     
     <item>
       <title></title>
-      <link>/pipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/pipeline/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  Delta Pipeline Machinery   Delta Pipeline Machinery is a leading pipeline equipment solutions and services provider with current operations on 4 continents of the world. We have enormous depth of experience, capabilities, skills and resources to provide our clients with the best equipment and service solutions.  Our history and pioneering spirit continues to lay a strong foundation for our future as one of the industry&#39;s leading providers.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>/privacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -3878,6 +3869,15 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       
       <guid>/workshop/</guid>
       <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  Delta Workshop   Our fully equipped (9500 m2) workshop and sandblasting/ painting facility is located in Deurne (the Netherlands), which is well situated for both Rotterdam and Antwerp Ports. Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/xrok/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/xrok/</guid>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  XROK   XROK equipment is available for rent and for sale, you can see our complete stock of machines here.      {{ with .Resources.GetMatch &#34;img/pipeline_equipment_2.jpg&#34;}} {{ $image_tn := .Resize &#34;300x&#34; }} {{end}}   Our engineers can be deployed in under 24 hours to provide, mobilization, commissioning of specialized equipment on the field, support and back up services etc.</description>
     </item>
     
   </channel>

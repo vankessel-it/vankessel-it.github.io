@@ -3,13 +3,19 @@
 const searchClient = algoliasearch(
     'ZKUT69QG8T',
     'a577b196fd8351e64f8329c6800bfadd'
-  );
-  
-  const search = instantsearch({
-    indexName: 'DL_index_main',
-    searchClient,
-    routing: true,
-  });
+);
+
+const search = instantsearch({
+  indexName: 'DL_index_main',
+  searchClient,
+  routing: true,
+});
+
+search.addWidget(
+  instantsearch.widgets.configure({
+    hitsPerPage: 50,
+  })
+);
 
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
@@ -44,16 +50,16 @@ search.addWidget(
   })
 );
 
-search.addWidget(
-  instantsearch.widgets.hitsPerPage({
-    container: '#hits-per-page',
-    items: [
-      { label: '20 hits per page', value: 20, default: true },
-      { label: '50 hits per page', value: 50 },
-      { label: '100 hits per page', value: 100 },
-    ],
-  })
-);
+// search.addWidget(
+//   instantsearch.widgets.hitsPerPage({
+//     container: '#hits-per-page',
+//     items: [
+//       { label: '20 hits per page', value: 20, default: true },
+//       { label: '50 hits per page', value: 50 },
+//       { label: '100 hits per page', value: 100 },
+//     ],
+//   })
+// );
 
 search.addWidget(
   instantsearch.widgets.clearRefinements({
@@ -213,8 +219,8 @@ function newFunction() {
 
      '<div class="col delta-hit-image delta-nopadding">'+
       
-        '<img src="'+data.primaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-        '<img src="'+data.secundaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+        '<img src="'+data.secundaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
+        '<img src="'+data.primaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
       '</div>'+
     '</div>' +
         

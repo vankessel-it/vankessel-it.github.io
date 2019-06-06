@@ -73,9 +73,14 @@ body { padding-top: 60px; }
 }
 
 .delta-card-body-2{
+  background-color: #D0D0D0;
+  color:  black;
+}
+
+/* .delta-card-body-2:hover{
   color:  #FAB428;
   background-color: #1D1D1B;
-}
+} */
 
 .delta-card-body-1{
   color: black;

@@ -2140,10 +2140,6 @@
   </url>
   
   <url>
-    <loc>/pipeline/</loc>
-  </url>
-  
-  <url>
     <loc>/privacy/</loc>
   </url>
   
@@ -2157,6 +2153,10 @@
   
   <url>
     <loc>/workshop/</loc>
+  </url>
+  
+  <url>
+    <loc>/xrok/</loc>
   </url>
   
   <url>
