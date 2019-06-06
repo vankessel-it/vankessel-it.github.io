@@ -11,7 +11,8 @@ body { padding-top: 60px; }
 
 .delta-search-bar{
   padding:0px;
-  min-width: 150px;
+  /* min-width: 150px; */
+  min-width: 200px;
   background-color: #DADADA;
 }
 
@@ -564,16 +565,21 @@ https://www.colorbook.io/hexcolors/view/FAB428
   background-color: #343A40;
 }
 
-
+.ais-RefinementList-showMore,
+.ais-RefinementList-showMore:focus,
 .ais-HierarchicalMenu-showMore,
 .ais-HierarchicalMenu-showMore:focus{
   color: black;
   background-color: #FBC55A;
 }
+.ais-RefinementList-showMore:hover,
 .ais-HierarchicalMenu-showMore:hover{
   color: black;
   background-color: #FAB428;
 }
+.ais-RefinementList-showMore[disabled],
+.ais-RefinementList-showMore[disabled]:hover,
+.ais-RefinementList-showMore[disabled]:focus,
 .ais-HierarchicalMenu-showMore[disabled],
 .ais-HierarchicalMenu-showMore[disabled]:hover,
 .ais-HierarchicalMenu-showMore[disabled]:focus{

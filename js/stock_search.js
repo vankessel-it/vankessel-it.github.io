@@ -92,6 +92,41 @@ search.addWidget(
 // );
 
 
+// Start Brand Panel
+const brandListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Brand',
+  },
+})(instantsearch.widgets.refinementList);
+
+search.addWidget(
+  brandListWithPanel({
+    container: '#brand-list',
+    attribute: 'brand',
+    limit: 5,
+    showMore: true,
+  })
+);
+// End Brand Panel
+
+// Start Model Panel
+const modelListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Model',
+  },
+})(instantsearch.widgets.refinementList);
+
+search.addWidget(
+  modelListWithPanel({
+    container: '#model-list',
+    attribute: 'model',
+    limit: 5,
+    showMore: true,
+  })
+);
+// End Model Panel
+
+
 // Location Panel
 const locationListWithPanel = instantsearch.widgets.panel({
   templates: {
@@ -107,25 +142,25 @@ search.addWidget(
 );
 // Location Panel
 
-// Start Brand Panel
-const brandListWithPanel = instantsearch.widgets.panel({
-  templates: {
-    header: 'Brand/Model',
-  },
-})(instantsearch.widgets.hierarchicalMenu);
-
-search.addWidget(
-  brandListWithPanel({
-    container: '#brand-list',
-    showMore: true,
-    limit: 5,
-    // showMoreLimit: 16,
-    attributes: [
-      'brand',
-      'brand_lvl2',
-    ],
-  })
-);
+// Start Brand/Model Panel
+// const brandListWithPanel = instantsearch.widgets.panel({
+//   templates: {
+//     header: 'Brand/Model',
+//   },
+// })(instantsearch.widgets.hierarchicalMenu);
+//
+// search.addWidget(
+//   brandListWithPanel({
+//     container: '#brand-list',
+//     showMore: true,
+//     limit: 5,
+//     // showMoreLimit: 16,
+//     attributes: [
+//       'brand',
+//       'brand_lvl2',
+//     ],
+//   })
+// );
 // End Brand Panel
 
 // Start Category Panel
@@ -159,8 +194,8 @@ const buildYearListWithPanel = instantsearch.widgets.panel({
 
 search.addWidget(
   buildYearListWithPanel({
-    container: '#buildYear-list',
-    attribute: 'buildYearFilter',
+    container: '#year-list',
+    attribute: 'year',
     precision: 0,
     step: 1,
     pips: false,
