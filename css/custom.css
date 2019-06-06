@@ -454,7 +454,6 @@ body { padding-top: 60px; }
   text-decoration: none !important;
 }
 
-
 /* .delta-hit .row:nth-of-type(odd) {
   background-color:lightgray;
 } */
@@ -464,6 +463,13 @@ body { padding-top: 60px; }
   padding: 0px !important;
   position: relative;
   display: inline-block;
+}
+
+.delta-hit-image-text{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: small;
 }
 
 .delta-hit-image .img-top{
@@ -483,7 +489,8 @@ body { padding-top: 60px; }
 .delta-hit-title{
   background-color: #1D1D1B;
   color: white;
-
+  border-top-left-radius:.55rem!important;
+  border-top-right-radius:.55rem!important;
   /* background-color: #FAB428;
   color: black;  */
 }
@@ -491,7 +498,7 @@ body { padding-top: 60px; }
 .delta-hit-subtitle{
   color: black;
   background-color: #FAB428;
-  font-size: small;
+  font-size: small; 
 }
 
 .delta-hit-body{
@@ -602,11 +609,16 @@ https://www.colorbook.io/hexcolors/view/FAB428
 }
 
 .ais-Hits-item{
-  background-color: #F8F8F8; 
+  /* background-color: #F8F8F8;  */
+  background-color:#EDEDED;
+  border-radius:.55rem!important;
+  /* border-top-right-radius:.55rem!important; */
+  /* border-bottom-right-radius:.55rem!important; */
 }
 
 .ais-Hits-item:hover {
-  background-color:lightgray !important;
+  /* background-color:lightgray !important; */
+  background-color: #F8F8F8 !important;
 }
 
 .ais-InfiniteHits-list,
@@ -623,8 +635,9 @@ https://www.colorbook.io/hexcolors/view/FAB428
 .ais-InfiniteResults-item,
 .ais-Hits-item,
 .ais-Results-item {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-left: 1rem;
+  
   padding: 0rem;
   width: auto;
   box-shadow: none; 

@@ -248,27 +248,40 @@ function newFunction() {
     var content =  
 '<a href="/stock/'+data.code+'" class="delta-hit-link"> '+
 
-  '<div class="container delta-hit">'+
+  '<div class="container delta-hit">';
 
-    '<div class="row">'+
+          
+  content+=
+  '<div class="row delta-hit-title delta-nopadding">'+
+    '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
+  '</div>';
+  
+    content+=
+    '<div class="row">';
+    
+    // if(data.advertTitle){
+    //   content+=
+    //   '<div class="row delta-hit-subtitle delta-nopadding">'+
+    //     '<div class="col">'+data.advertTitle+'</div> '+
+    //   '</div>';
+    // } 
 
+     content+=
      '<div class="col delta-hit-image delta-nopadding">'+
       
         '<img src="'+data.secundaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-        '<img src="'+data.primaryImageUrl+'" alt="'+data.code+'" onerror="imgError(this);"></img> '+
-      '</div>'+
-    '</div>' +
+        '<img src="'+data.primaryImageUrl+'" class="" alt="'+data.code+'" onerror="imgError(this);"></img> ';
         
-    '<div class="row delta-hit-title delta-nopadding">'+
-      '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
+        if(data.advertTitle){
+          content+=
+          '<div class="delta-hit-image-text badge badge-info">'+data.advertTitle+'</div>';
+        }
+
+        content+=
+      '</div>'+
     '</div>';
 
-    if(data.advertTitle){
-      content+=
-      '<div class="row delta-hit-subtitle delta-nopadding">'+
-        '<div class="col">'+data.advertTitle+'</div> '+
-      '</div>';
-    }
+
     content +=
     '<div class="row delta-hit-body delta-nopadding">'+
 
@@ -355,7 +368,8 @@ function newFunction() {
         '</div>'+
       '</div>';
     } 
-    
+ 
+
     if(data.tags.includes("R")){
       content+=
       '<div class="row delta-hit-subtitle delta-nopadding">'+
