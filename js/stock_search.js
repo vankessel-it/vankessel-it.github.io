@@ -14,27 +14,16 @@ const searchClient = algoliasearch(
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
 
-var iconFilterTemplate = 
-`
-<a class="{{cssClasses.link}} delta-search-icon" href="{{url}}">
-<img src="/img/categories/{{label}}.png"/>
-<span class="{{cssClasses.count}}">
-  {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
-</span>
-<small><div class="text-secondary text-center">{{label}}</div></small>
-</a>
-`;
-
-var iconFilterTemplate_24052019 = 
-`
-<a class="{{cssClasses.link}} delta-search-icon" href="{{url}}">
-<span class="{{cssClasses.label}}"> <img src="/img/categories/{{label}}.png"/> </span>
-<span class="{{cssClasses.count}}">
-  {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
-</span>
-<small><div class="text-secondary">{{label}}</div></small>
-</a>
-`;
+// var iconFilterTemplate = 
+// `
+// <a class="{{cssClasses.link}} delta-search-icon" href="{{url}}">
+// <img src="/img/categories/{{label}}.png"/>
+// <span class="{{cssClasses.count}}">
+//   {{#helpers.formatNumber}}{{count}}{{/helpers.formatNumber}}
+// </span>
+// <small><div class="text-secondary text-center">{{label}}</div></small>
+// </a>
+// `;
 
 search.addWidget(
   instantsearch.widgets.searchBox({
@@ -85,24 +74,17 @@ search.addWidget(
   })
 );
 
-search.addWidget(
-  instantsearch.widgets.menu({
-    container: '#iconFilter-list',
-    attribute: 'categoryFilter',
-    sortBy: ['name:desc'],
-    templates: {
-      item: iconFilterTemplate,
-    },
-
-  })
-);
-
 // search.addWidget(
-//   instantsearch.widgets.refinementList({
-//     container: '#location-list',
-//     attribute: 'location',
+//   instantsearch.widgets.menu({
+//     container: '#iconFilter-list',
+//     attribute: 'categoryFilter',
+//     sortBy: ['name:desc'],
+//     templates: {
+//       item: iconFilterTemplate,
+//     },
 //   })
 // );
+
 
 // Location Panel
 const locationListWithPanel = instantsearch.widgets.panel({
@@ -303,7 +285,7 @@ function newFunction() {
           '<i class="fa fa-clock delta-hit-icon"></i>' +
         '</div>' +
         '<div class="col">' + 
-          data.hours +'h'+
+          data.hours.toLocaleString() +' h'+
         '</div>'+
       '</div>';
     } 
@@ -315,7 +297,7 @@ function newFunction() {
           '<i class="fa fa-clock delta-hit-icon"></i>' +
         '</div>' +
         '<div class="col">' + 
-          data.mileage +'km'+
+          data.mileage.toLocaleString() +' km'+
         '</div>'+
       '</div>';
     } 
@@ -361,29 +343,5 @@ function imgError(image) {
   image.src = "/img/default_image_tn.jpg";
   return true;
 }
-
-// 
-// '<div class="col">' +
-//   '<i class="fa fa-calendar delta-hit-icon"></i> {{{buildYear}}}' +
-// '</div>' +
-// '<div class="col">' +
-//   '<i class="fa fa-clock delta-hit-icon"></i> {{{hours}}}' +
-// '</div>' +
-
-
-// '</div>'+
-
-
-  // search.addWidget(
-  //   instantsearch.widgets.toggleRefinement({
-  //     container: '#toggle-new',
-  //     attribute: 'used',
-  //     templates: {
-  //       labelText: 'New Machines ({{ count }})',
-  //     },
-  //     on: false,
-  //   })
-  // );
-
 
 

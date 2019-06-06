@@ -1,8 +1,4 @@
 
-/* CSS Algolia
-https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
-*/
-
 body { padding-top: 60px; }
 
 /***********************************
@@ -442,14 +438,6 @@ body { padding-top: 60px; }
 * Search Hits
 ************************************/
 
-.ais-Hits-item{
-  background-color: #F8F8F8; 
-}
-
-.ais-Hits-item:hover {
-  background-color:lightgray !important;
-}
-
 .delta-hit{
   /* padding: 0px; */
   width: 213px;
@@ -496,7 +484,7 @@ body { padding-top: 60px; }
 
 .delta-hit-subtitle{
   color: black;
-  background-color: #FFB512;
+  background-color: #FAB428;
   font-size: small;
 }
 
@@ -545,47 +533,69 @@ body { padding-top: 60px; }
   -o-transform:scale(1.2); /* Opera */ 
 }
 
-/* .delta-nav-bg{
-  background-color: #1D1D1B;
-} */
-
-/* .delta-homepage-search{
-  background-color: #FFFFFF;
-  color: #FAB428;
-} */
-
-/* .delta-hit-item{
-  margin-left: 1rem;
-} */
-
-/* .delta-imageWrapper{
-  display: inline-block;
-  overflow: hidden; 
-}
-
-.delta-imageWrapper img{
-  -webkit-transition: all .2s ease;
-  -moz-transition: all .2s ease;
-  -ms-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
-  
-  vertical-align: middle;
-}
-
-.delta-imageWrapper img:hover{
-  transform:scale(1.2);
-  -ms-transform:scale(1.2); 
-  -moz-transform:scale(1.2); 
-  -webkit-transform:scale(1.2);
-  -o-transform:scale(1.2); 
-} */
-
 /***********************************
-* Algolia Hits
+* Algolia CSS changes
 ************************************/
+/* CSS Algolia
+https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+*/
+
+/* For color light/dark %
+https://www.colorbook.io/hexcolors/view/FAB428
+*/
+
+.ais-ClearRefinements-button{
+  color: black;
+  background-color: #FBC55A;
+}
+.ais-ClearRefinements-button:hover,
+.ais-ClearRefinements-button:focus{
+  color: black;
+  background-color: #FAB428;
+}
+.ais-ClearRefinements-button[disabled],
+.ais-ClearRefinements-button[disabled]:hover{
+  color: white;
+  background-color: #343A40;
+}
+
+
+.ais-HierarchicalMenu-showMore,
+.ais-HierarchicalMenu-showMore:focus{
+  color: black;
+  background-color: #FBC55A;
+}
+.ais-HierarchicalMenu-showMore:hover{
+  color: black;
+  background-color: #FAB428;
+}
+.ais-HierarchicalMenu-showMore[disabled],
+.ais-HierarchicalMenu-showMore[disabled]:hover,
+.ais-HierarchicalMenu-showMore[disabled]:focus{
+  color: white;
+  background-color: #343A40;
+}
+
+
+.rheostat-progress{
+  background-color: #FAB428 !important;
+}
+
+
+.ais-HierarchicalMenu-label{
+  color:black;
+}
+
 .ais-Hits  {
-  color: #3a4570;
+  color: red;
+}
+
+.ais-Hits-item{
+  background-color: #F8F8F8; 
+}
+
+.ais-Hits-item:hover {
+  background-color:lightgray !important;
 }
 
 .ais-InfiniteHits-list,
