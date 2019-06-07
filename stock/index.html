@@ -87,7 +87,7 @@
   
   <body>
         
-    <div id="all">
+    
 
       <header>
         
@@ -272,24 +272,32 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
   <div class="row delta-search-panel">
 
-      <lu class="col-md-2 delta-search-bar">
+      <div class="col-md-2 delta-search-bar"> 
+    
+        <lu class="">
 
-        <li class="delta-search-card"><div id="searchbox" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="clear-refinements" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="category-list" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="brand-list" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="model-list" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="year-list" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="hours-list" class="card-body delta-search-card-body"></div></li>
-        <li class="delta-search-card"><div id="location-list" class="card-body delta-search-card-body"></div></li>
-
-      </lu>     
-      <div class="col-md-10">
-
-        <div class="row">
-          <div id="sort-by-selector" class="col-md-4"></div>
+          <li class="delta-search-card"><div id="searchbox" class="card-body delta-search-card-body"></div></li>
           
-          <div id="current-refinements" class="col-md-2"></div>
+          <li class="delta-search-card"><div id="category-list" class="card-body delta-search-card-body"></div></li>
+          <li class="delta-search-card"><div id="brand-list" class="card-body delta-search-card-body"></div></li>
+          <li class="delta-search-card"><div id="model-list" class="card-body delta-search-card-body"></div></li>
+          <li class="delta-search-card"><div id="year-list" class="card-body delta-search-card-body"></div></li>
+          <li class="delta-search-card"><div id="hours-list" class="card-body delta-search-card-body"></div></li>
+          <li class="delta-search-card"><div id="location-list" class="card-body delta-search-card-body"></div></li>
+
+        </lu>     
+      </div>
+
+      <div class="col-md-10 delta-search-body">
+
+        <div class="row delta-search-filter">
+            <div id="sort-by-selector" class="col-md-4"></div>     
+            
+            
+            
+            <div id="current-refinements" class="col-md-auto"></div>
+            <div id="clear-refinements" class="col-md-2"></div>
+          
         </div>
         
         <div class="row">
@@ -298,7 +306,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
           
         </div>
 
-        <div id="pagination" class="row pages"></div>
+        <div id="pagination" class="row pages delta-search-pagination"></div>
       
       </div>
       
@@ -310,11 +318,11 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
 <script src="/js/stock_search.js"></script> 
     
-      <BR>
+      
       
 <section class="delta-footer-header" >
 
-    <div class="container">
+    <div class="container delta-footer-container">
 
         <div class="row justify-content-around">
         
@@ -486,7 +494,7 @@ The Netherlands<BR>
 </div>
      
 
-    </div>
+    
   
     
 

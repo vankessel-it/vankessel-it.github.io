@@ -4,18 +4,28 @@ body { padding-top: 60px; }
 /***********************************
 * Search bar
 ************************************/
+
 .delta-search-panel{
-  margin-top:10px;
-  margin-left:10px;
+  margin-top:0px;
+  margin-left:0px;
+  margin-bottom:0px;
 }
 
 .delta-search-bar{
   padding:0px;
-  /* min-width: 150px; */
-  min-width: 200px;
+  min-width: 180px;
+  max-width: 250px;
   background-color: #DADADA;
 }
 
+.delta-search-body{
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.delta-search-filter{
+  padding-top:1rem;
+}
 .delta-search-card{
   padding-top:20px;
   padding-left:18px;
@@ -392,7 +402,11 @@ body { padding-top: 60px; }
 /***********************************
 * Footer
 ************************************/
+.delta-footer-container{
+}
+
 .delta-footer-header{
+  margin: 0px;
   padding-top: 10px;
   color: #FAB428;
   background-color: #EDEDED;
@@ -440,6 +454,10 @@ body { padding-top: 60px; }
 * Search Stock
 ************************************/
 
+.delta-search-pagination{
+  margin-bottom:1rem;
+  margin-left:1rem;
+}
 /***********************************
 * Search Hits
 ************************************/
@@ -469,6 +487,20 @@ body { padding-top: 60px; }
   position: absolute;
   bottom: 8px;
   left: 16px;
+  font-size: small;
+}
+
+.delta-hit-badge-ce{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: small;
+}
+
+.delta-hit-badge-epa{
+  position: absolute;
+  top: 2px;
+  right: 2px;
   font-size: small;
 }
 
@@ -508,6 +540,7 @@ body { padding-top: 60px; }
   color: grey;
   /* color:  #FAB428; */
 }
+
 /***********************************
 * General
 ************************************/
@@ -557,9 +590,27 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 https://www.colorbook.io/hexcolors/view/FAB428
 */
 
+/*
+ * Show current refinements horizontally
+ * not working for long list of refinements
+ */
+.ais-CurrentRefinements-list{
+  /* -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; */
+}
+
+.ais-CurrentRefinements-item{
+  
+}
+
+
 .ais-ClearRefinements-button{
   color: black;
   background-color: #FBC55A;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .ais-ClearRefinements-button:hover,
 .ais-ClearRefinements-button:focus{
@@ -635,7 +686,8 @@ https://www.colorbook.io/hexcolors/view/FAB428
 .ais-InfiniteResults-item,
 .ais-Hits-item,
 .ais-Results-item {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 1rem;
   
   padding: 0rem;

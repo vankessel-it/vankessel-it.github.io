@@ -65,6 +65,9 @@ search.addWidget(
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
     autoHideContainer: true,
+    templates: {
+      resetLabel: '<span class="fa fa-1x fa-trash-alt"></span> Filter',
+    },
   })
 );
 
@@ -276,7 +279,12 @@ function newFunction() {
           content+=
           '<div class="delta-hit-image-text badge badge-info">'+data.advertTitle+'</div>';
         }
-
+        if(data.epaCertified){
+          content += '<div class="delta-hit-badge-epa badge badge-success">EPA</div>';
+        }
+        if(data.ceCertified){
+              content += '<span class="delta-hit-badge-ce badge badge-warning">CE</span> ';
+        }
         content+=
       '</div>'+
     '</div>';
@@ -290,19 +298,26 @@ function newFunction() {
       '</div>' +
 
       '<div class="col">' + 
-        data._highlightResult.code.value +
-      '</div>' +
-      
-      '<div class="col-3">' 
-        if(data.epaCertified){
-          content += '<span class="badge badge-success">EPA</span>'
-        }
-        if(data.ceCertified){
-          content += '<span class="badge badge-warning">CE</span> '
-        }
-        content+=
-      '</div>'+ 
 
+        '<div class="row justify-content-between">'+
+
+          '<div class="col">' + 
+            data._highlightResult.code.value +
+          '</div>' +
+      
+          // '<div class="col">' 
+          //   if(data.epaCertified){
+          //     content += '<span class="badge badge-success">EPA</span>'
+          //   }
+          //   if(data.ceCertified){
+          //     content += '<span class="badge badge-warning">CE</span> '
+          //   }
+          //   content+=
+          // '</div>'+ 
+
+        '</div>'+ 
+
+      '</div>'+ 
     '</div>';
 
     if(data.location!=="Other"){
