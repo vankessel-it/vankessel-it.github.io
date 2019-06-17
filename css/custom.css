@@ -132,7 +132,11 @@ body { padding-top: 60px; }
 ************************************/
 
 .delta-homepage-search-field{
-  padding-top: 55px;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 600px;
+  max-height: 50px;
+  min-height: 50px;
   
 }
 
