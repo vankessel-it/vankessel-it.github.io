@@ -16,38 +16,18 @@
   
   
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-
   
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-
     
-    
-    
-
     
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    
     
 
     
-    
-
-
-    
-
-    
-    
-    
-
-    
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'b7c7cd20-96bf-4a89-9e76-fc6e24dc19ed', f: true }); done = true; } }; })();</script>
-    
-
-    
-    
-    
     
 
     
@@ -58,15 +38,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia-min.css" integrity="sha256-nkldBwBn2NQqRL1mod7BqHsJ6cEOn6u/ln6F/lI4CFo=" crossorigin="anonymous">
     
     
-
     
     <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
     
 
-    
-
-    
-   
      
     
     <link rel="stylesheet" href="/css/social_icons.css">
@@ -77,6 +52,7 @@
     
 
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    
   <meta property="og:title" content="Stocks" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/stock//" />
@@ -86,16 +62,15 @@
 
   
   <body>
-        
-    
 
       <header>
         
-<nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-sm">
+
+<nav class="navbar fixed-top navbar-expand-sm delta-navbar">
 
   <div class="container">
-    <a class="navbar-brand" href="/">
-      <img src="/img/delta_logo_small.jpg" height="30" alt="logo">
+    <a class="" href="/">
+      <img src="/img/delta_logo_small.jpg" height="50" alt="logo">
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,33 +79,33 @@
 
     <div class="collapse navbar-collapse" id="navbar-list">
 
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto delta-dark-link">
         
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item active delta-nav-item">
+          <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/stock">Stock</a>
+        <li class="nav-item delta-nav-item">
+          <a class="nav-link" href="/stock">STOCK</a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link" href="/about-us">About Us</a>
+        <li class="nav-item delta-nav-item">
+          <a class="nav-link" href="/about-us">ABOUT US</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/gallery">Gallery</a>
+        <li class="nav-item delta-nav-item">
+          <a class="nav-link" href="/gallery">GALLERY</a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+        <li class="nav-item delta-nav-item">
+          <a class="nav-link" href="/contact">CONTACT</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown delta-nav-item">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="/img/countries/icon_netherlands.png" height="20" alt="Dutch">
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">          
+          <div class="dropdown-menu delta-navbar" aria-labelledby="navbarDropdownMenuLink">          
             <a class="dropdown-item" href="#"><img src="/img/countries/icon_unitedkingdom.png" height="20" alt="English"> English</a>
             <a class="dropdown-item" href="#"><img src="/img/countries/icon_netherlands.png" height="20" alt="Dutch"> Nederlands</a>
             <a class="dropdown-item" href="#"><img src="/img/countries/icon_germany.png" height="20" alt="German"> Deutsch</a>
@@ -141,7 +116,7 @@
 
       </ul>
 
-      <span class="navbar-text text-light right-side d-flex">
+      <span class="navbar-text text-light right-side d-flex delta-nav-item-phone delta-dark-link">
           <a href="tel:+31 888 966 966"><i class="fa fa-phone"></i> +31 888 966 966</a>
       </span>
 
@@ -150,12 +125,12 @@
   </div>
  
 </nav>
-        <section class="nav justify-content-center delta-quick-search">
+        <section class="container justify-content-center delta-quick-search">
 
-<div class="ais-Menu">
-    <ul class="ais-Menu-list">
+<div class="">
+    <ul class="delta-quick-search-list">
 
-        <li class = "ais-Menu-item">
+        <li class = "delta-quick-search-item">
 
             <div class="input-group input-group-sm delta-homepage-search-field">
 
@@ -169,83 +144,91 @@
         
         </li>
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
                 <img src="/img/categories/Excavators.png"/>
-                <span class="ais-Menu-count">38</span>
-                <small><div class="text-secondary text-center">Excavators</div></small>
+                
+                <div class="delta-quick-search-count text-center">38</div>
+                <div class="delta-quick-search-title text-center">Excavators</div>
             </a>
         </li> 
         
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
                 <img src="/img/categories/Dozers.png"/>
-                <span class="ais-Menu-count">34</span>
-                <small><div class="text-secondary text-center">Dozers</div></small>
+
+                <div class="delta-quick-search-count text-center">34</div>
+                <div class="delta-quick-search-title  text-center">Dozers</div>
             </a>
         </li>      
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
                 <img src="/img/categories/Motor-graders.png"/>
-                <span class="ais-Menu-count">9</span>
-                <small><div class="text-secondary text-center">Motor graders</div></small>
+
+                <div class="delta-quick-search-count text-center">9</div>
+                <div class="delta-quick-search-title  text-center">Motor graders</div>
             </a>
         </li> 
         
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
                 <img src="/img/categories/Wheel-loaders.png"/>
-                <span class="ais-Menu-count">7</span>
-                <small><div class="text-secondary text-center">Wheel loaders</div></small>
+
+                <div class="delta-quick-search-count text-center">7</div>
+                <div class="delta-quick-search-title  text-center">Wheel loaders</div>
             </a>
         </li>
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
                 <img src="/img/categories/Pipelayers.png"/>
-                <span class="ais-Menu-count">7</span>
-                <small><div class="text-secondary text-center">Pipelayers</div></small>
+
+                <div class="delta-quick-search-count text-center">7</div>
+                <div class="delta-quick-search-title  text-center">Pipelayers</div>
             </a>
         </li>   
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-searc-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Crushers">
+            <a class="delta-searc-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Crushers">
                 <img src="/img/categories/Crushers.png"/>
-                <span class="ais-Menu-count">24</span>
-                <small><div class="text-secondary text-center">Crushers</div></small>
+
+                <div class="delta-quick-search-count text-center">24</div>
+                <div class="delta-quick-search-title  text-center">Crushers</div>
             </a>
         </li> 
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Parts">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Parts">
                 <img src="/img/categories/Parts.png"/>
-                <span class="ais-Menu-count">232</span>
-                <small><div class="text-secondary text-center">Parts</div></small>
+
+                <div class="delta-quick-search-count text-center">232</div>
+                <div class="delta-quick-search-title  text-center">Parts</div>
             </a>
         </li> 
 
-        <li class="ais-Menu-item">
+        <li class="delta-quick-search-item ">
             
             
-            <a class="ais-Menu-link delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
+            <a class="delta-search-icon" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
                 <img src="/img/categories/Other.png"/>
-                <span class="ais-Menu-count">64</span>
-                <small><div class="text-secondary text-center">Other</div></small>
+
+                <div class="delta-quick-search-count text-center">64</div>
+                <div class="delta-quick-search-title text-center">Other</div>
             </a>
         </li> 
 
@@ -254,7 +237,7 @@
 </div>
 </section>
 
-<div class="delta-homepage-bar w-100"></div>
+<a class="delta-homepage-anchor" href="\stock"><div class="delta-homepage-line w-100">VIEW COMPLETE STOCK</div></a>
 
 <script>
 document.querySelector("#searchField").addEventListener("keyup", event => {
@@ -266,9 +249,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
       </header>
       
       
-<div id="container-fluid">
-
-  
+<div class="container">
 
   <div class="row delta-search-panel">
 
@@ -385,13 +366,13 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                     Machine Brands
                 </div>
                 <ul>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Komatsu">Komatsu</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=XROK">XROK</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Phoenix">Phoenix</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Terex">Terex</a></li>
-                    <li><a href="/stock/?hierarchicalMenu%5Bbrand%5D%5B0%5D=Metso">Metso</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Komatsu">Komatsu</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=XROK">XROK</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Phoenix">Phoenix</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Terex">Terex</a></li>
+                    <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Metso">Metso</a></li>
                 </ul>
             </div>
 
@@ -493,8 +474,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
-    
   
     
 

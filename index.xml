@@ -3754,7 +3754,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-us/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  -- About us      -- {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Rental      {{ with .</description>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Rental      {{ with .</description>
     </item>
     
     <item>
@@ -3763,12 +3763,9 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  Delta Machinery   Telephone:	+31 (0) 888 966 966
-Fax: +31 (0) 888 966 950
-Chambre of commerce number:	17078066
-Email: sales@deltamachinery.nl    -- 	Delta Machinery
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }}  	Delta Machinery
 {{ partial &#34;address_moerdijk.html&#34; . }}     	Delta Machinery Workshop
-{{ partial &#34;address_deurne.html&#34; . }}     {{ partial &#34;</description>
+{{ partial &#34;address_deurne.html&#34; . }}     {{ partial &#34;contact_openinghours.html&#34; . }}  {{ partial &#34;contact_bankdetails.html&#34; . }}   Thanks for your interest in our company. To inform you about our way of doing business you can download our general terms &amp; conditions.</description>
     </item>
     
     <item>
