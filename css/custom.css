@@ -9,10 +9,23 @@ body {
 
 
 /***********************************
-* Header
+* Navigation
 ************************************/
+
 .delta-navbar{
   background-color: #1D1D1B;
+}
+
+.delta-navbar-icon{
+  font-size: larger;
+}
+
+.delta-navbar .navbar-toggler-icon{
+  color:white;
+}
+
+.delta-navbar .navbar-toggler-icon:hover{
+  color:#FAB428;
 }
 
 .delta-nav-item a{
@@ -26,6 +39,9 @@ body {
   font-weight: bold;
 }
 
+/***********************************
+* Header
+************************************/
 .delta-homepage-line{
   background-color: #FAB428;
   color:black;
