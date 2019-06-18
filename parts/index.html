@@ -59,6 +59,7 @@
 
 </head>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body>
 
@@ -249,28 +250,37 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="Delta Parts">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner7_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-dark" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Parts</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="delta-band-3">
+    <section class="delta-band-3" data-aos="fade-up">
 
         <div class="container">
             
             <div class="row">
             
-            <div class="col">
-                <div class="delta-band-3-title">
-                    <h1>Delta Parts</h1>
-                </div>
-                <div class="delta-band-3-body">
-                    <p>
-                        The supply of spare parts, wear parts and consumables is an essential part of our customer support, and is handled by the Delta Parts business unit. Order handling is managed from the headquarters in The Netherlands where our spare parts teams and technical experts are ready to serve you. We have a large parts inventory and an efficient ordering and logistics system in place. We offer an emergency airfreight delivery service anywhere in the world which means low downtimes.
-                    </p>
+            <div class="col delta-band-3-body">
+
+                <p>
+                    The supply of spare parts, wear parts and consumables is an essential part of our customer support, and is handled by the Delta Parts business unit. Order handling is managed from the headquarters in The Netherlands where our spare parts teams and technical experts are ready to serve you. We have a large parts inventory and an efficient ordering and logistics system in place. We offer an emergency airfreight delivery service anywhere in the world which means low downtimes.
+                </p>
             
-                    <p>
-                        A phone call or email will quickly determine what you need, and we will dispatch the parts with a fast response. We strive to keep your machines working to ensure you meet your strict deadlines!                        
-                    </p>
+                <p>
+                    A phone call or email will quickly determine what you need, and we will dispatch the parts with a fast response. We strive to keep your machines working to ensure you meet your strict deadlines!                        
+                </p>
+                <div data-aos="fade-left" data-aos-duration="1500">
                     <a class="btn btn-danger button" href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Parts">View parts stock</a>
                 </div>
+
             </div> 
     
         </div>
@@ -278,7 +288,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section class="container delta-info-1-body" >
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
             
             <div class="col">
 
@@ -315,7 +325,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
         
             <div class="col">
 
@@ -513,7 +523,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -537,7 +546,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

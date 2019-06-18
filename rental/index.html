@@ -59,7 +59,7 @@
 
 </head>
 
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <body>
 
     <header>
@@ -249,27 +249,34 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="Delta Rental">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner3_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-dark" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Rental</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="delta-band-1" >
+    <section class="delta-band-1" data-aos="fade-up">
 
         <div class="container" >
 
             <div class="row">
                 
-                <div class="col">
-                    <div class="delta-band-1-title">
-                        <h1>Delta Rental</h1>
-                    </div>
-                    <div class="delta-band-1-body">
-                        <p>
-                            Delta Rental is a leading heavy equipment solutions and services provider with current operations on 4 continents of the world. We have enormous depth of experience, capabilities, skills and resources to provide our clients with integrated equipment and service solutions. Our history and pioneering spirit continues to lay a strong foundation for our future as one of the industry's leading providers. 
-                        </p>
+                <div class="col delta-band-1-body">
 
-                        <p>
-                            Today, we play a pivotal role in building vital infrastructure in the oil & gas, quarry & mining, road building and general construction industry sectors while promoting and providing essential services and development for our current and future customers.
-                        </p>
-                    </div>
+                    <p>
+                        Delta Rental is a leading heavy equipment solutions and services provider with current operations on 4 continents of the world. We have enormous depth of experience, capabilities, skills and resources to provide our clients with integrated equipment and service solutions. Our history and pioneering spirit continues to lay a strong foundation for our future as one of the industry's leading providers. 
+                    </p>
+
+                    <p>
+                        Today, we play a pivotal role in building vital infrastructure in the oil & gas, quarry & mining, road building and general construction industry sectors while promoting and providing essential services and development for our current and future customers.
+                    </p>
+
                 </div> 
         
             </div>
@@ -278,7 +285,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     
     <section class="container delta-info-1-body">
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
             
             <div class="col">
 
@@ -486,7 +493,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -510,7 +516,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

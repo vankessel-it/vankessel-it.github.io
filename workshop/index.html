@@ -59,6 +59,7 @@
 
 </head>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body>
 
@@ -249,27 +250,34 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner  img-fluid" src="img/banner_1920x500.jpg" alt="Delta Workshop">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner7_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-dark" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Workshop</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="delta-band-1" >
+    <section class="delta-band-1" data-aos="fade-up">
 
         <div class="container" >
    
             <div class="row">
                 
-                <div class="col">
-                    <div class="delta-band-1-title">
-                        <h1>Delta Workshop</h1>
-                    </div>
-                    <div class="delta-band-1-body">
-                        <p>
-                            Our fully equipped (9500 m2) workshop and sandblasting/ painting facility is located in 
-                            Deurne (the Netherlands), which is well situated for both Rotterdam and Antwerp Ports. 
-                            Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne.
-                            We have a team of professional engineers and mechanics with in-house facilities for repair and 
-                            maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines.
-                        </p>
-                    </div>
+                <div class="col delta-band-1-body">
+
+                    <p>
+                        Our fully equipped (9500 m2) workshop and sandblasting/ painting facility is located in 
+                        Deurne (the Netherlands), which is well situated for both Rotterdam and Antwerp Ports. 
+                        Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne.
+                        We have a team of professional engineers and mechanics with in-house facilities for repair and 
+                        maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines.
+                    </p>
+
                 </div> 
         
             </div>
@@ -278,7 +286,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section class="container delta-info-1-body" >
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up">
             
             <div class="col">
                 
@@ -293,7 +301,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up">
         
             <div class="col">
                 
@@ -312,7 +320,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up">
     
             <div class="col">
 
@@ -499,7 +507,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -523,7 +530,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <script src="https://player.vimeo.com/api/player.js"></script>
 
   </body>

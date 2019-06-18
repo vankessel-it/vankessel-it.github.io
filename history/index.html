@@ -59,7 +59,7 @@
 
 </head>
 
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <body>
 
     <header>
@@ -249,41 +249,46 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="History">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner1_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-light" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>HISTORY</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="delta-band-2" >
+    <section class="delta-band-2" data-aos="slide-up">
         
         <div class="container" >
     
             <div class="row ">
                 
-                <div class="col">
-                    <div class="delta-band-2-title">
-                        <h1>History</h1>
-                    </div>
-                    <div class="delta-band-2-body">
-                        <p>
-                            The company was founded in 1987, exporting agricultural tractors and equipment. In the nineties, earth moving machinery was added to the range, and heavy machinery is now the main focus.                             
-                        </p>
+                <div class="col delta-band-2-body">
+                    <p>
+                    The company was founded in 1987, exporting agricultural tractors and equipment. In the nineties, earth moving machinery was added to the range, and heavy machinery is now the main focus.                             
+                    </p>
                 
-                        <p>
-                            Today, the Delta Group is a full-service supplier that takes care of transportation to any destination in the world, strip down for container loading, shipping, manuals, spare parts and consumables packages.                            
-                        </p>
-                    </div>
+                    <p>
+                    Today, the Delta Group is a full-service supplier that takes care of transportation to any destination in the world, strip down for container loading, shipping, manuals, spare parts and consumables packages.                            
+                    </p>
                 </div> 
         
             </div>
         </div>
     </section>
 
-    <section class="container delta-info-1-body">
+    <section class="container delta-info-1-body"  >
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
             
             <div class="col">
                 
                     
-                    <img class="rounded float-left img-fluid"  src=/history/img/deltamachinery_2_hu6426a6d3faecb8315127d809011f6228_464517_300x0_resize_q75_box.jpg alt="History">
+                    <img class="rounded float-left img-fluid" src=/history/img/deltamachinery_2_hu6426a6d3faecb8315127d809011f6228_464517_300x0_resize_q75_box.jpg alt="History">
                 
                 
                 <p>
@@ -293,7 +298,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             </div>
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
         
             <div class="col">
                 
@@ -485,7 +490,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -509,7 +513,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

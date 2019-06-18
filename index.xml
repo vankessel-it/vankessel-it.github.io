@@ -3754,7 +3754,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-us/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Rental      {{ with .</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;</description>
     </item>
     
     <item>
@@ -3764,8 +3764,8 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       
       <guid>/contact/</guid>
       <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  	Delta Machinery
-{{ partial &#34;address_moerdijk.html&#34; . }}     	Delta Machinery Workshop
-{{ partial &#34;address_deurne.html&#34; . }}     {{ partial &#34;contact_openinghours.html&#34; . }}  {{ partial &#34;contact_bankdetails.html&#34; . }}   Thanks for your interest in our company. To inform you about our way of doing business you can download our general terms &amp; conditions.</description>
+{{ partial &#34;address_moerdijk.html&#34; . }}       	Delta Machinery Workshop
+{{ partial &#34;address_deurne.html&#34; . }}       {{ partial &#34;contact_openinghours.html&#34; . }}  {{ partial &#34;contact_bankdetails.html&#34; . }}   Thanks for your interest in our company.</description>
     </item>
     
     <item>
@@ -3801,7 +3801,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/history/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  History   The company was founded in 1987, exporting agricultural tractors and equipment. In the nineties, earth moving machinery was added to the range, and heavy machinery is now the main focus.  Today, the Delta Group is a full-service supplier that takes care of transportation to any destination in the world, strip down for container loading, shipping, manuals, spare parts and consumables packages.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  HISTORY       The company was founded in 1987, exporting agricultural tractors and equipment. In the nineties, earth moving machinery was added to the range, and heavy machinery is now the main focus.  Today, the Delta Group is a full-service supplier that takes care of transportation to any destination in the world, strip down for container loading, shipping, manuals, spare parts and consumables packages.</description>
     </item>
     
     <item>
@@ -3810,7 +3810,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/logistics/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Logistics   We oversee the logistics from the headquarters in Deurne, The Netherlands which is conveniently located for international shipping. These services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  -- Delta Logistics       We oversee the logistics from the headquarters in Deurne, The Netherlands which is conveniently located for international shipping. These services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.</description>
     </item>
     
     <item>
@@ -3819,7 +3819,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/machinery/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Machinery   With a fresh stock of over 1,000 units sourced from our worldwide network and our own fully equipped workshops with skilled personnel to carry out anything from full refurbishments to single repairs, Delta Machinery is here to assist you with all your heavy equipment needs.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Machinery       With a fresh stock of over 1,000 units sourced from our worldwide network and our own fully equipped workshops with skilled personnel to carry out anything from full refurbishments to single repairs, Delta Machinery is here to assist you with all your heavy equipment needs.</description>
     </item>
     
     <item>
@@ -3828,7 +3828,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/parts/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Parts   The supply of spare parts, wear parts and consumables is an essential part of our customer support, and is handled by the Delta Parts business unit. Order handling is managed from the headquarters in The Netherlands where our spare parts teams and technical experts are ready to serve you.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Parts       The supply of spare parts, wear parts and consumables is an essential part of our customer support, and is handled by the Delta Parts business unit. Order handling is managed from the headquarters in The Netherlands where our spare parts teams and technical experts are ready to serve you.</description>
     </item>
     
     <item>
@@ -3847,7 +3847,7 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rental/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Rental   Delta Rental is a leading heavy equipment solutions and services provider with current operations on 4 continents of the world. We have enormous depth of experience, capabilities, skills and resources to provide our clients with integrated equipment and service solutions. Our history and pioneering spirit continues to lay a strong foundation for our future as one of the industry&#39;s leading providers.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Rental       Delta Rental is a leading heavy equipment solutions and services provider with current operations on 4 continents of the world. We have enormous depth of experience, capabilities, skills and resources to provide our clients with integrated equipment and service solutions.</description>
     </item>
     
     <item>
@@ -3856,7 +3856,7 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/services/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Services   Delta has a proven track record in delivering solutions on time and in budget to a diverse range of applications, backed with technical expertise and worldwide integrated support services. We have service-oriented teams of qualified engineers and skilled mechanics for repair and maintenance as well as full refurbishment.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Services       Delta has a proven track record in delivering solutions on time and in budget to a diverse range of applications, backed with technical expertise and worldwide integrated support services. We have service-oriented teams of qualified engineers and skilled mechanics for repair and maintenance as well as full refurbishment.</description>
     </item>
     
     <item>
@@ -3865,7 +3865,7 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/workshop/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Workshop   Our fully equipped (9500 m2) workshop and sandblasting/ painting facility is located in Deurne (the Netherlands), which is well situated for both Rotterdam and Antwerp Ports. Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne. We have a team of professional engineers and mechanics with in-house facilities for repair and maintenance as well as full refurbishment, meaning we are not reliant on outside services or suppliers to meet deadlines.</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  Delta Workshop       Our fully equipped (9500 m2) workshop and sandblasting/ painting facility is located in Deurne (the Netherlands), which is well situated for both Rotterdam and Antwerp Ports. Refurbishment, inspection, testing, rebuilding and painting is carried out at our workshop in Deurne.</description>
     </item>
     
     <item>
@@ -3874,7 +3874,7 @@ This website uses Google Analytics, a web analytics service provided by Google, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/xrok/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  XROK   XROK is a manufacturer of innovative padding and screening machinery as well as wheeled and tracked stockpiling conveyors. Delta Pipeline Machinery B.V. is the exclusive distributor for sale and rental of XROK equipment. View XROK stock      {{ with .Resources.GetMatch &#34;</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  XROK       XROK is a manufacturer of innovative padding and screening machinery as well as wheeled and tracked stockpiling conveyors. Delta Pipeline Machinery B.V. is the exclusive distributor for sale and rental of XROK equipment. View XROK stock      {{ with .</description>
     </item>
     
   </channel>

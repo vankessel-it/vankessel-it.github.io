@@ -59,6 +59,7 @@
 
 </head>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body>
 
@@ -249,24 +250,29 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="Logistics">
+    
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner2_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-light" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Logistics</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    <section class="delta-band-1">
+    <section class="delta-band-1"  data-aos="slide-up">
 
         <div class="container">
             
             <div class="row">
             
-            <div class="col">
-                <div class="delta-band-1-title">
-                    <h1>Delta Logistics</h1>
-                </div>
-                <div class="delta-band-1-body">
-                    <p>
-                        We oversee the logistics from the headquarters in Deurne, The Netherlands which is conveniently located for international shipping. These services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.
-                    </p>
-                </div>
+            <div class="col delta-band-1-body">
+                <p>
+                We oversee the logistics from the headquarters in Deurne, The Netherlands which is conveniently located for international shipping. These services include taking care of customs and export documentation and insurance as well as organizing the road transport, delivery to port, handling, loading and shipping.
+                </p>
             </div> 
     
         </div>
@@ -274,7 +280,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section class="container delta-info-1-body" >
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up">
             
             <div class="col">
 
@@ -291,7 +297,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up" data-aos-duration="1000">
         
             <div class="col">
 
@@ -483,7 +489,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -507,7 +512,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

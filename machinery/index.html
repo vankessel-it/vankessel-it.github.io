@@ -59,7 +59,7 @@
 
 </head>
 
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <body>
 
     <header>
@@ -249,29 +249,36 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="Delta Machinery">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner4_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-dark" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Machinery</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="delta-band-3" >
+    <section class="delta-band-3" data-aos="fade-up">
 
         <div class="container" >
 
             <div class="row">
                 
-                <div class="col">
-                    <div class="delta-band-3-title">
-                        <h1>Delta Machinery</h1>
-                    </div>
-                    <div class="delta-band-3-body">
-                        <p>
-                            With a fresh stock of over 1,000 units sourced from our worldwide network and our own fully equipped workshops with skilled personnel to carry out anything from full refurbishments to single repairs, Delta Machinery is here to assist you with all your heavy equipment needs. 
-                        </p>
-                
-                        <p>
-                            In case the machinery you need is not in stock, we can source, service, inspect, test and if necessary refurbish quality used machinery. Our extensive global purchasing network means we can respond quickly to specific needs no matter how large or small. Our objective is to supply the most suitable machinery for the job, always taking into account factors like your budget, climate, location, operating conditions and availability of skilled personnel. 
-                        </p>
-                        <p>
-                        If you have any questions, please contact Delta Machinery and you will be referred to the appropriate team member.
-                        </p>
+                <div class="col delta-band-3-body">
+                    <p>
+                        With a fresh stock of over 1,000 units sourced from our worldwide network and our own fully equipped workshops with skilled personnel to carry out anything from full refurbishments to single repairs, Delta Machinery is here to assist you with all your heavy equipment needs. 
+                    </p>
+            
+                    <p>
+                        In case the machinery you need is not in stock, we can source, service, inspect, test and if necessary refurbish quality used machinery. Our extensive global purchasing network means we can respond quickly to specific needs no matter how large or small. Our objective is to supply the most suitable machinery for the job, always taking into account factors like your budget, climate, location, operating conditions and availability of skilled personnel. 
+                    </p>
+                    <p>
+                    If you have any questions, please contact Delta Machinery and you will be referred to the appropriate team member.
+                    </p>
+                    <div data-aos="fade-left" data-aos-duration="1500">
                         <a class="btn btn-danger button" href="/stock">View complete stock</a>
                     </div>
                 </div> 
@@ -282,7 +289,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section class="container delta-info-1-body" >
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
             
             <div class="col">
                 
@@ -306,7 +313,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             
         </div>
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row"  data-aos="fade-up">
         
             <div class="col">
                 
@@ -507,7 +514,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -531,7 +537,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

@@ -59,7 +59,7 @@
 
 </head>
 
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <body>
 
     <header>
@@ -249,23 +249,29 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     </header>
 
-    <img class="delta-info-banner img-fluid" src="img/banner_1920x500.jpg" alt="Delta Services">
-    
-    <section class="delta-band-1">
+    <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/img/carousel/banner8_1920x703.png">
+        
+        <div class="carousel-caption d-none d-md-block delta-carousel-overlay-light" data-aos="slide-right">
+          <div class="delta-carousel-overlay-text">
+            <h1>Delta Services</h1>
+            <div class="delta-carousel-overlay-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="delta-band-1" data-aos="fade-up">
 
         <div class="container" >
             
             <div class="row">
                 
-                <div class="col">
-                    <div class="delta-band-1-title">
-                        <h1>Delta Services</h1>
-                    </div>
-                    <div class="delta-band-1-body">
-                        <p>
-                            Delta has a proven track record in delivering solutions on time and in budget to a diverse range of applications, backed with technical expertise and worldwide integrated support services. We have service-oriented teams of qualified engineers and skilled mechanics for repair and maintenance as well as full refurbishment. We can deploy skilled engineers and diagnostic tools for support and technical back up services anywhere in the world. Delta Machinery is an added value supplier with extensive in-house facilities and stock.
-                        </p>
-                    </div>
+                <div class="col delta-band-1-body">
+
+                    <p>
+                        Delta has a proven track record in delivering solutions on time and in budget to a diverse range of applications, backed with technical expertise and worldwide integrated support services. We have service-oriented teams of qualified engineers and skilled mechanics for repair and maintenance as well as full refurbishment. We can deploy skilled engineers and diagnostic tools for support and technical back up services anywhere in the world. Delta Machinery is an added value supplier with extensive in-house facilities and stock.
+                    </p>
                 </div> 
         
             </div>
@@ -274,7 +280,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section class="container delta-info-1-body">
 
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
             
             <div class="col">
 
@@ -295,7 +301,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
             
         </div>
     
-        <div class="row delta-info-1-row">
+        <div class="row delta-info-1-row" data-aos="fade-up">
         
             <div class="col">
 
@@ -484,7 +490,6 @@ The Netherlands<BR>
     </div>
 </div>
      
-
     
 
 
@@ -508,7 +513,10 @@ The Netherlands<BR>
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 
 </html>

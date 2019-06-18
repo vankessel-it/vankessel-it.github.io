@@ -282,8 +282,8 @@ body {
 /***********************************
 * Contact
 ************************************/
-.delta-contact{
-
+.delta-contact-details{
+  background-color: #EDEDED;
 }
 
 .delta-required label:after {
@@ -295,17 +295,25 @@ body {
 .delta-contact-col{
 }
 
-.delta-contact-row{
-  background-color: #EDEDED;
-  margin-top: 10px;
+.delta-contact-addres1{
+  background-color: #D0D0D0;
+  color: black;
+  
+  padding:20px;
+  /* background-color: #EDEDED; */
+  /* margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 4px;
   margin-right: 4px;
-  padding-top: 15px;
+  padding-top: 15px; */
 }
 
-
-
+.delta-contact-addres2{
+  
+  /* background-color:  #FAB428; */
+  color: #1D1D1B;
+  padding:20px;
+}
 /***********************************
 * Feature
 ************************************/
