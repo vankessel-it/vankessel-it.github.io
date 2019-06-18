@@ -3754,7 +3754,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-us/</guid>
-      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  History     {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}  Machinery     {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .Resize &#34;</description>
+      <description>{{ partial &#34;head.html&#34; . }} {{ partial &#34;animation_header.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;stock_search_homepage.html&#34; . }} {{ partial &#34;stock_view_complete_bar.html&#34; . }}  History  {{ with .Resources.GetMatch &#34;img/01_HISTORY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}     Machinery  {{ with .Resources.GetMatch &#34;img/02_MACHINERY.jpg&#34;}} {{ $image_tn := .Resize &#34;484x&#34; }} {{end}}     Rental  {{ with .Resources.GetMatch &#34;img/03_RENTAL.jpg&#34;}} {{ $image_tn := .</description>
     </item>
     
     <item>

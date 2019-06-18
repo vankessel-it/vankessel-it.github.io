@@ -270,19 +270,35 @@ body {
 /***********************************
 * Feature
 ************************************/
+
 .delta-feature{
-  background-color: #FFFFFF;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 
+.delta-feature a{
+  text-decoration: none;
+}
+
+.delta-feature-card-line{
+  background-color: #FFFFFF;
+  height:5px;
+}
+
 .delta-feature-card{
+  background-color: #1D1D1B;
   margin-right: 10px;
   margin-left: 10px;
+  margin-top: 10px;
   padding-left: 0px;
   padding-right: 0px;
   border: none;
 }
+
+.delta-feature-card:hover{
+  background-color:  #FAB428;
+  color: white;
+} 
 
 .delta-feature-card img{
   height:227px;
@@ -293,13 +309,12 @@ body {
   
 }
 
-.delta-feature-header{
+.delta-feature-card-header{
   color: #FFFFFF;
-  background-color: #1D1D1B;
-  align-content: center;
+  
+  /* align-content: center;
   padding: 5px;
-  height: 40px;
-  margin-bottom: 8px;
+  height: 40px; */
   width:250px;
 }
 
@@ -310,6 +325,10 @@ body {
   text-decoration: none;
 }
 
+.delta-about-card-line{
+  background-color: #FFFFFF;
+  height:5px;
+}
 
 .delta-about-card-history img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -317,9 +336,18 @@ body {
 }
 
 .delta-about-card{
-  margin:30px;
+  /* margin:30px;
+  
+  color: black; */
+  /* background-color: #1D1D1B; */
   background-color:  #D0D0D0;
-  color: black;
+  
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
 }
 
 .delta-about-card:hover{
@@ -327,9 +355,14 @@ body {
   color: white;
 }
 
-.delta-about-card-body{
-  
+.delta-about-card-body{ 
 }
+
+.delta-about-card-header{
+  text-align: center;
+  color: black;
+}
+
 
 /***********************************
 * Info
