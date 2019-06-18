@@ -231,53 +231,6 @@ body {
 .delta-cookie-consent .modal-footer{
 
 }
-/***********************************
-* About-us page
-************************************/
-
-.delta-cards{
-
-}
-
-.delta-card-contact{
-  color:  #FAB428;
-  background-color: white;
-  
-}
-
-.delta-card-history img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-.delta-card{
-  margin:30px;
-  background-color: white;
-}
-
-.delta-card-body-1{
-  color: black;
-}
-
-.delta-card-body-2{
-  background-color: #D0D0D0;
-  color:  black;
-}
-
-/* .delta-card-body-2 a:hover{
-  text-decoration: none;
-  
-} */
-
-.delta-card-body-2:hover{
-  background-color:  #FAB428;
-  color: #1D1D1B;
-}
-
-.delta-card-body-1{
-  color: black;
-  background-color: #D0D0D0;
-}
 
 /***********************************
 * Contact
@@ -348,6 +301,33 @@ body {
   height: 40px;
   margin-bottom: 8px;
   width:250px;
+}
+
+/***********************************
+* About-us page
+************************************/
+.delta-about-cards a{
+  text-decoration: none;
+}
+
+
+.delta-about-card-history img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.delta-about-card{
+  margin:30px;
+  background-color:  #D0D0D0;
+  color: black;
+}
+
+.delta-about-card:hover{
+  background-color:  #FAB428;
+  color: white;
+}
+
+.delta-about-card-body{
   
 }
 
