@@ -253,24 +253,20 @@ function newFunction() {
 
   '<div class="container delta-hit">';
 
-          
-  content+=
-  '<div class="row delta-hit-title delta-nopadding">'+
-    '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
-  '</div>';
-  
+        
+
     content+=
     '<div class="row">';
     
     // if(data.advertTitle){
     //   content+=
-    //   '<div class="row delta-hit-subtitle delta-nopadding">'+
+    //   '<div class="row delta-hit-subtitle ">'+
     //     '<div class="col">'+data.advertTitle+'</div> '+
     //   '</div>';
     // } 
 
      content+=
-     '<div class="col delta-hit-image delta-nopadding">'+
+     '<div class="col delta-hit-image ">'+
       
         '<img src="'+data.secundaryImageUrl+'" class="img-top" alt="'+data.code+'" onerror="imgError(this);"></img> '+
         '<img src="'+data.primaryImageUrl+'" class="" alt="'+data.code+'" onerror="imgError(this);"></img> ';
@@ -289,9 +285,14 @@ function newFunction() {
       '</div>'+
     '</div>';
 
+    content+=
+    '<div class="row delta-hit-title ">'+
+      '<div class="col">'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</div> '+
+    '</div>';
+    
 
     content +=
-    '<div class="row delta-hit-body delta-nopadding">'+
+    '<div class="row delta-hit-body ">'+
 
       '<div class="col-1">' +
         '<i class="fa fa-key delta-hit-icon"></i>' +
@@ -322,7 +323,7 @@ function newFunction() {
 
     if(data.location!=="Other"){
       content+=
-      '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="row delta-hit-body ">'+
         '<div class="col-1">' +
           '<i class="fa fa-map-marker delta-hit-icon"></i>'+
         '</div>' +
@@ -334,7 +335,7 @@ function newFunction() {
     
     if(data.buildYear!==0){
       content+=
-      '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="row delta-hit-body ">'+
 
         '<div class="col-1">' +
           '<i class="fa fa-calendar delta-hit-icon"></i>' +
@@ -349,7 +350,7 @@ function newFunction() {
     
     if(data.hours!==0){
       content+=
-      '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="row delta-hit-body ">'+
        '<div class="col-1">' +
           '<i class="fa fa-clock delta-hit-icon"></i>' +
         '</div>' +
@@ -361,7 +362,7 @@ function newFunction() {
 
     if(data.mileage!==0){
       content+=
-      '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="row delta-hit-body ">'+
        '<div class="col-1">' +
           '<i class="fa fa-clock delta-hit-icon"></i>' +
         '</div>' +
@@ -374,7 +375,7 @@ function newFunction() {
 
     if(data.price!==0){
       content+=
-      '<div class="row delta-hit-body delta-nopadding">'+
+      '<div class="row delta-hit-body ">'+
        '<div class="col-1">' +
           '<i class="fa fa-clock delta-hit-icon"></i>' +
         '</div>' +
@@ -387,13 +388,13 @@ function newFunction() {
 
     if(data.tags.includes("R")){
       content+=
-      '<div class="row delta-hit-subtitle delta-nopadding">'+
+      '<div class="row delta-hit-subtitle ">'+
         '<div class="col badge-warning">RESERVED</div> '+
       '</div>';
     }
     if(data.tags.includes("S")){
       content+=
-      '<div class="row delta-hit-subtitle delta-nopadding">'+
+      '<div class="row delta-hit-subtitle ">'+
         '<div class="col badge-danger">SOLD</div> '+
       '</div>';
     }

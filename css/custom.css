@@ -336,10 +336,7 @@ body {
 }
 
 .delta-about-card{
-  /* margin:30px;
-  
-  color: black; */
-  /* background-color: #1D1D1B; */
+
   background-color:  #D0D0D0;
   
   margin-right: 10px;
@@ -541,13 +538,27 @@ body {
   margin-bottom:1rem;
   margin-left:1rem;
 }
+
+.delta-stock-overview-line{
+  background-color: #DADADA;
+  margin-top:10px;
+  margin-left:15px;
+  height:3px; 
+  width:100%;
+}
 /***********************************
 * Search Hits
 ************************************/
-
 .delta-hit{
   width: 213px;
-  color:black;
+  background-color: #1D1D1B;
+  color:white;
+  border:none;
+}
+
+.delta-hit:hover{
+  background-color:  #FAB428;
+  color: white;
 }
 
 .delta-hit-link{
@@ -586,20 +597,14 @@ body {
   position: absolute;
 }
 
-.delta-hit-image:hover .img-top {
+.delta-hit-image:hover .img-top{
   display: inline;
 }
 
-.delta-nopadding{
-  /* padding: 0px !important;
-  margin: 0px !important; */
-}
-
 .delta-hit-title{
-  background-color: #1D1D1B;
-  color: white;
-  border-top-left-radius:.55rem!important;
-  border-top-right-radius:.55rem!important;
+  
+  /* border-top-left-radius:.55rem!important;
+  border-top-right-radius:.55rem!important; */
 }
 
 .delta-hit-subtitle{
@@ -609,6 +614,12 @@ body {
 }
 
 .delta-hit-body{
+  color:black;
+  background-color: #EDEDED;
+}
+
+.delta-hit-body:hover{
+  background-color:#F8F8F8 
 }
 
 .delta-hit-icon{
@@ -732,7 +743,8 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
 
 .ais-Hits-item{
   background-color:#EDEDED;
-  border-radius:.55rem!important;
+  /* border-radius:.55rem!important; */
+  /* margin:20px; */
 }
 
 .ais-Hits-item:hover {
@@ -759,40 +771,5 @@ https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
   
   padding: 0rem;
   width: auto;
-  box-shadow: none; 
-  
+  box-shadow: none;  
 }
-
-/* .ais-Menu-list  {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-} 
-
-.ais-Menu-item {
-  float: left;
-  font-weight: bold; 
-  padding: 0px 20px 0px 10px;
-}
-
-.ais-Menu-item{
-  background-color: #FFFFFF;
-}
-
-.ais-Menu-item img {
-  filter: grayscale(1);
-}
-
-.ais-Menu-item--selected img {
-  filter: grayscale(0);
-}
-
-.ais-Menu-count{
-  color: #3a4570;
-  background-color: #dfe2ee;
-}  
-
-.ais-Menu-item--selected .ais-Menu-count {
-  color: white;
-  background-color: red;
-} */
