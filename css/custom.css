@@ -482,6 +482,12 @@ body {
 /***********************************
 * Footer
 ************************************/
+.delta-footer-backhome{
+  
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
 .delta-footer-container{
 }
 
