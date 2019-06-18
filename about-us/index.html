@@ -14,7 +14,7 @@
 
   
   
-  <link href="https://fonts.googleapis.com/css?family=Rock+Salt|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -59,6 +59,7 @@
 
 </head>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body>
 
@@ -68,7 +69,7 @@
 <nav class="navbar fixed-top navbar-expand-sm delta-navbar">
 
   <div class="container">
-    <a class="" href="/">
+    <a class="" href="/" data-aos="fade-down" data-aos-duration="700">
       <img src="/img/delta_logo_small.jpg" height="50" alt="logo">
     </a>
 
@@ -238,8 +239,6 @@
 
 </section>
 
-<a class="delta-homepage-anchor" href="\stock"><div class="delta-homepage-line w-100">VIEW COMPLETE STOCK</div></a>
-
 <script>
 document.querySelector("#searchField").addEventListener("keyup", event => {
     if(event.key !== "Enter") return; 
@@ -247,13 +246,15 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
+        <a class="delta-homepage-anchor" href="\stock"><div class="delta-homepage-line w-100">VIEW COMPLETE STOCK</div></a>
+
     </header>
 
     <section class="container delta-cards">
 
         <div class="row">
 
-            <div class="col">
+            <div class="col" data-aos="fade-right" data-aos-duration="300">
 
                 <a href="/history">
                     <div class="card delta-card">
@@ -273,7 +274,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col" data-aos="fade-up" data-aos-duration="900">
                 
                 <a href="/machinery">
                     <div class="card delta-card">
@@ -293,7 +294,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col" data-aos="fade-right" data-aos-duration="600">
         
                 <a href="/rental">
                     <div class="card delta-card">
@@ -319,7 +320,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
         <div class="row">
             
-            <div class="col">
+            <div class="col" data-aos="fade-right" data-aos-duration="1300">
 
                 <a href="/parts">
 
@@ -339,7 +340,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
       
-            <div class="col">
+            <div class="col" data-aos="fade-left" data-aos-duration="1600">
 
                 <a href="/services">
 
@@ -360,7 +361,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col" data-aos="fade-left" data-aos-duration="1900">
 
                 <a href="/workshop">
                     <div class="card delta-card">
@@ -383,7 +384,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
         <div class="row">
 
-            <div class="col">
+            <div class="col" data-aos="fade-right" data-aos-duration="2000">
 
                 <a href="/logistics">
                     <div class="card delta-card">
@@ -402,7 +403,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
     
-            <div class="col">
+            <div class="col" data-aos="fade-up" data-aos-duration="1500">
 
                 <a href="/xrok">
                     <div class="card delta-card">
@@ -421,7 +422,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col" data-aos="fade-left" data-aos-duration="1250">
                 
                 <a href="/contact">
                     <div class="card delta-card">
@@ -644,6 +645,11 @@ The Netherlands<BR>
 
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
   </body>
 
 </html>

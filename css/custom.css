@@ -1,5 +1,11 @@
-
-body { padding-top: 60px; }
+/*
+ * Font:
+ * https://fonts.google.com/specimen/Roboto?selection.family=Roboto
+*/
+body { 
+  padding-top: 60px; 
+  font-family: 'Roboto', sans-serif;
+}
 
 
 /***********************************
@@ -258,10 +264,15 @@ body { padding-top: 60px; }
   color:  black;
 }
 
-/* .delta-card-body-2:hover{
-  color:  #FAB428;
-  background-color: #1D1D1B;
+/* .delta-card-body-2 a:hover{
+  text-decoration: none;
+  
 } */
+
+.delta-card-body-2:hover{
+  background-color:  #FAB428;
+  color: #1D1D1B;
+}
 
 .delta-card-body-1{
   color: black;

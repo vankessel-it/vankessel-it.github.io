@@ -14,7 +14,7 @@
 
   
   
-  <link href="https://fonts.googleapis.com/css?family=Rock+Salt|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -59,6 +59,7 @@
 
 </head>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body>
 
@@ -68,7 +69,7 @@
 <nav class="navbar fixed-top navbar-expand-sm delta-navbar">
 
   <div class="container">
-    <a class="" href="/">
+    <a class="" href="/" data-aos="fade-down" data-aos-duration="700">
       <img src="/img/delta_logo_small.jpg" height="50" alt="logo">
     </a>
 
@@ -238,8 +239,6 @@
 
 </section>
 
-<a class="delta-homepage-anchor" href="\stock"><div class="delta-homepage-line w-100">VIEW COMPLETE STOCK</div></a>
-
 <script>
 document.querySelector("#searchField").addEventListener("keyup", event => {
     if(event.key !== "Enter") return; 
@@ -247,11 +246,13 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
+        <a class="delta-homepage-anchor" href="\stock"><div class="delta-homepage-line w-100">VIEW COMPLETE STOCK</div></a>
+
     </header>
 
     <section class="container delta-contact" >
 
-        <div class="row delta-contact-row">
+        <div class="row delta-contact-row"  data-aos="fade-left" data-aos-duration="500">
         
             <div class="col-sm-auto col-md-6 delta-contact-col">
 
@@ -276,7 +277,7 @@ The Netherlands<BR>
             </div>
         </div>
 
-        <div class="row delta-contact-row">
+        <div class="row delta-contact-row" data-aos="fade-up" data-aos-duration="1000">
 
             <div class="col-sm-auto col-md-6 delta-contact-col">
 
@@ -302,7 +303,7 @@ The Netherlands<BR>
                                 
         </div>
 
-        <div class="row delta-contact-row">
+        <div class="row delta-contact-row"  data-aos="fade-left" data-aos-duration="1500">
 
             <div class="col-6 delta-contact-col">
                 <h4 class="mt-4">Opening Hours</h4>
@@ -366,7 +367,7 @@ The Netherlands<BR>
         
         </div>
         
-        <div class="row">
+        <div class="row"  data-aos="fade-right" data-aos-duration="2000">
             <div class="col">
                 <div class="alert alert-info" role="alert">
                     <a href="/downloads/delta_machinery_general_terms_and_conditions_2018_03.pdf">
@@ -377,7 +378,7 @@ The Netherlands<BR>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-duration="2500">
             <div class="col">
                 <div class="jumbotron">
                     <h4 align="left">Contact form</h4>
@@ -936,6 +937,11 @@ The Netherlands<BR>
 
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
   </body>
 
 </html>
