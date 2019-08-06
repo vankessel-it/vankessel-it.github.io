@@ -1,0 +1,798 @@
+/*
+ * Font:
+ * https://fonts.google.com/specimen/Roboto?selection.family=Roboto
+*/
+body { 
+  padding-top: 60px; 
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/***********************************
+* Navigation
+************************************/
+
+.delta-navbar{
+  background-color: #1D1D1B;
+}
+
+.delta-navbar-icon{
+  font-size: larger;
+  width: 20px;
+}
+
+.delta-navbar .navbar-toggler-icon{
+  color:white;
+}
+
+.delta-navbar .navbar-toggler-icon:hover{
+  color:#FAB428;
+}
+
+.delta-nav-item a{
+  padding-left: 10px;
+  font-size: small;
+}
+
+.delta-nav-item-phone{
+  /* color:  #FAB428; */
+  padding-left: 40px;
+  font-weight: bold;
+}
+
+/***********************************
+* Header
+************************************/
+.delta-homepage-line{
+  background-color: #FAB428;
+  color:black;
+  height:24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+  padding-top: 2px;
+}
+
+.delta-homepage-line:hover{
+  background-color:  #1D1D1B;
+  color: #FAB428;
+  text-decoration: none;
+}
+
+.delta-homepage-anchor:hover{
+  text-decoration: none;
+}
+/***********************************
+* Carousel
+************************************/
+.delta-carousel-button{
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  animation: shadow-pulse 2s infinite;
+}
+
+.delta-carousel-overlay-line{
+  background-color: white;
+  height:2px; 
+}
+
+.delta-carousel-overlay-text{
+  color:white;
+  text-align:right;
+  width:50%;
+  opacity: 1.00;
+}
+
+.delta-carousel-overlay-text h1{
+  font-weight: 900;
+}
+
+.delta-carousel-overlay-text h4{
+  font-weight: 900;
+}
+
+.delta-carousel-overlay-dark{
+  width:100%;
+  bottom:0%;
+  left:0%;
+  height:30%;
+  background: #1D1D1B;
+  opacity: 0.75;
+}
+
+.delta-carousel-overlay-light{
+  width:100%;
+  bottom:0%;
+  height:30%;
+  left:0%;
+  background: #6D5402;
+  /* background: #866703; */
+  /* background: #FAB428; */
+  opacity: 0.75;
+}
+/***********************************
+* Search bar
+************************************/
+
+.delta-search-panel{
+  margin-top:10px;
+  margin-left:0px;
+  margin-bottom:10px;
+}
+
+.delta-search-bar{
+  padding:0px;
+  min-width: 180px;
+  max-width: 250px;
+  background-color: #DADADA;
+}
+
+.delta-search-body{
+  /* flex-grow: 1; */
+  /* max-width: 100%; */
+}
+
+.delta-search-filter{
+  padding-top:1rem;
+}
+.delta-search-card{
+  padding-top:20px;
+  padding-left:18px;
+  padding-right:18px;
+  background-color: #DADADA;
+  list-style-type: none;
+  
+}
+
+.delta-search-card-body{
+  padding:0px;
+}
+
+
+/***********************************
+* Homepage Stock Search button
+************************************/
+
+.delta-homepage-search-field{
+  padding: 5px;
+  min-width: 200px;
+  max-width: 600px;
+  max-height: 50px;
+  min-height: 50px;
+  
+}
+
+.delta-homepage-search img{
+  /* background-color: #FFFFFF; */
+}
+
+.delta-homepage-search button{
+  animation: radial-pulse 1s infinite;
+}
+
+/***********************************
+* Quick Search (Icon bar)
+************************************/
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+.delta-quick-search-title{
+  color: #1D1D1B;
+  font-size: small;
+  font-weight: bold;
+}
+
+.delta-quick-search-count{
+  color: #9D9D9C;
+}
+
+.delta-quick-search-list{
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.delta-quick-search-item{
+  float: left;
+  
+  padding:10px;
+}
+
+.delta-search-icon img{
+  height: 40px;
+  
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+
+.delta-quick-search img{
+  height: 50px;
+}
+
+
+.delta-quick-search-button{
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  animation: shadow-pulse 2s infinite;
+  margin-top: 10px;
+}
+
+.delta-quick-search img{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+
+/***********************************
+* Cookie consent
+************************************/
+.delta-cookie-consent .modal-header{
+  background:  #FAB428;
+  color: white;
+}
+
+.delta-cookie-consent .modal-body{
+  color:  black;
+  background-color: white;
+}
+
+.delta-cookie-consent .modal-footer{
+
+}
+
+/***********************************
+* Contact
+************************************/
+.delta-contact-details{
+  background-color: #EDEDED;
+}
+
+.delta-required label:after {
+  color: #e32;
+  content: ' *';
+  display:inline;
+}
+
+.delta-contact-col{
+}
+
+.delta-contact-addres1{
+  background-color: #D0D0D0;
+  color: black;
+  
+  padding:20px;
+  /* background-color: #EDEDED; */
+  /* margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-top: 15px; */
+}
+
+.delta-contact-addres2{
+  
+  /* background-color:  #FAB428; */
+  color: #1D1D1B;
+  padding:20px;
+}
+/***********************************
+* Feature
+************************************/
+
+.delta-feature{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.delta-feature a{
+  text-decoration: none;
+}
+
+.delta-feature-card-line{
+  background-color: #FFFFFF;
+  height:5px;
+}
+
+.delta-feature-card{
+  background-color: #1D1D1B;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
+}
+
+.delta-feature-card:hover{
+  background-color:  #FAB428;
+  color: white;
+} 
+
+.delta-feature-card img{
+  height:227px;
+  width:250px;
+}
+
+.delta-feature-card-border{
+  
+}
+
+.delta-feature-card-header{
+  color: #FFFFFF;
+  
+  /* align-content: center;
+  padding: 5px;
+  height: 40px; */
+  width:250px;
+}
+
+/***********************************
+* About-us page
+************************************/
+.delta-about-cards a{
+  text-decoration: none;
+}
+
+.delta-about-card-line{
+  background-color: #FFFFFF;
+  height:5px;
+}
+
+.delta-about-card-history img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.delta-about-card{
+
+  background-color:  #D0D0D0;
+  
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
+}
+
+.delta-about-card:hover{
+  background-color:  #FAB428;
+  color: white;
+}
+
+.delta-about-card-body{ 
+}
+
+.delta-about-card-header{
+  text-align: center;
+  color: black;
+}
+
+
+/***********************************
+* Info
+************************************/
+
+.delta-info-1-body{
+  background-color: white;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.delta-info-1-row{
+  padding-top: 10px;
+}
+
+.delta-info-1-body img{
+  padding-left: 0px;
+  padding-right: 30px;
+}
+
+/***********************************
+* Band
+************************************/
+.delta-band-mail{
+  background:#FAB428;
+}
+
+#mc_embed_signup{
+  padding:0px;
+  background:#FAB428;
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width:100%;
+}
+
+.delta-band-mail-title{
+  color: #FFFFFF;
+}
+
+.delta-band-mail-body{
+  background-color: #FAB428;
+  color: black;
+}
+
+.delta-band-xrok{
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.delta-band-xrok-title{
+  background-color: black;
+  color: red;
+}
+
+.delta-band-xrok-body{
+  color: white;
+  background-color: black;
+}
+
+.delta-band-3{
+  background-color: #FAB428;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-3-title{
+  color: #FFFFFF;
+}
+
+.delta-band-3-body{
+  color: black;
+}
+
+.delta-band-1{
+  background-color: #1D1D1B;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-1-title{
+  color: #FFFFFF;
+}
+
+.delta-band-1-body{
+  color: #FAB428;
+}
+
+.delta-band-2{
+  background-color: #D0D0D0;
+  /* margin-top: 40px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.delta-band-2-title{
+  color: #FFFFFF;
+}
+
+.delta-band-2-body{
+  color: black;
+}
+
+.delta-band-button{
+  color: #FFFFFF;
+}
+
+.delta-band-button span{
+  color: #FAB428;
+  vertical-align: middle;
+}
+
+.delta-band-2-small{
+  background-color: #D0D0D0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/***********************************
+* Footer
+************************************/
+.delta-footer-backhome{
+  
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
+.delta-footer-container{
+}
+
+.delta-footer-header{
+  margin: 0px;
+  padding-top: 10px;
+  color: #FAB428;
+  background-color: #EDEDED;
+}
+
+.delta-footer-items{
+  color: black;
+  background-color: #EDEDED;
+}
+
+.delta-footer-items ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.delta-footer-items a {
+  color: black;
+}
+
+.delta-footer-social ul{
+  padding-left: 0;
+  list-style: none;
+}
+
+.delta-footer-social li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.delta-footer-bar{
+  color: white;
+  background-color: #1D1D1B;
+}
+
+.delta-footer-bar span{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+
+/***********************************
+* Search Stock
+************************************/
+
+.delta-search-pagination{
+  margin-bottom:1rem;
+  margin-left:1rem;
+}
+
+.delta-stock-overview-line{
+  background-color: #DADADA;
+  margin-top:10px;
+  margin-left:15px;
+  height:3px; 
+  width:100%;
+}
+/***********************************
+* Search Hits
+************************************/
+.delta-hit{
+  width: 213px;
+  background-color: #1D1D1B;
+  color:white;
+  border:none;
+}
+
+.delta-hit:hover{
+  background-color:  #FAB428;
+  color: white;
+}
+
+.delta-hit-link{
+  text-decoration: none !important;
+}
+
+.delta-hit-image{
+  padding: 0px !important;
+  position: relative;
+  display: inline-block;
+}
+
+.delta-hit-image-text{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: small;
+}
+
+.delta-hit-badge-ce{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: small;
+}
+
+.delta-hit-badge-epa{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: small;
+}
+
+.delta-hit-image .img-top{
+  display: none;
+  position: absolute;
+}
+
+.delta-hit-image:hover .img-top{
+  display: inline;
+}
+
+.delta-hit-title{
+  
+  /* border-top-left-radius:.55rem!important;
+  border-top-right-radius:.55rem!important; */
+}
+
+.delta-hit-subtitle{
+  color: black;
+  background-color: #FAB428;
+  font-size: small; 
+}
+
+.delta-hit-body{
+  color:black;
+  background-color: #EDEDED;
+}
+
+.delta-hit-body:hover{
+  background-color:#F8F8F8 
+}
+
+.delta-hit-icon{
+  color: grey;
+}
+
+/***********************************
+* General
+************************************/
+.delta-dark-link a{
+  color: white;
+}
+
+.delta-dark-link a:link{
+  text-decoration: none;
+}
+  
+.delta-dark-link a:visited{
+  text-decoration: none;
+}
+
+.delta-dark-link a:hover{
+  text-decoration: underline  #FAB428;
+} 
+
+
+.delta-link a:link{
+  color: white;
+}
+  
+.delta-link a:visited{
+  color: white;
+}
+
+.delta-link a:hover{
+  color: #FAB428;
+} 
+
+.delta-zoom-image{
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.delta-zoom-image img{
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  
+  vertical-align: middle;
+}
+
+.delta-zoom-image img:hover{
+  transform:scale(1.2);
+  -ms-transform:scale(1.2); /* IE 9 */
+  -moz-transform:scale(1.2); /* Firefox */
+  -webkit-transform:scale(1.2); /* Safari and Chrome */
+  -o-transform:scale(1.2); /* Opera */ 
+}
+
+/***********************************
+* Algolia CSS changes
+************************************/
+/* CSS Algolia
+https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+*/
+
+.ais-ClearRefinements-button{
+  color: black;
+  background-color: #FBC55A;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ais-ClearRefinements-button:hover,
+.ais-ClearRefinements-button:focus{
+  color: black;
+  background-color: #FAB428;
+}
+.ais-ClearRefinements-button[disabled],
+.ais-ClearRefinements-button[disabled]:hover{
+  color: white;
+  background-color: #343A40;
+}
+
+.ais-RefinementList-showMore,
+.ais-RefinementList-showMore:focus,
+.ais-HierarchicalMenu-showMore,
+.ais-HierarchicalMenu-showMore:focus{
+  color: black;
+  background-color: #FBC55A;
+}
+.ais-RefinementList-showMore:hover,
+.ais-HierarchicalMenu-showMore:hover{
+  color: black;
+  background-color: #FAB428;
+}
+.ais-RefinementList-showMore[disabled],
+.ais-RefinementList-showMore[disabled]:hover,
+.ais-RefinementList-showMore[disabled]:focus,
+.ais-HierarchicalMenu-showMore[disabled],
+.ais-HierarchicalMenu-showMore[disabled]:hover,
+.ais-HierarchicalMenu-showMore[disabled]:focus{
+  color: white;
+  background-color: #343A40;
+}
+
+.rheostat-progress{
+  background-color: #FAB428 !important;
+}
+
+.ais-HierarchicalMenu-label{
+  color:black;
+}
+
+.ais-Hits  {
+  color: red;
+}
+
+.ais-Hits-item{
+  background-color:#EDEDED;
+  /* border-radius:.55rem!important; */
+  /* margin:20px; */
+}
+
+.ais-Hits-item:hover {
+  background-color: #F8F8F8 !important;
+}
+
+.ais-InfiniteHits-list,
+.ais-InfiniteResults-list,
+.ais-Hits-list,
+.ais-Results-list  {
+  margin-top: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.ais-InfiniteHits-item,
+.ais-InfiniteResults-item,
+.ais-Hits-item,
+.ais-Results-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  
+  padding: 0rem;
+  width: auto;
+  box-shadow: none;  
+}
