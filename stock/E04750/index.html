@@ -20,11 +20,14 @@
 	
 </head>
 
-    
-  <body>
 
-    <header>
-      <div class="header-top centered">
+  <body>
+    <div id="wrapper">
+
+      <div id="mainCntr">
+
+        <header id="headerCntr">
+          <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
@@ -55,713 +58,601 @@
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-      
-      
-<div class="col-sm-9">
+          
+<div class="header-bottom centered">
+    
+    
+    <div class="searchBox">
+        <input id="searchField" type="search" placeholder="Search ...">
+        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
+    </div>
+    
 
-  <div id="stock_images" class="row">
+    
+    <div class="linkBox">
+        <ul>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
+                    <i class="icon-icon1"></i>
+
+                    <span>38</span>
+
+                    <strong>Excavators</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
+                    <i class="icon-icon2"></i>
+
+                    <span>34</span>
+
+                    <strong>Dozers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
+                    <i class="icon-icon3"></i>
+
+                    <span>9</span>
+
+                    <strong>Motor graders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
+                    <i class="icon-icon4"></i>
+
+                    <span>7</span>
+
+                    <strong>Wheel loaders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
+                    <i class="icon-icon5"></i>
+
+                    <span>7</span>
+
+                    <strong>Pipelayers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon6"></i>
+
+                    <span>24</span>
+
+                    <strong>Crushers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon7"></i>
+
+                    <span>232</span>
+
+                    <strong>Parts</strong>
+                </a>
+            </li>
+            <li>
+                
+                                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
+                    <i class="icon-icon8"></i>
+
+                    <span>64</span>
+
+                    <strong>Other</strong>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<script>
+document.querySelector("#searchField").addEventListener("keyup", event => {
+    if(event.key !== "Enter") return; 
+    document.querySelector("#searchButton").click(); 
+    event.preventDefault(); 
+});    
+</script>
+          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
+
+        </header>
+        
+        <main id="contentCntr">
+            <div class="detailBox centered">
+
+  <h1>Caterpillar 824G <span>Wheeldozer</span></h1>
+
+  <div class="left">
+    <div class="large-image js-image-for">
       
-      <div ID="ngy2p" class="col" data-nanogallery2='{
-        "itemsBaseURL": "./",
-        "locationHash": false,
-        "touchAnimation": false,
-        
-        "thumbnailWidth": "213",
-        "thumbnailHeight": "auto",
-        "thumbnailBorderVertical": 0,
-        "thumbnailBorderHorizontal": 0,
-        "thumbnailAlignment": "center",
-        
-        "album": "none",
-        "galleryDisplayMode": "pagination",
-        "galleryMaxRows": 1,
-        "galleryPaginationMode": "dots"
-      }'>
+      <figure><img src="ws/E04750_001.jpg" alt=""></figure>
+      
+      <figure><img src="ws/E04750_002.jpg" alt=""></figure>
+      
+      <figure><img src="ws/E04750_003.jpg" alt=""></figure>
+         
+    </div>
+
+    <div class="small-image js-image-nav">
+      
+      <figure><img src="tn/E04750_001.jpg" alt=""></figure>
+      
+      <figure><img src="tn/E04750_002.jpg" alt=""></figure>
+      
+      <figure><img src="tn/E04750_003.jpg" alt=""></figure>
+                 
+    </div>
+  </div>
+
+  <div class="right">
+
+    
+    <h2>price 0</h2>
+    
+    <p>Caterpillar 824G, E-rops cab with airconditioning, 6 cylinder turbocharged Cat 3406C engine with 315HP (235kW), 4 speed automatic powershift transmission, blade with double tilt, Command Control Steering, 29.5R29 Bridgestone front tyres &amp; 29.5R29 Michelin rear tyres, 28.495 Kgs operating weight, front &amp; rear work lights, fast fill fuel system, fire suppression system, CE marked. Machine comes straight out of work and is in clean condition. Inspections are welcome.</p>
+
+  </div>
+</div>
+
+<div class="infoBox centered">
+
+  <div class="main">
+
+    <div class="left">
+
+      <ul class="tabs">
+        <li class="is-active"><a href="#">general information</a></li>
+        <li><a href="#">technical information</a></li>
+        <li><a href="#">description</a></li>
+      </ul>
+
+      <div class="detail">
+        <ul>
+          <li><strong>Refnr.</strong>E04750</li>
+          <li><strong>Sold new</strong>1997</li>
+          <li><strong>Brand</strong>Caterpillar</li>
+          <li><strong>Model</strong>824G</li>
+          <li><strong>Undercarriage / Tires</strong> 70%</li>
+          <li><strong>Hours shown</strong>17124</li>
+          <li><strong>Serialnumber</strong></li>
+          <li><strong>Location</strong>Deurne (NL)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+        <div class="top">
+          <a href="#" class="button button-orange">make an offer</a>
+          <a href="#" class="button">contact us</a>
+        </div>
+
+        <div class="add" style="background-image: url(img/add-img.jpg)">
+          <strong><span>100%</span> QUALITY <small>GUARANTEED</small></strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="link">
 
       
-      <a href="ws/E04750_001.jpg" data-ngthumb="tn/E04750_001.jpg" ></a>
-      
-      <a href="ws/E04750_002.jpg" data-ngthumb="tn/E04750_002.jpg" ></a>
-      
-      <a href="ws/E04750_003.jpg" data-ngthumb="tn/E04750_003.jpg" ></a>
+    
+      <a href="#" class="print-link"><i class="icon-print-icon"></i></a>
+    </div>
+  </div>
+
+
+    
+
+    
+      <h1>Inspection</h1>
+
+
+
+    <h2>General</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Axle configuration</strong>
+
             
-    </div>
+                4x4
+            
+        </li>
+        
+        <li>
+            <strong>Engine enclosures</strong>
 
-  </div>
+            
 
-  <div id="productMain3" class="row">
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Accumulators</strong>
+
+            
+
+                
+                    Yes
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Ripper valve</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Differential unlock</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Quick coupler</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>High lift</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Ride control</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Rear view camera</strong>
+
+            
+                Yes_not_working
+            
+        </li>
+        
+        <li>
+            <strong>Weight system</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Extra attachments included</strong>
+
+            
+                Fire extinguise system
+            
+        </li>
+        
+        <li>
+            <strong>Central grease system</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Winch</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>EPA</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>CE</strong>
+
+            
+
+                
+                    Yes
+                
+
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Engine</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Engine model</strong>
+
+            
+                3406
+            
+        </li>
+        
+        <li>
+            <strong>VHP engine</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>Electronic Controlled Engine</strong>
+
+            
+                NO
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Transmission</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Transmission type</strong>
+
+            
+                automatic
+            
+        </li>
+        
+        <li>
+            <strong>Speed forward</strong>
+
+            
+                ?
+            
+        </li>
+        
+        <li>
+            <strong>Speed reverse</strong>
+
+            
+                ?
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Operator station</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Cab type</strong>
+
+            
+                erops
+            
+        </li>
+        
+        <li>
+            <strong>Airconditioning</strong>
+
+            
+                YES
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Implements</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Blade width [CM]</strong>
+
+            
+                496
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>UC / Chassis</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Tyre brand</strong>
+
+            
+                Michelin and bridgetone
+            
+        </li>
+        
+        <li>
+            <strong>Tyre size</strong>
+
+            
+                29.5 x 29
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Main</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Category</strong>
+
+            
+                WHEELDOZER
+            
+        </li>
+        
+        <li>
+            <strong>Stock number</strong>
+
+            
+                E04750
+            
+        </li>
+        
+        <li>
+            <strong>Description</strong>
+
+            
+                Caterpillar 824G
+            
+        </li>
+        
+        <li>
+            <strong>Year [YYYY]</strong>
+
+            
+                1997
+            
+        </li>
+        
+        <li>
+            <strong>Machine Length</strong>
+
+            
+                7.48
+            
+        </li>
+        
+        <li>
+            <strong>Machine Width</strong>
+
+            
+                3.76
+            
+        </li>
+        
+        <li>
+            <strong>Machine Height</strong>
+
+            
+                3.84
+            
+        </li>
+        
+    </ul>
+    
+
     
     
-    <table class="table table-sm">
-        <col width="200px">
-      <tbody>
-        <tr class="table-warning"><td>Basic Information</td><td></td></tr>
 
-        <tr><td>Refnr.</td><td>E04750</td></tr>
-        <tr><td>Sold new</td><td>1997</td></tr>
-        <tr><td>Brand</td><td>Caterpillar</td></tr>
-        <tr><td>Model</td><td>824G</td></tr>
-        <tr><td>Undercarriage / Tires</td><td> 70%</td></tr>
-        <tr><td>Hours shown</td><td>17124</td></tr>
-        <tr><td>Serialnumber</td><td></td></tr>
-        <tr><td>Location</td><td>Deurne (NL)</td></tr>
-
-        <tr class="table-warning"><td>General</td><td></td></tr>
-        <tr><td>Asking Price</td><td>0</td></tr>
-
-      </tbody>
-    </table>
-
-    <div class="alert alert-primary" role="alert">
-        Caterpillar 824G, E-rops cab with airconditioning, 6 cylinder turbocharged Cat 3406C engine with 315HP (235kW), 4 speed automatic powershift transmission, blade with double tilt, Command Control Steering, 29.5R29 Bridgestone front tyres &amp; 29.5R29 Michelin rear tyres, 28.495 Kgs operating weight, front &amp; rear work lights, fast fill fuel system, fire suppression system, CE marked. Machine comes straight out of work and is in clean condition. Inspections are welcome.
-    </div>
-
-    
-      
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-sm-3">
-            <div id="list-example" class="list-group">
-                
-                <a class="list-group-item list-group-item-action" href="#General">General</a>
-                
-                <a class="list-group-item list-group-item-action" href="#Engine">Engine</a>
-                
-                <a class="list-group-item list-group-item-action" href="#Transmission">Transmission</a>
-                
-                <a class="list-group-item list-group-item-action" href="#Operator%20station">Operator station</a>
-                
-                <a class="list-group-item list-group-item-action" href="#Implements">Implements</a>
-                
-                <a class="list-group-item list-group-item-action" href="#UC%20%2f%20Chassis">UC / Chassis</a>
-                
-                <a class="list-group-item list-group-item-action" href="#Main">Main</a>
-                
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-
-            <table class="table table-sm">
-                <col width="200px">
-                <tbody>
-                    <tr class="table-warning">
-                        <td>Caterpillar 824G</td>
-                        <td></td>
-                    </tr>
-
-                    
-
-                        <tr class="table-success">
-                            <td id="General">General</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Axle configuration</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            4x4
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Engine enclosures</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Accumulators</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-check' style="color:green"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Ripper valve</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Differential unlock</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Quick coupler</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>High lift</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Ride control</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Rear view camera</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Yes_not_working
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Weight system</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Extra attachments included</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Fire extinguise system
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Central grease system</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Winch</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>EPA</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>CE</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-check' style="color:green"></i></span></td>
-                                
-
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="Engine">Engine</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Engine model</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            3406
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>VHP engine</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
-
-                            
-                        
-                        <tr>
-                            <td>Electronic Controlled Engine</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        <span class="icon"><i class='fa fa-ban' style="color:gray"></i></span>
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="Transmission">Transmission</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Transmission type</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            automatic
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Speed forward</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            ?
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Speed reverse</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            ?
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="Operator station">Operator station</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Cab type</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            erops
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Airconditioning</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            <span class="icon"><i class='fa fa-check' style="color:green"></i></span>
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="Implements">Implements</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Blade width [CM]</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            496
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="UC / Chassis">UC / Chassis</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Tyre brand</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Michelin and bridgetone
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Tyre size</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            29.5 x 29
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-
-                        <tr class="table-success">
-                            <td id="Main">Main</td>
-                            <td></td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>Category</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            WHEELDOZER
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Stock number</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            E04750
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Description</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Caterpillar 824G
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Year [YYYY]</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            1997
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Machine Length</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            7.48
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Machine Width</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            3.76
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Machine Height</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            3.84
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-                </tbody>
-            </table>
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-  </div>
 </div>
 
-      
-    </header>
+        </main>
 
-    <BR>
-
-    
+        <footer id="footerCntr">
+          
 
 <div class="footerBox centered">
     <section>
@@ -863,6 +754,10 @@
 
 
 
+        </footer>
+      </div>
+
+    </div>
 
     
 
@@ -872,21 +767,7 @@
 <script src="/js/vendor/mmenu.js"></script>
 <script src="/js/main.js"></script>
 
-
-    
-
-<script type="application/ld+json">
-    {
-    "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": "Caterpillar 824G",
-      "image": "/stock/E04750/",
-      "description": "Caterpillar 824G, E-rops cab with airconditioning, 6 cylinder turbocharged Cat 3406C engine with 315HP (235kW), 4 speed automatic powershift transmission, blade with double tilt, Command Control Steering, 29.5R29 Bridgestone front tyres &amp; 29.5R29 Michelin rear tyres, 28.495 Kgs operating weight, front &amp; rear work lights, fast fill fuel system, fire suppression system, CE marked. Machine comes straight out of work and is in clean condition. Inspections are welcome.",
-      "brand": {
-        "@type": "Thing",
-        "name": "Caterpillar"
-      },
-    }
-</script>
+  
   </body>
 </html>
+

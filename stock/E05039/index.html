@@ -20,11 +20,14 @@
 	
 </head>
 
-    
-  <body>
 
-    <header>
-      <div class="header-top centered">
+  <body>
+    <div id="wrapper">
+
+      <div id="mainCntr">
+
+        <header id="headerCntr">
+          <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
@@ -55,318 +58,429 @@
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-      
-      
-<div class="col-sm-9">
+          
+<div class="header-bottom centered">
+    
+    
+    <div class="searchBox">
+        <input id="searchField" type="search" placeholder="Search ...">
+        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
+    </div>
+    
 
-  <div id="stock_images" class="row">
+    
+    <div class="linkBox">
+        <ul>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
+                    <i class="icon-icon1"></i>
+
+                    <span>38</span>
+
+                    <strong>Excavators</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
+                    <i class="icon-icon2"></i>
+
+                    <span>34</span>
+
+                    <strong>Dozers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
+                    <i class="icon-icon3"></i>
+
+                    <span>9</span>
+
+                    <strong>Motor graders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
+                    <i class="icon-icon4"></i>
+
+                    <span>7</span>
+
+                    <strong>Wheel loaders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
+                    <i class="icon-icon5"></i>
+
+                    <span>7</span>
+
+                    <strong>Pipelayers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon6"></i>
+
+                    <span>24</span>
+
+                    <strong>Crushers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon7"></i>
+
+                    <span>232</span>
+
+                    <strong>Parts</strong>
+                </a>
+            </li>
+            <li>
+                
+                                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
+                    <i class="icon-icon8"></i>
+
+                    <span>64</span>
+
+                    <strong>Other</strong>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<script>
+document.querySelector("#searchField").addEventListener("keyup", event => {
+    if(event.key !== "Enter") return; 
+    document.querySelector("#searchButton").click(); 
+    event.preventDefault(); 
+});    
+</script>
+          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
+
+        </header>
+        
+        <main id="contentCntr">
+            <div class="detailBox centered">
+
+  <h1>Caterpillar 140K <span>Motor graders</span></h1>
+
+  <div class="left">
+    <div class="large-image js-image-for">
       
-      <div ID="ngy2p" class="col" data-nanogallery2='{
-        "itemsBaseURL": "./",
-        "locationHash": false,
-        "touchAnimation": false,
-        
-        "thumbnailWidth": "213",
-        "thumbnailHeight": "auto",
-        "thumbnailBorderVertical": 0,
-        "thumbnailBorderHorizontal": 0,
-        "thumbnailAlignment": "center",
-        
-        "album": "none",
-        "galleryDisplayMode": "pagination",
-        "galleryMaxRows": 1,
-        "galleryPaginationMode": "dots"
-      }'>
+      <figure><img src="ws/E05039_001.jpg" alt=""></figure>
+      
+      <figure><img src="ws/E05039_002.jpg" alt=""></figure>
+      
+      <figure><img src="ws/E05039_003.jpg" alt=""></figure>
+         
+    </div>
+
+    <div class="small-image js-image-nav">
+      
+      <figure><img src="tn/E05039_001.jpg" alt=""></figure>
+      
+      <figure><img src="tn/E05039_002.jpg" alt=""></figure>
+      
+      <figure><img src="tn/E05039_003.jpg" alt=""></figure>
+                 
+    </div>
+  </div>
+
+  <div class="right">
+
+    
+    <h2>price 0</h2>
+    
+    <p>Caterpillar 140K, E-rops cab with air conditioning, 6 cylinder turbocharged Caterpillar C7.2 ACERT Technology engine with 170HP (127kW), powershift transmission, MS rear ripper with full set of teeth, push block, NEW 17.5-25 tyres will be installed, front &amp; rear work lights. Machine comes straight out of work and is in clean condition. Inspections are welcome.</p>
+
+  </div>
+</div>
+
+<div class="infoBox centered">
+
+  <div class="main">
+
+    <div class="left">
+
+      <ul class="tabs">
+        <li class="is-active"><a href="#">general information</a></li>
+        <li><a href="#">technical information</a></li>
+        <li><a href="#">description</a></li>
+      </ul>
+
+      <div class="detail">
+        <ul>
+          <li><strong>Refnr.</strong>E05039</li>
+          <li><strong>Sold new</strong>2014</li>
+          <li><strong>Brand</strong>Caterpillar</li>
+          <li><strong>Model</strong>140K</li>
+          <li><strong>Undercarriage / Tires</strong> 100%</li>
+          <li><strong>Hours shown</strong>5520</li>
+          <li><strong>Serialnumber</strong>JPA03613</li>
+          <li><strong>Location</strong>Deurne (NL)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+        <div class="top">
+          <a href="#" class="button button-orange">make an offer</a>
+          <a href="#" class="button">contact us</a>
+        </div>
+
+        <div class="add" style="background-image: url(img/add-img.jpg)">
+          <strong><span>100%</span> QUALITY <small>GUARANTEED</small></strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="link">
 
       
-      <a href="ws/E05039_001.jpg" data-ngthumb="tn/E05039_001.jpg" ></a>
-      
-      <a href="ws/E05039_002.jpg" data-ngthumb="tn/E05039_002.jpg" ></a>
-      
-      <a href="ws/E05039_003.jpg" data-ngthumb="tn/E05039_003.jpg" ></a>
+    
+      <a href="#" class="print-link"><i class="icon-print-icon"></i></a>
+    </div>
+  </div>
+
+
+    
+
+    
+      <h1>Inspection</h1>
+
+
+
+    <h2>General</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Scarifier</strong>
+
             
-    </div>
 
-  </div>
-
-  <div id="productMain3" class="row">
-    
-    
-    <table class="table table-sm">
-        <col width="200px">
-      <tbody>
-        <tr class="table-warning"><td>Basic Information</td><td></td></tr>
-
-        <tr><td>Refnr.</td><td>E05039</td></tr>
-        <tr><td>Sold new</td><td>2014</td></tr>
-        <tr><td>Brand</td><td>Caterpillar</td></tr>
-        <tr><td>Model</td><td>140K</td></tr>
-        <tr><td>Undercarriage / Tires</td><td> 100%</td></tr>
-        <tr><td>Hours shown</td><td>5520</td></tr>
-        <tr><td>Serialnumber</td><td>JPA03613</td></tr>
-        <tr><td>Location</td><td>Deurne (NL)</td></tr>
-
-        <tr class="table-warning"><td>General</td><td></td></tr>
-        <tr><td>Asking Price</td><td>0</td></tr>
-
-      </tbody>
-    </table>
-
-    <div class="alert alert-primary" role="alert">
-        Caterpillar 140K, E-rops cab with air conditioning, 6 cylinder turbocharged Caterpillar C7.2 ACERT Technology engine with 170HP (127kW), powershift transmission, MS rear ripper with full set of teeth, push block, NEW 17.5-25 tyres will be installed, front &amp; rear work lights. Machine comes straight out of work and is in clean condition. Inspections are welcome.
-    </div>
-
-    
-      
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-sm-3">
-            <div id="list-example" class="list-group">
                 
-                <a class="list-group-item list-group-item-action" href="#General">General</a>
+                    No
                 
-                <a class="list-group-item list-group-item-action" href="#Engine">Engine</a>
+
+            
+        </li>
+        
+        <li>
+            <strong>Engine enclosures</strong>
+
+            
+
                 
-                <a class="list-group-item list-group-item-action" href="#Main">Main</a>
+                    No
                 
-            </div>
-        </div>
 
-        <div class="col-sm-6">
-            <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+            
+        </li>
+        
+        <li>
+            <strong>Accumulators</strong>
 
-            <table class="table table-sm">
-                <col width="200px">
-                <tbody>
-                    <tr class="table-warning">
-                        <td>Caterpillar 140K</td>
-                        <td></td>
-                    </tr>
+            
 
-                    
+                
+                    No
+                
 
-                        <tr class="table-success">
-                            <td id="General">General</td>
-                            <td></td>
-                        </tr>
+            
+        </li>
+        
+        <li>
+            <strong>Ripper valve</strong>
 
-                        
-                        <tr>
-                            <td>Scarifier</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
 
-                            
-                        
-                        <tr>
-                            <td>Engine enclosures</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+                
+                    No
+                
 
-                            
-                        
-                        <tr>
-                            <td>Accumulators</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
+        </li>
+        
+        <li>
+            <strong>Push block</strong>
 
-                            
-                        
-                        <tr>
-                            <td>Ripper valve</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
 
-                            
-                        
-                        <tr>
-                            <td>Push block</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+                
+                    No
+                
 
-                            
-                        
-                        <tr>
-                            <td>Differential unlock</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
+        </li>
+        
+        <li>
+            <strong>Differential unlock</strong>
 
-                            
-                        
-                        <tr>
-                            <td>Front hitch</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
 
-                            
-                        
-                        <tr>
-                            <td>Front dozer blade</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+                
+                    No
+                
 
-                            
-                        
-                        <tr>
-                            <td>Central grease system</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
+        </li>
+        
+        <li>
+            <strong>Front hitch</strong>
 
-                            
-                        
-                        <tr>
-                            <td>Centershift</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
 
-                            
-                        
-                        <tr>
-                            <td>EPA</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+                
+                    No
+                
 
-                            
-                        
-                        <tr>
-                            <td>CE</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
+        </li>
+        
+        <li>
+            <strong>Front dozer blade</strong>
 
-                            
-                        
-                    
+            
 
-                        <tr class="table-success">
-                            <td id="Engine">Engine</td>
-                            <td></td>
-                        </tr>
+                
+                    No
+                
 
-                        
-                        <tr>
-                            <td>VHP engine</td> 
-                            
-                                
-                                    <td><span class="icon"><i class='fa fa-ban' style="color:gray"></i></span></td>
-                                
+            
+        </li>
+        
+        <li>
+            <strong>Central grease system</strong>
 
-                            
-                        
-                    
+            
 
-                        <tr class="table-success">
-                            <td id="Main">Main</td>
-                            <td></td>
-                        </tr>
+                
+                    No
+                
 
-                        
-                        <tr>
-                            <td>Category</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Motor graders
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Stock number</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            E05039
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                        <tr>
-                            <td>Description</td> 
-                            
-                                    <td>
-                                    
-                                        
-                                            
-                                                
-                                                    
-                                                        
-                                                            Caterpillar 140K
-                                                        
-                                                    
-                                                
-                                            
-                                        
-                                                              
-                                     </td>
-                                </tr>
-                            
-                        
-                    
-                </tbody>
-            </table>
-            </div>
-        </div>
-    </div>
-</div>
+            
+        </li>
+        
+        <li>
+            <strong>Centershift</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>EPA</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+        <li>
+            <strong>CE</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Engine</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>VHP engine</strong>
+
+            
+
+                
+                    No
+                
+
+            
+        </li>
+        
+    </ul>
+    
+
+
+    <h2>Main</h2>
+
+    
+    <ul>
+        
+        <li>
+            <strong>Category</strong>
+
+            
+                Motor graders
+            
+        </li>
+        
+        <li>
+            <strong>Stock number</strong>
+
+            
+                E05039
+            
+        </li>
+        
+        <li>
+            <strong>Description</strong>
+
+            
+                Caterpillar 140K
+            
+        </li>
+        
+    </ul>
+    
+
     
     
-  </div>
+
 </div>
 
-      
-    </header>
+        </main>
 
-    <BR>
-
-    
+        <footer id="footerCntr">
+          
 
 <div class="footerBox centered">
     <section>
@@ -468,6 +582,10 @@
 
 
 
+        </footer>
+      </div>
+
+    </div>
 
     
 
@@ -477,21 +595,7 @@
 <script src="/js/vendor/mmenu.js"></script>
 <script src="/js/main.js"></script>
 
-
-    
-
-<script type="application/ld+json">
-    {
-    "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": "Caterpillar 140K",
-      "image": "/stock/E05039/",
-      "description": "Caterpillar 140K, E-rops cab with air conditioning, 6 cylinder turbocharged Caterpillar C7.2 ACERT Technology engine with 170HP (127kW), powershift transmission, MS rear ripper with full set of teeth, push block, NEW 17.5-25 tyres will be installed, front &amp; rear work lights. Machine comes straight out of work and is in clean condition. Inspections are welcome.",
-      "brand": {
-        "@type": "Thing",
-        "name": "Caterpillar"
-      },
-    }
-</script>
+  
   </body>
 </html>
+

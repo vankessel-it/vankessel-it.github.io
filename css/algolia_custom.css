@@ -1,0 +1,18 @@
+/***********************************
+* Algolia CSS changes
+************************************/
+/* CSS Algolia
+https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.1/themes/algolia.css
+*/
+/*
+
+Algolia HTML structure:
+
+<div class="ais-Hits">
+  <ol class="ais-Hits-list">
+    <li class="ais-Hits-item">
+    </li>
+  </ol>
+</div>
+*/
+ 

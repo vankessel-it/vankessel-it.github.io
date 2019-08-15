@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
 
   <head>
@@ -21,11 +20,14 @@
 	
 </head>
 
-  
-  <body>
 
-      <header>
-        <div class="header-top centered">
+  <body>
+    <div id="wrapper">
+
+      <div id="mainCntr">
+
+        <header id="headerCntr">
+          <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
@@ -56,15 +58,13 @@
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-        
+          
 <div class="header-bottom centered">
     
+    
     <div class="searchBox">
-        <form action="#">
-            <input id="searchField" type="search" placeholder="Search ...">
-
-            <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
-        </form>
+        <input id="searchField" type="search" placeholder="Search ...">
+        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
     </div>
     
 
@@ -171,65 +171,67 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
-        <a href="\stock"><div class="stock-bar">view complete stock</div></a>
+          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
 
-      </header>
-      
-      
-<div class="container">
-
-  <div class="row delta-search-panel">
-
-      <div class="col-md-2 delta-search-bar"> 
-    
-        <lu class="">
-
-          <li class="delta-search-card"><div id="searchbox" class="card-body delta-search-card-body"></div></li>
-          
-          <li class="delta-search-card"><div id="category-list" class="card-body delta-search-card-body"></div></li>
-          <li class="delta-search-card"><div id="brand-list" class="card-body delta-search-card-body"></div></li>
-          <li class="delta-search-card"><div id="model-list" class="card-body delta-search-card-body"></div></li>
-          <li class="delta-search-card"><div id="year-list" class="card-body delta-search-card-body"></div></li>
-          <li class="delta-search-card"><div id="hours-list" class="card-body delta-search-card-body"></div></li>
-          <li class="delta-search-card"><div id="location-list" class="card-body delta-search-card-body"></div></li>
-
-        </lu>     
-      </div>
-
-      <div class="col-md-10 delta-search-body">
-
-        <div class="row delta-search-filter">
-            <div id="sort-by-selector" class="col-md-4"></div>     
-            
-            
-            
-            <div id="current-refinements" class="col-md-auto"></div>
-            <div id="clear-refinements" class="col-md-2"></div>
-          
-        </div>
+        </header>
         
-        <div class="row">
-
-          <div class="delta-stock-overview-line"></div>
+        <main id="contentCntr">
           
-          <div id="hits"></div>
-          
-        </div>
+<div class="productBox centered">
 
-        <div id="pagination" class="row pages delta-search-pagination"></div>
-      
+  <div class="left">
+
+    <h3 class="js-filter-toggle">filters</h3>
+
+    <div class="panel">
+      <div id="searchbox"></div>
+      <div id="category-list"></div>
+      <div id="brand-list"></div>
+      <div id="model-list"></div>
+      <div id="year-list"></div>
+      <div id="hours-list"></div>
+      <div id="location-list"></div>
+
+      <a href="#" id="clear-refinements">reset filter options</a>
+      <div id="current-refinements"></div>      
+    </div>
+
+  </div>
+
+
+  <div class="right">
+
+      <div class="heading">
+        <h2>special items</h2>
+
+        <div id="sort-by-selector"></div>
       </div>
-      
+
+      <div id="hits"></div>
+
+      <div id="pagination"></div>
+
   </div>
 </div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
+
+
+
+
+<link rel="stylesheet" href="/css/algolia_custom.css">
+
 
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.32.1/dist/algoliasearchLite.js" integrity="sha256-pMaJf0I78weeXGkRMBDO6jSulxC/q3sb0aPdtV2N8n0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.2.0" integrity="sha256-/8usMtTwZ01jujD7KAZctG0UMk2S2NDNirGFVBbBZCM=" crossorigin="anonymous"></script>
 
 <script src="/js/stock_search.js"></script> 
     
-      
-      
+        </main>
+
+        <footer id="footerCntr">
+          
 
 <div class="footerBox centered">
     <section>
@@ -331,7 +333,11 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
 
 
-  
+        </footer>
+      </div>
+
+    </div>
+
     
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -340,7 +346,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 <script src="/js/vendor/mmenu.js"></script>
 <script src="/js/main.js"></script>
 
-
-  </body>
   
+  </body>
 </html>
+

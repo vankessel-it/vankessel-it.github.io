@@ -20,11 +20,14 @@
 	
 </head>
 
-    
-  <body>
 
-    <header>
-      <div class="header-top centered">
+  <body>
+    <div id="wrapper">
+
+      <div id="mainCntr">
+
+        <header id="headerCntr">
+          <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
@@ -55,78 +58,218 @@
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-      
-      
-<div class="col-sm-9">
+          
+<div class="header-bottom centered">
+    
+    
+    <div class="searchBox">
+        <input id="searchField" type="search" placeholder="Search ...">
+        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
+    </div>
+    
 
-  <div id="stock_images" class="row">
-      
-      <div ID="ngy2p" class="col" data-nanogallery2='{
-        "itemsBaseURL": "./",
-        "locationHash": false,
-        "touchAnimation": false,
-        
-        "thumbnailWidth": "213",
-        "thumbnailHeight": "auto",
-        "thumbnailBorderVertical": 0,
-        "thumbnailBorderHorizontal": 0,
-        "thumbnailAlignment": "center",
-        
-        "album": "none",
-        "galleryDisplayMode": "pagination",
-        "galleryMaxRows": 1,
-        "galleryPaginationMode": "dots"
-      }'>
+    
+    <div class="linkBox">
+        <ul>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
+                    <i class="icon-icon1"></i>
 
+                    <span>38</span>
+
+                    <strong>Excavators</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
+                    <i class="icon-icon2"></i>
+
+                    <span>34</span>
+
+                    <strong>Dozers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
+                    <i class="icon-icon3"></i>
+
+                    <span>9</span>
+
+                    <strong>Motor graders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
+                    <i class="icon-icon4"></i>
+
+                    <span>7</span>
+
+                    <strong>Wheel loaders</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
+                    <i class="icon-icon5"></i>
+
+                    <span>7</span>
+
+                    <strong>Pipelayers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon6"></i>
+
+                    <span>24</span>
+
+                    <strong>Crushers</strong>
+                </a>
+            </li>
+            <li>
+                
+                
+                <a href="#">
+                    <i class="icon-icon7"></i>
+
+                    <span>232</span>
+
+                    <strong>Parts</strong>
+                </a>
+            </li>
+            <li>
+                
+                                
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
+                    <i class="icon-icon8"></i>
+
+                    <span>64</span>
+
+                    <strong>Other</strong>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<script>
+document.querySelector("#searchField").addEventListener("keyup", event => {
+    if(event.key !== "Enter") return; 
+    document.querySelector("#searchButton").click(); 
+    event.preventDefault(); 
+});    
+</script>
+          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
+
+        </header>
+        
+        <main id="contentCntr">
+            <div class="detailBox centered">
+
+  <h1>Perkins 4.236 <span>Engine</span></h1>
+
+  <div class="left">
+    <div class="large-image js-image-for">
       
-      <a href="ws/K04402_001.jpg" data-ngthumb="tn/K04402_001.jpg" ></a>
+      <figure><img src="ws/K04402_001.jpg" alt=""></figure>
       
-      <a href="ws/K04402_002.jpg" data-ngthumb="tn/K04402_002.jpg" ></a>
+      <figure><img src="ws/K04402_002.jpg" alt=""></figure>
       
-      <a href="ws/K04402_003.jpg" data-ngthumb="tn/K04402_003.jpg" ></a>
-            
+      <figure><img src="ws/K04402_003.jpg" alt=""></figure>
+         
     </div>
 
+    <div class="small-image js-image-nav">
+      
+      <figure><img src="tn/K04402_001.jpg" alt=""></figure>
+      
+      <figure><img src="tn/K04402_002.jpg" alt=""></figure>
+      
+      <figure><img src="tn/K04402_003.jpg" alt=""></figure>
+                 
+    </div>
   </div>
 
-  <div id="productMain3" class="row">
-    
-    
-    <table class="table table-sm">
-        <col width="200px">
-      <tbody>
-        <tr class="table-warning"><td>Basic Information</td><td></td></tr>
-
-        <tr><td>Refnr.</td><td>K04402</td></tr>
-        <tr><td>Sold new</td><td>0</td></tr>
-        <tr><td>Brand</td><td>Perkins</td></tr>
-        <tr><td>Model</td><td>4.236</td></tr>
-        <tr><td>Undercarriage / Tires</td><td></td></tr>
-        <tr><td>Hours shown</td><td>0</td></tr>
-        <tr><td>Serialnumber</td><td></td></tr>
-        <tr><td>Location</td><td>Deurne (NL)</td></tr>
-
-        <tr class="table-warning"><td>General</td><td></td></tr>
-        <tr><td>Asking Price</td><td>0</td></tr>
-
-      </tbody>
-    </table>
-
-    <div class="alert alert-primary" role="alert">
-        Perkins 4.236 engine, 4 cylinder, 62HP. Engine does not run, for parts or repair.
-    </div>
+  <div class="right">
 
     
+    <h2>price 0</h2>
     
+    <p>Perkins 4.236 engine, 4 cylinder, 62HP. Engine does not run, for parts or repair.</p>
+
   </div>
 </div>
 
-      
-    </header>
+<div class="infoBox centered">
 
-    <BR>
+  <div class="main">
+
+    <div class="left">
+
+      <ul class="tabs">
+        <li class="is-active"><a href="#">general information</a></li>
+        <li><a href="#">technical information</a></li>
+        <li><a href="#">description</a></li>
+      </ul>
+
+      <div class="detail">
+        <ul>
+          <li><strong>Refnr.</strong>K04402</li>
+          <li><strong>Sold new</strong>0</li>
+          <li><strong>Brand</strong>Perkins</li>
+          <li><strong>Model</strong>4.236</li>
+          <li><strong>Undercarriage / Tires</strong></li>
+          <li><strong>Hours shown</strong>0</li>
+          <li><strong>Serialnumber</strong></li>
+          <li><strong>Location</strong>Deurne (NL)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+        <div class="top">
+          <a href="#" class="button button-orange">make an offer</a>
+          <a href="#" class="button">contact us</a>
+        </div>
+
+        <div class="add" style="background-image: url(img/add-img.jpg)">
+          <strong><span>100%</span> QUALITY <small>GUARANTEED</small></strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="link">
+
+      
+    
+      <a href="#" class="print-link"><i class="icon-print-icon"></i></a>
+    </div>
+  </div>
+
 
     
+
+    
+    
+
+</div>
+
+        </main>
+
+        <footer id="footerCntr">
+          
 
 <div class="footerBox centered">
     <section>
@@ -228,6 +371,10 @@
 
 
 
+        </footer>
+      </div>
+
+    </div>
 
     
 
@@ -237,21 +384,7 @@
 <script src="/js/vendor/mmenu.js"></script>
 <script src="/js/main.js"></script>
 
-
-    
-
-<script type="application/ld+json">
-    {
-    "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": "Perkins 4.236",
-      "image": "/stock/K04402/",
-      "description": "Perkins 4.236 engine, 4 cylinder, 62HP. Engine does not run, for parts or repair.",
-      "brand": {
-        "@type": "Thing",
-        "name": "Perkins"
-      },
-    }
-</script>
+  
   </body>
 </html>
+
