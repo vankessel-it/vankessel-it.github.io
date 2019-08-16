@@ -22,9 +22,12 @@
 
 
   <body>
+    <div id="wrapper">
 
-    <header>
-        <div class="header-top centered">
+      <div id="mainCntr">
+
+        <header id="headerCntr">
+          <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
@@ -49,13 +52,12 @@
 
   <div class="phone-number">
     <a href="tel:31888966966">+31 888 966 966</a>
-
-    <small>today we’re open untill 17.00</small>
+    <small>weekdays 08.00 - 17.00 CEST</small>
   </div>
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-        
+          
 <div class="header-bottom centered">
     
     
@@ -74,7 +76,7 @@
                 <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Excavators">
                     <i class="icon-icon1"></i>
 
-                    <span>38</span>
+                    <span>34</span>
 
                     <strong>Excavators</strong>
                 </a>
@@ -85,7 +87,7 @@
                 <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Dozers">
                     <i class="icon-icon2"></i>
 
-                    <span>34</span>
+                    <span>31</span>
 
                     <strong>Dozers</strong>
                 </a>
@@ -96,7 +98,7 @@
                 <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Motor%20graders">
                     <i class="icon-icon3"></i>
 
-                    <span>9</span>
+                    <span>8</span>
 
                     <strong>Motor graders</strong>
                 </a>
@@ -107,7 +109,7 @@
                 <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Wheel%20loaders">
                     <i class="icon-icon4"></i>
 
-                    <span>7</span>
+                    <span>10</span>
 
                     <strong>Wheel loaders</strong>
                 </a>
@@ -118,7 +120,7 @@
                 <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Pipelayers">
                     <i class="icon-icon5"></i>
 
-                    <span>7</span>
+                    <span>5</span>
 
                     <strong>Pipelayers</strong>
                 </a>
@@ -126,10 +128,10 @@
             <li>
                 
                 
-                <a href="#">
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Crushers">
                     <i class="icon-icon6"></i>
 
-                    <span>24</span>
+                    <span>23</span>
 
                     <strong>Crushers</strong>
                 </a>
@@ -137,10 +139,10 @@
             <li>
                 
                 
-                <a href="#">
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Parts">
                     <i class="icon-icon7"></i>
 
-                    <span>232</span>
+                    <span>234</span>
 
                     <strong>Parts</strong>
                 </a>
@@ -148,10 +150,11 @@
             <li>
                 
                                 
-                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D=Other">
+                <a href="/stock/?hierarchicalMenu%5Bcategory%5D%5B0%5D!=Other">
+
                     <i class="icon-icon8"></i>
 
-                    <span>64</span>
+                    <span>61</span>
 
                     <strong>Other</strong>
                 </a>
@@ -168,21 +171,23 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
-        <a href="\stock"><div class="stock-bar">view complete stock</div></a>
+          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
 
-    </header>
+        </header>
+        
+        <main id="contentCntr">
+    
+            <div class="contentBox centered">
 
-    <section class="container-fluid delta-contact-addres1" >
-
-        <div class="container">
-            
-            <div class="row">
-            
-                <div class="col-sm-auto col-md-6 delta-contact-col">
-
-                    <p>	
-                        <b>Delta Machinery</b><br>
-                        <address>haven m529, port of moerdijk <br>
+                <div class="row">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d632385.7630590899!2d4.684671!3d51.746626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4236cc488a661%3A0xa26d9eaaacc97f0!2sMark+S.+Clarkelaan+6%2C+4761+RK+Zevenbergen%2C+Netherlands!5e0!3m2!1sen!2sus!4v1558075794681!5m2!1sen!2sus" 
+                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    
+                    <div class="text">
+                        <h2>Delta Machinery</h2>
+                        <p>	
+                            <address>haven m529, port of moerdijk <br>
     mark s. clarkelaan 6 <br>
     4761 rk zevenbergen <br>
     the netherlands <br> <br>
@@ -190,28 +195,19 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
 </address>
-                    </p>
-
+                        </p>
+                    </div>
                 </div>
 
-                <div class="col-md-auto"  data-aos="fade-left" data-aos-duration="500">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d632385.7630590899!2d4.684671!3d51.746626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4236cc488a661%3A0xa26d9eaaacc97f0!2sMark+S.+Clarkelaan+6%2C+4761+RK+Zevenbergen%2C+Netherlands!5e0!3m2!1sen!2sus!4v1558075794681!5m2!1sen!2sus" 
-                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>                    
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="row">
 
-    <section class="container-fluid delta-contact-addres2" >
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-sm-auto col-md-6 delta-contact-col ">
-
-                    <p>	
-                        <b>Delta Machinery Workshop</b><br>
-                        <address>Voltstraat 19, Deurne<br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d893977.341629758!2d4.321574260849776!3d51.76436250096963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c73b8407e3b57f%3A0x24a57150e6679304!2sVoltstraat+19%2C+5753+RL+Deurne!5e0!3m2!1sen!2snl!4v1558076296832!5m2!1sen!2snl" 
+                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    
+                    <div class="text">
+                        <h2>Delta Machinery Workshop</h2>
+                        <p>
+                            <address>Voltstraat 19, Deurne<br>
     Voltstraat 19 <br>
     5753 RL Deurne<br>
     The Netherlands<br> <br>
@@ -219,125 +215,65 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
 </address>
-                    </p>
+                        </p>
+                    </div>
                 </div>
-                
-                
-                <div class="col-md-auto"  data-aos="fade-up" data-aos-duration="750">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d893977.341629758!2d4.321574260849776!3d51.76436250096963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c73b8407e3b57f%3A0x24a57150e6679304!2sVoltstraat+19%2C+5753+RL+Deurne!5e0!3m2!1sen!2snl!4v1558076296832!5m2!1sen!2snl" 
-                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>                 
-                </div>
-                                    
+
             </div>
-        </div>
-    </section>
 
-    <div class="container-fluid delta-contact-details">
-        <div class="container">
-            <div class="row delta-contact-row"  data-aos="fade-up" data-aos-duration="1500">
-
-                <div class="col-md-6 delta-contact-col">
-                    
-
-  <div class="row">
-  <h4 class="col mt-4">Opening Hours</h4>
-  </div>
-
-  <div class="row">
-    <div class="col">Monday</div>
-    <div class="col">08:00 - 17:00</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Tuesday</div>
-    <div class="col">08:00 - 17:00</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Wednesday</div>
-    <div class="col">08:00 - 17:00</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Thursday</div>
-    <div class="col">08:00 - 17:00</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Friday</div>
-    <div class="col">08:00 - 17:00</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Saturday</div>
-    <div class="col">On appointment</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Sunday</div>
-    <div class="col">Closed</div>
-  </div>
-
-  
-
-
-                </div>    
-                
-                <div class="col-md-6 delta-contact-col">
-                    
-
-  <div class="row">
-    <h4 class="col mt-4">Bank Details</h4>
-  </div>
-
-  <div class="row">
-    <div class="col">VAT Nr</div>
-    <div class="col">NL 802430685B01</div>
-  </div>
-
-  <div class="row">
-    <div class="col">COC nr</div>
-    <div class="col">17078066</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Swift code</div>
-    <div class="col">ABNANL2A</div>
-  </div>
-
-  <div class="row">
-    <div class="col">IBAN nr</div>
-    <div class="col">NL30ABNA0469187565</div>
-  </div>
-
-  <div class="row">
-      <div class="col">
-        <a href="/downloads/delta_machinery_contact_details.pdf">Download our bank details</a>
-      </div>
-  </div>
-
-
-  
-                </div>
             
-            </div>
-            
-            <div class="row" data-aos="fade-left" data-aos-duration="2000">
-                <div class="col">
-                    <div class="alert alert-info" role="alert">
-                        <a href="/downloads/delta_machinery_general_terms_and_conditions_2018_03.pdf">
-                        Thanks for your interest in our company. To inform you about our way of doing business you can
-                        download our general terms & conditions.
-                        </a>
+            <div class="infoBox centered">
+
+                <div class="main">
+                  
+                    <div class="left">
+                        <div class="detail">
+  <h4>Opening Hours</h4>
+  <ul>
+    <li><strong>Monday</strong>08:00 - 17:00</li>
+    <li><strong>Tuesday</strong>08:00 - 17:00</li>
+    <li><strong>Wednesday</strong>08:00 - 17:00</li>
+    <li><strong>Thursday</strong>08:00 - 17:00</li>
+    <li><strong>Friday</strong>08:00 - 17:00</li>
+    <li><strong>Saturday</strong>On appointment</li>
+    <li><strong>Sunday</strong>Closed</li>
+  </ul>
+</div>
+                    </div>
+
+                    <div class="right">
+                        <div class="detail">
+  <h4>Bank Details</h4>
+  <ul>
+    <li><strong>VAT Nr</strong>NL 802430685B01</li>
+    <li><strong>COC nr</strong>17078066</li>
+    <li><strong>Swift code</strong>ABNANL2A</li>
+    <li><strong>IBAN nr</strong>NL30ABNA0469187565</li>
+    <li>
+      <a href="/downloads/delta_machinery_contact_details.pdf">Download our bank details</a>
+    </li>
+  </ul>
+</div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="jumbotron">
-                        <h4 align="left">Contact form</h4>
-                        <form class="contact-form delta-contact-form needs-validation" method="post" action="https://formspree.io/sales@deltamachinery.nl" novalidate>
+                        
+            <div class="contentBox centered">
+
+                <div class="row">
+                    
+                    <a href="/downloads/delta_machinery_general_terms_and_conditions_2018_03.pdf">
+                        Thanks for your interest in our company. To inform you about our way of doing business you can
+                        download our general terms & conditions.
+                    </a>
+                </div>
+
+                <div class="row">
+                    
+                    <h4>Contact form</h4>
+                    <form class="contact-form delta-contact-form needs-validation" method="post" action="https://formspree.io/sales@deltamachinery.nl" novalidate>
 
     <div class="form-row">
         <div class="form-group col">
@@ -650,29 +586,29 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 </form>
 
 <script>
-        (function() {
-          'use strict';
-          window.addEventListener('load', function() {
-            var forms = document.getElementsByClassName('needs-validation');
-            var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-              }, false);
-            });
-          }, false);
-        })();
-        </script>
-                    </div>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
+</script>
                 </div>
             </div>
-        </div>
-    </section>
-
     
+        </main>
+
+        <footer id="footerCntr">
+          
 
 <div class="footerBox centered">
     <section>
@@ -774,26 +710,11 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
 
 
-    
- 
+        </footer>
+      </div>
 
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Delta Machinery",
-    "email": "sales@deltaheavymachinery.com",
-    "openingHours": "Mo,Tu,We,Th,Fr 08:00-17:00",
-    "telephone": "+31 888 966 966"
-    "url": "http://www.deltaheavymachinery.com",
-    "contactPoint": [
-        { "@type": "ContactPoint",
-        "telephone": "+31 888 966 966",
-        "contactType": "customer service"
-        }
-    ]
-}
-</script>
+    </div>
+
     
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -804,5 +725,4 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
   
   </body>
-
 </html>

@@ -132,7 +132,7 @@ search.addWidget(
     showMore: true,
     // showMoreLimit: 6,
     attributes: [
-      'category',
+      'categoryFilter',
       'category_lvl2',
     ],
   })
@@ -228,17 +228,23 @@ function newFunction() {
     }
     
 		content+='<li><strong>Reference number</strong>'+data._highlightResult.code.value +'</li>';
-  
-    if(data.location!=="Other"){
-      content+=
-      '<li><strong>Location</strong>'+data.location+'</li>';
-    }
-    
+    content+='<li><strong>Machine type</strong>'+data.subcategory+'</li>';
+
     if(data.buildYear!==0){
       content+=
       '<li><strong>Year</strong>'+data.buildYear+'</li>';
     }
+
+    if(data.undercarriage!==''){
+      content+=
+      '<li><strong>Undercarriage / Tires</strong>'+data.undercarriage+'</li>';
+    }
     
+    if(data.location!=="Other"){
+      content+=
+      '<li><strong>Location</strong>'+data.location+'</li>';
+    }
+        
     if(data.hours!==0){
       content+=
       '<li><strong>Hours</strong>'+data.hours.toLocaleString() +' h'+'</li>';
@@ -247,11 +253,6 @@ function newFunction() {
     if(data.mileage!==0){
       content+=
       '<li><strong>Mileage</strong>'+data.mileage.toLocaleString() +' km'+'</li>';
-    } 
-
-    if(data.price!==0){
-      content+=
-      '<li><strong>PRICE</strong>'+data.price +' EUR'+'</li>';
     } 
 
     if(data.epaCertified){
@@ -268,6 +269,13 @@ function newFunction() {
 
     if(data.tags.includes("S")){
       content+= '<li><strong>SOLD</strong></li>';
+    }
+
+    if(data.price!==0){
+      content+=
+      '<li><strong>PRICE</strong>'+data.price +' &euro;'+'</li>';
+    } else {
+      content+='<li><strong>PRICE</strong>on request</li>';
     }
 
 content +=    
