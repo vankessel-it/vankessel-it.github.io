@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/introduction/</loc>
+    <lastmod>2019-08-19T15:49:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/domain/</loc>
+    <lastmod>2019-08-19T15:50:54+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/introduction/design/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/domain/entity/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/introduction/comparison/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankesse-it.io/real_doc/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,57 @@
+[
+{
+	"uri": "http://vankesse-it.io/real_doc/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": " Introduction REAL REAL enables developers to focus on business functionality, while retaining the breadth and power of the Java eco-system.\n"
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/domain/",
+	"title": "Domain",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/introduction/design/",
+	"title": "Design",
+	"tags": [],
+	"description": "",
+	"content": " A set of 13 libraries "
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/domain/entity/",
+	"title": "Entity",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/introduction/comparison/",
+	"title": "Product Comparison",
+	"tags": [],
+	"description": "",
+	"content": " How does it stack up ? REAL is a low-code software development environment. REAL aims to minimize the overall code-base of administrative systems, while promoting concise and quality business-code.\n    Thinkwise Mendix Studio Pro 8 REAL 7     General      Technologie Platform MS .NET Java 11 Java 11   Product Type framework framework set libraries (13 in total)   Programming language procedural SQL nano/micro-flows, Java/JS call-outs Java for desktop, web (mobile) and server   Target audience Thinkwise developers Citizen developers Professional developers   Since 2002 2005 2007   # Developers 20+ 20+ 2+   Modelling      Database grafical-model grafical-model text-model (Domain Specific Language)   User-interface definition in tabels UI-designer, pages / widgets text-model (DSL), code of UI-designer (Vaadin)   Custom Code      Business code works only within Thinkwise works only within Mendix (micro-flow) independent from REAL, standard Java / Spring   User-interface code programming not supported works only within Mendix (nano-flow) dependent on REAL, standard Java / Spring   Uitbreidbaarheid very limited limited Java/JS call-out complete Java / Spring platform, and external libraries   Code Quality      Automatic checks no no industry-standard: Sonar, Structure101, etc.   Automated testing ? proprietary (unit-test microflow) industry-standard: JUnit, etc.   Value Types yes (limited) no yes, e.g. Amount, Price, Document, Quantity, etc.   Nullability checks no no yes, avoid the \u0026ldquo;billion dollar mistake\u0026rdquo; (Tony Hoare)   Tooling      Development environment proprietary proprietary industry-standard: Eclipse of IntelliJ   Versiebeheer proprietary, code and model separat proprietary, SVN extension (Team Server) industry-standard (GIT), datamodel and code    Deployment proprietary proprietary (Mendix server) industry-standard: Tomcat, JBoss, Websphere, etc.   Monitoring Database or IIS monitoring Java JMX Spring Boot Actuator and Java JMX   Continuity      # developers very limited limited 10.000.000 according to Oracle   Business-code dependend on Thinkwise dependend on Mendix dependend on Java (open source)   *Vendor lock-in 100% 100% user-interface limited, business-code no lock-in   Escrow available ? yes yes    "
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/",
+	"title": "REAL ERP",
+	"tags": [],
+	"description": "",
+	"content": " REAL Documentation REAL Documentation is created with Hugo and Hugo-theme-learn, a fast and modern static website engine written in Go.\nContribute to this documentation Feel free to update this content, just click the Edit this page link displayed on top right of each page, and pullrequest it\nYour modification will be deployed automatically when merged.\n Automatically published and hosted thanks to Netlify. Read more about Automated HUGO deployments with Netlify\n -- "
+},
+{
+	"uri": "http://vankesse-it.io/real_doc/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on REAL Documentation</title>
+    <link>http://vankesse-it.io/real_doc/introduction/</link>
+    <description>Recent content in Introduction on REAL Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 15:49:48 +0200</lastBuildDate>
+    
+	<atom:link href="http://vankesse-it.io/real_doc/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design</title>
+      <link>http://vankesse-it.io/real_doc/introduction/design/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/introduction/design/</guid>
+      <description> A set of 13 libraries </description>
+    </item>
+    
+    <item>
+      <title>Product Comparison</title>
+      <link>http://vankesse-it.io/real_doc/introduction/comparison/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/introduction/comparison/</guid>
+      <description>How does it stack up ? REAL is a low-code software development environment. REAL aims to minimize the overall code-base of administrative systems, while promoting concise and quality business-code.
+    Thinkwise Mendix Studio Pro 8 REAL 7     General      Technologie Platform MS .NET Java 11 Java 11   Product Type framework framework set libraries (13 in total)   Programming language procedural SQL nano/micro-flows, Java/JS call-outs Java for desktop, web (mobile) and server   Target audience Thinkwise developers Citizen developers Professional developers   Since 2002 2005 2007   # Developers 20+ 20+ 2+   Modelling      Database grafical-model grafical-model text-model (Domain Specific Language)   User-interface definition in tabels UI-designer, pages / widgets text-model (DSL), code of UI-designer (Vaadin)   Custom Code      Business code works only within Thinkwise works only within Mendix (micro-flow) independent from REAL, standard Java / Spring   User-interface code programming not supported works only within Mendix (nano-flow) dependent on REAL, standard Java / Spring   Uitbreidbaarheid very limited limited Java/JS call-out complete Java / Spring platform, and external libraries   Code Quality      Automatic checks no no industry-standard: Sonar, Structure101, etc.</description>
+    </item>
+    
+  </channel>
+</rss>
