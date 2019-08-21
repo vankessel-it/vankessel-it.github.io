@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Domain :: REAL Documentation</title>
+    <title>Value types :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566346204" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/domain/">
+  <body class="" data-url="/real_doc/domain/valuetype/">
     <nav id="sidebar" class="">
 
 
@@ -149,7 +149,7 @@
     
     <li data-nav-id="/real_doc/domain/" title="Domain" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/real_doc/domain/">
@@ -194,8 +194,8 @@
   
     
     <li data-nav-id="/real_doc/domain/valuetype/" title="Value types" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/real_doc/domain/valuetype/">
@@ -299,13 +299,22 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
-                   Domain 
+                   Value types 
                  
                   </span>
                 </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
                 
               </div>
             </div>
@@ -314,9 +323,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Value types
+            </h1>
           
 
         
@@ -324,13 +336,38 @@
 
 
 
-	
+	<p>Value Types wrap Java primitive types in order to provide additional abstraction and validation.</p>
 
-<h3 id="chapter-2">Chapter 2</h3>
+<p>Value Types are immutable objects that represent business concepts which have no  identity of their own. They are identified by the object properties, the same
+as for instance a <code>String</code> object in Java.</p>
 
-<h1 id="domain">Domain</h1>
+<p>Examples of Value Types are <code>Amount</code>, <code>Price</code>, <code>Quantity</code> and <code>Confirmed</code>.</p>
 
-<p>Lorem Ipsum.</p>
+<!-- 
+<div class="notices info" ><p>REAL will only create valid Value Types in order to prevent runtime errors.</p>
+</div>
+ -->
+
+<p>REAL will ensure that only valid value-type-objects can be created. This can
+mean that numeric values are rounded upon creation, or an exception is thrown
+in case of a String that exeeds the maximum length.</p>
+
+<p>The following value types are supported:</p>
+
+<ul>
+<li>Boolean</li>
+<li>Date</li>
+<li>DateTime</li>
+<li>Decimal</li>
+<li>Enumerate</li>
+<li>Integer</li>
+<li>Long</li>
+<li>String</li>
+<li>Text</li>
+<li>Time</li>
+</ul>
+
+<p>All value types implement the Comparable interface consistent and provide a <code>getValue()</code> method for retrieving the wrapped primitive value.</p>
 
 
 
@@ -340,8 +377,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -459,6 +494,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -471,6 +507,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

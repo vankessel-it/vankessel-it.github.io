@@ -12,6 +12,27 @@
     
     
     <item>
+      <title>Boolean</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</guid>
+      <description>Create the Boolean value type by extending &amp;lsquo;DomainBoolean&amp;rsquo;.
+class OrderConfirmed extends DomainBoolean{ public OrderConfirmed(final Boolean value) { super(value); } }</description>
+    </item>
+    
+    <item>
+      <title>Decimal</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</guid>
+      <description>Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal object. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
+The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
+For example, the declaration of a new Amount value type with a precision of ten digits, and a scale of two:</description>
+    </item>
+    
+    <item>
       <title>Design</title>
       <link>http://vankesse-it.io/real_doc/introduction/design/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
@@ -36,7 +57,7 @@
       
       <guid>http://vankesse-it.io/real_doc/introduction/comparison/</guid>
       <description>How does it stack up ? REAL is a low-code software development environment. REAL aims to minimize the overall code-base of administrative systems, while promoting concise and quality business-code.
-    Thinkwise Mendix Studio Pro 8 REAL 7     General      Technologie Platform MS .NET Java 11 Java 11   Product Type framework framework set libraries (13 in total)   Programming language procedural SQL nano/micro-flows, Java/JS call-outs Java for desktop, web (mobile) and server   Target audience Thinkwise developers Citizen developers Professional developers   Since 2002 2005 2007   # Developers 20+ 20+ 2+   Modelling      Database grafical-model grafical-model text-model (Domain Specific Language)   User-interface definition in tabels UI-designer, pages / widgets text-model (DSL), code of UI-designer (Vaadin)   Custom Code      Business code works only within Thinkwise works only within Mendix (micro-flow) independent from REAL, standard Java / Spring   User-interface code programming not supported works only within Mendix (nano-flow) dependent on REAL, standard Java / Spring   Uitbreidbaarheid very limited limited Java/JS call-out complete Java / Spring platform, and external libraries   Code Quality      Automatic checks no no industry-standard: Sonar, Structure101, etc.</description>
+    Thinkwise Mendix Studio Pro 8 REAL 7     General      Technologie Platform MS .NET Java 11 Java 11   Product Type framework framework set libraries (13 in total)   Programming language procedural SQL nano/micro-flows, Java/JS call-outs Java for desktop, web (mobile) and server   Target audience Thinkwise developers Citizen developers Professional developers   Since 2002 2005 2007   # Developers 20+ 20+ 2+   Modelling      Database grafical-model grafical-model text-model (Domain Specific Language)   User-interface definition in tabels UI-designer, pages / widgets text-model (DSL), code or UI-designer (Vaadin)   Custom Code      Business code works only within Thinkwise works only within Mendix (micro-flow) independent from REAL, standard Java / Spring   User-interface code programming not supported works only within Mendix (nano-flow) dependent on REAL, standard Java / Spring   Uitbreidbaarheid very limited limited Java/JS call-out complete Java / Spring platform, and external libraries   Code Quality      Automatic checks no no industry-standard: Sonar, Structure101, etc.</description>
     </item>
     
   </channel>

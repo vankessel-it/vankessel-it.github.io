@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Value types on REAL Documentation</title>
+    <link>http://vankesse-it.io/real_doc/domain/valuetype/</link>
+    <description>Recent content in Value types on REAL Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 15:51:59 +0200</lastBuildDate>
+    
+	<atom:link href="http://vankesse-it.io/real_doc/domain/valuetype/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boolean</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</guid>
+      <description>Create the Boolean value type by extending &amp;lsquo;DomainBoolean&amp;rsquo;.
+class OrderConfirmed extends DomainBoolean{ public OrderConfirmed(final Boolean value) { super(value); } }</description>
+    </item>
+    
+    <item>
+      <title>Decimal</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</guid>
+      <description>Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal object. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
+The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
+For example, the declaration of a new Amount value type with a precision of ten digits, and a scale of two:</description>
+    </item>
+    
+  </channel>
+</rss>

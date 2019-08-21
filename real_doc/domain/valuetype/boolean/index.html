@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Domain :: REAL Documentation</title>
+    <title>Boolean :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566346204" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/domain/">
+  <body class="" data-url="/real_doc/domain/valuetype/boolean/">
     <nav id="sidebar" class="">
 
 
@@ -149,7 +149,7 @@
     
     <li data-nav-id="/real_doc/domain/" title="Domain" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/real_doc/domain/">
@@ -194,7 +194,7 @@
   
     
     <li data-nav-id="/real_doc/domain/valuetype/" title="Value types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -218,7 +218,7 @@
  
   
     
-      <li data-nav-id="/real_doc/domain/valuetype/boolean/" title="Boolean" class="dd-item ">
+      <li data-nav-id="/real_doc/domain/valuetype/boolean/" title="Boolean" class="dd-item active">
         <a href="/real_doc/domain/valuetype/boolean/">
         <i class='fas fa-check'></i> Boolean
         
@@ -299,13 +299,22 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
-                   Domain 
+                   Boolean 
                  
                   </span>
                 </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
                 
               </div>
             </div>
@@ -314,34 +323,31 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Boolean
+            </h1>
           
 
         
 
 
 
+<p>Create the Boolean value type by extending &lsquo;DomainBoolean&rsquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrderConfirmed</span> <span style="color:#66d9ef">extends</span> DomainBoolean<span style="color:#f92672">{</span>
 
-	
-
-<h3 id="chapter-2">Chapter 2</h3>
-
-<h1 id="domain">Domain</h1>
-
-<p>Lorem Ipsum.</p>
-
-
-
-
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OrderConfirmed</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -459,6 +465,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -471,6 +478,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -487,6 +495,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -540,3 +551,4 @@
 
   </body>
 </html>
+
