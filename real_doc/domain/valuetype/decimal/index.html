@@ -12,20 +12,20 @@
     <title>Decimal :: REAL Documentation</title>
 
     
-    <link href="/real_doc/css/nucleus.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/fontawesome-all.min.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/hybrid.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/featherlight.min.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/perfect-scrollbar.min.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/auto-complete.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/theme.css?1566346204" rel="stylesheet">
-    <link href="/real_doc/css/hugo-theme.css?1566346204" rel="stylesheet">
+    <link href="/real_doc/css/nucleus.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/fontawesome-all.min.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/hybrid.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/featherlight.min.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/perfect-scrollbar.min.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/auto-complete.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/theme.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/hugo-theme.css?1566347624" rel="stylesheet">
     
-      <link href="/real_doc/css/theme-green.css?1566346204" rel="stylesheet">
+      <link href="/real_doc/css/theme-green.css?1566347624" rel="stylesheet">
     
 
-    <script src="/real_doc/js/jquery-3.3.1.min.js?1566346204"></script>
+    <script src="/real_doc/js/jquery-3.3.1.min.js?1566347624"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566346204"></script>
-<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566346204"></script>
+<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566347624"></script>
+<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566347624"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/vankesse-it.io\/real_doc\/";
     
 </script>
-<script type="text/javascript" src="/real_doc/js/search.js?1566346204"></script>
+<script type="text/javascript" src="/real_doc/js/search.js?1566347624"></script>
 
     
   </div>
@@ -323,6 +323,7 @@
 <li><a href="#precision">Precision</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#validation">Validation</a></li>
+<li><a href="#convenience-methods">Convenience methods</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -363,7 +364,7 @@ a <code>BigDecimal</code> object. The constructor requires a meta-object <code>M
 
 		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 			
-			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>10<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
 		<span style="color:#f92672">}</span>
 
 		<span style="color:#a6e22e">@Override</span>
@@ -496,6 +497,32 @@ is created.</p>
 <p>result:</p>
 
 <pre><code>nl.openframe.domain.value.DomainValueException: Negative price not allowed: -3.590
+</code></pre>
+
+<h4 id="convenience-methods">Convenience methods</h4>
+
+<p>Besides the standard methods <code>add</code>, <code>substract</code>, <code>multiply</code>, <code>divide</code>,
+<code>max</code> and <code>min</code>, domain decimals include additional convenience methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Amount amount <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.23&#34;</span><span style="color:#f92672">));</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;absolute    : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">absolute</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;negate      : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">negate</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-negative : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNegative</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-positive : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isPositive</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-zero     : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isZero</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-non-zero : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNonZero</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-one      : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isOne</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-minus one: &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNegativeOne</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>absolute    : 1.23
+negate      : -1.23
+is-negative : false
+is-positive : true
+is-zero     : false
+is-non-zero : true
+is-one      : false
+is-minus one: false
 </code></pre>
 
 
@@ -687,19 +714,19 @@ is created.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/real_doc/js/clipboard.min.js?1566346204"></script>
-    <script src="/real_doc/js/perfect-scrollbar.min.js?1566346204"></script>
-    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566346204"></script>
-    <script src="/real_doc/js/jquery.sticky.js?1566346204"></script>
-    <script src="/real_doc/js/featherlight.min.js?1566346204"></script>
-    <script src="/real_doc/js/highlight.pack.js?1566346204"></script>
+    <script src="/real_doc/js/clipboard.min.js?1566347624"></script>
+    <script src="/real_doc/js/perfect-scrollbar.min.js?1566347624"></script>
+    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566347624"></script>
+    <script src="/real_doc/js/jquery.sticky.js?1566347624"></script>
+    <script src="/real_doc/js/featherlight.min.js?1566347624"></script>
+    <script src="/real_doc/js/highlight.pack.js?1566347624"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566346204"></script>
-    <script src="/real_doc/js/learn.js?1566346204"></script>
-    <script src="/real_doc/js/hugo-learn.js?1566346204"></script>
+    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566347624"></script>
+    <script src="/real_doc/js/learn.js?1566347624"></script>
+    <script src="/real_doc/js/hugo-learn.js?1566347624"></script>
 
-    <link href="/real_doc/mermaid/mermaid.css?1566346204" rel="stylesheet" />
-    <script src="/real_doc/mermaid/mermaid.js?1566346204"></script>
+    <link href="/real_doc/mermaid/mermaid.css?1566347624" rel="stylesheet" />
+    <script src="/real_doc/mermaid/mermaid.js?1566347624"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
