@@ -77,6 +77,17 @@ For example, the declaration of a new Amount value type with a precision of five
     </item>
     
     <item>
+      <title>Integer / Long</title>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/integer/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/integer/</guid>
+      <description>Java Note: Value type DomainLong is not described here as it works the same as DomainInteger, except for the larger number range.
+ Integer Value Types extend DomainInteger, which is a wrapper arround a Integer instance. The constructor requires a meta-object MInteger to specify lower- and upper-limit.
+The integer value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.</description>
+    </item>
+    
+    <item>
       <title>Product Comparison</title>
       <link>http://vankessel-it.io/real_doc/introduction/comparison/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
@@ -87,15 +98,26 @@ For example, the declaration of a new Amount value type with a precision of five
     </item>
     
     <item>
-      <title>String</title>
+      <title>String / Text</title>
       <link>http://vankessel-it.io/real_doc/domain/valuetype/string/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
       <guid>http://vankessel-it.io/real_doc/domain/valuetype/string/</guid>
-      <description>Java String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
-The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
-For example, the declaration of a new Description value type with a lenght of 60 characters.
-class Description extends DomainString&amp;lt;Description&amp;gt;{ public Description(final String value) { super(MString.</description>
+      <description>Java Note: Value type DomainText is not described here as it works the same as DomainString, except for the limitless text length.
+ String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
+The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Time</title>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/time/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/time/</guid>
+      <description>Java Time Value Types extend DomainTime, which is a wrapper arround a LocalTime instance. The constructor requires a meta-object MTime to specify the precision: minutes, seconds or milliseconds.
+The Time value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusSecondes&amp;rsquo; and &amp;lsquo;minusMinutes&amp;rsquo;.
+For example, the declaration of a new StartTime type:
+class StartTime extends DomainTime&amp;lt;StartTime&amp;gt;{ public StartTime(final LocalTime value) { super(MTime.</description>
     </item>
     
   </channel>

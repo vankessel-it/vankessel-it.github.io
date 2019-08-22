@@ -48,12 +48,22 @@
   </url>
   
   <url>
+    <loc>http://vankessel-it.io/real_doc/domain/valuetype/integer/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vankessel-it.io/real_doc/introduction/comparison/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://vankessel-it.io/real_doc/domain/valuetype/string/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/domain/valuetype/time/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
