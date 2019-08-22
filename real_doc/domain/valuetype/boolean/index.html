@@ -12,20 +12,20 @@
     <title>Boolean :: REAL Documentation</title>
 
     
-    <link href="/real_doc/css/nucleus.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/fontawesome-all.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/hybrid.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/featherlight.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/perfect-scrollbar.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/auto-complete.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/theme.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/hugo-theme.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/nucleus.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/fontawesome-all.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/hybrid.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/featherlight.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/perfect-scrollbar.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/auto-complete.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/theme.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/hugo-theme.css?1566485720" rel="stylesheet">
     
-      <link href="/real_doc/css/theme-green.css?1566347624" rel="stylesheet">
+      <link href="/real_doc/css/theme-green.css?1566485720" rel="stylesheet">
     
 
-    <script src="/real_doc/js/jquery-3.3.1.min.js?1566347624"></script>
+    <script src="/real_doc/js/jquery-3.3.1.min.js?1566485720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566347624"></script>
-<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566347624"></script>
+<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566485720"></script>
+<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566485720"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/vankesse-it.io\/real_doc\/";
     
 </script>
-<script type="text/javascript" src="/real_doc/js/search.js?1566347624"></script>
+<script type="text/javascript" src="/real_doc/js/search.js?1566485720"></script>
 
     
   </div>
@@ -174,25 +174,6 @@
  
   
     
-      <li data-nav-id="/real_doc/domain/entity/" title="Entity" class="dd-item ">
-        <a href="/real_doc/domain/entity/">
-        <i class='fas fa-database'></i> Entity
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
     <li data-nav-id="/real_doc/domain/valuetype/" title="Value types" class="dd-item 
         parent
         
@@ -237,9 +218,66 @@
  
   
     
+      <li data-nav-id="/real_doc/domain/valuetype/date/" title="Date" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/date/">
+        <i class='fas fa-check'></i> Date
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/valuetype/datetime/" title="DateTime" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/datetime/">
+        <i class='fas fa-check'></i> DateTime
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/real_doc/domain/valuetype/decimal/" title="Decimal" class="dd-item ">
         <a href="/real_doc/domain/valuetype/decimal/">
         <i class='fas fa-check'></i> Decimal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/valuetype/string/" title="String" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/string/">
+        <i class='fas fa-check'></i> String
         
         </a>
     </li>
@@ -253,6 +291,25 @@
         </ul>
               
     </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/entity/" title="Entity" class="dd-item ">
+        <a href="/real_doc/domain/entity/">
+        <i class='fas fa-database'></i> Entity
+        
+        </a>
+    </li>
+     
   
  
 
@@ -311,7 +368,21 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#java">Java</a></li>
+<li><a href="#dsl">DSL</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -335,13 +406,71 @@
 
 
 
-<p>Create the Boolean value type by extending &lsquo;DomainBoolean&rsquo;.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrderConfirmed</span> <span style="color:#66d9ef">extends</span> DomainBoolean<span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OrderConfirmed</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+<h4 id="java">Java</h4>
+
+<p>Boolean Value Types extend <code>DomainBoolean</code>, which is a wrapper arround
+a <code>Boolean</code> instance.</p>
+
+<p>The value-type must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;negate&rsquo;.</p>
+
+<p>For example, the declaration of a new <code>Confirmed</code> value type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Confirmed</span> <span style="color:#66d9ef">extends</span> DomainBoolean<span style="color:#f92672">&lt;</span>Confirmed<span style="color:#f92672">&gt;{</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Confirmed</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> Confirmed <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Confirmed<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span></code></pre></div>
+<p>usage:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Confirmed confirmed <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Confirmed<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;negate   : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">negate</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-false : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">isFalse</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-true  : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">isTrue</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>negate   : true
+is-false : true
+is-true  : false
+</code></pre>
+
+<h4 id="dsl">DSL</h4>
+
+<p>Boolean value types can be also be created using the REAL DSL:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">SystemLabels</span>.<span style="color:#a6e22e">confirmedLabel</span>
+
+<span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">Confirmed</span> <span style="color:#a6e22e">confirmedLabel</span>
+</code></pre></div>
+<p>This will generate two new classes: <code>Confirmed.java</code> and <code>AbstractConfirmed.java</code>.
+The concrete class is a skeleton-class and can be used to add validation and
+additional functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Confirmed</span> <span style="color:#66d9ef">extends</span> AbstractConfirmed<span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Confirmed</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>The abstract class extends <code>DomainBoolean</code> and
+adds several new static constructors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Confirmed c1 <span style="color:#f92672">=</span> Confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> Confirmed c2 <span style="color:#f92672">=</span> Confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;True&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> Confirmed c3 <span style="color:#f92672">=</span> Confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;T&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#75715e">// Equality is based on the underlying Boolean value.
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c1.equal(c2) : &#34;</span> <span style="color:#f92672">+</span> c1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>c2<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c1.equal(c3) : &#34;</span> <span style="color:#f92672">+</span> c1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>c3<span style="color:#f92672">));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>c1.equal(c2) : true
+c1.equal(c3) : true
+</code></pre>
+
 
 <footer class=" footline" >
 	
@@ -446,25 +575,6 @@
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -509,6 +619,70 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -531,19 +705,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/real_doc/js/clipboard.min.js?1566347624"></script>
-    <script src="/real_doc/js/perfect-scrollbar.min.js?1566347624"></script>
-    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566347624"></script>
-    <script src="/real_doc/js/jquery.sticky.js?1566347624"></script>
-    <script src="/real_doc/js/featherlight.min.js?1566347624"></script>
-    <script src="/real_doc/js/highlight.pack.js?1566347624"></script>
+    <script src="/real_doc/js/clipboard.min.js?1566485720"></script>
+    <script src="/real_doc/js/perfect-scrollbar.min.js?1566485720"></script>
+    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566485720"></script>
+    <script src="/real_doc/js/jquery.sticky.js?1566485720"></script>
+    <script src="/real_doc/js/featherlight.min.js?1566485720"></script>
+    <script src="/real_doc/js/highlight.pack.js?1566485720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566347624"></script>
-    <script src="/real_doc/js/learn.js?1566347624"></script>
-    <script src="/real_doc/js/hugo-learn.js?1566347624"></script>
+    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566485720"></script>
+    <script src="/real_doc/js/learn.js?1566485720"></script>
+    <script src="/real_doc/js/hugo-learn.js?1566485720"></script>
 
-    <link href="/real_doc/mermaid/mermaid.css?1566347624" rel="stylesheet" />
-    <script src="/real_doc/mermaid/mermaid.js?1566347624"></script>
+    <link href="/real_doc/mermaid/mermaid.css?1566485720" rel="stylesheet" />
+    <script src="/real_doc/mermaid/mermaid.js?1566485720"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,13 +12,48 @@
     
     
     <item>
+      <title>Entity</title>
+      <link>http://vankesse-it.io/real_doc/domain/entity/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/entity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Boolean</title>
       <link>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
       <guid>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</guid>
-      <description>Create the Boolean value type by extending &amp;lsquo;DomainBoolean&amp;rsquo;.
-class OrderConfirmed extends DomainBoolean{ public OrderConfirmed(final Boolean value) { super(value); } }</description>
+      <description>Java Boolean Value Types extend DomainBoolean, which is a wrapper arround a Boolean instance.
+The value-type must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;negate&amp;rsquo;.
+For example, the declaration of a new Confirmed value type:
+class Confirmed extends DomainBoolean&amp;lt;Confirmed&amp;gt;{ public Confirmed(final Boolean value) { super(value); } @Override protected Confirmed createInstance(final Boolean value) { return new Confirmed(value); } } usage:</description>
+    </item>
+    
+    <item>
+      <title>Date</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/date/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/date/</guid>
+      <description>Java Date Value Types extend DomainDate, which is a wrapper arround a LocalDate instance.
+The Date value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new InvoiceDate type:
+class InvoiceDate extends DomainDate&amp;lt;InvoiceDate&amp;gt;{ public InvoiceDate(final LocalDate value) { super(value); } @Override protected InvoiceDate createInstance(final LocalDate value) { return new InvoiceDate(value); } } usage:</description>
+    </item>
+    
+    <item>
+      <title>DateTime</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/datetime/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/datetime/</guid>
+      <description>Java DateTime Value Types extend DomainDateTime, which is a wrapper arround a LocalDateTime instance. The constructor requires a meta-object MDateTime to specify the precision: minutes, seconds or milliseconds.
+The DateTime value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new TimeStamp type:
+class TimeStamp extends DomainDateTime&amp;lt;TimeStamp&amp;gt;{ public TimeStamp(final LocalDateTime value) { super(MDateTime.</description>
     </item>
     
     <item>
@@ -27,9 +62,9 @@ class OrderConfirmed extends DomainBoolean{ public OrderConfirmed(final Boolean 
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
       <guid>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</guid>
-      <description>Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal object. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
+      <description>Java Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal instance. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
 The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
-For example, the declaration of a new Amount value type with a precision of ten digits, and a scale of two:</description>
+For example, the declaration of a new Amount value type with a precision of five digits, and a scale of two:</description>
     </item>
     
     <item>
@@ -42,15 +77,6 @@ For example, the declaration of a new Amount value type with a precision of ten 
     </item>
     
     <item>
-      <title>Entity</title>
-      <link>http://vankesse-it.io/real_doc/domain/entity/</link>
-      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
-      
-      <guid>http://vankesse-it.io/real_doc/domain/entity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Product Comparison</title>
       <link>http://vankesse-it.io/real_doc/introduction/comparison/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
@@ -58,6 +84,18 @@ For example, the declaration of a new Amount value type with a precision of ten 
       <guid>http://vankesse-it.io/real_doc/introduction/comparison/</guid>
       <description>How does it stack up ? REAL is a low-code software development environment. REAL aims to minimize the overall code-base of administrative systems, while promoting concise and quality business-code.
     Thinkwise Mendix Studio Pro 8 REAL 7     General      Technologie Platform MS .NET Java 11 Java 11   Product Type framework framework set libraries (13 in total)   Programming language procedural SQL nano/micro-flows, Java/JS call-outs Java for desktop, web (mobile) and server   Target audience Thinkwise developers Citizen developers Professional developers   Since 2002 2005 2007   # Developers 20+ 20+ 2+   Modelling      Database grafical-model grafical-model text-model (Domain Specific Language)   User-interface definition in tabels UI-designer, pages / widgets text-model (DSL), code or UI-designer (Vaadin)   Custom Code      Business code works only within Thinkwise works only within Mendix (micro-flow) independent from REAL, standard Java / Spring   User-interface code programming not supported works only within Mendix (nano-flow) dependent on REAL, standard Java / Spring   Uitbreidbaarheid very limited limited Java/JS call-out complete Java / Spring platform, and external libraries   Code Quality      Automatic checks no no industry-standard: Sonar, Structure101, etc.</description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>http://vankesse-it.io/real_doc/domain/valuetype/string/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankesse-it.io/real_doc/domain/valuetype/string/</guid>
+      <description>Java String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
+The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
+For example, the declaration of a new Description value type with a lenght of 60 characters.
+class Description extends DomainString&amp;lt;Description&amp;gt;{ public Description(final String value) { super(MString.</description>
     </item>
     
   </channel>

@@ -12,20 +12,20 @@
     <title>Decimal :: REAL Documentation</title>
 
     
-    <link href="/real_doc/css/nucleus.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/fontawesome-all.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/hybrid.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/featherlight.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/perfect-scrollbar.min.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/auto-complete.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/theme.css?1566347624" rel="stylesheet">
-    <link href="/real_doc/css/hugo-theme.css?1566347624" rel="stylesheet">
+    <link href="/real_doc/css/nucleus.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/fontawesome-all.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/hybrid.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/featherlight.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/perfect-scrollbar.min.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/auto-complete.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/atom-one-dark-reasonable.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/theme.css?1566485720" rel="stylesheet">
+    <link href="/real_doc/css/hugo-theme.css?1566485720" rel="stylesheet">
     
-      <link href="/real_doc/css/theme-green.css?1566347624" rel="stylesheet">
+      <link href="/real_doc/css/theme-green.css?1566485720" rel="stylesheet">
     
 
-    <script src="/real_doc/js/jquery-3.3.1.min.js?1566347624"></script>
+    <script src="/real_doc/js/jquery-3.3.1.min.js?1566485720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566347624"></script>
-<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566347624"></script>
+<script type="text/javascript" src="/real_doc/js/lunr.min.js?1566485720"></script>
+<script type="text/javascript" src="/real_doc/js/auto-complete.js?1566485720"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/vankesse-it.io\/real_doc\/";
     
 </script>
-<script type="text/javascript" src="/real_doc/js/search.js?1566347624"></script>
+<script type="text/javascript" src="/real_doc/js/search.js?1566485720"></script>
 
     
   </div>
@@ -174,25 +174,6 @@
  
   
     
-      <li data-nav-id="/real_doc/domain/entity/" title="Entity" class="dd-item ">
-        <a href="/real_doc/domain/entity/">
-        <i class='fas fa-database'></i> Entity
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
     <li data-nav-id="/real_doc/domain/valuetype/" title="Value types" class="dd-item 
         parent
         
@@ -237,9 +218,66 @@
  
   
     
+      <li data-nav-id="/real_doc/domain/valuetype/date/" title="Date" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/date/">
+        <i class='fas fa-check'></i> Date
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/valuetype/datetime/" title="DateTime" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/datetime/">
+        <i class='fas fa-check'></i> DateTime
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/real_doc/domain/valuetype/decimal/" title="Decimal" class="dd-item active">
         <a href="/real_doc/domain/valuetype/decimal/">
         <i class='fas fa-check'></i> Decimal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/valuetype/string/" title="String" class="dd-item ">
+        <a href="/real_doc/domain/valuetype/string/">
+        <i class='fas fa-check'></i> String
         
         </a>
     </li>
@@ -253,6 +291,25 @@
         </ul>
               
     </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/domain/entity/" title="Entity" class="dd-item ">
+        <a href="/real_doc/domain/entity/">
+        <i class='fas fa-database'></i> Entity
+        
+        </a>
+    </li>
+     
   
  
 
@@ -319,11 +376,18 @@
 <ul>
 <li>
 <ul>
+<li><a href="#java">Java</a>
+<ul>
 <li><a href="#scale">Scale</a></li>
 <li><a href="#precision">Precision</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#validation">Validation</a></li>
 <li><a href="#convenience-methods">Convenience methods</a></li>
+</ul></li>
+<li><a href="#dsl">DSL</a>
+<ul>
+<li><a href="#equality">Equality</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -354,25 +418,27 @@
 
 
 
+<h4 id="java">Java</h4>
+
 <p>Decimal Value Types extend <code>DomainDecimal</code>, which is a wrapper arround
-a <code>BigDecimal</code> object. The constructor requires a meta-object <code>MDecimal</code> to specify precision, scale and rounding.</p>
+a <code>BigDecimal</code> instance. The constructor requires a meta-object <code>MDecimal</code> to specify precision, scale and rounding.</p>
 
 <p>The decimal value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;add&rsquo;, &lsquo;subtract&rsquo;, etc.</p>
 
-<p>For example, the declaration of a new <code>Amount</code> value type with a precision of ten digits, and a scale of two:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Amount</span> <span style="color:#66d9ef">extends</span> DomainDecimal<span style="color:#f92672">&lt;</span>Amount<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+<p>For example, the declaration of a new <code>Amount</code> value type with a precision of five digits, and a scale of two:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Amount</span> <span style="color:#66d9ef">extends</span> DomainDecimal<span style="color:#f92672">&lt;</span>Amount<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
 
-		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			
-			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
 
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">protected</span> Amount <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span></code></pre></div>
-<h4 id="scale">Scale</h4>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> Amount <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="scale">Scale</h5>
 
 <p>Domain decimals are rounded upon creation to ensure that no invalid
 objects can exist.</p>
@@ -394,7 +460,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 - round up   from 1.237 to 1.24: 1.24
 </code></pre>
 
-<h4 id="precision">Precision</h4>
+<h5 id="precision">Precision</h5>
 
 <pre><code>System.out.println(&quot;Decrease precision:&quot;);
 System.out.println(&quot;- from 12345.67  to     12346.00: &quot; + new Amount(new BigDecimal(&quot;12345.67&quot;)));
@@ -408,7 +474,7 @@ System.out.println(&quot;- from 123456789 to 123460000.00: &quot; + new Amount(n
 - from 123456789 to 123460000.00: 123460000.00
 </code></pre>
 
-<h4 id="usage">Usage</h4>
+<h5 id="usage">Usage</h5>
 
 <p>REAL will generate Value Type classes with many extra methods and constructors, but
 for this example we will add some of these methods manually.</p>
@@ -452,18 +518,14 @@ using the new amount-constructor.</p>
 
 <p>Given these new value types, calculations are possible using only
 the business concepts Amount, Price and Quantity:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#a6e22e">@Test</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">priceExample</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		
-		<span style="color:#66d9ef">final</span> Price price <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;13.3329&#34;</span><span style="color:#f92672">));</span>
-		<span style="color:#66d9ef">final</span> Quantity quantity <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Quantity<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3.50&#34;</span><span style="color:#f92672">));</span>
-		
-		<span style="color:#66d9ef">final</span> Amount amount <span style="color:#f92672">=</span> price<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>quantity<span style="color:#f92672">);</span>
-		
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Price      &#34;</span><span style="color:#f92672">+</span>price<span style="color:#f92672">);</span>
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Quantity * &#34;</span><span style="color:#f92672">+</span>quantity<span style="color:#f92672">);</span>
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Amount   = &#34;</span><span style="color:#f92672">+</span>amount<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Price price <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;13.3329&#34;</span><span style="color:#f92672">));</span>
+<span style="color:#66d9ef">final</span> Quantity quantity <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Quantity<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3.50&#34;</span><span style="color:#f92672">));</span>
+
+<span style="color:#66d9ef">final</span> Amount amount <span style="color:#f92672">=</span> price<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>quantity<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Price      &#34;</span><span style="color:#f92672">+</span>price<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Quantity * &#34;</span><span style="color:#f92672">+</span>quantity<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Amount   = &#34;</span><span style="color:#f92672">+</span>amount<span style="color:#f92672">);</span></code></pre></div>
 <p>result:</p>
 
 <pre><code>Price      13.333
@@ -481,7 +543,7 @@ imprecise results.</p>
 </div>
 
 
-<h4 id="validation">Validation</h4>
+<h5 id="validation">Validation</h5>
 
 <p>Value Types can be validated by adding checks in the constructor. For example, disallow negative prices:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Price</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -499,7 +561,7 @@ is created.</p>
 <pre><code>nl.openframe.domain.value.DomainValueException: Negative price not allowed: -3.590
 </code></pre>
 
-<h4 id="convenience-methods">Convenience methods</h4>
+<h5 id="convenience-methods">Convenience methods</h5>
 
 <p>Besides the standard methods <code>add</code>, <code>substract</code>, <code>multiply</code>, <code>divide</code>,
 <code>max</code> and <code>min</code>, domain decimals include additional convenience methods:</p>
@@ -523,6 +585,60 @@ is-zero     : false
 is-non-zero : true
 is-one      : false
 is-minus one: false
+</code></pre>
+
+<h4 id="dsl">DSL</h4>
+
+<p>Decimal value types can be also be created using the REAL DSL:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">SystemLabels</span>.<span style="color:#a6e22e">amountLabel</span>
+
+<span style="color:#a6e22e">decimal</span> <span style="color:#a6e22e">Amount</span> <span style="color:#a6e22e">amountLabel</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">2</span> <span style="color:#a6e22e">half_up</span>
+</code></pre></div>
+<p>This will generate two new classes: <code>Amount.java</code> and <code>AbstractAmount.java</code>.
+The concrete class is a skeleton-class and can be used to add validation and
+additional functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Amount</span> <span style="color:#66d9ef">extends</span> AbstractAmount<span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>The abstract class extends <code>DomainDecimal</code> and
+adds several new static constructors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Create new instance
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Amount a1 <span style="color:#f92672">=</span> Amount<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;123.45&#34;</span><span style="color:#f92672">));</span>
+<span style="color:#66d9ef">final</span> Amount a2 <span style="color:#f92672">=</span> Amount<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>123<span style="color:#f92672">.</span><span style="color:#a6e22e">45</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> Amount a3 <span style="color:#f92672">=</span> Amount<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;123.45&#34;</span><span style="color:#f92672">);</span>
+		
+<span style="color:#75715e">// Convert Amount to Price
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Price p1 <span style="color:#f92672">=</span> Price<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>a1<span style="color:#f92672">);</span></code></pre></div>
+<p>Because value types objects are immutable they can benefit from
+caching (&lsquo;flyweight&rsquo; design-pattern). This is enabled by using
+static constructors.</p>
+
+<h5 id="equality">Equality</h5>
+
+<p>Domain Decimal equality is based on the underlying BigDecimal value.</p>
+
+<pre><code>System.out.println(&quot;a1.equal(a2) : &quot; + a1.equals(a2));
+System.out.println(&quot;a1.equal(a3) : &quot; + a1.equals(a3));
+</code></pre>
+
+<p>result:</p>
+
+<pre><code>a1.equal(a2) : true
+a1.equal(a3) : true
+</code></pre>
+
+<p>Only values with the same precision and scale can be equal.</p>
+
+<pre><code>// Price and Amount have different scales
+System.out.println(&quot;p1.equal(a1) : &quot; + p1.equals(a1));
+</code></pre>
+
+<p>result:</p>
+
+<pre><code>p1.equal(a1) : false
 </code></pre>
 
 
@@ -629,25 +745,6 @@ is-minus one: false
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -681,6 +778,21 @@ is-minus one: false
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -692,6 +804,58 @@ is-minus one: false
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -714,19 +878,19 @@ is-minus one: false
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/real_doc/js/clipboard.min.js?1566347624"></script>
-    <script src="/real_doc/js/perfect-scrollbar.min.js?1566347624"></script>
-    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566347624"></script>
-    <script src="/real_doc/js/jquery.sticky.js?1566347624"></script>
-    <script src="/real_doc/js/featherlight.min.js?1566347624"></script>
-    <script src="/real_doc/js/highlight.pack.js?1566347624"></script>
+    <script src="/real_doc/js/clipboard.min.js?1566485720"></script>
+    <script src="/real_doc/js/perfect-scrollbar.min.js?1566485720"></script>
+    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1566485720"></script>
+    <script src="/real_doc/js/jquery.sticky.js?1566485720"></script>
+    <script src="/real_doc/js/featherlight.min.js?1566485720"></script>
+    <script src="/real_doc/js/highlight.pack.js?1566485720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566347624"></script>
-    <script src="/real_doc/js/learn.js?1566347624"></script>
-    <script src="/real_doc/js/hugo-learn.js?1566347624"></script>
+    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1566485720"></script>
+    <script src="/real_doc/js/learn.js?1566485720"></script>
+    <script src="/real_doc/js/hugo-learn.js?1566485720"></script>
 
-    <link href="/real_doc/mermaid/mermaid.css?1566347624" rel="stylesheet" />
-    <script src="/real_doc/mermaid/mermaid.js?1566347624"></script>
+    <link href="/real_doc/mermaid/mermaid.css?1566485720" rel="stylesheet" />
+    <script src="/real_doc/mermaid/mermaid.js?1566485720"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

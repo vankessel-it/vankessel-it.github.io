@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Design :: REAL Documentation</title>
+    <title>Date :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566485720" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/introduction/design/">
+  <body class="" data-url="/real_doc/domain/valuetype/date/">
     <nav id="sidebar" class="">
 
 
@@ -78,7 +78,7 @@
   
     
     <li data-nav-id="/real_doc/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -102,7 +102,7 @@
  
   
     
-      <li data-nav-id="/real_doc/introduction/design/" title="Design" class="dd-item active">
+      <li data-nav-id="/real_doc/introduction/design/" title="Design" class="dd-item ">
         <a href="/real_doc/introduction/design/">
         <i class='fab fa-github'></i> Design
         
@@ -148,7 +148,7 @@
   
     
     <li data-nav-id="/real_doc/domain/" title="Domain" class="dd-item 
-        
+        parent
         
         
         ">
@@ -175,7 +175,7 @@
   
     
     <li data-nav-id="/real_doc/domain/valuetype/" title="Value types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -218,7 +218,7 @@
  
   
     
-      <li data-nav-id="/real_doc/domain/valuetype/date/" title="Date" class="dd-item ">
+      <li data-nav-id="/real_doc/domain/valuetype/date/" title="Date" class="dd-item active">
         <a href="/real_doc/domain/valuetype/date/">
         <i class='fas fa-check'></i> Date
         
@@ -361,7 +361,7 @@
                   <span class="links">
                  
                  
-                   Design 
+                   Date 
                  
                   </span>
                 </div>
@@ -372,7 +372,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#a-set-of-13-libraries">A set of 13 libraries</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#java">Java</a></li>
+<li><a href="#dsl">DSL</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -391,7 +398,7 @@
           
             <h1>
               
-              Design
+              Date
             </h1>
           
 
@@ -401,9 +408,83 @@
 
 
 
-<h2 id="a-set-of-13-libraries">A set of 13 libraries</h2>
+<h4 id="java">Java</h4>
 
-<p><img src="/real_doc/introduction/dependencies.png" alt="design" /></p>
+<p>Date Value Types extend <code>DomainDate</code>, which is a wrapper arround
+a <code>LocalDate</code> instance.</p>
+
+<p>The Date value-type class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;plusDays&rsquo; and &lsquo;minusDays&rsquo;.</p>
+
+<p>For example, the declaration of a new <code>InvoiceDate</code> type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InvoiceDate</span> <span style="color:#66d9ef">extends</span> DomainDate<span style="color:#f92672">&lt;</span>InvoiceDate<span style="color:#f92672">&gt;{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">InvoiceDate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LocalDate value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> InvoiceDate <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LocalDate value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> InvoiceDate<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>usage:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> InvoiceDate d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> InvoiceDate<span style="color:#f92672">(</span>LocalDate<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">());</span>
+<span style="color:#66d9ef">final</span> InvoiceDate d2 <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">plusDays</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> InvoiceDate d3 <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">minusDays</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.plusDays(5) : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.minusDays(5): &#34;</span> <span style="color:#f92672">+</span>d3<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.isBefore(d1): &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">isBefore</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.isAfter(d1) : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">isAfter</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.equals(d1)  : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>d1.plusDays(5) : 2019-08-27
+d1.minusDays(5): 2019-08-17
+d2.isBefore(d1): false
+d2.isAfter(d1) : true
+d2.equals(d1)  : false
+</code></pre>
+
+<h4 id="dsl">DSL</h4>
+
+<p>Date value types can be also be created using the REAL DSL:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>.<span style="color:#a6e22e">SYS_BTLabels</span>.<span style="color:#a6e22e">executionDateLabel</span>
+
+<span style="color:#a6e22e">date</span> <span style="color:#a6e22e">ExecutionDate</span> <span style="color:#a6e22e">executionDateLabel</span>
+</code></pre></div>
+<p>This will generate two new classes: <code>ExecutionDate.java</code> and <code>AbstractExecutionDate.java</code>.
+The concrete class is a skeleton-class and can be used to add validation and
+additional functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExecutionDate</span> <span style="color:#66d9ef">extends</span> AbstractExecutionDate<span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ExecutionDate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LocalDate value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>The abstract class extends <code>DomainDate</code> and
+adds several new static constructors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> ExecutionDate d1 <span style="color:#f92672">=</span> ExecutionDate<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">final</span> ExecutionDate d2 <span style="color:#f92672">=</span> ExecutionDate<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>LocalDate<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">());</span>
+<span style="color:#66d9ef">final</span> ExecutionDate d3 <span style="color:#f92672">=</span> ExecutionDate<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;01-01-2019&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> ExecutionDate d4 <span style="color:#f92672">=</span> ExecutionDate<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>d3<span style="color:#f92672">.</span><span style="color:#a6e22e">minusDays</span><span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1 : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2 : &#34;</span> <span style="color:#f92672">+</span> d2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d3 : &#34;</span> <span style="color:#f92672">+</span> d3<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d4 : &#34;</span> <span style="color:#f92672">+</span> d4<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.equals(d2) : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d2<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.equals(d3) : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d3<span style="color:#f92672">));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>d1 : 22-08-2019
+d2 : 22-08-2019
+d3 : 01-01-2019
+d4 : 31-12-2018
+d1.equals(d2) : true
+d1.equals(d3) : false
+</code></pre>
 
 
 <footer class=" footline" >
@@ -442,73 +523,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -550,10 +566,82 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
