@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain on REAL Documentation</title>
-    <link>http://vankesse-it.io/real_doc/domain/</link>
+    <link>http://vankessel-it.io/real_doc/domain/</link>
     <description>Recent content in Domain on REAL Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Aug 2019 15:50:54 +0200</lastBuildDate>
     
-	<atom:link href="http://vankesse-it.io/real_doc/domain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://vankessel-it.io/real_doc/domain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Entity</title>
-      <link>http://vankesse-it.io/real_doc/domain/entity/</link>
+      <link>http://vankessel-it.io/real_doc/domain/entity/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/entity/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/entity/</guid>
       <description></description>
     </item>
     

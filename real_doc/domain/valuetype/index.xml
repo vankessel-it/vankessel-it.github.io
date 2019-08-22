@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Value types on REAL Documentation</title>
-    <link>http://vankesse-it.io/real_doc/domain/valuetype/</link>
+    <link>http://vankessel-it.io/real_doc/domain/valuetype/</link>
     <description>Recent content in Value types on REAL Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Aug 2019 15:51:59 +0200</lastBuildDate>
     
-	<atom:link href="http://vankesse-it.io/real_doc/domain/valuetype/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://vankessel-it.io/real_doc/domain/valuetype/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Boolean</title>
-      <link>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</link>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/boolean/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/valuetype/boolean/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/boolean/</guid>
       <description>Java Boolean Value Types extend DomainBoolean, which is a wrapper arround a Boolean instance.
 The value-type must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;negate&amp;rsquo;.
 For example, the declaration of a new Confirmed value type:
@@ -25,10 +25,10 @@ class Confirmed extends DomainBoolean&amp;lt;Confirmed&amp;gt;{ public Confirmed
     
     <item>
       <title>Date</title>
-      <link>http://vankesse-it.io/real_doc/domain/valuetype/date/</link>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/date/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/valuetype/date/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/date/</guid>
       <description>Java Date Value Types extend DomainDate, which is a wrapper arround a LocalDate instance.
 The Date value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
 For example, the declaration of a new InvoiceDate type:
@@ -37,10 +37,10 @@ class InvoiceDate extends DomainDate&amp;lt;InvoiceDate&amp;gt;{ public InvoiceD
     
     <item>
       <title>DateTime</title>
-      <link>http://vankesse-it.io/real_doc/domain/valuetype/datetime/</link>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/datetime/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/valuetype/datetime/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/datetime/</guid>
       <description>Java DateTime Value Types extend DomainDateTime, which is a wrapper arround a LocalDateTime instance. The constructor requires a meta-object MDateTime to specify the precision: minutes, seconds or milliseconds.
 The DateTime value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
 For example, the declaration of a new TimeStamp type:
@@ -49,10 +49,10 @@ class TimeStamp extends DomainDateTime&amp;lt;TimeStamp&amp;gt;{ public TimeStam
     
     <item>
       <title>Decimal</title>
-      <link>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</link>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/decimal/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/valuetype/decimal/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/decimal/</guid>
       <description>Java Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal instance. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
 The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
 For example, the declaration of a new Amount value type with a precision of five digits, and a scale of two:</description>
@@ -60,10 +60,10 @@ For example, the declaration of a new Amount value type with a precision of five
     
     <item>
       <title>String</title>
-      <link>http://vankesse-it.io/real_doc/domain/valuetype/string/</link>
+      <link>http://vankessel-it.io/real_doc/domain/valuetype/string/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankesse-it.io/real_doc/domain/valuetype/string/</guid>
+      <guid>http://vankessel-it.io/real_doc/domain/valuetype/string/</guid>
       <description>Java String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
 The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
 For example, the declaration of a new Description value type with a lenght of 60 characters.
