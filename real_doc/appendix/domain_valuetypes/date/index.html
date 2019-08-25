@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Domain Date :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/appendix/domain_valuetypes/date/">
     <nav id="sidebar" class="">
 
 
@@ -498,7 +498,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        
+        parent
         
         
         ">
@@ -525,7 +525,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -568,7 +568,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/date/" title="Domain Date" class="dd-item ">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/date/" title="Domain Date" class="dd-item active">
         <a href="/real_doc/appendix/domain_valuetypes/date/">
         Domain Date
         
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Domain Date 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              Domain Date
             </h1>
           
 
@@ -761,17 +761,48 @@
 
 
 
+<p>Date Value Types extend <code>DomainDate</code>, which is a wrapper arround
+a <code>LocalDate</code> instance.</p>
 
+<p>The Date value-type class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;plusDays&rsquo; and &lsquo;minusDays&rsquo;.</p>
 
-
-<ul>
+<p>For example, the declaration of a new <code>InvoiceDate</code> type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InvoiceDate</span> <span style="color:#66d9ef">extends</span> DomainDate<span style="color:#f92672">&lt;</span>InvoiceDate<span style="color:#f92672">&gt;{</span>
 	
-</ul>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">InvoiceDate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LocalDate value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> InvoiceDate <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LocalDate value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> InvoiceDate<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>usage:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> InvoiceDate d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> InvoiceDate<span style="color:#f92672">(</span>LocalDate<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">());</span>
+<span style="color:#66d9ef">final</span> InvoiceDate d2 <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">plusDays</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> InvoiceDate d3 <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">minusDays</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.plusDays(5) : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.minusDays(5): &#34;</span> <span style="color:#f92672">+</span>d3<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.isBefore(d1): &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">isBefore</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.isAfter(d1) : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">isAfter</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2.equals(d1)  : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>d1.plusDays(5) : 2019-08-27
+d1.minusDays(5): 2019-08-17
+d2.isBefore(d1): false
+d2.isAfter(d1) : true
+d2.equals(d1)  : false
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1113,6 +1144,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1128,6 +1160,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1140,6 +1173,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1157,6 +1193,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1172,6 +1209,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1329,4 @@
 
   </body>
 </html>
+

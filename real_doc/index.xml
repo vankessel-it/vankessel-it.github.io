@@ -12,59 +12,63 @@
     
     
     <item>
-      <title>Entity</title>
-      <link>http://vankessel-it.io/real_doc/domain/entity/</link>
+      <title>Configuration</title>
+      <link>http://vankessel-it.io/real_doc/reference/configuration/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/entity/</guid>
-      <description></description>
+      <guid>http://vankessel-it.io/real_doc/reference/configuration/</guid>
+      <description>Global application configurations are contained in one or more configuration DSL files.
+Labels The configuration file specifies the label-sets available in the application:
+package nl.openframe.erp.system import nl.openframe.erp.system.bc.SYS_BCLabels import nl.openframe.erp.system.bf.SYS_BFLabels import nl.openframe.erp.system.bt.SYS_BTLabels import nl.openframe.erp.system.sr.SYS_SRLabels import nl.openframe.erp.system.SystemLabels configuration SystemSharedConfiguration{ label-set SYS_BCLabels label-set SYS_BFLabels label-set SYS_BTLabels label-set SYS_SRLabels label-set SystemLabels }  This translates into a Spring configuration class which imports all the message resources.
+@Configuration public class SystemSharedConfiguration{ @Bean public MessageSource messageSource() { final ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource(); messageSource.</description>
     </item>
     
     <item>
       <title>Boolean</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/boolean/</link>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/boolean/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/boolean/</guid>
-      <description>Java Boolean Value Types extend DomainBoolean, which is a wrapper arround a Boolean instance.
-The value-type must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;negate&amp;rsquo;.
-For example, the declaration of a new Confirmed value type:
-class Confirmed extends DomainBoolean&amp;lt;Confirmed&amp;gt;{ public Confirmed(final Boolean value) { super(value); } @Override protected Confirmed createInstance(final Boolean value) { return new Confirmed(value); } } usage:</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/boolean/</guid>
+      <description>Boolean value type DSL declaration:
+import nl.openframe.erp.system.SystemLabels.confirmedLabel boolean Confirmed confirmedLabel  This will generate two new classes: Confirmed.java and AbstractConfirmed.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Confirmed extends AbstractConfirmed{ public Confirmed(final Boolean value) { super(value); } } The abstract class extends DomainBoolean and adds static constructors:
+final Confirmed c1 = Confirmed.of(true); final Confirmed c2 = Confirmed.of(&amp;#34;True&amp;#34;); final Confirmed c3 = Confirmed.</description>
     </item>
     
     <item>
       <title>Date</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/date/</link>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/date/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/date/</guid>
-      <description>Java Date Value Types extend DomainDate, which is a wrapper arround a LocalDate instance.
-The Date value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
-For example, the declaration of a new InvoiceDate type:
-class InvoiceDate extends DomainDate&amp;lt;InvoiceDate&amp;gt;{ public InvoiceDate(final LocalDate value) { super(value); } @Override protected InvoiceDate createInstance(final LocalDate value) { return new InvoiceDate(value); } } usage:</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/date/</guid>
+      <description>Date value type DSL declaration:
+import nl.openframe.erp.system.bt.SYS_BTLabels.executionDateLabel date ExecutionDate executionDateLabel  This will generate two new classes: ExecutionDate.java and AbstractExecutionDate.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class ExecutionDate extends AbstractExecutionDate{ public ExecutionDate(final LocalDate value) { super(value); } } The abstract class extends DomainDate and adds static constructors:
+final ExecutionDate d1 = ExecutionDate.now(); final ExecutionDate d2 = ExecutionDate.of(LocalDate.now()); final ExecutionDate d3 = ExecutionDate.</description>
     </item>
     
     <item>
       <title>DateTime</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/datetime/</link>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/datetime/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/datetime/</guid>
-      <description>Java DateTime Value Types extend DomainDateTime, which is a wrapper arround a LocalDateTime instance. The constructor requires a meta-object MDateTime to specify the precision: minutes, seconds or milliseconds.
-The DateTime value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
-For example, the declaration of a new TimeStamp type:
-class TimeStamp extends DomainDateTime&amp;lt;TimeStamp&amp;gt;{ public TimeStamp(final LocalDateTime value) { super(MDateTime.</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/datetime/</guid>
+      <description>DateTime value type DSL declaration, including precision:
+import nl.openframe.erp.system.sr.SYS_SRLabels.alertDateTimeLabel datetime AlertDateTime alertDateTimeLabel milliseconds  The precision can be milliseconds, seconds or minutes. New instances will be truncated according to their precision.
+This will generate two new classes: AlertDateTime.java and AbstractAlertDateTime.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class AlertDateTime extends AbstractAlertDateTime{ public AlertDateTime(final LocalDateTime value) { super(value); } } The abstract class extends DomainDateTime and adds static constructors:</description>
     </item>
     
     <item>
       <title>Decimal</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/decimal/</link>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/decimal/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/decimal/</guid>
-      <description>Java Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal instance. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
-The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
-For example, the declaration of a new Amount value type with a precision of five digits, and a scale of two:</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/decimal/</guid>
+      <description>Decimal value type DSL declaration, including respectively, the precision, scale and rounding:
+import nl.openframe.erp.system.SystemLabels.amountLabel decimal Amount amountLabel 10 2 half_up  The rounding can be ceiling, down, floor, half_down, half_even, half_up or up.
+This will generate two new classes: Amount.java and AbstractAmount.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Amount extends AbstractAmount{ public Amount(final BigDecimal value) { super(value); } } The abstract class extends DomainDecimal and adds static constructors:</description>
     </item>
     
     <item>
@@ -73,18 +77,114 @@ For example, the declaration of a new Amount value type with a precision of five
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
       <guid>http://vankessel-it.io/real_doc/introduction/design/</guid>
-      <description> A set of 13 libraries </description>
+      <description> Technical Principles  business-code independant of REAL separation of business-logic and UI-technology user interaction logic must be UI-independant and server-side auto-generated UI, but full-manual option available all code and domain-structures in one GIT repository Nullability checks throughout all code Only valid business objects can be instantiated (all mandatory fields must be set, call to validate() generates no errors)  A set of 13 libraries </description>
     </item>
     
     <item>
-      <title>Integer / Long</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/integer/</link>
+      <title>Domain Boolean</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/boolean/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/integer/</guid>
-      <description>Java Note: Value type DomainLong is not described here as it works the same as DomainInteger, except for the larger number range.
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/boolean/</guid>
+      <description>Boolean Value Types extend DomainBoolean, which is a wrapper arround a Boolean instance.
+The value-type must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;negate&amp;rsquo;.
+For example, the declaration of a new Confirmed value type:
+class Confirmed extends DomainBoolean&amp;lt;Confirmed&amp;gt;{ public Confirmed(final Boolean value) { super(value); } @Override protected Confirmed createInstance(final Boolean value) { return new Confirmed(value); } } usage:
+final Confirmed confirmed = new Confirmed(false); System.</description>
+    </item>
+    
+    <item>
+      <title>Domain Date</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/date/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/date/</guid>
+      <description>Date Value Types extend DomainDate, which is a wrapper arround a LocalDate instance.
+The Date value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new InvoiceDate type:
+class InvoiceDate extends DomainDate&amp;lt;InvoiceDate&amp;gt;{ public InvoiceDate(final LocalDate value) { super(value); } @Override protected InvoiceDate createInstance(final LocalDate value) { return new InvoiceDate(value); } } usage:</description>
+    </item>
+    
+    <item>
+      <title>Domain DateTime</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/datetime/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/datetime/</guid>
+      <description>DateTime Value Types extend DomainDateTime, which is a wrapper arround a LocalDateTime instance. The constructor requires a meta-object MDateTime to specify the precision: minutes, seconds or milliseconds.
+The DateTime value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new TimeStamp type:
+class TimeStamp extends DomainDateTime&amp;lt;TimeStamp&amp;gt;{ public TimeStamp(final LocalDateTime value) { super(MDateTime.</description>
+    </item>
+    
+    <item>
+      <title>Domain Decimal</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/decimal/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/decimal/</guid>
+      <description>Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal instance. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
+The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
+For example, the declaration of a new Amount value type with a precision of five digits, and a scale of two:</description>
+    </item>
+    
+    <item>
+      <title>Domain Integer / Long</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/integer/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/integer/</guid>
+      <description>Note: Value type DomainLong is not described here as it works the same as DomainInteger, except for the larger number range.
  Integer Value Types extend DomainInteger, which is a wrapper arround a Integer instance. The constructor requires a meta-object MInteger to specify lower- and upper-limit.
-The integer value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.</description>
+The integer value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
+For example, the declaration of a new PortNumber value type with a range of [0,65535].</description>
+    </item>
+    
+    <item>
+      <title>Domain String / Text</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/string/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/string/</guid>
+      <description>Note: Value type DomainText is not described here as it works the same as DomainString, except for the limitless text length.
+ String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
+The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
+For example, the declaration of a new Description value type with a lenght of 60 characters.</description>
+    </item>
+    
+    <item>
+      <title>Domain Time</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/time/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/time/</guid>
+      <description>Time Value Types extend DomainTime, which is a wrapper arround a LocalTime instance. The constructor requires a meta-object MTime to specify the precision: minutes, seconds or milliseconds.
+The Time value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusSecondes&amp;rsquo; and &amp;lsquo;minusMinutes&amp;rsquo;.
+For example, the declaration of a new StartTime type:
+class StartTime extends DomainTime&amp;lt;StartTime&amp;gt;{ public StartTime(final LocalTime value) { super(MTime.</description>
+    </item>
+    
+    <item>
+      <title>Enumerate</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/enumerate/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/enumerate/</guid>
+      <description>The DSL declaration for an Enumerate value type with three options; &amp;lsquo;Yes&amp;rsquo;, &amp;lsquo;No&amp;rsquo;, &amp;lsquo;Unknown&amp;rsquo;:
+enumerate YesNoUnknown yesNoUnknownLabel{ Y: yesNoUnknownLabel_Y N: yesNoUnknownLabel_N U: yesNoUnknownLabel_U }  The labels are defined as follows:
+labelSet SystemLabels{ label yesNoUnknownLabel &amp;#34;Yes/No/Unknown&amp;#34; label yesNoUnknownLabel_Y &amp;#34;Yes&amp;#34; label yesNoUnknownLabel_N &amp;#34;No&amp;#34; label yesNoUnknownLabel_U &amp;#34;Uknown&amp;#34; }  This will generate one class: YesNoUnknown.java. This class can be extended with custom code, however, as enumerates do not support inheritance, any future changes in the DSL will have to be handled manually.</description>
+    </item>
+    
+    <item>
+      <title>Integer</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/integer/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/integer/</guid>
+      <description>Note: Value type Long is not described here as it works the same as Integer, except for the larger number range.
+ Integer value type DSL declaration, including the lower- and upper-bound for values:
+import nl.openframe.erp.system.sr.SYS_SRLabels.batchFrequencyLabel integer BatchFrequency batchFrequencyLabel 0 60  This will generate two new classes: BatchFrequency.java and AbstractBatchFrequency.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class BatchFrequency extends AbstractBatchFrequency{ public BatchFrequency(final Integer value) { super(value); } } The abstract class extends DomainInteger and adds static constructors:</description>
     </item>
     
     <item>
@@ -98,26 +198,54 @@ The integer value-type-class must implement at least one method; createInstance(
     </item>
     
     <item>
-      <title>String / Text</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/string/</link>
+      <title>String</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/string/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/string/</guid>
-      <description>Java Note: Value type DomainText is not described here as it works the same as DomainString, except for the limitless text length.
- String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
-The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/string/</guid>
+      <description>Note: Value type Text is not described here as it works the same as String, except for the limitless text length.
+ String value type DSL declaration, including maximum number of characters:
+import nl.openframe.erp.system.SystemLabels.descriptionLabel string Description descriptionLabel 60  This will generate two new classes: Description.java and AbstractDescription.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Description extends AbstractDescription{ public Description(final String value) { super(value); } } The abstract class extends DomainString and adds static constructors:</description>
     </item>
     
     <item>
       <title>Time</title>
-      <link>http://vankessel-it.io/real_doc/domain/valuetype/time/</link>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/time/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/domain/valuetype/time/</guid>
-      <description>Java Time Value Types extend DomainTime, which is a wrapper arround a LocalTime instance. The constructor requires a meta-object MTime to specify the precision: minutes, seconds or milliseconds.
-The Time value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusSecondes&amp;rsquo; and &amp;lsquo;minusMinutes&amp;rsquo;.
-For example, the declaration of a new StartTime type:
-class StartTime extends DomainTime&amp;lt;StartTime&amp;gt;{ public StartTime(final LocalTime value) { super(MTime.</description>
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/time/</guid>
+      <description>Time value type DSL declaration, including precision:
+import nl.openframe.erp.system.sr.SYS_SRLabels.batchTimeLabel time BatchTime batchTimeLabel minutes  The precision can be milliseconds, seconds or minutes. New instances will be truncated according to their precision.
+This will generate two new classes: BatchTime.java and AbstractBatchTime.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class BatchTime extends AbstractBatchTime{ public BatchTime(final LocalTime value) { super(value); } } The abstract class extends DomainTime and adds static constructors:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://vankessel-it.io/real_doc/introduction/conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/introduction/conventions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://vankessel-it.io/real_doc/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/notes/</guid>
+      <description>REAL-business:
+resources: - goods - employees - packaging - tools - trucks / cars
+agents: - customers / suppliers - employees
+events: - add resource - purchase goods - purchase tools
+ rent-in resource
+ enroll employee purchase services  rent-out resource
+ sell services   remove resource
+ fire employee sell goods sell tools  change resource
+ use tools train employee  create resource
+ assemble manufacture   Company (system dependency): - manages: currencies, units, languages, departments</description>
     </item>
     
   </channel>

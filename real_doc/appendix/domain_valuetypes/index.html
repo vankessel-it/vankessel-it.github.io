@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Java Value types :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/appendix/domain_valuetypes/">
     <nav id="sidebar" class="">
 
 
@@ -498,7 +498,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        
+        parent
         
         
         ">
@@ -525,8 +525,8 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/real_doc/appendix/domain_valuetypes/">
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Java Value types 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              Java Value types
             </h1>
           
 
@@ -762,11 +762,38 @@
 
 
 
+	<p>Value Types can be created by extending the base classes:
+<code>DomainBoolean</code>,
+<code>DomainDate</code>,
+<code>DomainDateTime</code>,
+<code>DomainDecimal</code>,
+<code>DomainEnumerate</code>,
+<code>DomainInteger</code>,
+<code>DomainLong</code>,
+<code>DomainString</code>,
+<code>DomainText</code> and
+<code>DomainTime</code>.</p>
 
 
-<ul>
-	
-</ul>
+<div class="notices info" ><p>Note that the Enumerate Value Type must be created using the DSL for the
+simple reason that Enumerates in Java do not support inheritance.</p>
+</div>
+
+
+
+<div class="notices info" ><p>Because value types objects are immutable they can benefit from
+caching (&lsquo;flyweight&rsquo; design-pattern). For this reason it is recommended to use static constructors in stead of the <code>new</code> keyword.</p>
+</div>
+
+
+<!-- with - the immutable equivalent of a setter
+plus - adds an amount to an object
+minus - subtracts an amount from an object
+to - converts this object to another type
+at - combines this object with another, such as date.atTime(time) -->
+
+
+
 
 
 <footer class=" footline" >
@@ -1113,6 +1140,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1128,6 +1156,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1140,6 +1169,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

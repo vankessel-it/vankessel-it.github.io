@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Domain Boolean :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/appendix/domain_valuetypes/boolean/">
     <nav id="sidebar" class="">
 
 
@@ -498,7 +498,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        
+        parent
         
         
         ">
@@ -525,7 +525,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -549,7 +549,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/boolean/" title="Domain Boolean" class="dd-item ">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/boolean/" title="Domain Boolean" class="dd-item active">
         <a href="/real_doc/appendix/domain_valuetypes/boolean/">
         Domain Boolean
         
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Domain Boolean 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              Domain Boolean
             </h1>
           
 
@@ -761,17 +761,41 @@
 
 
 
+<p>Boolean Value Types extend <code>DomainBoolean</code>, which is a wrapper arround
+a <code>Boolean</code> instance.</p>
 
+<p>The value-type must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;negate&rsquo;.</p>
 
+<p>For example, the declaration of a new <code>Confirmed</code> value type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Confirmed</span> <span style="color:#66d9ef">extends</span> DomainBoolean<span style="color:#f92672">&lt;</span>Confirmed<span style="color:#f92672">&gt;{</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Confirmed</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-<ul>
-	
-</ul>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> Confirmed <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Boolean value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Confirmed<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>usage:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Confirmed confirmed <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Confirmed<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;negate   : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">negate</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-false : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">isFalse</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-true  : &#34;</span> <span style="color:#f92672">+</span>confirmed<span style="color:#f92672">.</span><span style="color:#a6e22e">isTrue</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>negate   : true
+is-false : true
+is-true  : false
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1113,6 +1137,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1128,6 +1153,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1140,6 +1166,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1156,6 +1183,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1319,4 @@
 
   </body>
 </html>
+

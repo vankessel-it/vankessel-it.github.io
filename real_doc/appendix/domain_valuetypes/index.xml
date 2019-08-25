@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Value types on REAL Documentation</title>
+    <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/</link>
+    <description>Recent content in Java Value types on REAL Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 15:51:59 +0200</lastBuildDate>
+    
+	<atom:link href="http://vankessel-it.io/real_doc/appendix/domain_valuetypes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Domain Boolean</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/boolean/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/boolean/</guid>
+      <description>Boolean Value Types extend DomainBoolean, which is a wrapper arround a Boolean instance.
+The value-type must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;negate&amp;rsquo;.
+For example, the declaration of a new Confirmed value type:
+class Confirmed extends DomainBoolean&amp;lt;Confirmed&amp;gt;{ public Confirmed(final Boolean value) { super(value); } @Override protected Confirmed createInstance(final Boolean value) { return new Confirmed(value); } } usage:
+final Confirmed confirmed = new Confirmed(false); System.</description>
+    </item>
+    
+    <item>
+      <title>Domain Date</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/date/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/date/</guid>
+      <description>Date Value Types extend DomainDate, which is a wrapper arround a LocalDate instance.
+The Date value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new InvoiceDate type:
+class InvoiceDate extends DomainDate&amp;lt;InvoiceDate&amp;gt;{ public InvoiceDate(final LocalDate value) { super(value); } @Override protected InvoiceDate createInstance(final LocalDate value) { return new InvoiceDate(value); } } usage:</description>
+    </item>
+    
+    <item>
+      <title>Domain DateTime</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/datetime/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/datetime/</guid>
+      <description>DateTime Value Types extend DomainDateTime, which is a wrapper arround a LocalDateTime instance. The constructor requires a meta-object MDateTime to specify the precision: minutes, seconds or milliseconds.
+The DateTime value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusDays&amp;rsquo; and &amp;lsquo;minusDays&amp;rsquo;.
+For example, the declaration of a new TimeStamp type:
+class TimeStamp extends DomainDateTime&amp;lt;TimeStamp&amp;gt;{ public TimeStamp(final LocalDateTime value) { super(MDateTime.</description>
+    </item>
+    
+    <item>
+      <title>Domain Decimal</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/decimal/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/decimal/</guid>
+      <description>Decimal Value Types extend DomainDecimal, which is a wrapper arround a BigDecimal instance. The constructor requires a meta-object MDecimal to specify precision, scale and rounding.
+The decimal value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;add&amp;rsquo;, &amp;lsquo;subtract&amp;rsquo;, etc.
+For example, the declaration of a new Amount value type with a precision of five digits, and a scale of two:</description>
+    </item>
+    
+    <item>
+      <title>Domain Integer / Long</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/integer/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/integer/</guid>
+      <description>Note: Value type DomainLong is not described here as it works the same as DomainInteger, except for the larger number range.
+ Integer Value Types extend DomainInteger, which is a wrapper arround a Integer instance. The constructor requires a meta-object MInteger to specify lower- and upper-limit.
+The integer value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
+For example, the declaration of a new PortNumber value type with a range of [0,65535].</description>
+    </item>
+    
+    <item>
+      <title>Domain String / Text</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/string/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/string/</guid>
+      <description>Note: Value type DomainText is not described here as it works the same as DomainString, except for the limitless text length.
+ String Value Types extend DomainString, which is a wrapper arround a String instance. The constructor requires a meta-object MString to specify length and case.
+The string value-type-class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;append&amp;rsquo;.
+For example, the declaration of a new Description value type with a lenght of 60 characters.</description>
+    </item>
+    
+    <item>
+      <title>Domain Time</title>
+      <link>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/time/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/time/</guid>
+      <description>Time Value Types extend DomainTime, which is a wrapper arround a LocalTime instance. The constructor requires a meta-object MTime to specify the precision: minutes, seconds or milliseconds.
+The Time value-type class must implement at least one method; createInstance(). This method allows the return of typed objects after operations as &amp;lsquo;plusSecondes&amp;rsquo; and &amp;lsquo;minusMinutes&amp;rsquo;.
+For example, the declaration of a new StartTime type:
+class StartTime extends DomainTime&amp;lt;StartTime&amp;gt;{ public StartTime(final LocalTime value) { super(MTime.</description>
+    </item>
+    
+  </channel>
+</rss>

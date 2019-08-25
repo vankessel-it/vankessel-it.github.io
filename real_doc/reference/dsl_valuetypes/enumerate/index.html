@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Enumerate :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/reference/dsl_valuetypes/enumerate/">
     <nav id="sidebar" class="">
 
 
@@ -167,7 +167,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/real_doc/reference/dsl_valuetypes/" title="Value Types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -318,7 +318,7 @@
  
   
     
-      <li data-nav-id="/real_doc/reference/dsl_valuetypes/enumerate/" title="Enumerate" class="dd-item ">
+      <li data-nav-id="/real_doc/reference/dsl_valuetypes/enumerate/" title="Enumerate" class="dd-item active">
         <a href="/real_doc/reference/dsl_valuetypes/enumerate/">
         Enumerate
         
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Enumerate 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              Enumerate
             </h1>
           
 
@@ -761,17 +761,60 @@
 
 
 
-
-
-
-<ul>
+<p>The DSL declaration for an Enumerate value type with three options; &lsquo;Yes&rsquo;, &lsquo;No&rsquo;, &lsquo;Unknown&rsquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">enumerate</span> <span style="color:#a6e22e">YesNoUnknown</span> <span style="color:#a6e22e">yesNoUnknownLabel</span>{
+	<span style="color:#a6e22e">Y</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">yesNoUnknownLabel_Y</span>
+	<span style="color:#a6e22e">N</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">yesNoUnknownLabel_N</span>
+	<span style="color:#a6e22e">U</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">yesNoUnknownLabel_U</span>
+}
+</code></pre></div>
+<p>The labels are defined as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">labelSet</span> <span style="color:#a6e22e">SystemLabels</span>{
 	
-</ul>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">yesNoUnknownLabel</span> <span style="color:#e6db74">&#34;Yes/No/Unknown&#34;</span>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">yesNoUnknownLabel_Y</span> <span style="color:#e6db74">&#34;Yes&#34;</span>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">yesNoUnknownLabel_N</span> <span style="color:#e6db74">&#34;No&#34;</span>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">yesNoUnknownLabel_U</span> <span style="color:#e6db74">&#34;Uknown&#34;</span>
+}
+</code></pre></div>
+<p>This will generate one class: <code>YesNoUnknown.java</code>. This class can
+be extended with custom code, however, as enumerates do not support
+inheritance, any future changes in the DSL will have to be handled manually.</p>
+
+<p>The enumerate implements <code>DomainEnumerate</code> and includes a static <code>of</code> constructor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> YesNoUnknown a1 <span style="color:#f92672">=</span> YesNoUnknown<span style="color:#f92672">.</span><span style="color:#a6e22e">YES</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">final</span> YesNoUnknown a2 <span style="color:#f92672">=</span> YesNoUnknown<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Y&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> YesNoUnknown a3 <span style="color:#f92672">=</span> YesNoUnknown<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;N&#34;</span><span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a1.getCode() : &#34;</span> <span style="color:#f92672">+</span> a1<span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a2.getCode() : &#34;</span> <span style="color:#f92672">+</span> a2<span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a3.getCode() : &#34;</span> <span style="color:#f92672">+</span> a3<span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">());</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a1.equals(a2) : &#34;</span> <span style="color:#f92672">+</span> a1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>a2<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a1.equals(a3) : &#34;</span> <span style="color:#f92672">+</span> a1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>a3<span style="color:#f92672">));</span>	</code></pre></div>
+<p>result:</p>
+
+<pre><code>a1.getCode() : Y
+a2.getCode() : Y
+a3.getCode() : N
+a1.equals(a2) : true
+a1.equals(a3) : false
+</code></pre>
+
+<p>Note that the enumerate constants are the same as the label text. For
+example <code>YesNoUnknown.UNKNOWN</code>. The <code>UNKNOWN</code> is derived from the <code>yesNoUnknownLabel_U</code> label.
+The actual code stored in the database is <code>U</code>. Every enumerate item has
+a <code>getCode()</code> method to retrieve the database value.</p>
+
+<p>This approach ensures that enumerates in source-code are expressive, while
+the code in the database can remain short. However, this also means that
+changes in label-text will require changes in the source-code.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -871,6 +914,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -885,6 +929,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -902,6 +949,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -915,21 +963,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -994,6 +1029,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1344,4 @@
 
   </body>
 </html>
+

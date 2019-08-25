@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Labels :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/reference/labels/">
     <nav id="sidebar" class="">
 
 
@@ -167,7 +167,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -194,8 +194,8 @@
   
     
     <li data-nav-id="/real_doc/reference/labels/" title="Labels" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/real_doc/reference/labels/">
@@ -730,14 +730,24 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Labels 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#generated-code">Generated code</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -753,7 +763,7 @@
           
             <h1>
               
-              Categories
+              Labels
             </h1>
           
 
@@ -762,11 +772,80 @@
 
 
 
-
-
-<ul>
 	
-</ul>
+
+<p>Labels enable the internationalization (i18n) of the user-interface. All user-facing
+text is replaced by label-codes. These codes are grouped together into label-sets,
+and translated using the standard Java i18n property-files.</p>
+
+<p>For example, DSL declaration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>
+
+<span style="color:#a6e22e">labelSet</span> <span style="color:#a6e22e">SYS_BTLabels</span>{
+
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">timeStampLabel</span> <span style="color:#e6db74">&#34;Time Stamp&#34;</span>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">emailLabel</span> <span style="color:#e6db74">&#34;Email&#34;</span> <span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;EMAIL&#34;</span>
+	<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">confirmedLabel</span> <span style="color:#e6db74">&#34;Confirmed&#34;</span>
+}
+</code></pre></div>
+<p>The label set has an identifier (<code>SYS_BT_Labels</code>), and every label has a code (<code>confirmedLabel</code>, etc.). Together
+with the package name, these comprise the fully qualified name of the label. The <code>confirmedLabel</code>, for
+example, is imported in the following <code>Confirmed</code> value type declaration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>.<span style="color:#a6e22e">SYS_BTLabels</span>.<span style="color:#a6e22e">confirmedLabel</span>
+
+<span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">Confirmed</span> <span style="color:#a6e22e">confirmedLabel</span>
+</code></pre></div>
+<p>Labels can optionally have a short name, an icon (<a href="https://material.io/resources/icons/?style=baseline">Material Design Icons</a>) and a style code. The style code is generally used
+for colors, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">label</span> <span style="color:#a6e22e">alertStatusLabel1</span> <span style="color:#e6db74">&#34;Bug&#34;</span> <span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;BUG_REPORT&#34;</span> <span style="color:#a6e22e">style</span> <span style="color:#e6db74">&#34;red&#34;</span>
+<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">alertStatusLabel2</span> <span style="color:#e6db74">&#34;Error&#34;</span>	<span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;BUG_REPORT&#34;</span> <span style="color:#a6e22e">style</span> <span style="color:#e6db74">&#34;red&#34;</span>
+<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">alertStatusLabel3</span> <span style="color:#e6db74">&#34;Warning&#34;</span> <span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;BUG_REPORT&#34;</span> <span style="color:#a6e22e">style</span> <span style="color:#e6db74">&#34;orange&#34;</span>
+<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">alertStatusLabel4</span> <span style="color:#e6db74">&#34;Info&#34;</span> <span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;BUG_REPORT&#34;</span> <span style="color:#a6e22e">style</span> <span style="color:#e6db74">&#34;blue&#34;</span>
+<span style="color:#a6e22e">label</span> <span style="color:#a6e22e">alertStatusLabel5</span> <span style="color:#e6db74">&#34;Solved&#34;</span> <span style="color:#a6e22e">icon</span> <span style="color:#e6db74">&#34;BUG_REPORT&#34;</span> <span style="color:#a6e22e">style</span> <span style="color:#e6db74">&#34;green&#34;</span>
+</code></pre></div>
+<h3 id="generated-code">Generated code</h3>
+
+<p>Label-sets generate two source files:</p>
+
+<ol>
+<li>A <code>.properties</code> file with one or more entries per label, which can be translated according to
+standard Java practises.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">timeStampLabel</span><span style="color:#f92672">=</span><span style="color:#a6e22e">Time</span> <span style="color:#a6e22e">Stamp</span>
+<span style="color:#a6e22e">emailLabel</span><span style="color:#f92672">=</span><span style="color:#a6e22e">Email</span>
+<span style="color:#a6e22e">emailLabel</span>.<span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#a6e22e">EMAIL</span>
+<span style="color:#a6e22e">confirmedLabel</span><span style="color:#f92672">=</span><span style="color:#a6e22e">Confirmed</span>
+</code></pre></div>
+<ol>
+<li>A java class with a constant for every label name. This alows you to reference labels without the
+use of string literals.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> nl.openframe.erp.system.bt<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SYS_BTLabels</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String TIME_STAMP_LABEL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;timeStampLabel&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String EMAIL_LABEL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;emailLabel&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String CONFIRMED_LABEL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;confirmedLabel&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<div class="notices info" ><p>Labels also have optional properties for &lsquo;focus-icon&rsquo; and &lsquo;focus-style&rsquo;, be these are currently not used.</p>
+</div>
+
+
+<p>All labels are imported into the application, and for convenience reasons, they are
+referenced only by label name. This means that label names should be globally unique in order
+to avoid conflicts.</p>
+
+<p>The generated files are located in the &lsquo;generated&rsquo; directory. They will be overwritten
+during every code-generation and should not be changed manually. The label-set should hold
+the default language text, for extra languages new &lsquo;.properties&rsquo; files should be added
+in the &lsquo;manual&rsquo; code directory.</p>
+
+
+
 
 
 <footer class=" footline" >
@@ -871,6 +950,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -885,6 +965,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -901,6 +982,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

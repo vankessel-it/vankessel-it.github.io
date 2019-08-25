@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Configuration :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/reference/configuration/">
     <nav id="sidebar" class="">
 
 
@@ -167,7 +167,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -427,7 +427,7 @@
  
   
     
-      <li data-nav-id="/real_doc/reference/configuration/" title="Configuration" class="dd-item ">
+      <li data-nav-id="/real_doc/reference/configuration/" title="Configuration" class="dd-item active">
         <a href="/real_doc/reference/configuration/">
         <b>2.4. </b>Configuration
         
@@ -730,14 +730,24 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Configuration 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#labels">Labels</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -753,7 +763,7 @@
           
             <h1>
               
-              Categories
+              Configuration
             </h1>
           
 
@@ -763,15 +773,52 @@
 
 
 
+<p>Global application configurations are contained in one or more <code>configuration</code> DSL files.</p>
 
-<ul>
-	
-</ul>
+<h3 id="labels">Labels</h3>
 
+<p>The configuration file specifies the label-sets available in the application:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bc</span>.<span style="color:#a6e22e">SYS_BCLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bf</span>.<span style="color:#a6e22e">SYS_BFLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>.<span style="color:#a6e22e">SYS_BTLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">sr</span>.<span style="color:#a6e22e">SYS_SRLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">SystemLabels</span>
+
+<span style="color:#a6e22e">configuration</span> <span style="color:#a6e22e">SystemSharedConfiguration</span>{
+
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BCLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BFLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BTLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_SRLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SystemLabels</span>
+}
+</code></pre></div>
+<p>This translates into a Spring configuration class which imports
+all the message resources.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SystemSharedConfiguration</span><span style="color:#f92672">{</span>
+
+	<span style="color:#a6e22e">@Bean</span>
+	<span style="color:#66d9ef">public</span> MessageSource <span style="color:#a6e22e">messageSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	    <span style="color:#66d9ef">final</span> ReloadableResourceBundleMessageSource messageSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ReloadableResourceBundleMessageSource<span style="color:#f92672">();</span>
+	    messageSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setBasenames</span><span style="color:#f92672">(</span>
+		    <span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bc/SYS_BCLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bf/SYS_BFLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bt/SYS_BTLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/sr/SYS_SRLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/SystemLabels&#34;</span>
+			<span style="color:#f92672">);</span>
+		messageSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setDefaultEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span>
+	    <span style="color:#66d9ef">return</span> messageSource<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -871,6 +918,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -885,6 +933,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1062,6 +1113,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1080,6 +1132,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1344,4 @@
 
   </body>
 </html>
+

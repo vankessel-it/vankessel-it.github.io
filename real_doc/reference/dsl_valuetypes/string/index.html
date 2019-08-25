@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>String :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/reference/dsl_valuetypes/string/">
     <nav id="sidebar" class="">
 
 
@@ -167,7 +167,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/real_doc/reference/dsl_valuetypes/" title="Value Types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -356,7 +356,7 @@
  
   
     
-      <li data-nav-id="/real_doc/reference/dsl_valuetypes/string/" title="String" class="dd-item ">
+      <li data-nav-id="/real_doc/reference/dsl_valuetypes/string/" title="String" class="dd-item active">
         <a href="/real_doc/reference/dsl_valuetypes/string/">
         String
         
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   String 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              String
             </h1>
           
 
@@ -762,16 +762,42 @@
 
 
 
+<div class="notices info" ><p>Note: Value type <code>Text</code> is not described here as it works the same as <code>String</code>, except for the limitless text length.</p>
+</div>
 
 
-<ul>
-	
-</ul>
+<p>String value type DSL declaration, including maximum number of characters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">SystemLabels</span>.<span style="color:#a6e22e">descriptionLabel</span>
+
+<span style="color:#a6e22e">string</span> <span style="color:#a6e22e">Description</span> <span style="color:#a6e22e">descriptionLabel</span> <span style="color:#ae81ff">60</span>
+</code></pre></div>
+<p>This will generate two new classes: <code>Description.java</code> and <code>AbstractDescription.java</code>.
+The concrete class is a skeleton-class and can be used to add validation and
+additional functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Description</span> <span style="color:#66d9ef">extends</span> AbstractDescription<span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Description</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>The abstract class extends <code>DomainString</code> and
+adds static constructors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Name n1 <span style="color:#f92672">=</span> Name<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> Description<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#75715e">// Convert Name to Description
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Description d2 <span style="color:#f92672">=</span> Description<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>n1<span style="color:#f92672">);</span></code></pre></div>
+
+<div class="notices info" ><p>See <a href="/real_doc/appendix/domain_valuetypes/string">Domain String</a> for more details.</p>
+</div>
+
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -871,6 +897,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -885,6 +912,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -902,6 +932,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -915,21 +946,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1026,6 +1044,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1327,4 @@
 
   </body>
 </html>
+

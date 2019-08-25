@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Value Types on REAL Documentation</title>
+    <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/</link>
+    <description>Recent content in Value Types on REAL Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 15:52:16 +0200</lastBuildDate>
+    
+	<atom:link href="http://vankessel-it.io/real_doc/reference/dsl_valuetypes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boolean</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/boolean/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/boolean/</guid>
+      <description>Boolean value type DSL declaration:
+import nl.openframe.erp.system.SystemLabels.confirmedLabel boolean Confirmed confirmedLabel  This will generate two new classes: Confirmed.java and AbstractConfirmed.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Confirmed extends AbstractConfirmed{ public Confirmed(final Boolean value) { super(value); } } The abstract class extends DomainBoolean and adds static constructors:
+final Confirmed c1 = Confirmed.of(true); final Confirmed c2 = Confirmed.of(&amp;#34;True&amp;#34;); final Confirmed c3 = Confirmed.</description>
+    </item>
+    
+    <item>
+      <title>Date</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/date/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/date/</guid>
+      <description>Date value type DSL declaration:
+import nl.openframe.erp.system.bt.SYS_BTLabels.executionDateLabel date ExecutionDate executionDateLabel  This will generate two new classes: ExecutionDate.java and AbstractExecutionDate.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class ExecutionDate extends AbstractExecutionDate{ public ExecutionDate(final LocalDate value) { super(value); } } The abstract class extends DomainDate and adds static constructors:
+final ExecutionDate d1 = ExecutionDate.now(); final ExecutionDate d2 = ExecutionDate.of(LocalDate.now()); final ExecutionDate d3 = ExecutionDate.</description>
+    </item>
+    
+    <item>
+      <title>DateTime</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/datetime/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/datetime/</guid>
+      <description>DateTime value type DSL declaration, including precision:
+import nl.openframe.erp.system.sr.SYS_SRLabels.alertDateTimeLabel datetime AlertDateTime alertDateTimeLabel milliseconds  The precision can be milliseconds, seconds or minutes. New instances will be truncated according to their precision.
+This will generate two new classes: AlertDateTime.java and AbstractAlertDateTime.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class AlertDateTime extends AbstractAlertDateTime{ public AlertDateTime(final LocalDateTime value) { super(value); } } The abstract class extends DomainDateTime and adds static constructors:</description>
+    </item>
+    
+    <item>
+      <title>Decimal</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/decimal/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/decimal/</guid>
+      <description>Decimal value type DSL declaration, including respectively, the precision, scale and rounding:
+import nl.openframe.erp.system.SystemLabels.amountLabel decimal Amount amountLabel 10 2 half_up  The rounding can be ceiling, down, floor, half_down, half_even, half_up or up.
+This will generate two new classes: Amount.java and AbstractAmount.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Amount extends AbstractAmount{ public Amount(final BigDecimal value) { super(value); } } The abstract class extends DomainDecimal and adds static constructors:</description>
+    </item>
+    
+    <item>
+      <title>Enumerate</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/enumerate/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/enumerate/</guid>
+      <description>The DSL declaration for an Enumerate value type with three options; &amp;lsquo;Yes&amp;rsquo;, &amp;lsquo;No&amp;rsquo;, &amp;lsquo;Unknown&amp;rsquo;:
+enumerate YesNoUnknown yesNoUnknownLabel{ Y: yesNoUnknownLabel_Y N: yesNoUnknownLabel_N U: yesNoUnknownLabel_U }  The labels are defined as follows:
+labelSet SystemLabels{ label yesNoUnknownLabel &amp;#34;Yes/No/Unknown&amp;#34; label yesNoUnknownLabel_Y &amp;#34;Yes&amp;#34; label yesNoUnknownLabel_N &amp;#34;No&amp;#34; label yesNoUnknownLabel_U &amp;#34;Uknown&amp;#34; }  This will generate one class: YesNoUnknown.java. This class can be extended with custom code, however, as enumerates do not support inheritance, any future changes in the DSL will have to be handled manually.</description>
+    </item>
+    
+    <item>
+      <title>Integer</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/integer/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/integer/</guid>
+      <description>Note: Value type Long is not described here as it works the same as Integer, except for the larger number range.
+ Integer value type DSL declaration, including the lower- and upper-bound for values:
+import nl.openframe.erp.system.sr.SYS_SRLabels.batchFrequencyLabel integer BatchFrequency batchFrequencyLabel 0 60  This will generate two new classes: BatchFrequency.java and AbstractBatchFrequency.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class BatchFrequency extends AbstractBatchFrequency{ public BatchFrequency(final Integer value) { super(value); } } The abstract class extends DomainInteger and adds static constructors:</description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/string/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/string/</guid>
+      <description>Note: Value type Text is not described here as it works the same as String, except for the limitless text length.
+ String value type DSL declaration, including maximum number of characters:
+import nl.openframe.erp.system.SystemLabels.descriptionLabel string Description descriptionLabel 60  This will generate two new classes: Description.java and AbstractDescription.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class Description extends AbstractDescription{ public Description(final String value) { super(value); } } The abstract class extends DomainString and adds static constructors:</description>
+    </item>
+    
+    <item>
+      <title>Time</title>
+      <link>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/time/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/time/</guid>
+      <description>Time value type DSL declaration, including precision:
+import nl.openframe.erp.system.sr.SYS_SRLabels.batchTimeLabel time BatchTime batchTimeLabel minutes  The precision can be milliseconds, seconds or minutes. New instances will be truncated according to their precision.
+This will generate two new classes: BatchTime.java and AbstractBatchTime.java. The concrete class is a skeleton-class and can be used to add validation and additional functionality.
+public class BatchTime extends AbstractBatchTime{ public BatchTime(final LocalTime value) { super(value); } } The abstract class extends DomainTime and adds static constructors:</description>
+    </item>
+    
+  </channel>
+</rss>

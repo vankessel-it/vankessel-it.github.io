@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: REAL Documentation</title>
+    <title>Domain Integer / Long :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1566776433" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/categories/">
+  <body class="" data-url="/real_doc/appendix/domain_valuetypes/integer/">
     <nav id="sidebar" class="">
 
 
@@ -498,7 +498,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        
+        parent
         
         
         ">
@@ -525,7 +525,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        
+        parent
         
         
         ">
@@ -625,7 +625,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/integer/" title="Domain Integer / Long" class="dd-item ">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/integer/" title="Domain Integer / Long" class="dd-item active">
         <a href="/real_doc/appendix/domain_valuetypes/integer/">
         Domain Integer / Long
         
@@ -730,7 +730,7 @@
                   <span class="links">
                  
                  
-                   Categories 
+                   Domain Integer / Long 
                  
                   </span>
                 </div>
@@ -753,7 +753,7 @@
           
             <h1>
               
-              Categories
+              Domain Integer / Long
             </h1>
           
 
@@ -762,16 +762,85 @@
 
 
 
+<div class="notices info" ><p>Note: Value type <code>DomainLong</code> is not described here as it works the same as <code>DomainInteger</code>, except for the larger number range.</p>
+</div>
 
 
-<ul>
+<p>Integer Value Types extend <code>DomainInteger</code>, which is a wrapper arround
+a <code>Integer</code> instance. The constructor requires a meta-object <code>MInteger</code> to specify lower- and upper-limit.</p>
+
+<p>The integer value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;append&rsquo;.</p>
+
+<p>For example, the declaration of a new <code>PortNumber</code> value type with a range of [0,65535].</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PortNumber</span> <span style="color:#66d9ef">extends</span> DomainInteger<span style="color:#f92672">&lt;</span>PortNumber<span style="color:#f92672">&gt;{</span>
 	
-</ul>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PortNumber</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Integer value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 65535<span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> PortNumber <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Integer value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>usage:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> PortNumber d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>80<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> PortNumber d2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>8000<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> PortNumber d3 <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>d2<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1 : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d2 : &#34;</span> <span style="color:#f92672">+</span>d2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d3 : &#34;</span> <span style="color:#f92672">+</span>d3<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.isNegative() : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isNegative</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.isZero()     : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isZero</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>d1 : 80
+d2 : 8000
+d3 : 8080
+d1.isNegative() : false
+d1.isZero()     : false
+</code></pre>
+
+<p>Note that an exception is thrown if the value is not within the
+declared range:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(-</span>1<span style="color:#f92672">);</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>DomainValueException: Value -1 exceeds minimum value 0.
+</code></pre>
+
+<p>calculations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> PortNumber n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> PortNumber n2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>15<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">final</span> PortNumber n3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PortNumber<span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n1 : &#34;</span> <span style="color:#f92672">+</span> n1<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n2 : &#34;</span> <span style="color:#f92672">+</span> n2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n3 : &#34;</span> <span style="color:#f92672">+</span> n3<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n2.divide(n3)  : &#34;</span><span style="color:#f92672">+</span> n2<span style="color:#f92672">.</span><span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span>n3<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n2.multiply(n3): &#34;</span><span style="color:#f92672">+</span> n2<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>n3<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n1.isOne()     : &#34;</span><span style="color:#f92672">+</span> n1<span style="color:#f92672">.</span><span style="color:#a6e22e">isOne</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>n1 : 1
+n2 : 15
+n3 : 4
+n2.divide(n3)  : 3
+n2.multiply(n3): 60
+n1.isOne()     : true
+</code></pre>
+
+
+<div class="notices warning" ><p>Notice that the results of <code>divide()</code> is truncated to an integer value.</p>
+</div>
+
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1113,6 +1182,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1128,6 +1198,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1140,6 +1211,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1205,6 +1279,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1220,6 +1295,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1289,3 +1367,4 @@
 
   </body>
 </html>
+
