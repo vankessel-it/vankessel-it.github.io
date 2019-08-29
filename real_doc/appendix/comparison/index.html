@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Domain String / Text :: REAL Documentation</title>
+    <title>Product Comparison :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1567062677" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/appendix/domain_valuetypes/string/">
+  <body class="" data-url="/real_doc/appendix/comparison/">
     <nav id="sidebar" class="">
 
 
@@ -561,7 +561,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        parent
+        
         
         
         ">
@@ -680,7 +680,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item active">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item ">
         <a href="/real_doc/appendix/domain_valuetypes/string/">
         Domain String / Text
         
@@ -727,7 +727,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/comparison/" title="Product Comparison" class="dd-item ">
+      <li data-nav-id="/real_doc/appendix/comparison/" title="Product Comparison" class="dd-item active">
         <a href="/real_doc/appendix/comparison/">
         <b>B </b>Product Comparison
         
@@ -785,7 +785,7 @@
                   <span class="links">
                  
                  
-                   Domain String / Text 
+                   Product Comparison 
                  
                   </span>
                 </div>
@@ -796,13 +796,7 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#equality">Equality</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#how-does-it-stack-up">How does it stack up ?</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -821,7 +815,7 @@
           
             <h1>
               
-              Domain String / Text
+              Product Comparison
             </h1>
           
 
@@ -831,63 +825,248 @@
 
 
 
+<h2 id="how-does-it-stack-up">How does it stack up ?</h2>
 
-<div class="notices info" ><p>Note: Value type <code>DomainText</code> is not described here as it works the same as <code>DomainString</code>, except for the limitless text length.</p>
+<p>REAL is a low-code software development environment. REAL aims to minimize the overall code-base of administrative systems, while
+promoting concise and quality business-code.</p>
+
+<!-- - REAL is a set of libraries based on Spring Boot
+- the full Java eco-system is available
+- Business Code is standard Java and does not depend on REAL
+- REAL relies on textual models for both datastructures and the user-interface
+- all code and models are under a single version management system -->
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Thinkwise</th>
+<th align="center">Mendix Studio Pro 8</th>
+<th align="center">REAL 7</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>General</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em>Technologie Platform</em></td>
+<td align="center">MS .NET</td>
+<td align="center">Java 11</td>
+<td align="center">Java 11</td>
+</tr>
+
+<tr>
+<td><em>Product Type</em></td>
+<td align="center">framework</td>
+<td align="center">framework</td>
+<td align="center">set libraries (13 in total)</td>
+</tr>
+
+<tr>
+<td><em>Programming language</em></td>
+<td align="center">procedural SQL</td>
+<td align="center">nano/micro-flows, Java/JS call-outs</td>
+<td align="center"><span style="color:green">Java for desktop, web (mobile) and server</span></td>
+</tr>
+
+<tr>
+<td><em>Target audience</em></td>
+<td align="center">Thinkwise developers</td>
+<td align="center">Citizen developers</td>
+<td align="center">Professional developers</td>
+</tr>
+
+<tr>
+<td><em>Since</em></td>
+<td align="center">2002</td>
+<td align="center">2005</td>
+<td align="center">2007</td>
+</tr>
+
+<tr>
+<td><em># Developers</em></td>
+<td align="center">20+</td>
+<td align="center">20+</td>
+<td align="center">2+</td>
+</tr>
+
+<tr>
+<td><strong>Modelling</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em>Database</em></td>
+<td align="center">grafical-model</td>
+<td align="center">grafical-model</td>
+<td align="center">text-model (Domain Specific Language)</td>
+</tr>
+
+<tr>
+<td><em>User-interface</em></td>
+<td align="center">definition in tabels</td>
+<td align="center">UI-designer, pages / widgets</td>
+<td align="center">text-model (DSL), code or UI-designer (Vaadin)</td>
+</tr>
+
+<tr>
+<td><strong>Custom Code</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em>Business code</em></td>
+<td align="center">works only within Thinkwise</td>
+<td align="center">works only within Mendix (micro-flow)</td>
+<td align="center"><span style="color:green">independent from REAL, standard Java / Spring</span></td>
+</tr>
+
+<tr>
+<td><em>User-interface code</em></td>
+<td align="center">programming not supported</td>
+<td align="center">works only within Mendix (nano-flow)</td>
+<td align="center">dependent on REAL, standard Java / Spring</td>
+</tr>
+
+<tr>
+<td><em>Uitbreidbaarheid</em></td>
+<td align="center">very limited</td>
+<td align="center">limited Java/JS call-out</td>
+<td align="center"><span style="color:green">complete Java / Spring platform, and external libraries</span></td>
+</tr>
+
+<tr>
+<td><strong>Code Quality</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em>Automatic checks</em></td>
+<td align="center">no</td>
+<td align="center">no</td>
+<td align="center"><span style="color:green">industry-standard: Sonar, Structure101, etc.</span></td>
+</tr>
+
+<tr>
+<td><em>Automated testing</em></td>
+<td align="center">?</td>
+<td align="center">proprietary (unit-test microflow)</td>
+<td align="center"><span style="color:green">industry-standard: JUnit, etc.</span></td>
+</tr>
+
+<tr>
+<td><em>Value Types</em></td>
+<td align="center">yes (limited)</td>
+<td align="center">no</td>
+<td align="center">yes, e.g. Amount, Price, Document, Quantity, etc.</td>
+</tr>
+
+<tr>
+<td><em>Nullability checks</em></td>
+<td align="center">no</td>
+<td align="center">no</td>
+<td align="center"><span style="color:green">yes, avoid the &ldquo;billion dollar mistake&rdquo; (Tony Hoare)</span></td>
+</tr>
+
+<tr>
+<td><strong>Tooling</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em>Development environment</em></td>
+<td align="center">proprietary</td>
+<td align="center">proprietary</td>
+<td align="center"><span style="color:green">industry-standard: Eclipse of IntelliJ</span></td>
+</tr>
+
+<tr>
+<td><em>Versiebeheer</em></td>
+<td align="center">proprietary, code and model separat</td>
+<td align="center">proprietary, SVN extension (Team Server)</td>
+<td align="center"><span style="color:green">industry-standard (GIT), datamodel and code </span></td>
+</tr>
+
+<tr>
+<td><em>Deployment</em></td>
+<td align="center">proprietary</td>
+<td align="center">proprietary (Mendix server)</td>
+<td align="center">industry-standard: Tomcat, JBoss, Websphere, etc.</td>
+</tr>
+
+<tr>
+<td><em>Monitoring</em></td>
+<td align="center">Database or IIS monitoring</td>
+<td align="center">Java JMX</td>
+<td align="center">Spring Boot Actuator and Java JMX</td>
+</tr>
+
+<tr>
+<td><strong>Continuity</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td><em># developers</em></td>
+<td align="center">very limited</td>
+<td align="center">limited</td>
+<td align="center"><span style="color:green">10.000.000 according to Oracle</span></td>
+</tr>
+
+<tr>
+<td><em>Business-code</em></td>
+<td align="center">dependend on Thinkwise</td>
+<td align="center">dependend on Mendix</td>
+<td align="center"><span style="color:green">dependend on Java (open source)</span></td>
+</tr>
+
+<tr>
+<td>*Vendor lock-in</td>
+<td align="center">100%</td>
+<td align="center">100%</td>
+<td align="center"><span style="color:green">user-interface limited, business-code no lock-in</span></td>
+</tr>
+
+<tr>
+<td>Escrow available</td>
+<td align="center">?</td>
+<td align="center">yes</td>
+<td align="center">yes</td>
+</tr>
+
+<tr>
+<td>Pricing</td>
+<td align="center">?</td>
+<td align="center">starting at $7,825 per month <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></td>
+<td align="center">&ndash;</td>
+</tr>
+</tbody>
+</table>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Enterprise Edition, On premise, Private cloud, Platinum support, Failover, Support for continuous integration and development, Horizontal scaling
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
 </div>
-
-
-<p>String Value Types extend <code>DomainString</code>, which is a wrapper arround
-a <code>String</code> instance. The constructor requires a meta-object <code>MString</code> to specify length and case.</p>
-
-<p>The string value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;append&rsquo;.</p>
-
-<p>For example, the declaration of a new <code>Description</code> value type with a lenght of 60 characters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Description</span> <span style="color:#66d9ef">extends</span> DomainString<span style="color:#f92672">&lt;</span>Description<span style="color:#f92672">&gt;{</span>
-	
-	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Description</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MString<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">protected</span> Description <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>usage:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">);</span>
-
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.append(&#39;_hij&#39;): &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;_hij&#34;</span><span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getLeft(3)       : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">getLeft</span><span style="color:#f92672">(</span>3<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isEmpty()        : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">());</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isNotEmpty()     : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isNotEmpty</span><span style="color:#f92672">());</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>d1.append('_hij'): abcdefg_hij
-getLeft(3)       : abc
-isEmpty()        : false
-isNotEmpty()     : true
-</code></pre>
-
-<p>Note that strings are not automatically truncated, if they do not fit
-the domain, an exception will be thrown:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repeat</span><span style="color:#f92672">(</span>30<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>DomainValueException: Value exceeds 60 characters.
-</code></pre>
-
-<h4 id="equality">Equality</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Equality is based on the underlying Boolean value.
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Name n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Name<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
-
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n1.equal(d1) : &#34;</span> <span style="color:#f92672">+</span> n1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.equal(d2) : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d2<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>n1.equal(d1) : true
-d1.equal(d2) : true
-</code></pre>
 
 
 <footer class=" footline" >
@@ -1269,20 +1448,6 @@ d1.equal(d2) : true
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1293,9 +1458,6 @@ d1.equal(d2) : true
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1366,6 +1528,21 @@ d1.equal(d2) : true
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1383,9 +1560,6 @@ d1.equal(d2) : true
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -1404,6 +1578,7 @@ d1.equal(d2) : true
             
             
                 
+                    
                     
                 
                 

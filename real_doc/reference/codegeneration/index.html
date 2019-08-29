@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Domain String / Text :: REAL Documentation</title>
+    <title>Code Generation :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1567062677" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/appendix/domain_valuetypes/string/">
+  <body class="" data-url="/real_doc/reference/codegeneration/">
     <nav id="sidebar" class="">
 
 
@@ -173,7 +173,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -199,7 +199,7 @@
  
   
     
-      <li data-nav-id="/real_doc/reference/codegeneration/" title="Code Generation" class="dd-item ">
+      <li data-nav-id="/real_doc/reference/codegeneration/" title="Code Generation" class="dd-item active">
         <a href="/real_doc/reference/codegeneration/">
         <b>4.1 </b>Code Generation
         
@@ -534,7 +534,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        parent
+        
         
         
         ">
@@ -561,7 +561,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        parent
+        
         
         
         ">
@@ -680,7 +680,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item active">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item ">
         <a href="/real_doc/appendix/domain_valuetypes/string/">
         Domain String / Text
         
@@ -785,27 +785,14 @@
                   <span class="links">
                  
                  
-                   Domain String / Text 
+                   Code Generation 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#equality">Equality</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -821,7 +808,7 @@
           
             <h1>
               
-              Domain String / Text
+              Code Generation
             </h1>
           
 
@@ -829,65 +816,244 @@
 
 
 
+<p>REAL:</p>
 
+<p>source tree:</p>
 
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>DSL component</th>
+<th>Extendable component</th>
+<th>Immutable component</th>
+</tr>
+</thead>
 
-<div class="notices info" ><p>Note: Value type <code>DomainText</code> is not described here as it works the same as <code>DomainString</code>, except for the limitless text length.</p>
-</div>
+<tbody>
+<tr>
+<td><em>Client</em></td>
+<td>client-viewmodel <code>P</code></td>
+<td></td>
+<td>base/<code>P</code>.java</td>
+</tr>
 
+<tr>
+<td></td>
+<td>view <code>V</code></td>
+<td><code>V</code>.java</td>
+<td>base/Abstract<code>V</code>.java</td>
+</tr>
 
-<p>String Value Types extend <code>DomainString</code>, which is a wrapper arround
-a <code>String</code> instance. The constructor requires a meta-object <code>MString</code> to specify length and case.</p>
+<tr>
+<td></td>
+<td>form <code>F</code></td>
+<td><code>F</code>.java</td>
+<td>base/Abstract<code>F</code>.java</td>
+</tr>
 
-<p>The string value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;append&rsquo;.</p>
+<tr>
+<td></td>
+<td>menu <code>M</code></td>
+<td></td>
+<td><code>M</code>.java</td>
+</tr>
 
-<p>For example, the declaration of a new <code>Description</code> value type with a lenght of 60 characters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Description</span> <span style="color:#66d9ef">extends</span> DomainString<span style="color:#f92672">&lt;</span>Description<span style="color:#f92672">&gt;{</span>
-	
-	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Description</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MString<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
+<tr>
+<td><em>Shared</em></td>
+<td>labelSet <code>L</code></td>
+<td></td>
+<td><code>L</code>.java</td>
+</tr>
 
-	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">protected</span> Description <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>usage:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">);</span>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><code>L</code>.properties</td>
+</tr>
 
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.append(&#39;_hij&#39;): &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;_hij&#34;</span><span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getLeft(3)       : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">getLeft</span><span style="color:#f92672">(</span>3<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isEmpty()        : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">());</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isNotEmpty()     : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isNotEmpty</span><span style="color:#f92672">());</span></code></pre></div>
-<p>result:</p>
+<tr>
+<td></td>
+<td>valueType <code>T</code></td>
+<td><code>T</code>.java</td>
+<td>base/Abstract<code>T</code>.java</td>
+</tr>
 
-<pre><code>d1.append('_hij'): abcdefg_hij
-getLeft(3)       : abc
-isEmpty()        : false
-isNotEmpty()     : true
-</code></pre>
+<tr>
+<td></td>
+<td>entity <code>E</code></td>
+<td></td>
+<td>base/<code>E</code>Meta.java</td>
+</tr>
 
-<p>Note that strings are not automatically truncated, if they do not fit
-the domain, an exception will be thrown:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repeat</span><span style="color:#f92672">(</span>30<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
+<tr>
+<td></td>
+<td>viewmodel <code>V</code></td>
+<td></td>
+<td>base/<code>V</code>Api.java</td>
+</tr>
 
-<pre><code>DomainValueException: Value exceeds 60 characters.
-</code></pre>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>base/<code>V</code>Dto.java</td>
+</tr>
 
-<h4 id="equality">Equality</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Equality is based on the underlying Boolean value.
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Name n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Name<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>base/<code>V</code>Meta.java</td>
+</tr>
 
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n1.equal(d1) : &#34;</span> <span style="color:#f92672">+</span> n1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.equal(d2) : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d2<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
+<tr>
+<td><em>Server</em></td>
+<td>server-entity <code>E</code></td>
+<td><code>E</code>.java</td>
+<td>base/Abstract<code>E</code>.java</td>
+</tr>
 
-<pre><code>n1.equal(d1) : true
-d1.equal(d2) : true
-</code></pre>
+<tr>
+<td></td>
+<td></td>
+<td><code>E</code>Repository.java</td>
+<td>base/Abstract<code>E</code>Repository.java</td>
+</tr>
+
+<tr>
+<td></td>
+<td>server-viewmodel <code>V</code></td>
+<td><code>V</code>.java</td>
+<td>base/Abstract<code>V</code>.java</td>
+</tr>
+</tbody>
+</table>
+
+<p>For example:</p>
+
+<p>Entity &lsquo;User&rsquo;:</p>
+
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>DSL component</th>
+<th>Extendable component</th>
+<th>Immutable component</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Shared</em></td>
+<td>entity <code>User</code>{&hellip;}</td>
+<td></td>
+<td>base/<code>User</code>Meta.java</td>
+</tr>
+
+<tr>
+<td><em>Server</em></td>
+<td>server-entity <code>User</code></td>
+<td><code>User</code>.java</td>
+<td>base/Abstract<code>User</code>.java</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td><code>User</code>Repository.java</td>
+<td>base/Abstract<code>User</code>Repository.java</td>
+</tr>
+</tbody>
+</table>
+
+<p>View-model &lsquo;User&rsquo;:</p>
+
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>DSL component</th>
+<th>Extendable component</th>
+<th>Immutable component</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Shared</em></td>
+<td>viewmodel <code>UserViewModel</code>{&hellip;}</td>
+<td></td>
+<td>base/<code>UserViewModel</code>Api.java</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>base/<code>UserViewModel</code>Dto.java</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>base/<code>UserViewModel</code>Meta.java</td>
+</tr>
+
+<tr>
+<td><em>Server</em></td>
+<td>server-viewmodel <code>UserViewModel</code></td>
+<td><code>UserViewModel</code>.java</td>
+<td>base/Abstract<code>UserViewModel</code>.java</td>
+</tr>
+
+<tr>
+<td><em>Client</em></td>
+<td>client-viewmodel <code>UserViewModelProxy</code></td>
+<td></td>
+<td>base/<code>UserViewModelProxy</code>.java</td>
+</tr>
+</tbody>
+</table>
+
+<p>View / Form &lsquo;User&rsquo;:</p>
+
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>DSL component</th>
+<th>Extendable component</th>
+<th>Immutable component</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Client</em></td>
+<td>view <code>UserView</code>{&hellip;}</td>
+<td><code>UserView</code>.java</td>
+<td>base/Abstract<code>UserView</code>.java</td>
+</tr>
+
+<tr>
+<td></td>
+<td>form <code>UserForm</code>{&hellip;}</td>
+<td><code>UserForm</code>.java</td>
+<td>base/Abstract<code>UserForm</code>.java</td>
+</tr>
+
+<tr>
+<td><em>Server</em></td>
+<td>server-viewmodel <code>UserViewModel</code></td>
+<td><code>UserViewModel</code>.java</td>
+<td>base/Abstract<code>UserViewModel</code>.java</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class=" footline" >
@@ -993,6 +1159,58 @@ d1.equal(d2) : true
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1031,101 +1249,6 @@ d1.equal(d2) : true
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1207,96 +1330,6 @@ d1.equal(d2) : true
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1345,6 +1378,9 @@ d1.equal(d2) : true
             
         
                     
+            
+        
+                    
                         
             
             
@@ -1366,6 +1402,55 @@ d1.equal(d2) : true
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1383,8 +1468,85 @@ d1.equal(d2) : true
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 

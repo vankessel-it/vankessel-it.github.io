@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
 
-    <title>Domain String / Text :: REAL Documentation</title>
+    <title>Configuration :: REAL Documentation</title>
 
     
     <link href="/real_doc/css/nucleus.css?1567062677" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/real_doc/appendix/domain_valuetypes/string/">
+  <body class="" data-url="/real_doc/reference/dsl/configuration/">
     <nav id="sidebar" class="">
 
 
@@ -173,7 +173,7 @@
   
     
     <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
-        
+        parent
         
         
         ">
@@ -238,7 +238,7 @@
   
     
     <li data-nav-id="/real_doc/reference/dsl/" title="Domain Language" class="dd-item 
-        
+        parent
         
         
         ">
@@ -498,7 +498,7 @@
  
   
     
-      <li data-nav-id="/real_doc/reference/dsl/configuration/" title="Configuration" class="dd-item ">
+      <li data-nav-id="/real_doc/reference/dsl/configuration/" title="Configuration" class="dd-item active">
         <a href="/real_doc/reference/dsl/configuration/">
         Configuration
         
@@ -534,7 +534,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
-        parent
+        
         
         
         ">
@@ -561,7 +561,7 @@
   
     
     <li data-nav-id="/real_doc/appendix/domain_valuetypes/" title="Java Value types" class="dd-item 
-        parent
+        
         
         
         ">
@@ -680,7 +680,7 @@
  
   
     
-      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item active">
+      <li data-nav-id="/real_doc/appendix/domain_valuetypes/string/" title="Domain String / Text" class="dd-item ">
         <a href="/real_doc/appendix/domain_valuetypes/string/">
         Domain String / Text
         
@@ -785,7 +785,7 @@
                   <span class="links">
                  
                  
-                   Domain String / Text 
+                   Configuration 
                  
                   </span>
                 </div>
@@ -798,10 +798,7 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li><a href="#equality">Equality</a></li>
-</ul></li>
+<li><a href="#labels">Labels</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -821,7 +818,7 @@
           
             <h1>
               
-              Domain String / Text
+              Configuration
             </h1>
           
 
@@ -831,64 +828,47 @@
 
 
 
+<p>Global application configurations are contained in one or more <code>configuration</code> DSL files.</p>
 
-<div class="notices info" ><p>Note: Value type <code>DomainText</code> is not described here as it works the same as <code>DomainString</code>, except for the limitless text length.</p>
-</div>
+<h3 id="labels">Labels</h3>
 
+<p>The configuration file specifies the label-sets available in the application:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>
 
-<p>String Value Types extend <code>DomainString</code>, which is a wrapper arround
-a <code>String</code> instance. The constructor requires a meta-object <code>MString</code> to specify length and case.</p>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bc</span>.<span style="color:#a6e22e">SYS_BCLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bf</span>.<span style="color:#a6e22e">SYS_BFLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">bt</span>.<span style="color:#a6e22e">SYS_BTLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">sr</span>.<span style="color:#a6e22e">SYS_SRLabels</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">nl</span>.<span style="color:#a6e22e">openframe</span>.<span style="color:#a6e22e">erp</span>.<span style="color:#a6e22e">system</span>.<span style="color:#a6e22e">SystemLabels</span>
 
-<p>The string value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;append&rsquo;.</p>
+<span style="color:#a6e22e">configuration</span> <span style="color:#a6e22e">SystemSharedConfiguration</span>{
 
-<p>For example, the declaration of a new <code>Description</code> value type with a lenght of 60 characters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Description</span> <span style="color:#66d9ef">extends</span> DomainString<span style="color:#f92672">&lt;</span>Description<span style="color:#f92672">&gt;{</span>
-	
-	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Description</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MString<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BCLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BFLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_BTLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SYS_SRLabels</span>
+	<span style="color:#a6e22e">label</span><span style="color:#f92672">-</span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">SystemLabels</span>
+}
+</code></pre></div>
+<p>This translates into a Spring configuration class which imports
+all the message resources.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SystemSharedConfiguration</span><span style="color:#f92672">{</span>
 
-	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">protected</span> Description <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#a6e22e">@Bean</span>
+	<span style="color:#66d9ef">public</span> MessageSource <span style="color:#a6e22e">messageSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	    <span style="color:#66d9ef">final</span> ReloadableResourceBundleMessageSource messageSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ReloadableResourceBundleMessageSource<span style="color:#f92672">();</span>
+	    messageSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setBasenames</span><span style="color:#f92672">(</span>
+		    <span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bc/SYS_BCLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bf/SYS_BFLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/bt/SYS_BTLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/sr/SYS_SRLabels&#34;</span><span style="color:#f92672">,</span>
+			<span style="color:#e6db74">&#34;classpath:/nl/openframe/erp/system/SystemLabels&#34;</span>
+			<span style="color:#f92672">);</span>
+		messageSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setDefaultEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span>
+	    <span style="color:#66d9ef">return</span> messageSource<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span></code></pre></div>
-<p>usage:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">);</span>
-
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.append(&#39;_hij&#39;): &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;_hij&#34;</span><span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getLeft(3)       : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">getLeft</span><span style="color:#f92672">(</span>3<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isEmpty()        : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">());</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isNotEmpty()     : &#34;</span> <span style="color:#f92672">+</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">isNotEmpty</span><span style="color:#f92672">());</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>d1.append('_hij'): abcdefg_hij
-getLeft(3)       : abc
-isEmpty()        : false
-isNotEmpty()     : true
-</code></pre>
-
-<p>Note that strings are not automatically truncated, if they do not fit
-the domain, an exception will be thrown:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repeat</span><span style="color:#f92672">(</span>30<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>DomainValueException: Value exceeds 60 characters.
-</code></pre>
-
-<h4 id="equality">Equality</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Equality is based on the underlying Boolean value.
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Name n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Name<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#66d9ef">final</span> Description d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Description<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abcdef&#34;</span><span style="color:#f92672">);</span>
-
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n1.equal(d1) : &#34;</span> <span style="color:#f92672">+</span> n1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d1.equal(d2) : &#34;</span> <span style="color:#f92672">+</span> d1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>d2<span style="color:#f92672">));</span></code></pre></div>
-<p>result:</p>
-
-<pre><code>n1.equal(d1) : true
-d1.equal(d2) : true
-</code></pre>
-
 
 <footer class=" footline" >
 	
@@ -993,6 +973,7 @@ d1.equal(d2) : true
             
                 
                     
+                    
                 
                 
 
@@ -1007,6 +988,9 @@ d1.equal(d2) : true
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1040,6 +1024,7 @@ d1.equal(d2) : true
             
                 
                     
+                    
                 
                 
 
@@ -1054,6 +1039,9 @@ d1.equal(d2) : true
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1078,54 +1066,6 @@ d1.equal(d2) : true
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1207,96 +1147,6 @@ d1.equal(d2) : true
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1345,6 +1195,9 @@ d1.equal(d2) : true
             
         
                     
+            
+        
+                    
                         
             
             
@@ -1378,6 +1231,12 @@ d1.equal(d2) : true
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -1385,6 +1244,130 @@ d1.equal(d2) : true
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 

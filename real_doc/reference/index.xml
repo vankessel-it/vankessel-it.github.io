@@ -12,15 +12,25 @@
     
     
     <item>
-      <title>Configuration</title>
-      <link>http://vankessel-it.io/real_doc/reference/configuration/</link>
+      <title>Code Generation</title>
+      <link>http://vankessel-it.io/real_doc/reference/codegeneration/</link>
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
-      <guid>http://vankessel-it.io/real_doc/reference/configuration/</guid>
-      <description>Global application configurations are contained in one or more configuration DSL files.
-Labels The configuration file specifies the label-sets available in the application:
-package nl.openframe.erp.system import nl.openframe.erp.system.bc.SYS_BCLabels import nl.openframe.erp.system.bf.SYS_BFLabels import nl.openframe.erp.system.bt.SYS_BTLabels import nl.openframe.erp.system.sr.SYS_SRLabels import nl.openframe.erp.system.SystemLabels configuration SystemSharedConfiguration{ label-set SYS_BCLabels label-set SYS_BFLabels label-set SYS_BTLabels label-set SYS_SRLabels label-set SystemLabels }  This translates into a Spring configuration class which imports all the message resources.
-@Configuration public class SystemSharedConfiguration{ @Bean public MessageSource messageSource() { final ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource(); messageSource.</description>
+      <guid>http://vankessel-it.io/real_doc/reference/codegeneration/</guid>
+      <description>REAL:
+source tree:
+   Layer DSL component Extendable component Immutable component     Client client-viewmodel P  base/P.java    view V V.java base/AbstractV.java    form F F.java base/AbstractF.java    menu M  M.java   Shared labelSet L  L.java      L.properties    valueType T T.java base/AbstractT.java    entity E  base/EMeta.java    viewmodel V  base/VApi.</description>
+    </item>
+    
+    <item>
+      <title>Tooling</title>
+      <link>http://vankessel-it.io/real_doc/reference/tooling/</link>
+      <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
+      
+      <guid>http://vankessel-it.io/real_doc/reference/tooling/</guid>
+      <description>Structure and consistency for large code bases Business Concepts reflected in Code Guaranteed valid Domain Model Enforce NULL-safety (“the worst mistake in computer science”)
+Tooling consist:
+ of a Domain Specific Language (DSL) for defining the domain-model, menus, forms and services an Eclipse IDE (Develop Environment) plugin for supporting the DSL’s and code-generation a set of libraries (required in development and operational)  Eclipse Plugin Enforce NULL-safety  “I call it [NULL] my billion-dollar mistake” (Tony Hoare, inventor of ALGOL W)</description>
     </item>
     
   </channel>

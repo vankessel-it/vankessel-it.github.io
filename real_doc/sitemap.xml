@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/labels/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/codegeneration/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/labels/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/reference/tooling/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -18,17 +28,12 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/comparison/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/</loc>
-    <lastmod>2019-08-19T15:49:48+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vankessel-it.io/real_doc/reference/entity/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -38,12 +43,27 @@
   </url>
   
   <url>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/entity/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vankessel-it.io/real_doc/how-to/</loc>
     <lastmod>2019-08-19T15:49:48+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/configuration/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/</loc>
+    <lastmod>2019-08-19T15:49:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/reference/</loc>
+    <lastmod>2019-08-19T15:49:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/configuration/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -53,22 +73,22 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/boolean/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/boolean/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/date/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/date/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/datetime/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/datetime/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/decimal/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/decimal/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -113,32 +133,23 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/enumerate/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/enumerate/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/integer/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/integer/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/introduction/comparison/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/string/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/string/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/time/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl_valuetypes/time/</loc>
-    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vankessel-it.io/real_doc/introduction/conventions/</loc>
   </url>
   
   <url>
