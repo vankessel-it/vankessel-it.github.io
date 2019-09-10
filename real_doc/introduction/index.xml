@@ -17,7 +17,8 @@
       <pubDate>Mon, 19 Aug 2019 15:52:16 +0200</pubDate>
       
       <guid>http://vankessel-it.io/real_doc/introduction/design/</guid>
-      <description> Technical Principles  business-code independant of REAL separation of business-logic and UI-technology user interaction logic must be UI-independant and server-side auto-generated UI, but full-manual option available all code and domain-structures in one GIT repository Nullability checks throughout all code Only valid business objects can be instantiated (all mandatory fields must be set, call to validate() generates no errors)  A set of 13 libraries </description>
+      <description>Page loading: (1) SQL + Paging + no count required if less than one page found - lots of complex SQL&amp;rsquo;s when paging - table can be any size&amp;hellip; +/- new records appear during browsing
+(2) Read Keys, load records by Id + refresh of records without adding / loosing records more stable + one complex SQL, lots of easy loads + order does not change after deleting, inserting, navigating, changing sort-order field or chaning a field that removes it by a filter +/- background incremental loading is possible - maximum number of Id&amp;rsquo;s, then a &amp;lsquo;more&amp;hellip;&amp;rsquo; indicator</description>
     </item>
     
   </channel>

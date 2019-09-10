@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://vankessel-it.io/real_doc/appendix/domein_entity/getters/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vankessel-it.io/real_doc/reference/dsl/labels/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
@@ -18,7 +23,7 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/</loc>
     <lastmod>2019-08-19T15:51:59+02:00</lastmod>
   </url>
   
@@ -28,13 +33,18 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/comparison/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domein_entity/setters/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/appendix/domein_entity/</loc>
+    <lastmod>2019-08-19T15:51:59+02:00</lastmod>
   </url>
   
   <url>
@@ -43,7 +53,17 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/entity/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_entity/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/appendix/comparison/</loc>
+    <lastmod>2019-08-19T15:52:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vankessel-it.io/real_doc/appendix/domein_entity/additional_methods/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -73,22 +93,22 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/boolean/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/boolean/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/date/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/date/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/datetime/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/datetime/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/decimal/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/decimal/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
@@ -98,57 +118,57 @@
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/boolean/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/boolean/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/date/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/date/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/datetime/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/datetime/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/decimal/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/decimal/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/integer/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/integer/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/string/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/string/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetypes/time/</loc>
+    <loc>http://vankessel-it.io/real_doc/appendix/domain_valuetype/time/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/enumerate/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/enumerate/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/integer/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/integer/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/string/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/string/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetypes/time/</loc>
+    <loc>http://vankessel-it.io/real_doc/reference/dsl/dsl_valuetype/time/</loc>
     <lastmod>2019-08-19T15:52:16+02:00</lastmod>
   </url>
   

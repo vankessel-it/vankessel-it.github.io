@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.53" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/real_doc/images/favicon.png" type="image/png">
+
+    <title>Domain Decimal :: REAL Documentation</title>
+
+    
+    <link href="/real_doc/css/nucleus.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/fontawesome-all.min.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/hybrid.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/featherlight.min.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/perfect-scrollbar.min.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/auto-complete.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/atom-one-dark-reasonable.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/theme.css?1568075026" rel="stylesheet">
+    <link href="/real_doc/css/hugo-theme.css?1568075026" rel="stylesheet">
+    
+      <link href="/real_doc/css/theme-green.css?1568075026" rel="stylesheet">
+    
+
+    <script src="/real_doc/js/jquery-3.3.1.min.js?1568075026"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/real_doc/appendix/domain_valuetype/decimal/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://vankessel-it.io/real_doc/">
+  <img src="/real_doc/images/real_logo.png" width="200px"></img>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/real_doc/js/lunr.min.js?1568075026"></script>
+<script type="text/javascript" src="/real_doc/js/auto-complete.js?1568075026"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/vankessel-it.io\/real_doc\/";
+    
+</script>
+<script type="text/javascript" src="/real_doc/js/search.js?1568075026"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/introduction/design/" title="Design" class="dd-item ">
+        <a href="/real_doc/introduction/design/">
+        Design
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/tutorial/" title="Tutorial" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/tutorial/">
+          <b>2. </b>Tutorial
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/how-to/" title="How-to" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/how-to/">
+          <b>3. </b>How-to
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/reference/" title="Reference" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/reference/">
+          <b>4. </b>Reference
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/codegeneration/" title="Code Generation" class="dd-item ">
+        <a href="/real_doc/reference/codegeneration/">
+        <b>4.1 </b>Code Generation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/tooling/" title="Tooling" class="dd-item ">
+        <a href="/real_doc/reference/tooling/">
+        <b>4.2 </b>Tooling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/reference/dsl/" title="Domain Language" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/reference/dsl/">
+          <b>4.3 </b>Domain Language
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/reference/dsl/labels/" title="Labels" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/reference/dsl/labels/">
+          Labels
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/" title="Value Types" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/reference/dsl/dsl_valuetype/">
+          Value Types
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/boolean/" title="Boolean" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/boolean/">
+        Boolean
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/date/" title="Date" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/date/">
+        Date
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/datetime/" title="DateTime" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/datetime/">
+        DateTime
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/decimal/" title="Decimal" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/decimal/">
+        Decimal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/enumerate/" title="Enumerate" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/enumerate/">
+        Enumerate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/integer/" title="Integer" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/integer/">
+        Integer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/string/" title="String" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/string/">
+        String
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/dsl_valuetype/time/" title="Time" class="dd-item ">
+        <a href="/real_doc/reference/dsl/dsl_valuetype/time/">
+        Time
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/reference/dsl/dsl_entity/" title="Domain Entities" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/reference/dsl/dsl_entity/">
+          Domain Entities
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/reference/dsl/configuration/" title="Configuration" class="dd-item ">
+        <a href="/real_doc/reference/dsl/configuration/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/appendix/" title="Appendix" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/real_doc/appendix/">
+          <b></b>Appendix
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/appendix/domain_valuetype/" title="Domain Value" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/real_doc/appendix/domain_valuetype/">
+          Domain Value
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/boolean/" title="Domain Boolean" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/boolean/">
+        Domain Boolean
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/date/" title="Domain Date" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/date/">
+        Domain Date
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/datetime/" title="Domain DateTime" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/datetime/">
+        Domain DateTime
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/decimal/" title="Domain Decimal" class="dd-item active">
+        <a href="/real_doc/appendix/domain_valuetype/decimal/">
+        Domain Decimal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/integer/" title="Domain Integer / Long" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/integer/">
+        Domain Integer / Long
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/string/" title="Domain String / Text" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/string/">
+        Domain String / Text
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domain_valuetype/time/" title="Domain Time" class="dd-item ">
+        <a href="/real_doc/appendix/domain_valuetype/time/">
+        Domain Time
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/real_doc/appendix/domein_entity/" title="Domain Entity" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/real_doc/appendix/domein_entity/">
+          Domain Entity
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domein_entity/getters/" title="Getters" class="dd-item ">
+        <a href="/real_doc/appendix/domein_entity/getters/">
+        Getters
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domein_entity/setters/" title="Setters" class="dd-item ">
+        <a href="/real_doc/appendix/domein_entity/setters/">
+        Setters
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/domein_entity/additional_methods/" title="Additional Methods" class="dd-item ">
+        <a href="/real_doc/appendix/domein_entity/additional_methods/">
+        Additional Methods
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/real_doc/appendix/comparison/" title="Product Comparison" class="dd-item ">
+        <a href="/real_doc/appendix/comparison/">
+        Product Comparison
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Domain Decimal 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#scale">Scale</a></li>
+<li><a href="#precision">Precision</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#validation">Validation</a></li>
+<li><a href="#convenience-methods">Convenience methods</a></li>
+<li><a href="#equality">Equality</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Domain Decimal
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>Decimal Value Types extend <code>DomainDecimal</code>, which is a wrapper arround
+a <code>BigDecimal</code> instance. The constructor requires a meta-object <code>MDecimal</code> to specify precision, scale and rounding.</p>
+
+<p>The decimal value-type-class must implement at least one method; <code>createInstance()</code>. This method allows the return of typed objects after operations as &lsquo;add&rsquo;, &lsquo;subtract&rsquo;, etc.</p>
+
+<p>For example, the declaration of a new <code>Amount</code> value type with a precision of five digits, and a scale of two:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Amount</span> <span style="color:#66d9ef">extends</span> DomainDecimal<span style="color:#f92672">&lt;</span>Amount<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> Amount <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="scale">Scale</h5>
+
+<p>Domain decimals are rounded upon creation to ensure that no invalid
+objects can exist.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Scale:&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- increase from 0   to 0.00    : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span>BigDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">ZERO</span><span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- increase from 1   to 1.00    : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">)));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- increase from 1.2 to 1.20    : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.2&#34;</span><span style="color:#f92672">)));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- valid amount 1.23            : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.23&#34;</span><span style="color:#f92672">)));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- round down from 1.233 to 1.23: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.233&#34;</span><span style="color:#f92672">)));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;- round up   from 1.237 to 1.24: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.237&#34;</span><span style="color:#f92672">)));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>Scale:
+- increase from 0   to 0.00    : 0.00
+- increase from 1   to 1.00    : 1.00
+- increase from 1.2 to 1.20    : 1.20
+- valid amount 1.23            : 1.23
+- round down from 1.233 to 1.23: 1.23
+- round up   from 1.237 to 1.24: 1.24
+</code></pre>
+
+<h5 id="precision">Precision</h5>
+
+<pre><code>System.out.println(&quot;Decrease precision:&quot;);
+System.out.println(&quot;- from 12345.67  to     12346.00: &quot; + new Amount(new BigDecimal(&quot;12345.67&quot;)));
+System.out.println(&quot;- from 123456789 to 123460000.00: &quot; + new Amount(new BigDecimal(&quot;123456789&quot;)));
+</code></pre>
+
+<p>result:</p>
+
+<pre><code>Decrease precision:
+- from 12345.67  to     12346.00: 12346.00
+- from 123456789 to 123460000.00: 123460000.00
+</code></pre>
+
+<h5 id="usage">Usage</h5>
+
+<p>REAL will generate Value Type classes with many extra methods and constructors, but
+for this example we will add some of these methods manually.</p>
+
+<p>First a new constructor for <code>Amount</code> to create new instances based on other decimals:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Amount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> DomainDecimal<span style="color:#f92672">&lt;?&gt;</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">(</span>value<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span></code></pre></div>
+<p>and two new Decimal types, <code>Quantity</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Quantity</span> <span style="color:#66d9ef">extends</span> DomainDecimal<span style="color:#f92672">&lt;</span>Quantity<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+
+		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Quantity</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+		
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">protected</span> Quantity <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Quantity<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span></code></pre></div>
+<p>and <code>Price</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Price</span> <span style="color:#66d9ef">extends</span> DomainDecimal<span style="color:#f92672">&lt;</span>Price<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+
+		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Price</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+		
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">protected</span> Price <span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+		
+		<span style="color:#66d9ef">public</span> Amount <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Quantity quantity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>quantity<span style="color:#f92672">));</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span></code></pre></div>
+<p>Value Types are plain java classes and can be extended with extra
+functionality, like the <code>multiply</code> method in the <code>Price</code> class. This
+method takes a quantity, multiplies it with the price and returns an amount
+using the new amount-constructor.</p>
+
+<p>Given these new value types, calculations are possible using only
+the business concepts Amount, Price and Quantity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Price price <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;13.3329&#34;</span><span style="color:#f92672">));</span>
+<span style="color:#66d9ef">final</span> Quantity quantity <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Quantity<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3.50&#34;</span><span style="color:#f92672">));</span>
+
+<span style="color:#66d9ef">final</span> Amount amount <span style="color:#f92672">=</span> price<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>quantity<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Price      &#34;</span><span style="color:#f92672">+</span>price<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Quantity * &#34;</span><span style="color:#f92672">+</span>quantity<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Amount   = &#34;</span><span style="color:#f92672">+</span>amount<span style="color:#f92672">);</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>Price      13.333
+Quantity * 3.50
+Amount   = 46.67
+</code></pre>
+
+<p>It is important to notice that two roundings were applied. The price is
+rounded to <code>13.333</code> before calculation. And after multiplication the result
+is rounded from <code>46.6655</code> to <code>46.67</code>.</p>
+
+
+<div class="notices warning" ><p>Automatic rounding must be used with care as a loss of precision can result in
+imprecise results.</p>
+</div>
+
+
+<h5 id="validation">Validation</h5>
+
+<p>Value Types can be validated by adding checks in the constructor. For example, disallow negative prices:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Price</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> BigDecimal value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>MDecimal<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> MRounding<span style="color:#f92672">.</span><span style="color:#a6e22e">HALF_UP</span><span style="color:#f92672">),</span> value<span style="color:#f92672">);</span>
+    
+    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>isNegative<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">throw</span> DomainValueException<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Negative price not allowed: &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>This will cause an exception in all business logic whenever a negative price
+is created.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-3.59&#34;</span><span style="color:#f92672">));</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>nl.openframe.domain.value.DomainValueException: Negative price not allowed: -3.590
+</code></pre>
+
+<h5 id="convenience-methods">Convenience methods</h5>
+
+<p>Besides the standard methods <code>add</code>, <code>substract</code>, <code>multiply</code>, <code>divide</code>,
+<code>max</code> and <code>min</code>, domain decimals include additional convenience methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> Amount amount <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Amount<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigDecimal<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.23&#34;</span><span style="color:#f92672">));</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;absolute    : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">absolute</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;negate      : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">negate</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-negative : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNegative</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-positive : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isPositive</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-zero     : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isZero</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-non-zero : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNonZero</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-one      : &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isOne</span><span style="color:#f92672">());</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is-minus one: &#34;</span><span style="color:#f92672">+</span> amount<span style="color:#f92672">.</span><span style="color:#a6e22e">isNegativeOne</span><span style="color:#f92672">());</span></code></pre></div>
+<p>result:</p>
+
+<pre><code>absolute    : 1.23
+negate      : -1.23
+is-negative : false
+is-positive : true
+is-zero     : false
+is-non-zero : true
+is-one      : false
+is-minus one: false
+</code></pre>
+
+<h5 id="equality">Equality</h5>
+
+<p>Domain Decimal equality is based on the underlying BigDecimal value.</p>
+
+<pre><code>System.out.println(&quot;a1.equal(a2) : &quot; + a1.equals(a2));
+System.out.println(&quot;a1.equal(a3) : &quot; + a1.equals(a3));
+</code></pre>
+
+<p>result:</p>
+
+<pre><code>a1.equal(a2) : true
+a1.equal(a3) : true
+</code></pre>
+
+<p>Only values with the same precision and scale can be equal.</p>
+
+<pre><code>// Price and Amount have different scales
+System.out.println(&quot;p1.equal(a1) : &quot; + p1.equals(a1));
+</code></pre>
+
+<p>result:</p>
+
+<pre><code>p1.equal(a1) : false
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/real_doc/js/clipboard.min.js?1568075026"></script>
+    <script src="/real_doc/js/perfect-scrollbar.min.js?1568075026"></script>
+    <script src="/real_doc/js/perfect-scrollbar.jquery.min.js?1568075026"></script>
+    <script src="/real_doc/js/jquery.sticky.js?1568075026"></script>
+    <script src="/real_doc/js/featherlight.min.js?1568075026"></script>
+    <script src="/real_doc/js/highlight.pack.js?1568075026"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/real_doc/js/modernizr.custom-3.6.0.js?1568075026"></script>
+    <script src="/real_doc/js/learn.js?1568075026"></script>
+    <script src="/real_doc/js/hugo-learn.js?1568075026"></script>
+
+    <link href="/real_doc/mermaid/mermaid.css?1568075026" rel="stylesheet" />
+    <script src="/real_doc/mermaid/mermaid.js?1568075026"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
