@@ -8,14 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta name="description" content="Website description" />
 	<meta name="robots" content="noindex, nofollow" />
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 	<link href="/img/favicon.png" rel="apple-touch-icon" sizes="76x76">
 	<link rel="stylesheet" href="/fonts/dinpro/dinpro.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/fonts/icomoon/iconmoon.css" type="text/css" media="all" />
 
 	
 	<link rel="stylesheet" href="/css/vendor/slick.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/vendor/range.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/css/vendor/mmenu.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/vendor/magnific-popup.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
 	
 </head>
@@ -27,25 +29,44 @@
       <div id="mainCntr">
 
         <header id="headerCntr">
-          <div class="header-top centered">
+            <div class="header-top centered">
   <a class="logo" href="/"><img src="/img/logo.png" alt=""></a>
 
   
   <nav class="menuBox custom-menu" id="nav">
     <ul>
+      <li><a href="/stock">STOCK</a></li>
+      <li><a href="#">about us</a>
       
-      <li><a href="/stock">stock</a></li>
-      <li><a href="/about-us">about us</a></li>
-      
-      <li><a href="/gallery">gallery</a></li>
-      <li><a href="/contact">contact</a></li>
-
-      <li><a href="#">nederlands</a>
         <ul>
-          <li><a href="#">nederlands</a></li>
-          <li><a href="#">English</a></li>
+          <li><a href="/history">HISTORY</a></li>
+          <li><a href="/machinery">MACHINERY</a></li>
+          <li><a href="/rental">RENTAL</a></li>
+
+          <li><a href="/parts">PARTS</a></li>
+          <li><a href="/services">SERVICES</a></li>
+          <li><a href="/workshop">WORKSHOP</a></li>
+
+          <li><a href="/logistics">LOGISTICS</a></li>
+          <li><a href="/xrok">XROK</a></li>
+      </ul>
+      
+      </li>
+      
+      <li><a href="/gallery">GALLERY</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+
+      <li><a href="#">NEDERLANDS <img src="/img/nederlands.png" alt=""></a>
+        <ul>
+          <li><a href="#">english <img src="/img/english.png" alt=""></a></li>
+          <li class="is-active"><a href="#">nederlands <img src="/img/nederlands.png" alt=""></a></li>
+          <li><a href="#">deutsch <img src="/img/deutsch.png" alt=""></a></li>
+          <li><a href="#">français <img src="/img/francais.png" alt=""></a></li>
+          <li><a href="#">español <img src="/img/espanol.png" alt=""></a></li>
+          <li><a href="#">polski <img src="/img/polski.png" alt=""></a></li>
         </ul>
       </li>
+      
     </ul>
   </nav>
   
@@ -57,15 +78,22 @@
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
 </div>
-          
+            
 <div class="header-bottom centered">
-    
+
     
     <div class="searchBox">
-        <input id="searchField" type="search" placeholder="Search ...">
-        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
+        <div class="title">Search our site</div>
+
+        <form action="#">
+            <input id="searchField" type="search" placeholder="Search ...">
+
+            <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>            
+        </form>
+
+        <a href="\stock" class="button">view complete stock</a>
     </div>
-    
+     
 
     
     <div class="linkBox">
@@ -170,149 +198,86 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
-          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
-
+            <div class="stock-bar blank"></div>
         </header>
         
         <main id="contentCntr">
     
-            <div class="contentBox centered">
+            
+            <div class="mapBox">
+                <div class="block" style="background-image: url('/img/map-1.jpg')">
+                    <img src="/img/map-1.jpg" alt="">
+                </div>
+
+                <div class="block" style="background-image: url('/img/map-2.jpg')">
+                    <img src="/img/map-2.jpg" alt="">
+                </div>
+            </div>
+            
+
+            <div class="contactBox centered">
 
                 <div class="row">
                     
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d632385.7630590899!2d4.684671!3d51.746626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4236cc488a661%3A0xa26d9eaaacc97f0!2sMark+S.+Clarkelaan+6%2C+4761+RK+Zevenbergen%2C+Netherlands!5e0!3m2!1sen!2sus!4v1558075794681!5m2!1sen!2sus" 
-                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    
-                    <div class="text">
-                        <h2>Delta Machinery</h2>
-                        <p>	
-                            <address>haven m529, port of moerdijk <br>
-    mark s. clarkelaan 6 <br>
-    4761 rk zevenbergen <br>
-    the netherlands <br> <br>
+                    <div class="left">
+                        <h3>DELTA MACHINERY</h3>
+
+                        <div class="address">
+                            <address>Haven M529, Port of Moerdijk <br>
+    Mark S. Clarkelaan 6 <br>
+    4761 RK Zevenbergen <br>
+    The Netherlands
+</address>
+
+<address>
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
 </address>
-                        </p>
+                        </div>                        
                     </div>
-                </div>
-
-                <div class="row">
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d893977.341629758!2d4.321574260849776!3d51.76436250096963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c73b8407e3b57f%3A0x24a57150e6679304!2sVoltstraat+19%2C+5753+RL+Deurne!5e0!3m2!1sen!2snl!4v1558076296832!5m2!1sen!2snl" 
-                    width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
                     
-                    <div class="text">
-                        <h2>Delta Machinery Workshop</h2>
-                        <p>
+                    <div class="right">
+                        <h3>WORKSHOP</h3>
+
+                        <div class="address">
                             <address>Voltstraat 19, Deurne<br>
     Voltstraat 19 <br>
     5753 RL Deurne<br>
-    The Netherlands<br> <br>
+    The Netherlands
+</address>
+
+<address>    
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
 </address>
-                        </p>
+                        </div>
+
                     </div>
+
                 </div>
 
-            </div>
+                <form class="needs-validation" method="post" action="https://formspree.io/sales@deltamachinery.nl" novalidate>
+
+    <div class="form">
+        <h3>CONTACT FORM</h3>
+        
+        <div class="col-1">
+            <input type="text" id="company" name="company" placeholder="Company:">
+
+            <input class="form-control" type="text" id="name" name="name" placeholder="Name:" required>
+            
+
+            <input type="text" id="email" name="email" placeholder="E-mail:" required>
+            
+            
+
+            <input type="text" id="phone" name="phone" placeholder="Phone number:" required>
+            
 
             
-            <div class="infoBox centered">
-
-                <div class="main">
-                  
-                    <div class="left">
-                        <div class="detail">
-  <h4>Opening Hours</h4>
-  <ul>
-    <li><strong>Monday</strong>08:00 - 17:00</li>
-    <li><strong>Tuesday</strong>08:00 - 17:00</li>
-    <li><strong>Wednesday</strong>08:00 - 17:00</li>
-    <li><strong>Thursday</strong>08:00 - 17:00</li>
-    <li><strong>Friday</strong>08:00 - 17:00</li>
-    <li><strong>Saturday</strong>On appointment</li>
-    <li><strong>Sunday</strong>Closed</li>
-  </ul>
-</div>
-                    </div>
-
-                    <div class="right">
-                        <div class="detail">
-  <h4>Bank Details</h4>
-  <ul>
-    <li><strong>VAT Nr</strong>NL 802430685B01</li>
-    <li><strong>COC nr</strong>17078066</li>
-    <li><strong>Swift code</strong>ABNANL2A</li>
-    <li><strong>IBAN nr</strong>NL30ABNA0469187565</li>
-    <li>
-      <a href="/downloads/delta_machinery_contact_details.pdf">Download our bank details</a>
-    </li>
-  </ul>
-</div>
-
-                    </div>
-                </div>
-            </div>
-
-                        
-            <div class="contentBox centered">
-
-                <div class="row">
-                    
-                    <a href="/downloads/delta_machinery_general_terms_and_conditions_2018_03.pdf">
-                        Thanks for your interest in our company. To inform you about our way of doing business you can
-                        download our general terms & conditions.
-                    </a>
-                </div>
-
-                <div class="row">
-                    
-                    <h4>Contact form</h4>
-                    <form class="contact-form delta-contact-form needs-validation" method="post" action="https://formspree.io/sales@deltamachinery.nl" novalidate>
-
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="company">Company</label>
-            <input type="text" class="form-control" name="company" id="company">
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-sm-6 delta-required">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" required>
-            <div class="invalid-feedback">
-                Please provide a valid name.
-            </div>
-        </div>
-
-        <div class="form-group col-sm-6 delta-required">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" required>
-            <div class="invalid-feedback">
-                Please provide a valid email address.
-            </div>            
-        </div>
-    </div>
-
-    <div class="form-row">
-
-        <div class="form-group col-sm-6 delta-required">
-            <label for="phone">Phone number</label>
-            <input type="tel" class="form-control" name="phone" id="phone" required>
-            <div class="invalid-feedback">
-                Please provide a valid telephone number.
-            </div>
-        </div>
-
-        <div class="form-group col-sm-6 delta-required">
-            <label for="country">Country</label>
-            
-<select class="form-control" name="country" id="country" placeholder="Country" required>
+<select class="" name="country" id="country" placeholder="Country:" required>
         <option value="">- Make a selection - </option>
         <option value="AF">Afghanistan</option>
         <option value="AX">Åland Islands</option>
@@ -564,24 +529,16 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
     </select>
-            <div class="invalid-feedback">
-                Please select a country.
-            </div>            
+            
+        </div>    
+        
+        <div class="col-2">
+            <textarea id="comment" name="comment" placeholder="Comment"></textarea>
+
+            <button class="button js-submit">Send</button>
         </div>
 
-        <div class="form-group col-sm-12 delta-required">
-            <label for="message">Question</label>
-            <textarea id="message" class="form-control" name="message" required></textarea>
-            <div class="invalid-feedback">
-                Please leave a valid message.
-            </div>
-        </div>
-
-        <div class="col-sm-12 text-center">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i>Send</button>
-        </div>
     </div>
-
 </form>
 
 <script>
@@ -601,12 +558,40 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         }, false);
     })();
 </script>
+            </div>
+           
+
+			
+			<div class="timingBox centered">
+				<div class="left">
+                    <h3>OPENING HOURS</h3>
+
+<ul>
+  <li><strong>Monday till Friday</strong> <span>08:00 - 17:00</span></li>
+  <li><strong>Saturday</strong> <span>On appointment</span></li>
+  <li><strong>Sunday</strong> <span>Closed</span></li>
+</ul>
+                </div>
+
+                <div class="right">
+                    <h3>BANK DETAILS</h3>
+
+<ul>
+  <li><strong>VAT nr</strong> <span>NL802430685B01</span></li>
+  <li><strong>COC nr</strong> <span>17078066</span></li>
+  <li><strong>Swift code</strong> <span>ABNABL2ANL30</span></li>
+  <li><strong>IBAN nr</strong> <span>ABNA0469187565</span></li>
+  
+</ul>
+
                 </div>
             </div>
-    
+            
+
+            
         </main>
 
-        <footer id="footerCntr">
+        <footer id="footerCntr" class="space">
           
 
 <div class="footerBox centered">
@@ -616,27 +601,25 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/stock">Stock</a></li>
-            <li><a href="/about-us">About us</a></li>
             <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/history">History</a></li>
-                                
+            <li><a href="/contact">Contact</a></li>        
         </ul>
     </section>
 
     
     <section>
-        <h4>delta services</h4>
+        <h4>about us</h4>
 
         <ul>
-            <li><a href="/machinery">Machinery</a></li>
-            <li><a href="/rental">Rental</a></li>
+            <li><a href="/history">HISTORY</a></li>
+            <li><a href="/machinery">MACHINERY</a></li>
+            <li><a href="/rental">RENTAL</a></li>
 
-            <li><a href="/parts">Parts</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/workshop">Workshop</a></li>
+            <li><a href="/parts">PARTS</a></li>
+            <li><a href="/services">SERVICES</a></li>
+            <li><a href="/workshop">WORKSHOP</a></li>
 
-            <li><a href="/logistics">Logistics</a></li>
+            <li><a href="/logistics">LOGISTICS</a></li>
             <li><a href="/xrok">XROK</a></li>
         </ul>
     </section>
@@ -672,10 +655,10 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section>
         <h4>contact & address</h4>
-        <address>haven m529, port of moerdijk <br>
-    mark s. clarkelaan 6 <br>
-    4761 rk zevenbergen <br>
-    the netherlands <br> <br>
+        <address>Haven M529, Port of Moerdijk <br>
+    Mark S. Clarkelaan 6 <br>
+    4761 RK Zevenbergen <br>
+    The Netherlands <br> <br>
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
@@ -716,11 +699,15 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script src="/js/vendor/slick.js"></script>
+<script src="/js/vendor/range.js"></script>
 <script src="/js/vendor/mmenu.js"></script>
+<script src="/js/vendor/jquery.magnific-popup.js"></script>
 <script src="/js/main.js"></script>
+
 
   
   </body>

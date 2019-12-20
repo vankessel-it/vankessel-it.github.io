@@ -2,21 +2,23 @@
 <html lang="en-us">
 
   <head>
-	<meta name="generator" content="Hugo 0.53" />
+	<meta name="generator" content="Hugo 0.61.0" />
 	<title>Delta</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta name="description" content="Website description" />
 	<meta name="robots" content="noindex, nofollow" />
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 	<link href="/img/favicon.png" rel="apple-touch-icon" sizes="76x76">
 	<link rel="stylesheet" href="/fonts/dinpro/dinpro.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/fonts/icomoon/iconmoon.css" type="text/css" media="all" />
 
 	
 	<link rel="stylesheet" href="/css/vendor/slick.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/vendor/range.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/css/vendor/mmenu.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/vendor/magnific-popup.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
 	
 </head>
@@ -34,19 +36,38 @@
   
   <nav class="menuBox custom-menu" id="nav">
     <ul>
+      <li><a href="/stock">STOCK</a></li>
+      <li><a href="#">about us</a>
       
-      <li><a href="/stock">stock</a></li>
-      <li><a href="/about-us">about us</a></li>
-      
-      <li><a href="/gallery">gallery</a></li>
-      <li><a href="/contact">contact</a></li>
-
-      <li><a href="#">nederlands</a>
         <ul>
-          <li><a href="#">nederlands</a></li>
-          <li><a href="#">English</a></li>
+          <li><a href="/history">HISTORY</a></li>
+          <li><a href="/machinery">MACHINERY</a></li>
+          <li><a href="/rental">RENTAL</a></li>
+
+          <li><a href="/parts">PARTS</a></li>
+          <li><a href="/services">SERVICES</a></li>
+          <li><a href="/workshop">WORKSHOP</a></li>
+
+          <li><a href="/logistics">LOGISTICS</a></li>
+          <li><a href="/xrok">XROK</a></li>
+      </ul>
+      
+      </li>
+      
+      <li><a href="/gallery">GALLERY</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+
+      <li><a href="#">NEDERLANDS <img src="/img/nederlands.png" alt=""></a>
+        <ul>
+          <li><a href="#">english <img src="/img/english.png" alt=""></a></li>
+          <li class="is-active"><a href="#">nederlands <img src="/img/nederlands.png" alt=""></a></li>
+          <li><a href="#">deutsch <img src="/img/deutsch.png" alt=""></a></li>
+          <li><a href="#">français <img src="/img/francais.png" alt=""></a></li>
+          <li><a href="#">español <img src="/img/espanol.png" alt=""></a></li>
+          <li><a href="#">polski <img src="/img/polski.png" alt=""></a></li>
         </ul>
       </li>
+      
     </ul>
   </nav>
   
@@ -60,13 +81,20 @@
 </div>
           
 <div class="header-bottom centered">
-    
+
     
     <div class="searchBox">
-        <input id="searchField" type="search" placeholder="Search ...">
-        <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>
+        <div class="title">Search our site</div>
+
+        <form action="#">
+            <input id="searchField" type="search" placeholder="Search ...">
+
+            <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>            
+        </form>
+
+        <a href="\stock" class="button">view complete stock</a>
     </div>
-    
+     
 
     
     <div class="linkBox">
@@ -171,13 +199,13 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     event.preventDefault(); 
 });    
 </script>
-          <a href="\stock"><div class="stock-bar">view complete stock</div></a>
-
+          <div class="stock-bar blank"></div>
         </header>
         
         <main id="contentCntr">
-          <div class="bannerBox" style="background-image: url('/img/banner-img.jpg')">
-  <img src="img/banner-img.jpg" alt="">
+          
+<div class="bannerBox" style="background-image: url('/img/banner-img.jpg')">
+  <img src="/img/banner-img.jpg" alt="">
 
   <div class="text centered">
     <h1>de nieuwe <span>pl</span>12b</h1>
@@ -185,34 +213,36 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     <a href="#" class="more-link">lorem ipsum dolores erti</a>
   </div>
 </div>
+
           
-          <div class="stockBox centered">
+          
+<div class="stockBox centered">
     <ul>
         <li>
             <a href="/machinery">
                 <span>delta machinery</span>
 
-                <figure><img src="img/stock-img1.jpg" alt=""></figure>
+                <figure><img src="/img/stock-img1.jpg" alt=""></figure>
             </a>
         </li>
         <li>
             <a href="/rental">
                 <span>delta rental</span>
 
-                <figure><img src="img/stock-img2.jpg" alt=""></figure>
+                <figure><img src="/img/stock-img2.jpg" alt=""></figure>
             </a>
         </li>
         <li>
             <a href="/parts">
                 <span>delta parts</span>
 
-                <figure><img src="img/stock-img3.jpg" alt=""></figure>
+                <figure><img src="/img/stock-img3.jpg" alt=""></figure>
             </a>
         </li><li>
         <a href="#">
             <span>delta services</span>
 
-            <figure><img src="img/stock-img4.jpg" alt=""></figure>
+            <figure><img src="/img/stock-img4.jpg" alt=""></figure>
         </a>
     </li>
 
@@ -220,13 +250,14 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 </div>
 
 
-          <div class="itemBox centered">
+          
+<div class="itemBox centered">
     <h2>Special items</h2>
 
     <ul>
         <li>
             <a href="#">
-                <figure><img src="img/item-img1.jpg" alt=""></figure>
+                <figure><img src="/img/item-img1.jpg" alt=""></figure>
 
                 <span>1999 NOOTEBOOM</span>
 
@@ -235,7 +266,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         </li>
         <li>
             <a href="#">
-                <figure><img src="img/item-img2.jpg" alt=""></figure>
+                <figure><img src="/img/item-img2.jpg" alt=""></figure>
 
                 <span>2013 DELTA</span>
 
@@ -244,7 +275,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         </li>
         <li>
             <a href="#">
-                <figure><img src="img/item-img3.jpg" alt=""></figure>
+                <figure><img src="/img/item-img3.jpg" alt=""></figure>
 
                 <span>2014 DELTA</span>
 
@@ -253,7 +284,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         </li>
         <li>
             <a href="#">
-                <figure><img src="img/item-img4.jpg" alt=""></figure>
+                <figure><img src="/img/item-img4.jpg" alt=""></figure>
 
                 <span>2013 DELTA</span>
 
@@ -262,7 +293,7 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         </li>
         <li>
             <a href="#">
-                <figure><img src="img/item-img5.jpg" alt=""></figure>
+                <figure><img src="/img/item-img5.jpg" alt=""></figure>
 
                 <span>2014 DELTA</span>
 
@@ -273,7 +304,8 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 </div>
 
 
-          <div class="textBox centered">
+          
+<div class="textBox centered">
     <h2>delta group</h2>
     <p>
     The Delta Group is a leading global supplier of new, refurbished and used heavy machinery for general construction, infrastructure, road building, mineral extraction projects and machinery related to the oil & gas industry.
@@ -291,8 +323,10 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     
     <a href="/about-us" class="button">read more</a>
 </div>
+
         
-          <div class="videoBox">
+          
+<div class="videoBox">
     <div class="video-block centered" style="background-image: url('/img/video-img.jpg')">
         <a href="#" class="play-btn"><i class="icon-play-icon"></i></a>
 
@@ -310,13 +344,14 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 </div>
 
 
-          <div class="screenBox centered">
+          
+<div class="screenBox centered">
     <div class="block">
         <div class="image">
             <ul>
-                <li><img src="img/screen-img1.png" alt=""></li>
-                <li><img src="img/screen-img2.png" alt=""></li>
-                <li><img src="img/screen-img3.png" alt=""></li>
+                <li><img src="/img/screen-img1.png" alt=""></li>
+                <li><img src="/img/screen-img2.png" alt=""></li>
+                <li><img src="/img/screen-img3.png" alt=""></li>
             </ul>
         </div>
 
@@ -330,7 +365,9 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
     </div>
 </div>
 
-          <div class="subscribeBox centered">
+
+          
+<div class="subscribeBox centered">
     <h2>stay up to date</h2>
 
     <form action="https://vdhe.us12.list-manage.com/subscribe/post?u=67706403159ad615676c99e07&amp;id=4c67880eed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -368,27 +405,25 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/stock">Stock</a></li>
-            <li><a href="/about-us">About us</a></li>
             <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/history">History</a></li>
-                                
+            <li><a href="/contact">Contact</a></li>        
         </ul>
     </section>
 
     
     <section>
-        <h4>delta services</h4>
+        <h4>about us</h4>
 
         <ul>
-            <li><a href="/machinery">Machinery</a></li>
-            <li><a href="/rental">Rental</a></li>
+            <li><a href="/history">HISTORY</a></li>
+            <li><a href="/machinery">MACHINERY</a></li>
+            <li><a href="/rental">RENTAL</a></li>
 
-            <li><a href="/parts">Parts</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/workshop">Workshop</a></li>
+            <li><a href="/parts">PARTS</a></li>
+            <li><a href="/services">SERVICES</a></li>
+            <li><a href="/workshop">WORKSHOP</a></li>
 
-            <li><a href="/logistics">Logistics</a></li>
+            <li><a href="/logistics">LOGISTICS</a></li>
             <li><a href="/xrok">XROK</a></li>
         </ul>
     </section>
@@ -424,10 +459,10 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     <section>
         <h4>contact & address</h4>
-        <address>haven m529, port of moerdijk <br>
-    mark s. clarkelaan 6 <br>
-    4761 rk zevenbergen <br>
-    the netherlands <br> <br>
+        <address>Haven M529, Port of Moerdijk <br>
+    Mark S. Clarkelaan 6 <br>
+    4761 RK Zevenbergen <br>
+    The Netherlands <br> <br>
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
     e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
@@ -468,11 +503,15 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
     
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script src="/js/vendor/slick.js"></script>
+<script src="/js/vendor/range.js"></script>
 <script src="/js/vendor/mmenu.js"></script>
+<script src="/js/vendor/jquery.magnific-popup.js"></script>
 <script src="/js/main.js"></script>
+
 
   
   </body>

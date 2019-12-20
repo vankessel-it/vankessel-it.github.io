@@ -1,6 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url>
   
   <url>
     <loc>/stock/E00127/</loc>
@@ -2033,90 +2058,72 @@
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/stock/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url>
-  
-  <url>
-    <loc>/about-us/</loc>
   </url>
   
   <url>
     <loc>/contact/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/disclaimer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/gallery/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/general-terms-and-conditions/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/history/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/logistics/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/machinery/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/parts/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/privacy/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/rental/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/services/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/workshop/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/xrok/</loc>
-  </url>
-  
-  <url>
-    <loc>/stock/</loc>
-    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
