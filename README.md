@@ -1,5 +1,5 @@
 # README #
-# GIT TEST2
+# GIT TEST3
 Here is a short description of this theme and how it should be set-up.
 
 ### Table of contents ###
