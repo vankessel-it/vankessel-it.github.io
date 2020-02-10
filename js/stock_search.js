@@ -20,12 +20,10 @@ search.addWidget(
 var noResultsTemplate =
 '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
 
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#searchbox',
-  })
-);
 
+/*
+ * Sorting
+ */
 search.addWidget(
   instantsearch.widgets.sortBy({
     container: '#sort-by-selector',
@@ -33,45 +31,85 @@ search.addWidget(
       {label: 'Sort by FEATURED', value: 'DL_index_main'},
       {label: 'Sort by OLDEST', value: 'DL_index_year_asc'},
       {label: 'Sort by NEWEST', value: 'DL_index_year_dec'},
-      {label: 'Sort by HIGHEST HOURS/MILEAGE', value: 'DL_index_milage_asc'},
-      {label: 'Sort by LOWEST HOURS/MILEAGE', value: 'DL_index_milage_dec'},
+      {label: 'Sort by LOWEST HOURS/MILEAGE', value: 'DL_index_milage_asc'},
+      {label: 'Sort by HIGHEST HOURS/MILEAGE', value: 'DL_index_milage_dec'},
     ],
     cssClasses: {
+      // root:'button',
       select: 'button',
       option: 'button'
     },
   })
 );
 
+
+/***********************************************
+ * Search Filters
+ ***********************************************/
+
+/*
+ * Text search
+ */
 search.addWidget(
-  instantsearch.widgets.clearRefinements({
-    container: '#clear-refinements',
-    autoHideContainer: true,
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    placeholder: 'category, model, brand, etc.',
+    searchAsYouType: true,
+    showSubmit: true,
+    autofocus: true,
+    // templates:{
+    //   submit:'<button type="submit" class="search-btn">Search</button>',
+    // },
+  })
+);
+
+ /*
+ * Category
+ */
+const categoryListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Category',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
+  }
+
+})(instantsearch.widgets.hierarchicalMenu);
+
+search.addWidget(
+  categoryListWithPanel({
+    container: '#category-list',
+    // limit: 5,
+    showMore: false,
+    // showMoreLimit: 6,
+    attributes: [
+      'categoryFilter',
+      'category_lvl2',
+    ],
     templates: {
-      resetLabel: '<a href="#" class="reset-btn">reset filter options</a>',
-    },
-    cssClasses: {
-      button: 'reset-btn'
-    }
-  })
-);
-
-search.addWidget(
-  instantsearch.widgets.currentRefinements({
-    container: '#current-refinements',
-    transformItems(items) {
-      return items.map(item => ({
-        ...item,
-        label: item.label,
-      }));
+      item: `
+      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      `,   
+      // item2: `
+      // <a href="{{url}}" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
+      // <label>{{label}} <span>{{count}}</span></label>
+      // </a>
+      // `,   
     },
   })
 );
 
-// Start Brand Panel
+/*
+ * Brand
+ */
 const brandListWithPanel = instantsearch.widgets.panel({
   templates: {
     header: 'Brand',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
   },
 })(instantsearch.widgets.refinementList);
 
@@ -81,14 +119,28 @@ search.addWidget(
     attribute: 'brand',
     limit: 5,
     showMore: true,
+    templates: {
+      item: `
+      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      `,
+    },
+    cssClasses:{
+      showMore: 'more-link',
+    },
   })
 );
-// End Brand Panel
 
-// Start Model Panel
+
+/*
+ * Model
+ */
 const modelListWithPanel = instantsearch.widgets.panel({
   templates: {
     header: 'Model',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
   },
 })(instantsearch.widgets.refinementList);
 
@@ -98,52 +150,28 @@ search.addWidget(
     attribute: 'model',
     limit: 5,
     showMore: true,
+    templates: {
+      item: `
+      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      `,     
+    },
+    cssClasses:{
+      showMore: 'more-link',
+    },      
   })
 );
-// End Model Panel
 
 
-// Location Panel
-const locationListWithPanel = instantsearch.widgets.panel({
-  templates: {
-    header: 'Location',
-  },
-})(instantsearch.widgets.refinementList);
-
-search.addWidget(
-  locationListWithPanel({
-    container: '#location-list',
-    attribute: 'location',
-  })
-);
-// Location Panel
-
-// Start Category Panel
-const categoryListWithPanel = instantsearch.widgets.panel({
-  templates: {
-    header: 'Category',
-  },
-})(instantsearch.widgets.hierarchicalMenu);
-
-search.addWidget(
-  categoryListWithPanel({
-    container: '#category-list',
-    limit: 5,
-    showMore: true,
-    // showMoreLimit: 6,
-    attributes: [
-      'categoryFilter',
-      'category_lvl2',
-    ],
-  })
-);
-// End Category Panel
-
-
-// Start BuildYear Panel
+/*
+ * Build Year
+ */
 const buildYearListWithPanel = instantsearch.widgets.panel({
   templates: {
     header: 'Year',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
   },
 })(instantsearch.widgets.rangeSlider);
 
@@ -154,16 +182,24 @@ search.addWidget(
     precision: 0,
     step: 1,
     pips: false,
+    cssClasses: {
+      root: 'range-block',
+      input: 'js-range-2',
+    },
   })
 );
-// End BuildYear Panel
 
 
-
-// Start Hours Panel
+/*
+ * Hours
+ */
 const hoursListWithPanel = instantsearch.widgets.panel({
   templates: {
     header: 'Hours',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
   },
 })(instantsearch.widgets.rangeSlider);
 
@@ -176,14 +212,74 @@ search.addWidget(
     pips: false,
   })
 );
-// End Hours Panel
+
+/*
+ * Location
+ */
+const locationListWithPanel = instantsearch.widgets.panel({
+  templates: {
+    header: 'Location',
+  },
+  cssClasses:{
+    // root: 'block',
+    header: 'title',
+  },  
+})(instantsearch.widgets.refinementList);
+
+search.addWidget(
+  locationListWithPanel({
+    container: '#location-list',
+    attribute: 'location',
+    templates: {
+      item: `
+      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      `,     
+    }, 
+  })
+);
+
+/***********************************
+ * Current / clear refinements
+ ***********************************/
+search.addWidget(
+  instantsearch.widgets.clearRefinements({
+    container: '#clear-refinements',
+    autoHideContainer: true,
+    templates: {
+      resetLabel: 'Reset',
+    },
+    cssClasses: {
+      button: 'reset-btn'
+    }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.currentRefinements({
+    container: '#current-refinements',
+    cssClasses: {
+      // root: 'list',
+      item: 'block',
+      label:'delta_title',
+    },
+    transformItems(items) {
+      return items.map(item => ({
+        ...item,
+        label: item.label,
+      }));
+    },
+  })
+);
 
 
+/***********************************
+ * Render Hits
+ ***********************************/
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
-      item: newFunction(),
+      item: deltaHitRenderFunction(),
       empty: noResultsTemplate,
     },
     cssClasses: {
@@ -214,72 +310,117 @@ search.addWidget(
 search.start();
 
 
-function newFunction() {
+function deltaHitRenderFunction() {
   return function hitFunction(data){
-    var content =  
 
-  '<figure><a href="/stock/'+data.code+'" class="delta-hit-link"><img src="'+data.primaryImageUrl+'"  alt="" onerror="imgError(this);"></a></figure>'+
-
-  '<h4>'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</h4>'+
-
-  '<ul>';
-    if(data.advertTitle){
-      content+= '<li>'+data.advertTitle+'</li>';
-    }
-    
-		content+='<li><strong>Reference number</strong>'+data._highlightResult.code.value +'</li>';
-    content+='<li><strong>Machine type</strong>'+data.subcategory+'</li>';
-
-    if(data.buildYear!==0){
-      content+=
-      '<li><strong>Year</strong>'+data.buildYear+'</li>';
-    }
-
-    if(data.undercarriage!==''){
-      content+=
-      '<li><strong>Undercarriage / Tires</strong>'+data.undercarriage+'</li>';
-    }
-    
-    if(data.location!=="Other"){
-      content+=
-      '<li><strong>Location</strong>'+data.location+'</li>';
-    }
+    /* image thumbnail in design 334 x 225
+     *
+     * Image
+     */
+    var content='<figure><a href="/stock/'+data.code+'" class="delta-hit-link">';
         
-    if(data.hours!==0){
-      content+=
-      '<li><strong>Hours</strong>'+data.hours.toLocaleString() +' h'+'</li>';
-    } 
+    content+='<img src="'+data.primaryImageUrl+'"  alt="" onerror="imgError(this);">';
 
-    if(data.mileage!==0){
-      content+=
-      '<li><strong>Mileage</strong>'+data.mileage.toLocaleString() +' km'+'</li>';
-    } 
-
-    if(data.epaCertified){
-      content+= '<li><strong>US certificate</strong>EPA</li>';
-    }
-    
-    if(data.ceCertified){
-      content+= '<li><strong>EEA certificate</strong>CE</li>';
-    }
+    // if(data.primaryImageUrl=='/img/default_image_tn.jpg'){
+    //   content+='<span class="available-soon not-available-image">Picture available soon</span>';
+    // }
     
     if(data.tags.includes("R")){
-      content+= '<li><strong>RESERVED</strong></li>';
+      content+='<span class="tag reserved">Reserved</span>';
     }
 
     if(data.tags.includes("S")){
-      content+= '<li><strong>SOLD</strong></li>';
+      content+='<span class="tag sold">Sold</span>';
     }
 
+    if(data.tags.includes("J")){
+      content+='<span class="tag arrived">Just<br> Arrived</span>';
+    }
+
+  content+='</a></figure>';
+
+  content+='<h4>'+data._highlightResult.brand.value + ' ' + data._highlightResult.model.value+'</h4>';
+
+  content+='<ul>';
+  
+    /*
+     * Advert Title
+     */
+    if(data.advertTitle){
+      content+= '<li class="low">'+data.advertTitle+'</li>';
+    } else {
+      content+= '<li></li>';
+    }
+    
+    /*
+     * Reference Code
+     */
+		content+='<li><strong>Reference number</strong>'+data._highlightResult.code.value +'</li>';
+
+    /*
+     * Build Year
+     */
+    if(data.buildYear!==0){
+      content+=
+      '<li><strong>Year</strong>'+data.buildYear+'</li>';
+    } else {
+      content+= '<li><strong>Year</strong></li>';
+    }
+
+    /*
+     * Hours / Mileage
+     */
+    if(data.hours!==0){
+      content+=
+      '<li><strong>Hours</strong>'+data.hours.toLocaleString() +'</li>';
+    } else {
+
+      if(data.mileage!==0){
+        content+=
+        '<li><strong>Mileage</strong>'+data.mileage.toLocaleString() +' km'+'</li>';
+      }  else {
+        content+= '<li><strong>Hours</strong>-</li>';
+      }
+
+    } 
+
+    /*
+     * Location
+     */
+    if(data.location!=="Other"){
+      content+=
+      '<li><strong>Location</strong>'+data.location+'</li>';
+    } else {
+      content+= '<li><strong>Location</strong>-</li>';
+    }
+
+    /*
+     * Price
+     */
     if(data.price!==0){
       content+=
       '<li><strong>PRICE</strong>'+data.price +' &euro;'+'</li>';
     } else {
-      content+='<li><strong>PRICE</strong>on request</li>';
+      content+='<li><strong>PRICE</strong>On request</li>';
     }
 
-content +=    
-  '</ul>';
+    /*
+     * Unused
+     */
+    // content+='<li><strong>Machine type</strong>'+data.subcategory+'</li>';
+    // if(data.undercarriage!==''){
+    //   content+=
+    //   '<li><strong>Undercarriage / Tires</strong>'+data.undercarriage+'</li>';
+    // }
+  
+    // if(data.epaCertified){
+    //   content+= '<li><strong>US certificate</strong>EPA</li>';
+    // }
+    
+    // if(data.ceCertified){
+    //   content+= '<li><strong>EEA certificate</strong>CE</li>';
+    // }
+content += '</ul>';
     
   return content;
   };

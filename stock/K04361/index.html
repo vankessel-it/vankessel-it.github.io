@@ -24,8 +24,11 @@
 
 
   <body>
+
+    
     <div id="wrapper">
 
+      
       <div id="mainCntr">
 
         <header id="headerCntr">
@@ -83,14 +86,13 @@
 
     
     <div class="searchBox">
+
         <div class="title">Search our site</div>
 
-        <form action="#">
+        <form action="javascript:window.location.href = '/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
             <input id="searchField" type="search" placeholder="Search ...">
-
-            <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>            
+            <button id="searchButton" type="submit" class="search-btn">Search</button>
         </form>
-
         <a href="\stock" class="button">view complete stock</a>
     </div>
      
@@ -101,10 +103,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Excavators">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Excavators">
                     <i class="icon-icon1"></i>
 
-                    <span>34</span>
+                    <span>23</span>
 
                     <strong>Excavators</strong>
                 </a>
@@ -112,10 +114,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Dozers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Dozers">
                     <i class="icon-icon2"></i>
 
-                    <span>31</span>
+                    <span>29</span>
 
                     <strong>Dozers</strong>
                 </a>
@@ -123,10 +125,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Motor-graders">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Motor-graders">
                     <i class="icon-icon3"></i>
 
-                    <span>8</span>
+                    <span>11</span>
 
                     <strong>Motor graders</strong>
                 </a>
@@ -134,7 +136,7 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">
                     <i class="icon-icon4"></i>
 
                     <span>10</span>
@@ -145,10 +147,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Pipelayers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Pipelayers">
                     <i class="icon-icon5"></i>
 
-                    <span>5</span>
+                    <span>4</span>
 
                     <strong>Pipelayers</strong>
                 </a>
@@ -156,10 +158,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Crushers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Crushers">
                     <i class="icon-icon6"></i>
 
-                    <span>23</span>
+                    <span>31</span>
 
                     <strong>Crushers</strong>
                 </a>
@@ -167,10 +169,10 @@
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Parts">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">
                     <i class="icon-icon7"></i>
 
-                    <span>234</span>
+                    <span>249</span>
 
                     <strong>Parts</strong>
                 </a>
@@ -178,10 +180,10 @@
             <li>
                 
                                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Other">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Other">
                     <i class="icon-icon8"></i>
 
-                    <span>61</span>
+                    <span>64</span>
 
                     <strong>Other</strong>
                 </a>
@@ -190,19 +192,13 @@
     </div>
     
 </div>
-
-<script>
-document.querySelector("#searchField").addEventListener("keyup", event => {
-    if(event.key !== "Enter") return; 
-    document.querySelector("#searchButton").click(); 
-    event.preventDefault(); 
-});    
-</script>
           <div class="stock-bar blank"></div>
         </header>
         
         <main id="contentCntr">
-          <div class="detailBox centered">
+          
+
+<div class="detailBox centered">
 
   <h1>Bucket Bucket <span>Bucket</span></h1>
 
@@ -215,6 +211,20 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
       <figure><img src="ws/K04361_002.jpg" alt=""></figure>
       
       <figure><img src="ws/K04361_003.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_004.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_005.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_006.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_007.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_008.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_009.jpg" alt=""></figure>
+      
+      <figure><img src="ws/K04361_010.jpg" alt=""></figure>
          
     </div>
 
@@ -225,6 +235,20 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
       <figure><img src="tn/K04361_002.jpg"  alt=""></figure>
       
       <figure><img src="tn/K04361_003.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_004.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_005.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_006.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_007.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_008.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_009.jpg"  alt=""></figure>
+      
+      <figure><img src="tn/K04361_010.jpg"  alt=""></figure>
                  
     </div>
 
@@ -232,13 +256,77 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
   <div class="right">
 
-    
-    <h2>price on request</h2>
-    
-    <p>GP bucket to suit 12-15 Ton excavator, bucket width 1.20 Mtr, pin diameter 65mm, stick width 260mm, pin centers 390mm.</p>
+    <div class="price">
+      
+      <h2>price on request</h2>
+      
+      
+    </div>
 
+    <div class="top">
+      <a href="#js-offer-popup" class="button button-orange js-popup-modal">make an offer</a>
+      <a href="#" class="button">contact us</a>
+    </div>
+
+    <ul>
+      <li><strong>Reference number</strong>K04361</li>
+      <li><strong>Machine type</strong>Bucket</li>
+      <li><strong>Year</strong>0</li>
+      <li><strong>Hours</strong>0</li>
+      <li><strong>Location</strong>Deurne (NL)</li>
+    </ul>
+    
   </div>
+
 </div>
+
+
+
+<div id="js-offer-popup" class="offerBox zoom-anim-dialog mfp-hide">
+  <h3>MAKE AN OFFER</h3>
+
+  <form action="#">
+    <div class="row">
+      <div class="left">
+        <div class="offer">
+          <a href="">€</a>
+
+          <input type="text" placeholder="YOUR OFFER">
+        </div>
+
+        <input type="text" placeholder="Company:">
+
+        <input type="text" placeholder="Name:">
+
+        <input type="text" placeholder="E-mail:">
+
+        <input type="text" placeholder="Phone number:">
+
+        <input type="text" placeholder="Country:">
+
+        <textarea placeholder="Comment"></textarea>
+      </div>
+
+      <div class="right">
+        <figure style="background-image: url('img/offer-img.jpg')"><img src="img/offer-img.jpg" alt=""></figure>
+
+        <div class="list">
+          <ul>
+            <li><strong>Ref. No.</strong>K04361</li>
+            <li><strong>Brand</strong>Bucket</li>
+            <li><strong>Model</strong>Bucket</li>
+            <li><strong>Year</strong>0</li>
+          </ul>
+        </div>
+
+        <button class="button">Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
 
 <div class="infoBox centered">
 
@@ -254,41 +342,49 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
       <div class="detail">
         <ul>
-          <li><strong>Refnr.</strong>K04361</li>
-          <li><strong>Sold new</strong>0</li>
-          <li><strong>Brand</strong>Bucket</li>
-          <li><strong>Model</strong>Bucket</li>
+          <li><strong>Reference number</strong>K04361</li>
+          <li><strong>Machine type</strong>Bucket</li>
+          <li><strong>Year</strong>0</li>
           <li><strong>Undercarriage / Tires</strong></li>
-          <li><strong>Hours shown</strong>0</li>
-          <li><strong>Serialnumber</strong></li>
+          <li><strong>Hours</strong>0</li>
+          <li><strong>Serialnumber</strong></li>          
           <li><strong>Location</strong>Deurne (NL)</li>
         </ul>
       </div>
     </div>
 
     <div class="right">
-      <div class="top">
-        <a href="#" class="button button-orange">make an offer</a>
-        <a href="#" class="button">contact us</a>
-      </div>
-
       <div class="add" style="background-image: url(/img/add-img.jpg)">
         <strong><span>100%</span> QUALITY <small>GUARANTEED</small></strong>
       </div>
     </div>
   </div>
 
-  <div class="link">
-
-    
   
-    <a href="#" class="print-link"><i class="icon-print-icon"></i></a>
-  </div>
-
-  
-   
 
 </div>
+
+
+ 
+
+<div class="inspectionBox centered">
+  <div class="main">
+    <h3>INSPECTION</h3>
+
+    <div class="left">
+      <div class="row">
+
+</div>
+    </div>
+
+    <div class="link">
+      <a href="#" class="download-link"><i class="icon-download-icon"></i></a>
+
+      <a href="#" class="print-link"><i class="icon-print-icon"></i></a>
+    </div>
+  </div>
+</div>
+
 
         </main>
 
@@ -329,14 +425,14 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <h4>machine types</h4>
 
         <ul>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Excavators">Excavators</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Dozers">Dozers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Motor-graders">Motor graders</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">Wheel loaders</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Pipelayers">Pipelayers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Crushers">Crushers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Parts">Parts</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Other">Other</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Excavators">Excavators</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Dozers">Dozers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Motor-graders">Motor graders</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">Wheel loaders</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Pipelayers">Pipelayers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Crushers">Crushers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">Parts</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Other">Other</a></li>
         </ul>
     </section>
 
@@ -344,13 +440,13 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <h4>machine brands</h4>
 
         <ul>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Komatsu">Komatsu</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=XROK">XROK</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Phoenix">Phoenix</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Terex">Terex</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Metso">Metso</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Komatsu">Komatsu</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=XROK">XROK</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Phoenix">Phoenix</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Terex">Terex</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Metso">Metso</a></li>
         </ul>
     </section>
 
@@ -395,8 +491,10 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
 
         </footer>
       </div>
+      
 
     </div>
+    
 
     
 

@@ -83,14 +83,13 @@ permalink: /404.html
 
     
     <div class="searchBox">
+
         <div class="title">Search our site</div>
 
-        <form action="#">
+        <form action="javascript:window.location.href = '/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
             <input id="searchField" type="search" placeholder="Search ...">
-
-            <button type="submit" class="search-btn" onclick="window.location.href = '/stock/?query='+document.getElementById('searchField').value;">Search</button>            
+            <button id="searchButton" type="submit" class="search-btn">Search</button>
         </form>
-
         <a href="\stock" class="button">view complete stock</a>
     </div>
      
@@ -101,7 +100,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Excavators">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Excavators">
                     <i class="icon-icon1"></i>
 
                     <span>0</span>
@@ -112,7 +111,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Dozers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Dozers">
                     <i class="icon-icon2"></i>
 
                     <span>0</span>
@@ -123,7 +122,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Motor-graders">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Motor-graders">
                     <i class="icon-icon3"></i>
 
                     <span>0</span>
@@ -134,7 +133,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">
                     <i class="icon-icon4"></i>
 
                     <span>0</span>
@@ -145,7 +144,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Pipelayers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Pipelayers">
                     <i class="icon-icon5"></i>
 
                     <span>0</span>
@@ -156,7 +155,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Crushers">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Crushers">
                     <i class="icon-icon6"></i>
 
                     <span>0</span>
@@ -167,7 +166,7 @@ permalink: /404.html
             <li>
                 
                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Parts">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">
                     <i class="icon-icon7"></i>
 
                     <span>0</span>
@@ -178,7 +177,7 @@ permalink: /404.html
             <li>
                 
                                 
-                <a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Other">
+                <a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Other">
                     <i class="icon-icon8"></i>
 
                     <span>0</span>
@@ -190,14 +189,6 @@ permalink: /404.html
     </div>
     
 </div>
-
-<script>
-document.querySelector("#searchField").addEventListener("keyup", event => {
-    if(event.key !== "Enter") return; 
-    document.querySelector("#searchButton").click(); 
-    event.preventDefault(); 
-});    
-</script>
         <div class="stock-bar blank"></div>
     </header>
 
@@ -276,14 +267,14 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <h4>machine types</h4>
 
         <ul>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Excavators">Excavators</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Dozers">Dozers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Motor-graders">Motor graders</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">Wheel loaders</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Pipelayers">Pipelayers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Crushers">Crushers</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Parts">Parts</a></li>
-            <li><a href="/stock/?hierarchicalMenu%5BcategoryFilter%5D%5B0%5D=Other">Other</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Excavators">Excavators</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Dozers">Dozers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Motor-graders">Motor graders</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Wheel-loaders">Wheel loaders</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Pipelayers">Pipelayers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Crushers">Crushers</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">Parts</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Other">Other</a></li>
         </ul>
     </section>
 
@@ -291,13 +282,13 @@ document.querySelector("#searchField").addEventListener("keyup", event => {
         <h4>machine brands</h4>
 
         <ul>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Komatsu">Komatsu</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=XROK">XROK</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Phoenix">Phoenix</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Terex">Terex</a></li>
-            <li><a href="/stock/?refinementList%5Bbrand%5D%5B0%5D=Metso">Metso</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Caterpillar">Caterpillar</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Komatsu">Komatsu</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Doosan%2FIR">Doosan</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=XROK">XROK</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Phoenix">Phoenix</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Terex">Terex</a></li>
+            <li><a href="/stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Metso">Metso</a></li>
         </ul>
     </section>
 
