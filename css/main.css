@@ -430,9 +430,14 @@ textarea::placeholder { color: #100e0f; }
 	.inspectionBox .detail ul li { padding: 12px 20px 12px; display: -webkit-flex; display: -ms-flexbox; display: flex; background: #f5f5f5; font-size: 15px; color: #1a181b; line-height: 1; position: relative; }
 	.inspectionBox .detail ul li strong { width: 62%; line-height: 1; display: block; }
 	.inspectionBox .detail ul li:nth-child(even) { background: #fff; }
-	.inspectionBox .detail ul li.available:after {  content: ''; position: absolute; right: 22px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 18px; height: 13px; background: url('../img/check.png') center center no-repeat; background-size: 18px auto; }
-	.inspectionBox .detail ul li.not-available:after { content: ''; position: absolute; right: 25px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 14px; height: 14px; background: url('../img/cross.png') center center no-repeat; background-size: 14px auto; }
-	.inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-bottom: 40px; }
+	/* MVK-so */
+	/* .inspectionBox .detail ul li.available:after {  content: ''; position: absolute; right: 22px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 18px; height: 13px; background: url('../img/check.png') center center no-repeat; background-size: 18px auto; } */
+	/* .inspectionBox .detail ul li.not-available:after { content: ''; position: absolute; right: 25px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 14px; height: 14px; background: url('../img/cross.png') center center no-repeat; background-size: 14px auto; } */
+	/* .inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-bottom: 40px; } */
+	/* MVK-eo */
+	/* MVK-sn */
+	.inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-top: 20px; margin-bottom: 10px; }
+	/* MVK-en */
 	.inspectionBox .row { width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 	.inspectionBox .col-1 { width: 50%; padding-right: 13px; }
 	.inspectionBox .col-1 + .col-1 { padding-right: 0; padding-left: 13px; }
