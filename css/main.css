@@ -336,7 +336,7 @@ textarea::placeholder { color: #100e0f; }
 	/* MVK-sn 
 	 * If the search results in less than three machines, the box collapses
 	*/
-	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%;  min-width: 313px;}
+	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%;  min-width: 250px;}
 	/* MVK-en */
 	.productBox .list figure img { width: 100%; transition: all 0.6s; }
 	.productBox .list figure a { display: block; position: relative; overflow: hidden; }
