@@ -216,6 +216,7 @@ search.addWidget(
 /*
  * Location
  */
+/*
 const locationListWithPanel = instantsearch.widgets.panel({
   templates: {
     header: 'Location',
@@ -237,7 +238,7 @@ search.addWidget(
     }, 
   })
 );
-
+*/
 /***********************************
  * Current / clear refinements
  ***********************************/

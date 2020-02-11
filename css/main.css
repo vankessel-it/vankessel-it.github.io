@@ -292,8 +292,13 @@ textarea::placeholder { color: #100e0f; }
 	.filterBox .searchBox input { background: #fff; }
 	.filterBox .searchBox button { background-size: 17px 17px; }
 	.filterBox .title { width: 100%; font-size: 14px; color: #100e0f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid #100e0f; padding-bottom: 4px; margin-bottom: 8px; }
-	.filterBox label { padding-left: 23px; cursor: pointer; position: relative; display: block; }
-	.filterBox label:after { transition: all 0.3s; content: ''; width: 13px; height: 13px; border: 1px solid #fff; position: absolute; left: 2px; top: 3px; background: url('../img/checkbox.png') center center no-repeat; background-size: 0 auto; }
+	/* MVK-so */
+	/* .filterBox label { padding-left: 23px; cursor: pointer; position: relative; display: block; }  */
+	/* .filterBox label:after { transition: all 0.3s; content: ''; width: 13px; height: 13px; border: 1px solid #fff; position: absolute; left: 2px; top: 3px; background: url('../img/checkbox.png') center center no-repeat; background-size: 0 auto; } */
+	/* MVK-eo */
+	/* MVK-sn */
+	.filterBox label {cursor: pointer; position: relative; display: block; } 
+	/* MVK-en */
 	.filterBox label span { position: absolute; right: 0; top: 0; }
 	.filterBox input:checked + label:after { background-size: 10px auto; }
 	.filterBox .more-link { margin-left: auto; display: inline-block; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 900; text-decoration: none; }
@@ -325,7 +330,14 @@ textarea::placeholder { color: #100e0f; }
 	.productBox .heading .button:after { position: absolute; right: 8px; top: 9px; border-width: 5px 0 5px 9px; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 	.productBox h2 { text-transform: uppercase; color: #ffb819; font-size: 33px; line-height: 1.2; font-weight: 900; margin-bottom: 5px; }
 	.productBox .list { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; width: calc(100% + 15px); margin-left: -15px; }
-	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%; }
+	/* MVK-so */
+	/* .productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%; } */
+	/* MVK-eo */
+	/* MVK-sn 
+	 * If the search results in less than three machines, the box collapses
+	*/
+	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%;  min-width: 313px;}
+	/* MVK-en */
 	.productBox .list figure img { width: 100%; transition: all 0.6s; }
 	.productBox .list figure a { display: block; position: relative; overflow: hidden; }
 	.productBox .list .tag { text-align: center; line-height: 1; position: absolute; right: 20px; top: 30px; width: 58px; height: 58px; box-shadow: 0 3px 3px rgba(0,0,0,0.3); border-radius: 50%; background: #feb534; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; font-size: 8px; color: #fff; text-transform: uppercase; font-weight: 700; }
