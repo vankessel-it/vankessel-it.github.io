@@ -3826,7 +3826,7 @@ For sale and/or rental information please contact: Tel. +31 653 85 3392 or E-mai
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/gallery/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}  {{ partial &#34;header_top.html&#34; . }} {{ partial &#34;header_bottom1.html&#34; . }} {{ partial &#34;header_bottom2.html&#34; . }}  {{ with .Resources.Match &#34;img/*&#34; }} {{ range . }} {{ $image_lg := .Resize &#34;1920x&#34; }}  {{ end }} {{ end }}  {{ with .Resources.Match &#34;img/*&#34; }} {{ range . }} {{ $image_tn := .Resize &#34;213x142&#34; }}  {{ end }} {{ end }}  {{ with .</description>
+      <description>{{ partial &#34;head.html&#34; . }}  {{ partial &#34;header_top.html&#34; . }} {{ partial &#34;header_bottom1.html&#34; . }} {{ partial &#34;header_bottom2.html&#34; . }}  {{ with .Resources.Match &#34;img/*&#34; }} {{ range . }} {{ $image_lg := .Resize &#34;1280x720&#34; }}   {{ end }} {{ end }}  {{ with .Resources.Match &#34;img/*&#34; }} {{ range . }} {{ $image_tn := .Resize &#34;213x142&#34; }}  {{ end }} {{ end }}     {{ partial &#34;</description>
     </item>
     
     <item>

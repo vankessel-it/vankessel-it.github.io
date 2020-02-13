@@ -17,6 +17,7 @@ jQuery( document ).ready( function( $ ) {
 		$( 'body' ).toggleClass( 'is-filter' );
 	} );
 
+	//MVK-sn
 	$( '.js-image-for' ).slick( {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -28,11 +29,17 @@ jQuery( document ).ready( function( $ ) {
 
 	$( '.js-image-nav' ).slick( {
 		slidesToShow: 5,
-		slidesToScroll: 1,
+		slidesToScroll: 5,
+		infinite: false,
 		rows: 0,
+		// slidesToShow: 1,
+		// slidesToScroll: 1,
+		// rows: 2,
+		// slidesPerRow: 5,
 		arrows: false,
 		asNavFor: '.js-image-for',
-		dots: false,
+		dots: true,
+		// centerMode: true,
 		focusOnSelect: true,
 		responsive: [
 			{
@@ -49,7 +56,42 @@ jQuery( document ).ready( function( $ ) {
 			}
 		]
 	} );
+	//MVK-en
 
+	//MVK-so
+	// $( '.js-image-for' ).slick( {
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	fade: true,
+	// 	rows: 0,
+	// 	asNavFor: '.js-image-nav'
+	// } );
+
+	// $( '.js-image-nav' ).slick( {
+	// 	slidesToShow: 5,
+	// 	slidesToScroll: 1,
+	// 	rows: 0,
+	// 	arrows: false,
+	// 	asNavFor: '.js-image-for',
+	// 	dots: false,
+	// 	focusOnSelect: true,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 4
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 480,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// } );
+	//MVK-eo
 	$( '.js-popup-modal' ).magnificPopup( {
 		type: 'inline',
 		preloader: false,
