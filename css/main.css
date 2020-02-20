@@ -11,6 +11,16 @@
 /* #Delta Machinery Styles
 ================================================== */
 
+/* MVK-sn */
+/* Make sure the stock-box titles are below the fixed header.  */
+a.delta_stockBoxAnchor {
+	display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+/* MVK-en */
+
 /* ### general ### */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { font-family: 'DINPro', sans-serif; font-size: 16px; color: #100e0f; }

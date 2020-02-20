@@ -318,13 +318,9 @@ function deltaHitRenderFunction() {
      *
      * Image
      */
-    var content='<figure><a href="/stock/'+data.code+'" class="delta-hit-link">';
+    var content='<figure><a href="/'+document.documentElement.lang+"/stock/"+data.code+'" class="delta-hit-link">';
         
     content+='<img src="'+data.primaryImageUrl+'"  alt="" onerror="imgError(this);">';
-
-    // if(data.primaryImageUrl=='/img/default_image_tn.jpg'){
-    //   content+='<span class="available-soon not-available-image">Picture available soon</span>';
-    // }
     
     if(data.tags.includes("R")){
       content+='<span class="tag reserved">Reserved</span>';
