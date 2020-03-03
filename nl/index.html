@@ -288,27 +288,89 @@
 <div class="subscribeBox centered">
     <h2>blijf op de hoogte</h2>
 
-    <form action="https://vdhe.us12.list-manage.com/subscribe/post?u=67706403159ad615676c99e07&amp;id=4c67880eed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="https://formspree.io/mbjyzqrz" method="post" id="my-form">
         <div class="field">
-            <input type="text" placeholder="">
+            
+            <input type="email" placeholder="" name="email" required>
 
-            <button type="submit" class="button">aanmelden</button>
+            <button id="my-form-button" type="submit" class="button">aanmelden</button>
+            <p id="my-form-status"></p>
         </div>
 
         <div class="radio">
-            <input type="checkbox" id="check1">
+            <input type="checkbox" id="terms">
 
-            <label for="check1">Ik heb de <a href="/nl/privacy>">privacy disclaimer en algemene voorwaarden</a> gelezen en ga akkoord</label>
+            <label for="terms">Ik heb de <a href="/nl/privacy>">privacy disclaimer en algemene voorwaarden</a> gelezen en ga akkoord</label>
         </div>
+
     </form>
 </div>
 
 
 
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+  
+      
+      
+      var form = document.getElementById("my-form");
+      var button = document.getElementById("my-form-button");
+      var status = document.getElementById("my-form-status");
+  
+      
+      
+      function success() {
+        form.reset();
+        button.style = "display: none ";
+        status.innerHTML = 'Hartelijk dank voor de aanmelding !';
+      }
+  
+      function error() {
+        status.innerHTML = 'Oops! Er is een probleem opgetreden.';
+      }
+  
+      
+  
+      form.addEventListener("submit", function(ev) {
+        
+        
+        if(!form.terms.checked) {
+            status.innerHTML = 'Gelieve aan te geven dat U akkoord gaat met de privacy disclaimer en algemene voorwaarden';
+            ev.preventDefault();
+            
+        } else {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);    
+        }
+        
 
-
+        
+        
+        
+        
+        
+      });
+    });
+    
+    
+  
+    function ajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+  </script>
 
 
         </main>
