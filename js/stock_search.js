@@ -89,7 +89,7 @@ search.addWidget(
     ],
     templates: {
       item: `
-      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      <label style="{{#isRefined}}color: black; background: #feb633; font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
       `,   
       // item2: `
       // <a href="{{url}}" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
@@ -99,6 +99,8 @@ search.addWidget(
     },
   })
 );
+//<label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+
 
 /*
  * Brand
@@ -121,7 +123,7 @@ search.addWidget(
     showMore: true,
     templates: {
       item: `
-      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      <label style="{{#isRefined}}color: black; background: #feb633; font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
       `,
     },
     cssClasses:{
@@ -129,6 +131,8 @@ search.addWidget(
     },
   })
 );
+//<label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+//<input {{#isRefined}}checked{{/isRefined}} id="{{label}}" type="checkbox"><label for="{{label}}">{{label}} <span>{{count}}</span></label>
 
 
 /*
@@ -152,7 +156,7 @@ search.addWidget(
     showMore: true,
     templates: {
       item: `
-      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
+      <label style="{{#isRefined}}color: black; background: #feb633; font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
       `,     
     },
     cssClasses:{
@@ -160,7 +164,7 @@ search.addWidget(
     },      
   })
 );
-
+//      <label style="{{#isRefined}}font-weight: bold{{/isRefined}}">{{label}} <span>{{count}}</span></label>
 
 /*
  * Build Year
@@ -210,6 +214,10 @@ search.addWidget(
     precision: 0,
     step: 100,
     pips: false,
+    cssClasses: {
+      root: 'range-block',
+      input: 'js-range-2',
+    },
   })
 );
 
@@ -300,10 +308,12 @@ search.addWidget(
     showLast: true,
     totalPages: 99,
     cssClasses: {
-      root :'pagination',
-      previousPageItem: 'prev',
-      nextPageItem: 'next',
-      selectedItem :'is-active',
+      list :'pagination',
+      firstPageItem:  'arrow prev-dabble',
+      previousPageItem: 'arrow prev',
+      nextPageItem: 'arrow next',
+      lastPageItem: 'arrow next-dabble',
+      selectedItem :'delta_selected',
     }
   })
 );

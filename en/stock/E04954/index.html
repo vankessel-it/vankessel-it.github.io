@@ -59,12 +59,12 @@
       
       <li><a href="/en/gallery">Gallery</a></li>
       <li><a href="/en/contact">Contact</a></li>
-      <li><a href="#">Language</a>
+      <li><a href="#">English <img src="/img/english.png" alt=""></a>
       <ul>
         
         
           
-          <li><a href="/nl/stock/E04954/">Dutch <img src="/img/nederlands.png" alt=""></a></li>
+          <li><a href="/nl/stock/E04954/">Nederlands <img src="/img/nederlands.png" alt=""></a></li>
         
         
       </ul>
@@ -77,7 +77,7 @@
 
   <div class="phone-number">
     <a href="tel:31888966966">+31 888 966 966</a>
-    <small>weekdays 08.00 - 17.00 CEST</small>
+    <small> </small>
   </div>
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
@@ -88,9 +88,9 @@
     
     <div class="searchBox">
 
-        <div class="title">Search our site</div>
+        <div class="title">Search stock</div>
 
-        <form action="javascript:window.location.href = '/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
+        <form action="javascript:window.location.href = '/en/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
             <input id="searchField" type="search" placeholder='Search ...'>
             <button id="searchButton" type="submit" class="search-btn">Search ...</button>
         </form>
@@ -923,11 +923,11 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      status.innerHTML = 'Thank you for the offer, we will contact you soon';
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      status.innerHTML = 'Oops! There was a problem';
     }
 
     
@@ -973,11 +973,12 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      
+      status.innerHTML = 'Thank you for your details, we will contact you soon';
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      status.innerHTML = 'Oops! There was a problem';
     }
 
     
@@ -1073,13 +1074,13 @@
 
     <section>
         <h4>contact &amp; address</h4>
-        <address>Haven M529, Port of Moerdijk <br>
-    Mark S. Clarkelaan 6 <br>
-    4761 RK Zevenbergen <br>
-    The Netherlands <br> <br>
+        <address>
+    Voltstraat 19 <br>
+    5753 RL Deurne<br>
+    The Netherlands<br> <br>
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
-    e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
+    e: <a href="mailto:info@deltamachinery.nl">info@deltamachinery</a>
 </address>
     </section>
 

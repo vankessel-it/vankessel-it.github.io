@@ -59,7 +59,7 @@
       
       <li><a href="/nl/gallery">Galerij</a></li>
       <li><a href="/nl/contact">Contact</a></li>
-      <li><a href="#">Taal</a>
+      <li><a href="#">Nederlands <img src="/img/nederlands.png" alt=""></a>
       <ul>
         
         
@@ -77,7 +77,7 @@
 
   <div class="phone-number">
     <a href="tel:31888966966">+31 888 966 966</a>
-    <small>werkdagen 08.00 - 17.00 CEST</small>
+    <small> </small>
   </div>
 
   <a class="mobileMenu" href="#nav"><span>Menu</span></a>
@@ -88,9 +88,9 @@
     
     <div class="searchBox">
 
-        <div class="title">Zoek onze site</div>
+        <div class="title">Zoek voorraad</div>
 
-        <form action="javascript:window.location.href = '/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
+        <form action="javascript:window.location.href = '/nl/stock/?DL_index_main%5Bquery%5D='+document.getElementById('searchField').value;">
             <input id="searchField" type="search" placeholder='Zoek ...'>
             <button id="searchButton" type="submit" class="search-btn">Zoek ...</button>
         </form>
@@ -919,11 +919,11 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      status.innerHTML = 'Hartelijk dank voor het bod, u hoort spoedig van ons';
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      status.innerHTML = 'Oops! Er is een fout opgetreden';
     }
 
     
@@ -969,11 +969,12 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      
+      status.innerHTML = 'U hoort spoedig van ons';
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      status.innerHTML = 'Oops! Er is een fout opgetreden';
     }
 
     
@@ -1069,13 +1070,13 @@
 
     <section>
         <h4>contact &amp; adres</h4>
-        <address>Haven M529, Port of Moerdijk <br>
-    Mark S. Clarkelaan 6 <br>
-    4761 RK Zevenbergen <br>
-    The Netherlands <br> <br>
+        <address>
+    Voltstraat 19 <br>
+    5753 RL Deurne<br>
+    The Netherlands<br> <br>
     t: <a href="tel:310888966966">+31 (0) 888 966 966</a> <br>
     f: +31 (0) 888 966 950 <br>
-    e: <a href="mailto:info@deltamachinery">info@deltamachinery</a>
+    e: <a href="mailto:info@deltamachinery.nl">info@deltamachinery</a>
 </address>
     </section>
 
