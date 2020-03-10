@@ -13,7 +13,7 @@ const search = instantsearch({
 
 search.addWidget(
   instantsearch.widgets.configure({
-    hitsPerPage: 9,
+    hitsPerPage: 21,
   })
 );
 
@@ -279,6 +279,25 @@ search.addWidget(
     },
   })
 );
+
+
+/***********************************
+ * Render Infinite Hits
+ ***********************************/
+// search.addWidget(
+//   instantsearch.widgets.infiniteHits({
+//     container: '#hits',
+//     showPrevious: false,
+//     templates: {
+//       item: deltaHitRenderFunction(),
+//       empty: noResultsTemplate,
+//     },
+//     cssClasses: {
+//       list: 'list',
+//       item: ['block'],
+//     },
+//   })
+// );
 
 
 /***********************************
