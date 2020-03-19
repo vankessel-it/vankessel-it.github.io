@@ -174,7 +174,7 @@
                 <a href="/en//stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">
                     <i class="icon-icon7"></i>
 
-                    <span>241</span>
+                    <span>254</span>
 
                     <strong>Parts</strong>
                 </a>
@@ -230,6 +230,19 @@
           "@type": "Brand",
           "name": "Terex-Pegson"
         },
+        
+        "offers": {
+          "@type": "Offer",
+          "url": "https:\/stock\/K01444\/",
+          "priceCurrency": "€",
+          "price": "450",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Delta Heavy Machinery"
+          }
+        }        
           
       }
       </script>
@@ -278,14 +291,14 @@
 
     <div class="price">
       
-      <h2>price on request</h2>
+      <h2>  450 €</h2>
       
       
     </div>
 
     <div class="top">
       
-      <a href="#js-offer-popup" class="button button-orange js-popup-modal">REQUEST AN OFFER</a>
+      <a href="#js-offer-popup" class="button button-orange js-popup-modal">MAKE AN OFFER</a>
       
       <a href="#js-contact-popup" class="button js-popup-modal">contact us</a>
     </div>
@@ -553,13 +566,18 @@
 </datalist>
 <div id="js-offer-popup" class="offerBox zoom-anim-dialog mfp-hide">
   
-  <h3>REQUEST AN OFFER</h3>
+  <h3>MAKE AN OFFER</h3>
   
   <form id="my-form-offer" method="post" action="https://formspree.io/mlenpaoa">
     <div class="row">
       <div class="left">
         <input type="hidden" id="unit-code" name="unit-code" value="K01444">
         <input type="hidden" id="unit-type" name="unit-type" value="Milling parts">
+        
+        <div class="offer">
+          <a>€</a>
+          <input type="text" id="offer" name="offer" value="450" placeholder="YOUR OFFER">
+        </div>
         
         <input type="text" id="company" name="company" placeholder="Company:" required>
 

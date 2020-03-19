@@ -174,7 +174,7 @@
                 <a href="/nl//stock/?DL_index_main%5BhierarchicalMenu%5D%5BcategoryFilter%5D%5B0%5D=Parts">
                     <i class="icon-icon7"></i>
 
-                    <span>241</span>
+                    <span>254</span>
 
                     <strong>Onderdelen</strong>
                 </a>
@@ -230,6 +230,19 @@
           "@type": "Brand",
           "name": "Unknown"
         },
+        
+        "offers": {
+          "@type": "Offer",
+          "url": "https:\/stock\/K04883\/",
+          "priceCurrency": "€",
+          "price": "2,500",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Delta Heavy Machinery"
+          }
+        }        
           
       }
       </script>
@@ -290,14 +303,14 @@
 
     <div class="price">
       
-      <h2>prijs op aanvraag</h2>
+      <h2>  2,500 €</h2>
       
       
     </div>
 
     <div class="top">
       
-      <a href="#js-offer-popup" class="button button-orange js-popup-modal">VRAAG OFFERTE</a>
+      <a href="#js-offer-popup" class="button button-orange js-popup-modal">DOE EEN BOD</a>
       
       <a href="#js-contact-popup" class="button js-popup-modal">neem contact op</a>
     </div>
@@ -565,13 +578,18 @@
 </datalist>
 <div id="js-offer-popup" class="offerBox zoom-anim-dialog mfp-hide">
   
-  <h3>VRAAG OFFERTE</h3>
+  <h3>DOE EEN BOD</h3>
   
   <form id="my-form-offer" method="post" action="https://formspree.io/mlenpaoa">
     <div class="row">
       <div class="left">
         <input type="hidden" id="unit-code" name="unit-code" value="K04883">
         <input type="hidden" id="unit-type" name="unit-type" value="Crusher parts">
+        
+        <div class="offer">
+          <a>€</a>
+          <input type="text" id="offer" name="offer" value="2,500" placeholder="YOUR OFFER">
+        </div>
         
         <input type="text" id="company" name="company" placeholder="Company:" required>
 
