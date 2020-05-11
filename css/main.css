@@ -11,20 +11,6 @@
 /* #Delta Machinery Styles
 ================================================== */
 
-/* MVK-sn */
-/* Make sure the stock-box titles are below the fixed header.  */
-a.delta_stockBoxAnchor {
-	display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
-}
-
-.filterBox .delta_range_filter_padding{
-	padding: 9px 10px 11px 13px; 
-}
-/* MVK-en */
-
 /* ### general ### */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { font-family: 'DINPro', sans-serif; font-size: 16px; color: #100e0f; }
@@ -39,7 +25,7 @@ h2 span,
 h1 span {  font-weight: 400; }
 h3 { text-transform: uppercase; color: #ffb819; font-size: 33px; line-height: 1.2; font-weight: 900; margin-bottom: 5px; }
 
-p { font-size: 20px; margin-bottom: 40px; line-height: 1.85; }
+p { font-size: 18px; margin-bottom: 40px; line-height: 1.85; }
 .button { cursor: pointer; padding: 9px 9px 9px 12px; text-transform: uppercase; font-size: 13px; font-weight: 700; display: inline-block; background: #100e0f; border: 1px solid #100e0f; color: #fff; text-decoration: none; transition: all 0.3s; }
 .button.button-alt { padding: 9px 10px 11px 13px; font-size: 13px; border-color: #fff; border-radius: 3px; background: transparent; }
 .button.button-alt:hover { background: transparent; border-color: #feb633; color: #fff; }
@@ -117,8 +103,8 @@ textarea::placeholder { color: #100e0f; }
 #headerCntr .mobileMenu span:before { top: -14px; }
 #headerCntr .mobileMenu span:after { bottom: -14px; }
 #headerCntr .header-top { z-index: 99; padding-top: 21px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; background: #100e0f; width: 100%; position: fixed; left: 0; top: 0; }
-#headerCntr .phone-number { padding-left: 26px; position: absolute; right: 50%; margin-right: -660px; top: 17px; background: url('../img/phone-icon.svg') left 3px no-repeat; background-size: 23px 23px; }
-#headerCntr .phone-number a { display: inline-block; text-decoration: none; font-size: 20px; font-weight: 700; color: #fff; text-transform: uppercase; line-height: 1.2; }
+#headerCntr .phone-number { padding-left: 26px; position: absolute; right: 50%; margin-right: -660px; top: 22px; background: url('../img/phone-icon.svg') left 3px no-repeat; background-size: 23px 23px; }
+#headerCntr .phone-number a { display: inline-block; text-decoration: none; font-size: 20px; font-weight: 700; color: #fff; text-transform: uppercase; line-height: 1.4; }
 #headerCntr .phone-number small { display: block; font-size: 9px; letter-spacing: 0.03em; color: #fff; text-transform: uppercase; line-height: 1.6; }
 #headerCntr .header-bottom { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; -ms-flex-line-pack: end; -webkit-align-content: flex-end; align-content: flex-end; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-bottom: 35px; }
 #headerCntr .stock-bar { background: #feb633; width: 100%; text-align: center; padding: 8px 15px; font-size: 12px; color: #feb633; text-transform: uppercase; box-shadow: 0 5px 10px rgba(0,0,0,0.25); }
@@ -169,6 +155,15 @@ textarea::placeholder { color: #100e0f; }
 	.searchBox .button:after { position: absolute; top: 50%; right: 6px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 	/* ### link box ### */
+	.linkBox-control{ display: none; background-color: #feb633; width: 100%; margin-top: 15px; cursor: pointer; }
+	.linkBox-control__text{ color: #fff; padding: 5px 21px; text-transform: uppercase; font-weight: bold; }
+	.linkBox-control__text span{ color: #000; font-size: 12px; padding-left: 5px; }
+	.linkBox-control__text--hide-filters{ display: none; }
+	.linkBox-control__text--show-filters{ display: block; }
+	.linkBox-control__text--show-filters span:before{ content: '▼'; }
+	.linkBox-control__text--hide-filters span:before{ content: '▲'; }		
+	.linkBox-control--active .linkBox-control__text--hide-filters{ display: block; }
+	.linkBox-control--active .linkBox-control__text--show-filters{ display: none; }
 	.linkBox { padding-top: 20px; padding-left: 50px; width: calc(100% - 176px); }
 	.linkBox ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 	.linkBox ul li { padding-left: 40px; }
@@ -180,6 +175,12 @@ textarea::placeholder { color: #100e0f; }
 	.linkBox ul li a i.icon-icon1 { font-size: 25px; }
 	.linkBox ul li a i.icon-icon2 { font-size: 64px; }
 	.linkBox ul li a i.icon-icon3 { font-size: 66px; }
+
+	/* Non-ICOMOON EXCEPTION */
+	.linkBox ul li a i.icon-icon3:before { content: ''; display: block; width: 66px; height: 66px; background-size: 66px 66px; background-image: url('../img/motor-grader.svg'); }
+	.linkBox ul li.is-active a i.icon-icon3:before,
+	.linkBox ul li a:hover i.icon-icon3:before{ background-image: url('../img/motor-grader-yellow.svg'); }
+
 	.linkBox ul li a i.icon-icon4 { font-size: 56px; }
 	.linkBox ul li a i.icon-icon5 { font-size: 42px; padding-bottom: 15px; }
 	.linkBox ul li a i.icon-icon6 { font-size: 86px; }
@@ -196,7 +197,7 @@ textarea::placeholder { color: #100e0f; }
 	/* ### banner box ### */
 	.bannerBox { z-index: 9; margin-bottom: 56px; box-shadow: 0 5px 5px rgba(0,0,0,0.3); min-height: 700px; width: 100%; height: 700px; overflow: hidden; background-position: center center; background-size: cover; background-repeat: no-repeat; position: relative; }
 	.bannerBox img { opacity: 0; }
-	.bannerBox .text { position: absolute; left: 0; bottom: 132px; z-index: 9; }
+	.bannerBox .text { position: absolute; left: 0; bottom: 55px; z-index: 9; }
 	.bannerBox h1 { margin: 0 0 11px; padding: 5px 0 8px; color: #fff; font-weight: 900; text-transform: uppercase; font-size: 65px; position: relative; }
 	.bannerBox h1 span { font-weight: 400; }
 	.bannerBox h1:after { position: absolute; right: 0; bottom: 0; width: 60000px; height: 2px; background: #fff; content: ''; }
@@ -208,7 +209,7 @@ textarea::placeholder { color: #100e0f; }
 	/* ### slider box ### */
 	.sliderBox { width: 100%; }
 	.sliderBox .slider { width: 100%; overflow: hidden; }
-	.sliderBox .slide { width: 100%; height: 700px; overflow: hidden; background-position: center center; background-size: cover; background-repeat: no-repeat; position: relative;}
+	.sliderBox .slide { width: 100%; height: 433px; overflow: hidden; background-position: center center; background-size: cover; background-repeat: no-repeat; position: relative;}
 	.sliderBox .text { padding-top: 18px; padding-bottom: 24px; width: 100%; position: absolute; left: 0; bottom: 0; z-index: 9; background: rgba(118, 114, 4 ,0.5); }
 	.sliderBox h1 { padding: 0; margin: 0; color: #fff; font-weight: 900; text-transform: uppercase; font-size: 65px; position: relative; }
 
@@ -260,7 +261,7 @@ textarea::placeholder { color: #100e0f; }
 
 	/* ### intro box ### */
 	.introBox { padding-top: 54px; padding-bottom: 60px; background: #feb633; position: relative; z-index: 6; width: 100%; }
-	.introBox p { font-weight: 700; padding-right: 5%; font-size: 20px; line-height: 2.1; margin-bottom: 0; }
+	.introBox p { font-weight: 700; padding-right: 5%; font-size: 18px; line-height: 2.1; margin-bottom: 0; }
 
 	/* ### video box ### */
 	.videoBox { position: relative; width: 100%; margin-bottom: 100px; }
@@ -283,12 +284,7 @@ textarea::placeholder { color: #100e0f; }
 	/* ### subscribe box ### */
 	.subscribeBox { padding-top: 145px; padding-bottom: 183px; text-align: center; width: 100%; background: #feb633; }
 	.subscribeBox h2 { color: #fff; line-height: 1; font-size: 65px; margin-bottom: 41px; }
-	/* MVK-so  */
-	/* .subscribeBox input[type="text"] { border-radius: 0; -webkit-border-radius: 0; -moz-appearance: none; appearance: none; -webkit-appearance: none; border: 0; width: 100%; height: 44px; background: #fff; padding: 5px 145px 5px 15px; margin-bottom: 0; } */
-	/* MVK-eo  */
-	/* MVK-sn  */
-	.subscribeBox input[type="email"] { border-radius: 0; -webkit-border-radius: 0; -moz-appearance: none; appearance: none; -webkit-appearance: none; border: 0; width: 100%; height: 44px; background: #fff; padding: 5px 145px 5px 15px; margin-bottom: 0; }
-	/* MVK-en  */
+	.subscribeBox input[type="text"] { border-radius: 0; -webkit-border-radius: 0; -moz-appearance: none; appearance: none; -webkit-appearance: none; border: 0; width: 100%; height: 44px; background: #fff; padding: 5px 145px 5px 15px; margin-bottom: 0; }
 	.subscribeBox form { max-width: 912px; margin: 0 auto; position: relative; }
 	.subscribeBox .button { position: absolute; height: 44px; right: 0; top: 0; width: 130px; }
 	.subscribeBox .field { position: relative; margin-bottom: 44px; }
@@ -303,8 +299,14 @@ textarea::placeholder { color: #100e0f; }
 	.contentBox .text { width: calc(100% - 365px); padding-left: 67px; padding-right: 6%; }
 	.contentBox .row:last-child { margin-bottom: 68px; }
 
+	/* ### gallery box ### */
+	.galleryBox { width: 100%; border: 1px solid #fff; }
+	.galleryBox__image{ display: block; width: 33.3333%; height: 375px; background-size: cover; background-repeat:no-repeat; background-position: center center; float: left; border: 1px solid #fff; }
+
+
 	/* ### filter box ### */
 	.filterBox { padding: 20px 34px 20px 24px; width: 100%; background: #e7e7e8; margin-bottom: 33px; }
+	.filterBox--lighter{ background: #f1f1f1; }
 	.filterBox h3 { margin-right: -15px; text-transform: uppercase; color: #9c9e9f; font-size: 23px; font-weight: 400; letter-spacing: 0.035em; margin-bottom: 11px; }
 	.filterBox .panel h3 { display: none; }
 	.filterBox ul { padding-bottom: 5px; width: 100%; }
@@ -314,13 +316,13 @@ textarea::placeholder { color: #100e0f; }
 	.filterBox .searchBox input { background: #fff; }
 	.filterBox .searchBox button { background-size: 17px 17px; }
 	.filterBox .title { width: 100%; font-size: 14px; color: #100e0f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid #100e0f; padding-bottom: 4px; margin-bottom: 8px; }
-	/* MVK-so */
-	/* .filterBox label { padding-left: 23px; cursor: pointer; position: relative; display: block; }  */
+	/* MVK-so REMOVE checkboxes */
+	/* .filterBox label { padding-left: 23px; cursor: pointer; position: relative; display: block; } */
 	/* .filterBox label:after { transition: all 0.3s; content: ''; width: 13px; height: 13px; border: 1px solid #fff; position: absolute; left: 2px; top: 3px; background: url('../img/checkbox.png') center center no-repeat; background-size: 0 auto; } */
 	/* MVK-eo */
 	/* MVK-sn */
 	.filterBox label {cursor: pointer; position: relative; display: block; } 
-	/* MVK-en */
+	/* MVK-en */	
 	.filterBox label span { position: absolute; right: 0; top: 0; }
 	.filterBox input:checked + label:after { background-size: 10px auto; }
 	.filterBox .more-link { margin-left: auto; display: inline-block; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 900; text-decoration: none; }
@@ -331,10 +333,10 @@ textarea::placeholder { color: #100e0f; }
 	.filterBox .reset-btn:hover { color: #feb633; background: #100e0f; }
 	.filterBox ul li strong { display: block; }
 	.filterBox .list li { padding-top: 4px; border-bottom: 2px solid #fff; padding-bottom: 8px; margin-bottom: 4px; }
-	.filterBox .list li:last-child { border-bottom: 0; }
+	.filterBox .list li:last-child { border-bottom: 2px solid #fff; }
 	.filterBox .range { margin-bottom: 20px; padding-bottom: 30px; min-height: 50px; }
 	.filterBox .range .title { padding-top: 5px; margin-bottom: 11px; border-bottom: 0; }
-	/* MVK-so */
+	/* MVK-so MAKE SURE YEAR / HOUR SLIDERS STAY WITHIN BLOCK */
 	/* .filterBox .range-block { width: 100%; position: relative; } */
 	/* MVK-eo */
 	/* MVK-sn */
@@ -356,14 +358,7 @@ textarea::placeholder { color: #100e0f; }
 	.productBox .heading .button:after { position: absolute; right: 8px; top: 9px; border-width: 5px 0 5px 9px; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 	.productBox h2 { text-transform: uppercase; color: #ffb819; font-size: 33px; line-height: 1.2; font-weight: 900; margin-bottom: 5px; }
 	.productBox .list { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; width: calc(100% + 15px); margin-left: -15px; }
-	/* MVK-so */
-	/* .productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%; } */
-	/* MVK-eo */
-	/* MVK-sn 
-	 * If the search results in less than three machines, the box collapses
-	*/
-	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%;  min-width: 250px;}
-	/* MVK-en */
+	.productBox .list .block { padding: 0 0 15px 15px; margin-bottom: 16px; width: 33.333%; }
 	.productBox .list figure img { width: 100%; transition: all 0.6s; }
 	.productBox .list figure a { display: block; position: relative; overflow: hidden; }
 	.productBox .list .tag { text-align: center; line-height: 1; position: absolute; right: 20px; top: 30px; width: 58px; height: 58px; box-shadow: 0 3px 3px rgba(0,0,0,0.3); border-radius: 50%; background: #feb534; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; font-size: 8px; color: #fff; text-transform: uppercase; font-weight: 700; }
@@ -400,10 +395,12 @@ textarea::placeholder { color: #100e0f; }
 	/* MVK-sn */
 	.pagination li.delta_selected a { color: black; background: #feb633; font-weight: bold}
 	/* MVK-en */
-
+	
 	/* ### detail box ### */
 	.detailBox { margin-bottom: 47px; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; display: -webkit-flex; display: -ms-flexbox; display: flex; padding-top: 95px; width: 100%; }
 	.detailBox h1 { width: 100%; letter-spacing: 0.015em; text-transform: uppercase; color: #ffb819; margin-bottom: 25px; }
+	.detailBox__heading-usp{ position: relative; border-bottom: 1px solid #DADADA; padding-bottom: 15px; margin-bottom: 60px!important; }
+	.detailBox__heading-usp__yellow{ position: absolute; right: 0; bottom: -29px; padding: 5px 10px; background-color: #feb633; font-size: 16px; font-weight: bold; line-height: 18px; }	
 	.detailBox h1 span { color: #100e0f; }
 	.detailBox .left { width: 70.8%; padding-right: 35px; }
 	.detailBox .right { padding: 35px 33px; width: 29.2%; background: #e7e7e8; }
@@ -432,8 +429,10 @@ textarea::placeholder { color: #100e0f; }
 	.infoBox .detail ul li:nth-child(even) { background: #fff; }
 	.infoBox .tabs { background: #bcbdc0; margin-bottom: 40px; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 	.infoBox .tabs li { padding: 0 20px; letter-spacing: 0.03em; }
-	.infoBox .tabs li a { transition: all 0.3s; height: 47px; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; -webkit-align-content: center; align-content: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; font-size: 15px; text-transform: uppercase; text-decoration: none; color: #fff; }
-	.infoBox .tabs li.is-active a { font-weight: 700; color: #100e0f; }
+	.infoBox .tabs li a { transition: all 0.3s; height: 47px; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; -webkit-align-content: center; align-content: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; font-size: 15px; text-transform: uppercase; text-decoration: none; color: #000; font-weight: bold; }
+	.infoBox .tabs li.is-active{ background-color: #000; }
+	.infoBox .tabs li.is-active a { font-weight: 700; color: #feb633; }
+	.infoBox .tabs li.is-active a:hover { color: #feb633; }
 	.infoBox .tabs li a:hover { color: #100e0f; }
 	.infoBox .left { width: 70.8%; padding-right: 35px; }
 	.infoBox .right { width: 29.2%; }
@@ -459,14 +458,9 @@ textarea::placeholder { color: #100e0f; }
 	.inspectionBox .detail ul li { padding: 12px 20px 12px; display: -webkit-flex; display: -ms-flexbox; display: flex; background: #f5f5f5; font-size: 15px; color: #1a181b; line-height: 1; position: relative; }
 	.inspectionBox .detail ul li strong { width: 62%; line-height: 1; display: block; }
 	.inspectionBox .detail ul li:nth-child(even) { background: #fff; }
-	/* MVK-so */
-	/* .inspectionBox .detail ul li.available:after {  content: ''; position: absolute; right: 22px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 18px; height: 13px; background: url('../img/check.png') center center no-repeat; background-size: 18px auto; } */
-	/* .inspectionBox .detail ul li.not-available:after { content: ''; position: absolute; right: 25px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 14px; height: 14px; background: url('../img/cross.png') center center no-repeat; background-size: 14px auto; } */
-	/* .inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-bottom: 40px; } */
-	/* MVK-eo */
-	/* MVK-sn */
-	.inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-top: 20px; margin-bottom: 10px; }
-	/* MVK-en */
+	.inspectionBox .detail ul li.available:after {  content: ''; position: absolute; right: 22px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 18px; height: 13px; background: url('../img/check.png') center center no-repeat; background-size: 18px auto; }
+	.inspectionBox .detail ul li.not-available:after { content: ''; position: absolute; right: 25px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 14px; height: 14px; background: url('../img/cross.png') center center no-repeat; background-size: 14px auto; }
+	.inspectionBox .title { padding: 10px 22px; line-height: 1.2; transition: all 0.3s; font-size: 16px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #100e0f; background: #bcbdc0; margin-bottom: 40px; }
 	.inspectionBox .row { width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 	.inspectionBox .col-1 { width: 50%; padding-right: 13px; }
 	.inspectionBox .col-1 + .col-1 { padding-right: 0; padding-left: 13px; }
@@ -474,17 +468,18 @@ textarea::placeholder { color: #100e0f; }
 
 	/* ### map box ### */
 	.mapBox { width: 100%; position: relative; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
+	.mapBox iframe{ width: 100%; height: 290px; }
 	.mapBox .block { width: 50%; min-height: 597px; background-size: cover; background-repeat: no-repeat; background-position: center; }
 	.mapBox .block img { opacity: 0; }
 
 	/* ### contact box ### */
 	.contactBox { padding-top: 136px; padding-bottom: 122px; width: 100%; position: relative; color: #fff; background: #100e0f; }
 	.contactBox .row { margin-bottom: 76px; width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
-	.contactBox .left { width: 49.8%; padding: 4px 95px 0 0; }
-	.contactBox .right { border-left: 2px solid #fff; width: 50.2%; padding: 4px 0 0 92px; }
+	.contactBox .left { width: 30%; padding: 4px 45px 0 0; padding-left: 40px; }
+	.contactBox .right { border-left: 2px solid #fff; width: 70%; padding: 0px 0 0 45px; }
 	.contactBox h3 { margin-bottom: 30px; margin-top: -7px; }
 	.contactBox .address { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; width: 100%; }
-	.contactBox address { font-style: normal; font-size: 20px; line-height: 2.15; }
+	.contactBox address { font-style: normal; font-size: 18px; line-height: 2.15; }
 	.contactBox address a { color: #fff; text-decoration: none; }
 	.contactBox address a:hover { text-decoration: underline; }
 	.contactBox .form { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
@@ -495,7 +490,7 @@ textarea::placeholder { color: #100e0f; }
 	/* MVK-en */
 	.contactBox input[type="number"],
 	.contactBox input[type="password"],
-	.contactBox input[type="text"] { color: #fff; background: #5c5d5f; height: 38px; font-size: 18px; padding: 3px 15px; margin-bottom: 15px; }
+	.contactBox input[type="text"] { color: #fff; background: #5c5d5f; height: 38px; font-size: 18px; padding: 3px 15px; margin-bottom: 10px; }
 	.contactBox textarea { height: 250px; padding-top: 10px; }
 	.contactBox textarea::-webkit-input-placeholder { color: #fff; }
 	.contactBox textarea::-moz-placeholder { color: #fff; }
@@ -507,8 +502,8 @@ textarea::placeholder { color: #100e0f; }
 	.contactBox input::placeholder { color: #fff; }
 	.contactBox .col-1 { width: 50%; padding-right: 15px; }
 	.contactBox .col-2 { width: 50%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
-	.contactBox .form .button { margin-left: auto; padding: 8px 12px 8px 10px; color: #100e0f; background: #fff; font-size: 16px; }
-	.contactBox .form .buttont:hover { background: #feb633 }
+	.contactBox .form .button { padding: 8px 12px 8px 10px; color: #100e0f; background: #fff; font-size: 16px; }
+	.contactBox .form .button:hover { background: #feb633 }
 	.contactBox .form .button:after { margin-left: 10px; border-width: 7px 0 7px 11px; }
 	.contactBox label.error { display: none!important; }
 	.contactBox input.error { border: 1px solid red; }
@@ -519,7 +514,7 @@ textarea::placeholder { color: #100e0f; }
 	.timingBox .left { width: 49.8%; padding: 0 95px 0 0; }
 	.timingBox .right { border-left: 2px solid #fff; width: 50.2%; padding: 0 0 0 92px; }
 	.timingBox h3 { color: #fff; margin-top: -6px; line-height: 1.1; margin-bottom: 30px; }
-	.timingBox ul li { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; font-size: 20px; margin-bottom: 16px; }
+	.timingBox ul li { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; font-size: 18px; margin-bottom: 16px; }
 	.timingBox ul li strong { width: 45%; }
 	.timingBox ul li span { width: 55%; }
 
@@ -554,8 +549,8 @@ textarea::placeholder { color: #100e0f; }
 	.copyrightBox { position: relative; padding-top: 15px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-bottom: 15px; width: 100%; background: #100e0f; }
 	.copyrightBox ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
 	.copyrightBox .social ul li { margin-right: 25px;}
-	.copyrightBox .social ul li a { width: 30px; display: block; transition: all 0.3s; border-radius: 5px; }
-	.copyrightBox .social ul li a:hover { background: #000; }
+	.copyrightBox .social ul li a { background: #fff; width: 30px; display: block; transition: all 0.3s; border-radius: 5px; padding: 4px; }
+	.copyrightBox .social ul li a:hover { background: #fff; }
 	.copyrightBox .link { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 23px; }
 	.copyrightBox .link li { font-size: 11px; color: #afb1b2; }
 	.copyrightBox .link li:before { content: '|'; margin: 0 11px; }
@@ -572,7 +567,7 @@ textarea::placeholder { color: #100e0f; }
 	.linkBox { padding-left: 30px; }
 	.bannerBox { height: auto; }
 	.bannerBox .text { bottom: 80px; }
-	.sliderBox .slide { height: 700px; }
+	.sliderBox .slide { height: 433px; }
 	.stockBox li span { font-size: 16px; line-height: 1; }
 	.stockBox { margin-bottom: 45px; }
 	.itemBox { padding-top: 50px; padding-bottom: 40px; }
@@ -665,7 +660,7 @@ textarea::placeholder { color: #100e0f; }
 	.inspectionBox .detail ul li { padding-left: 15px; padding-right: 15px; }
 	.offerBox { padding: 30px; }
 	.mapBox .block { min-height: 300px; }
-	.contactBox .left { padding-right: 30px; }
+	.contactBox .left { padding-right: 30px; padding-left: 0; }
 	.contactBox .right { padding-left: 30px; }
 	.contactBox address { font-size: 18px; line-height: 2; }
 	.timingBox ul li { margin-bottom: 12px; font-size: 18px; }
@@ -673,17 +668,27 @@ textarea::placeholder { color: #100e0f; }
 	.timingBox .left { padding-right: 30px; }
 }
 
+@media only screen and (min-width: 992px) {
+	.linkBox{
+		display: block!important;
+	}
+}
 @media only screen and (max-width: 991px) {
 	#headerCntr .phone-number { top: 25px; width: 25px; height: 25px; background-position: center center; }
 	#headerCntr .phone-number a { text-indent: -9999px; position: absolute; left: 0; top: 0; }
 	#headerCntr .phone-number small { display: none; }
-	#headerCntr .header-bottom { padding-bottom: 15px; }
+	#headerCntr .header-bottom { padding-bottom: 0px; padding-left: 0; padding-right: 0; }
 	.menuBox:not(.mm-menu) { padding-right: 43px; }
 	.menuBox:not(.mm-menu) >ul >li { margin-left: 20px;}
 	.menuBox:not(.mm-menu) >ul >li.has-children >a { padding-right: 16px; }
-	.searchBox { width: 100%; margin-top: 24px; }
+	.searchBox { width: 100%; margin-top: 24px; padding-left: 20px; padding-right: 20px; }
+	.searchBox .title{ width: 100%; }
+	.searchBox form{ width: 48%; float: left; }
 	.searchBox input[type="search"] { height: 40px; }
 	.searchBox button { width: 43px; height: 40px; }
+	.searchBox .button{ width: 48%; margin-left: 4%; float: left; margin-top: 0; height: 40px; line-height: 28px; text-align: center;}
+	.linkBox-control{ display: block; }
+	.linkBox{ display: none; }
 	.linkBox { width: 100%; padding-top: 5px; }
 	.linkBox ul { margin-right: -25px; }
 	.linkBox ul li a strong { font-size: 12px; }
@@ -697,7 +702,7 @@ textarea::placeholder { color: #100e0f; }
 	.linkBox ul li a i.icon-icon6 { font-size: 56px; }
 	.linkBox ul li a i.icon-icon7 { font-size: 30px; }
 	.linkBox ul li a i.icon-icon8 { font-size: 34px; }
-	#headerCntr .stock-bar { padding: 8px 15px; }
+	#headerCntr .stock-bar { padding: 8px 15px; display: none; }
 	.sliderBox .slide { height: 450px; }
 	.bannerBox { min-height: 450px; }
 	.videoBox h2,
@@ -715,6 +720,7 @@ textarea::placeholder { color: #100e0f; }
 	.contentBox .text { width: calc(100% - 320px); }
 	.contentBox .row { margin-bottom: 30px; }
 	.contentBox .row:last-child { margin-bottom: 15px; }
+	.galleryBox__image{ width: 50%; }	
 	.productBox h2,
 	.detailBox h2,
 	h3 { font-size: 31px; }
@@ -789,13 +795,7 @@ textarea::placeholder { color: #100e0f; }
 	.timingBox ul li { margin-bottom: 10px; font-size: 16px; }
 	.timingBox .right { padding-left: 15px; }
 	.timingBox .left { padding-right: 15px; }
-	.contactBox textarea, 
-	/* MVK-sn */
-	.contactBox input[type="email"], 
-	/* MVK-en */
-	.contactBox input[type="number"], 
-	.contactBox input[type="password"], 
-	.contactBox input[type="text"] { font-size: 16px; }
+	.contactBox textarea, .contactBox input[type="number"], .contactBox input[type="password"], .contactBox input[type="text"] { font-size: 16px; }
 	.filterBox h3.js-filter-toggle { cursor: pointer; margin-bottom: 0; background: url('../img/filter-solid.svg') center right no-repeat; background-size: 20px 20px; margin-right: 0; }
 	.filterBox .panel { position: fixed; left: 0; top: -10px; width: 100%; background: #e7e7e8; z-index: 999; padding: 20px; height: 100vh; overflow: auto; transition: all 0.3s; visibility: hidden; opacity: 0; }
 	.filterBox .panel h3 { display: block; }
@@ -889,6 +889,7 @@ textarea::placeholder { color: #100e0f; }
 	.infoBox .add strong span { font-size: 68px; }
 	.infoBox .add strong small { font-size: 24px; }
 	.infoBox .link { padding-top: 15px; }
+	.galleryBox__image{ width: 100%; }			
 	#headerCntr { padding-top: 0; }
 	#headerCntr .header-top { position: relative; }
 	.subscribeBox .radio label:before { top: 0; position: absolute; left: -26px; }
@@ -937,12 +938,7 @@ textarea::placeholder { color: #100e0f; }
 	.itemBox li { width: 100%; }
 	.screenBox .image ul li { width: 50%; }
 	.subscribeBox .button { position: static; width: 100%; }
-	/* MVK-so */
-	/* .subscribeBox input[type="text"] { padding: 5px 15px; } */
-	/* MVK-eo */
-	/* MVK-sn */
-	.subscribeBox input[type="email"] { padding: 5px 15px; }
-	/* MVK-en */
+	.subscribeBox input[type="text"] { padding: 5px 15px; }
 	.footerBox section:nth-child(3) { border-right: 1px solid #fff; padding-left: 0; padding-right: 0; }
 	.footerBox section:nth-child(4) { padding-left: 15px; border-right: 0; padding-right: 0; }
 	.footerBox section:nth-child(2) { border-right: 0; }

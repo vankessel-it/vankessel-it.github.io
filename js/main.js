@@ -17,7 +17,6 @@ jQuery( document ).ready( function( $ ) {
 		$( 'body' ).toggleClass( 'is-filter' );
 	} );
 
-	//MVK-sn
 	$( '.js-image-for' ).slick( {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -29,17 +28,11 @@ jQuery( document ).ready( function( $ ) {
 
 	$( '.js-image-nav' ).slick( {
 		slidesToShow: 5,
-		slidesToScroll: 5,
-		infinite: false,
+		slidesToScroll: 1,
 		rows: 0,
-		// slidesToShow: 1,
-		// slidesToScroll: 1,
-		// rows: 2,
-		// slidesPerRow: 5,
 		arrows: false,
 		asNavFor: '.js-image-for',
-		dots: true,
-		// centerMode: true,
+		dots: false,
 		focusOnSelect: true,
 		responsive: [
 			{
@@ -56,42 +49,7 @@ jQuery( document ).ready( function( $ ) {
 			}
 		]
 	} );
-	//MVK-en
 
-	//MVK-so
-	// $( '.js-image-for' ).slick( {
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	rows: 0,
-	// 	asNavFor: '.js-image-nav'
-	// } );
-
-	// $( '.js-image-nav' ).slick( {
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 1,
-	// 	rows: 0,
-	// 	arrows: false,
-	// 	asNavFor: '.js-image-for',
-	// 	dots: false,
-	// 	focusOnSelect: true,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 768,
-	// 			settings: {
-	// 				slidesToShow: 4
-	// 			}
-	// 		},
-	// 		{
-	// 			breakpoint: 480,
-	// 			settings: {
-	// 				slidesToShow: 2
-	// 			}
-	// 		}
-	// 	]
-	// } );
-	//MVK-eo
 	$( '.js-popup-modal' ).magnificPopup( {
 		type: 'inline',
 		preloader: false,
@@ -100,6 +58,22 @@ jQuery( document ).ready( function( $ ) {
 		mainClass: 'my-mfp-zoom-in'
 	} );
 
+	$('.galleryBox').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			gallery: {
+				enabled:true
+			}
+		});
+	});
+
+	$('.linkBox-control').click(function(event){
+		event.preventDefault();
+		$(this).toggleClass('linkBox-control--active');
+		$(this).prev().slideToggle();
+	});
+	
 	$( '.js-range-1' ).asRange( {
 		range: true,
 		limit: false
